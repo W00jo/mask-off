@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://cw58umx5qon26"]
+
+[ext_resource type="PackedScene" uid="uid://n04qbcl6c0oe" path="res://src/maps/base_map.tscn" id="1_jkh1s"]
+
+[node name="BaseMap" unique_id=1175649286 instance=ExtResource("1_jkh1s")]
+
+[node name="MaskSpawner" parent="." index="0" unique_id=1271967546]
+position = Vector2(160, 185)
