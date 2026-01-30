@@ -6,12 +6,14 @@ uid="uid://g8jrg2eoo1ql"
 
 [deps]
 
-files=["res://config/translations.pl.translation", "res://config/translations.en.translation"]
+files=["res://config/translations.en.translation", "res://config/translations.en.translation"]
 
 source_file="res://config/translations.csv"
-dest_files=["res://config/translations.pl.translation", "res://config/translations.en.translation"]
+dest_files=["res://config/translations.en.translation", "res://config/translations.en.translation"]
 
 [params]
 
 compress=true
 delimiter=0
+unescape_keys=false
+unescape_translations=true
