@@ -1,9 +1,29 @@
 [gd_scene format=3 uid="uid://nkccp7tqucmv"]
 
-[node name="Hud" type="Control" unique_id=1872890660]
+[node name="HUD" type="Control" unique_id=1872890660]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1131526487]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer" unique_id=421894671]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/HBoxContainer" unique_id=1828645379]
+layout_mode = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="PanelContainer/HBoxContainer" unique_id=1494983212]
+layout_mode = 2
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="PanelContainer/HBoxContainer" unique_id=941877014]
+layout_mode = 2
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="PanelContainer/HBoxContainer" unique_id=686289681]
+layout_mode = 2

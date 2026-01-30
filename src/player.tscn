@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://dckgfslhmkth7"]
+[gd_scene format=3 uid="uid://cv4ay603k1vy8"]
 
 [ext_resource type="Script" uid="uid://dmg143wfbe7nl" path="res://src/player.gd" id="1_gmfve"]
 [ext_resource type="Texture2D" uid="uid://qix0oygodiat" path="res://icon.svg" id="1_lowyb"]
@@ -25,11 +25,9 @@ shape = SubResource("RectangleShape2D_gmfve")
 [node name="StateMachine" type="Node2D" parent="." unique_id=638512149 node_paths=PackedStringArray("CURRENT_STATE")]
 script = ExtResource("3_ehvfd")
 CURRENT_STATE = NodePath("IdleStateMachine")
-metadata/_custom_type_script = "uid://d2572mauui27f"
 
 [node name="IdleStateMachine" type="Node" parent="StateMachine" unique_id=530028852]
 script = ExtResource("4_bktlc")
-metadata/_custom_type_script = "uid://bd1f78gi2cqdl"
 
 [node name="WalkingStateMachine" type="Node" parent="StateMachine" unique_id=1738527426]
 script = ExtResource("5_pg28d")
