@@ -2,6 +2,9 @@
 
 [ext_resource type="Texture2D" uid="uid://qix0oygodiat" path="res://icon.svg" id="1_hxats"]
 [ext_resource type="Script" uid="uid://deothbd7lj3ay" path="res://scripts/game_manager.gd" id="2_hxats"]
+[ext_resource type="PackedScene" uid="uid://d0e8l1jy46mm3" path="res://src/maps/map_1.tscn" id="3_uyu2i"]
+[ext_resource type="PackedScene" uid="uid://cw58umx5qon26" path="res://src/maps/map_2.tscn" id="4_xikop"]
+[ext_resource type="PackedScene" uid="uid://du82m1e2nx6e4" path="res://src/maps/map_3.tscn" id="5_adyk0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qppop"]
 size = Vector2(128, 128)
@@ -46,3 +49,4 @@ shape = SubResource("RectangleShape2D_qppop")
 
 [node name="GameManager" type="Node2D" parent="." unique_id=517955868]
 script = ExtResource("2_hxats")
+maps = Array[PackedScene]([ExtResource("3_uyu2i"), ExtResource("4_xikop"), ExtResource("5_adyk0")])

@@ -1,5 +1,6 @@
 extends Node2D
 
+class_name MaskSpawner
 
 var max_ticks := 2
 var _current_ticks := 2
@@ -20,7 +21,7 @@ func initialize() -> void:
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	initialize()
+	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
