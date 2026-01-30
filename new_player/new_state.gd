@@ -1,0 +1,20 @@
+class_name NewState
+extends Node
+
+var state_machine: NewStateMachine
+
+
+func enter():
+	pass
+
+func exit():
+	pass
+
+func update(delta:float):
+	pass
+
+func physics_update(delta:float):
+	pass
+
+func handle_input(event:InputEvent):
+	pass
