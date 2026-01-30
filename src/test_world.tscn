@@ -2,12 +2,30 @@
 
 [ext_resource type="PackedScene" uid="uid://dckgfslhmkth7" path="res://src/player.tscn" id="1_057no"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_057no"]
+size = Vector2(214, 42.5)
+
 [node name="TestWorld" type="Node2D" unique_id=74326303]
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1271306441]
-offset_right = 604.0
-offset_bottom = 284.0
+offset_left = -12.0
+offset_top = 29.0
+offset_right = 592.0
+offset_bottom = 313.0
 color = Color(0.43707457, 0.5235364, 0.6798183, 1)
 
 [node name="Player" parent="." unique_id=98183670 instance=ExtResource("1_057no")]
 position = Vector2(48, 47)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1254299226]
+position = Vector2(-12, 113)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=344125462]
+position = Vector2(87, 129)
+shape = SubResource("RectangleShape2D_057no")
+
+[node name="ColorRect2" type="ColorRect" parent="StaticBody2D" unique_id=405209419]
+offset_left = -19.0
+offset_top = 109.0
+offset_right = 197.0
+offset_bottom = 149.0
