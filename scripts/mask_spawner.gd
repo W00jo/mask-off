@@ -2,7 +2,8 @@ extends Node2D
 
 class_name MaskSpawner
 
-var max_ticks := 2
+@export var max_ticks := 2
+@export var show_treshold := 5
 var _current_ticks := 2
 var spawned_mask: BaseMask
 @export var masks: Array[PackedScene]
@@ -19,11 +20,9 @@ func initialize() -> void:
 	randomize()
 	_start_timeout()
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
 	
@@ -33,11 +32,12 @@ func _start_timeout():
 	_update_label()
 	
 func _on_timeout():
-	_update_label()
-	
+	if(_current_ticks <= show_treshold):
+		_update_label()
+		label.visible = true
+		anim.play("countdown_label_shrink")
+		
 	_current_ticks-=1;
-	label.visible = true
-	anim.play("countdown_label_shrink")
 	
 	if(_current_ticks < 0):
 		_spawn_mask()

@@ -60,6 +60,7 @@ colors = PackedColorArray(1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0.19607843)
 
 [node name="MaskSpawner" type="Node2D" unique_id=1271967546]
 script = ExtResource("1_5skxl")
+max_ticks = 10
 masks = Array[PackedScene]([ExtResource("2_hbtf8")])
 
 [node name="Timer" type="Timer" parent="." unique_id=179535140]
@@ -85,7 +86,7 @@ libraries/ = SubResource("AnimationLibrary_qppop")
 z_index = 2
 emitting = false
 amount = 150
-lifetime = 1.4000000000000001
+lifetime = 1.4
 one_shot = true
 lifetime_randomness = 1.0
 direction = Vector2(1, 15)
