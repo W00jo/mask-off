@@ -11,6 +11,7 @@ size = Vector2(123, 122)
 
 [node name="Player" type="CharacterBody2D" unique_id=98183670]
 script = ExtResource("1_gmfve")
+speed = null
 
 [node name="CharacterSprite" type="Sprite2D" parent="." unique_id=124187322]
 texture = ExtResource("1_lowyb")
@@ -30,6 +31,6 @@ metadata/_custom_type_script = "uid://d2572mauui27f"
 script = ExtResource("4_bktlc")
 metadata/_custom_type_script = "uid://bd1f78gi2cqdl"
 
-[node name="WalkingStateMachine" type="Node" parent="StateMachine" unique_id=1738527426]
+[node name="WalkigStateMachine" type="Node" parent="StateMachine" unique_id=1738527426]
 script = ExtResource("5_pg28d")
 metadata/_custom_type_script = "uid://b8yhlnyyeai51"
