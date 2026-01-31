@@ -1,31 +1,26 @@
 extends Node2D
 
 class_name MaskSpawner
-
+@export var spawn_parent: Node
 @export var max_ticks := 2
 @export var show_treshold := 5
+@export var level:Node2D
 var _current_ticks := 2
-var spawned_mask: BaseMask
-@export var masks: Array[PackedScene]
+#var spawned_mask: CollectibleBaseMask
+#@export var masks: Array[PackedScene]
 
 @onready var timer: Timer = $Timer
 @onready var label: Label = $MaskSpawnPoint/Label
 @onready var anim: AnimationPlayer = $MaskSpawnPoint/Label/AnimationPlayer
-@onready var spawn_point = $MaskSpawnPoint
+#@onready var spawn_point = $"../MaskSpawnPoints"
 @onready var particles_1 = $"MaskSpawnPoint/Particles!!!"
 @onready var particles_2 = $"MaskSpawnPoint/Particles!!!/MORE PARTICLES"
-
+var spawn_points = []
 
 func initialize() -> void:
 	randomize()
 	_start_timeout()
 
-func _ready() -> void:
-	pass
-
-func _process(delta: float) -> void:
-	pass
-	
 func _start_timeout():
 	_current_ticks = max_ticks
 	timer.timeout.connect(_on_timeout)
@@ -48,9 +43,13 @@ func _update_label():
 	label.text = str(_current_ticks)
 	
 func _spawn_mask():
-	var index := randi() % masks.size()
-	spawned_mask = masks[index].instantiate()
-	spawn_point.add_child(spawned_mask)
+	var spawned_mask = preload("res://src/masks/collectible_base_mask.tscn").instantiate()
+	for spawn in spawn_parent.get_children():
+		print("spawn", spawn)
+		spawn_points.append(spawn)
+	var random_spawn_point = spawn_points.pick_random()
+	random_spawn_point.add_child(spawned_mask)
+	level.connect_to_signal_from_mask(spawned_mask)
 	
 	particles_1.emitting = true
 	particles_2.emitting = true

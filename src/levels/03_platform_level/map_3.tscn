@@ -1,8 +1,105 @@
 [gd_scene format=3 uid="uid://du82m1e2nx6e4"]
 
 [ext_resource type="PackedScene" uid="uid://n04qbcl6c0oe" path="res://src/levels/01_default_level/base_map.tscn" id="1_as2kr"]
+[ext_resource type="PackedScene" uid="uid://bnwj4t5xae30h" path="res://src/player/player_spawn.tscn" id="2_31w4d"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_2joc0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_31w4d"]
+size = Vector2(176.5, 20)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_2joc0"]
+b = Vector2(57, 0)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lq6pl"]
+size = Vector2(109, 201)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xnjqu"]
+size = Vector2(258, 12.5)
 
 [node name="BaseMap" unique_id=1175649286 instance=ExtResource("1_as2kr")]
 
 [node name="MaskSpawner" parent="." index="0" unique_id=1271967546]
-position = Vector2(160, 185)
+position = Vector2(556, 589)
+
+[node name="Kolizje" type="StaticBody2D" parent="." index="1" unique_id=365756288]
+
+[node name="Boki" type="CollisionShape2D" parent="Kolizje" index="0" unique_id=1059267917]
+position = Vector2(555, 649)
+shape = SubResource("WorldBoundaryShape2D_2joc0")
+
+[node name="Boki2" type="CollisionShape2D" parent="Kolizje" index="1" unique_id=192434694]
+position = Vector2(-1, 297)
+rotation = 1.5707964
+shape = SubResource("WorldBoundaryShape2D_2joc0")
+
+[node name="Boki3" type="CollisionShape2D" parent="Kolizje" index="2" unique_id=532034385]
+position = Vector2(1154, 378)
+rotation = -1.5707964
+shape = SubResource("WorldBoundaryShape2D_2joc0")
+
+[node name="Boki4" type="CollisionShape2D" parent="Kolizje" index="3" unique_id=140625836]
+position = Vector2(576, -69)
+rotation = 3.1415927
+shape = SubResource("WorldBoundaryShape2D_2joc0")
+
+[node name="Platforma" type="CollisionShape2D" parent="Kolizje" index="4" unique_id=888861577]
+position = Vector2(196.75, 508)
+shape = SubResource("RectangleShape2D_31w4d")
+one_way_collision = true
+
+[node name="Platforma2" type="CollisionShape2D" parent="Kolizje" index="5" unique_id=1313624170]
+position = Vector2(557, 508)
+shape = SubResource("RectangleShape2D_31w4d")
+one_way_collision = true
+
+[node name="Platforma3" type="CollisionShape2D" parent="Kolizje" index="6" unique_id=297556079]
+position = Vector2(953, 508)
+shape = SubResource("RectangleShape2D_31w4d")
+one_way_collision = true
+
+[node name="Ławki" type="CollisionShape2D" parent="Kolizje" index="7" unique_id=1971945163]
+position = Vector2(171, 464)
+shape = SubResource("SegmentShape2D_2joc0")
+
+[node name="Ławki2" type="CollisionShape2D" parent="Kolizje" index="8" unique_id=1887724123]
+position = Vector2(532, 464)
+shape = SubResource("SegmentShape2D_2joc0")
+
+[node name="Ławki3" type="CollisionShape2D" parent="Kolizje" index="9" unique_id=981025760]
+position = Vector2(929, 464)
+shape = SubResource("SegmentShape2D_2joc0")
+
+[node name="Platforma4" type="CollisionShape2D" parent="Kolizje" index="10" unique_id=150988462]
+position = Vector2(53.5, 395.5)
+shape = SubResource("RectangleShape2D_lq6pl")
+
+[node name="Platforma5" type="CollisionShape2D" parent="Kolizje" index="11" unique_id=1523048279]
+position = Vector2(1097, 396)
+shape = SubResource("RectangleShape2D_lq6pl")
+
+[node name="PlatformaWyz" type="CollisionShape2D" parent="Kolizje" index="12" unique_id=1400947263]
+position = Vector2(700, 71)
+shape = SubResource("RectangleShape2D_xnjqu")
+
+[node name="PlatformaWyz3" type="CollisionShape2D" parent="Kolizje" index="13" unique_id=2092145123]
+position = Vector2(335, 205)
+shape = SubResource("RectangleShape2D_xnjqu")
+
+[node name="PlatformaWyz2" type="CollisionShape2D" parent="Kolizje" index="14" unique_id=817549325]
+position = Vector2(800, 245)
+shape = SubResource("RectangleShape2D_xnjqu")
+
+[node name="Player_spawner" type="Node" parent="." index="2" unique_id=1116052806]
+
+[node name="Player_Marker" parent="Player_spawner" index="0" unique_id=1255660246 instance=ExtResource("2_31w4d")]
+position = Vector2(48, 264)
+
+[node name="Player_Marker2" parent="Player_spawner" index="1" unique_id=1047001203 instance=ExtResource("2_31w4d")]
+position = Vector2(1095, 254)
+
+[node name="Player_Marker3" parent="Player_spawner" index="2" unique_id=1337033795 instance=ExtResource("2_31w4d")]
+position = Vector2(330, 158)
+
+[node name="Player_Marker4" parent="Player_spawner" index="3" unique_id=1303456930 instance=ExtResource("2_31w4d")]
+position = Vector2(801, 194)

@@ -1,0 +1,78 @@
+[gd_scene format=3 uid="uid://b8t7r3johr2yi"]
+
+[ext_resource type="Texture2D" uid="uid://hhwr40w72ju" path="res://src/ui/menus/flag_icon_pl.png" id="1_kf8lf"]
+[ext_resource type="Script" uid="uid://d0qnl4mjb4t2l" path="res://src/waiting_room.gd" id="1_mgm53"]
+[ext_resource type="PackedScene" uid="uid://nkccp7tqucmv" path="res://src/ui/in_game/hud.tscn" id="2_gh0ne"]
+[ext_resource type="Script" uid="uid://d21cqnj2kxrr" path="res://src/ui/ui_controller.gd" id="2_kf8lf"]
+[ext_resource type="PackedScene" uid="uid://cooakotr76fm4" path="res://src/ui/menus/main_menu.tscn" id="3_5q4o7"]
+[ext_resource type="PackedScene" uid="uid://fjhqoi1myrss" path="res://src/ui/menus/options.tscn" id="4_3cfgd"]
+[ext_resource type="PackedScene" uid="uid://l1crux0gfiid" path="res://src/ui/menus/credits.tscn" id="5_fyndt"]
+[ext_resource type="PackedScene" uid="uid://crf8kbvbl8uu6" path="res://src/ui/menus/how_to_play.tscn" id="6_kmhfv"]
+[ext_resource type="PackedScene" uid="uid://cxrtc71l5s4xu" path="res://src/ui/in_game/pause.tscn" id="7_rlaii"]
+[ext_resource type="PackedScene" uid="uid://ce0ttob42nhv0" path="res://src/ui/in_game/win_screen.tscn" id="8_5mrjc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5mrjc"]
+size = Vector2(512, 342)
+
+[node name="Main" type="Node2D" unique_id=1058179015]
+process_mode = 3
+
+[node name="Gameplay" type="Node" parent="." unique_id=890166657]
+
+[node name="WaitingRoom" type="Node2D" parent="Gameplay" unique_id=944906252]
+script = ExtResource("1_mgm53")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Gameplay/WaitingRoom" unique_id=1433697885]
+position = Vector2(590, 608)
+scale = Vector2(2.12, 0.120000005)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Gameplay/WaitingRoom/StaticBody2D" unique_id=990031088]
+shape = SubResource("RectangleShape2D_5mrjc")
+
+[node name="Sprite2D" type="Sprite2D" parent="Gameplay/WaitingRoom/StaticBody2D" unique_id=1984882013]
+texture = ExtResource("1_kf8lf")
+
+[node name="UI" type="Node" parent="." unique_id=65613235 node_paths=PackedStringArray("hud", "main_menu", "options", "credits", "how_to_play", "pause", "win_screen")]
+script = ExtResource("2_kf8lf")
+hud = NodePath("HUDLayer/HUD")
+main_menu = NodePath("MainMenuLayer/MainMenu")
+options = NodePath("OptionsLayer/Options")
+credits = NodePath("CreditsLayer/Credits")
+how_to_play = NodePath("HowToPlayLayer/HowToPlay")
+pause = NodePath("PauseLayer/Pause")
+win_screen = NodePath("WinLayer/WinScreen")
+
+[node name="HUDLayer" type="CanvasLayer" parent="UI" unique_id=908624174]
+visible = false
+
+[node name="HUD" parent="UI/HUDLayer" unique_id=53009314 instance=ExtResource("2_gh0ne")]
+
+[node name="MainMenuLayer" type="CanvasLayer" parent="UI" unique_id=592216844]
+visible = false
+
+[node name="MainMenu" parent="UI/MainMenuLayer" unique_id=801312819 instance=ExtResource("3_5q4o7")]
+
+[node name="OptionsLayer" type="CanvasLayer" parent="UI" unique_id=1773063081]
+visible = false
+
+[node name="Options" parent="UI/OptionsLayer" unique_id=1038357148 instance=ExtResource("4_3cfgd")]
+
+[node name="CreditsLayer" type="CanvasLayer" parent="UI" unique_id=594907791]
+visible = false
+
+[node name="Credits" parent="UI/CreditsLayer" unique_id=299128963 instance=ExtResource("5_fyndt")]
+
+[node name="HowToPlayLayer" type="CanvasLayer" parent="UI" unique_id=635465305]
+visible = false
+
+[node name="HowToPlay" parent="UI/HowToPlayLayer" unique_id=1391345934 instance=ExtResource("6_kmhfv")]
+
+[node name="PauseLayer" type="CanvasLayer" parent="UI" unique_id=913723979]
+visible = false
+
+[node name="Pause" parent="UI/PauseLayer" unique_id=1320695175 instance=ExtResource("7_rlaii")]
+
+[node name="WinLayer" type="CanvasLayer" parent="UI" unique_id=1275854566]
+visible = false
+
+[node name="WinScreen" parent="UI/WinLayer" unique_id=169360461 instance=ExtResource("8_5mrjc")]

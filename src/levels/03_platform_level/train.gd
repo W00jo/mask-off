@@ -1,11 +1,23 @@
 extends Node2D
 
+@onready var train: Sprite2D = $Train_sprite
+@onready var warning: Sprite2D = $Warning_sprite
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	warning.visible = false
+	set_process(false)
+	for a in 5:
+		warning.visible = true
+		await get_tree().create_timer(0.1).timeout
+		warning.visible = false
+		await get_tree().create_timer(0.1).timeout
 
+		if a == 4:
+			set_process(true)
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	train.position.x -= 3000 * delta
+	if train.position.x <= -5000:
+		queue_free()

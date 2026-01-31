@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://r1ki73v18ynn"]
+
+[ext_resource type="PackedScene" uid="uid://dfa7acfcvc3yy" path="res://src/player/player.tscn" id="1_mi0if"]
+[ext_resource type="Script" uid="uid://cw54x64sgkqv6" path="res://src/levels/level_test.gd" id="1_qykk4"]
+[ext_resource type="PackedScene" uid="uid://crrflahojckb3" path="res://src/levels/modifiers/killzones/damage_place.tscn" id="2_cmjwt"]
+[ext_resource type="PackedScene" uid="uid://vwin6y5xrqyc" path="res://src/levels/modifiers/mask_spawner/mask_spawner.tscn" id="3_n7tny"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7ypsn"]
+size = Vector2(194, 39)
+
+[node name="NewPlayerTesting" type="Node2D" unique_id=1048883764 node_paths=PackedStringArray("mask_spawner", "mask_spawn_points")]
+script = ExtResource("1_qykk4")
+mask_spawner = NodePath("MaskSpawner")
+mask_spawn_points = NodePath("MaskSpawnPoints")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=2052164583]
+position = Vector2(-163, 445)
+scale = Vector2(3.9604578, 0.75848436)
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D" unique_id=1562816909]
+offset_left = 82.0
+offset_top = 180.0
+offset_right = 277.0
+offset_bottom = 219.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1971309972]
+position = Vector2(180, 198.5)
+shape = SubResource("RectangleShape2D_7ypsn")
+
+[node name="PlayerNew" parent="." unique_id=1053524098 instance=ExtResource("1_mi0if")]
+position = Vector2(538, 442)
+move_left = "ui_left"
+move_right = "ui_right"
+jump = "ui_accept"
+attack = "attack"
+
+[node name="Kukła Do bicia" parent="." unique_id=1469781152 instance=ExtResource("1_mi0if")]
+position = Vector2(836, 472)
+
+[node name="damage_place" parent="." unique_id=507009979 instance=ExtResource("2_cmjwt")]
+position = Vector2(692, 399)
+DMG_amount = 50
+
+[node name="MaskSpawner" parent="." unique_id=1271967546 instance=ExtResource("3_n7tny")]
+
+[node name="MaskSpawnPoints" type="Node" parent="." unique_id=1890485271]
+
+[node name="MaskSpawnPoint" type="Node2D" parent="MaskSpawnPoints" unique_id=1820209933]
+position = Vector2(284, 435)
+
+[node name="MaskSpawnPoint2" type="Node2D" parent="MaskSpawnPoints" unique_id=682277923]
+position = Vector2(157, 315)
+
+[node name="MaskSpawnPoint3" type="Node2D" parent="MaskSpawnPoints" unique_id=329397788]
+position = Vector2(716, 318)

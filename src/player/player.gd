@@ -11,7 +11,8 @@ signal on_player_death
 
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var attack_parent: Node2D = $AttackParent 
-@onready var attack_holder: Node2D = $AttackParent/AttackHolder 
+@onready var attack_holder: Node2D = $AttackParent/AttackHolder
+@onready var damage_target: DamageTarget = $DamageTarget 
 
 @export var default_attack: PackedScene
 @export var new_attack: PackedScene
@@ -28,6 +29,11 @@ func _ready():
 	))
 	$MaskSystem.on_attack_picked_up.connect(set_attack)
 	set_attack(default_attack)
+	
+func reset():
+	damage_target._ready()
+	set_attack(default_attack)
+	$StateMachine.change_state("fallstate")
 
 func set_attack(attack: PackedScene):
 	var new_attack: BaseAttack = attack.instantiate()
@@ -50,5 +56,9 @@ func _process(delta):
 		clear_attack()
 
 func _begin_death() -> void:
+	$StateMachine.change_state("deathstate")
+	
+func set_input_data(input_data: InputData):
+	$StateMachine.set_input_data(input_data)
 	get_tree().paused = true
 	print("player ded")

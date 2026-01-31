@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://b2xkqxwyfnvwi"]
+
+[ext_resource type="Script" uid="uid://dmd6e88hlbur5" path="res://src/ui/player_display.gd" id="1_rhhb7"]
+
+[node name="Player1Display" type="PanelContainer" unique_id=1738070447]
+custom_minimum_size = Vector2(200, 0)
+script = ExtResource("1_rhhb7")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1307540134]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=347745801]
+layout_mode = 2
+
+[node name="PlayerIcon" type="ColorRect" parent="VBoxContainer/HBoxContainer" unique_id=647063618]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+
+[node name="PlayerLabel" type="Label" parent="VBoxContainer/HBoxContainer" unique_id=1315835411]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+text = "Player 1"
+vertical_alignment = 1
+
+[node name="HealthBar" type="ProgressBar" parent="VBoxContainer" unique_id=1565973223]
+modulate = Color(1, 0.089999974, 0.089999974, 1)
+layout_mode = 2
+show_percentage = false

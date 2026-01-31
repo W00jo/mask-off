@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://by66ymds8i5ef"]
+
+[ext_resource type="Texture2D" uid="uid://th7ronkdrg8s" path="res://assets/sprites/maskaaaa.png" id="1_c8ge7"]
+[ext_resource type="Script" uid="uid://b6cp6a2avi5ei" path="res://src/masks/collectible_base_mask.gd" id="1_l4cnm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l4cnm"]
+size = Vector2(84, 84)
+
+[node name="CollectibleBaseMask" type="Area2D" unique_id=1577365050]
+script = ExtResource("1_l4cnm")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=194835546]
+texture_filter = 1
+scale = Vector2(5.28, 5.28)
+texture = ExtResource("1_c8ge7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1204240414]
+shape = SubResource("RectangleShape2D_l4cnm")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
