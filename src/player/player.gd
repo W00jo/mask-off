@@ -53,5 +53,4 @@ func _begin_death() -> void:
 	$StateMachine.change_state("deathstate")
 	
 func set_input_data(input_data: InputData):
-	print(input_data.move_left, input_data.move_right, input_data.jump)
 	$StateMachine.set_input_data(input_data)
