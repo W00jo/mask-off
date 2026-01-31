@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://b8t7r3johr2yi"]
 
 [ext_resource type="PackedScene" uid="uid://cmtk5jkhwnmxv" path="res://src/levels/waiting_room.tscn" id="1_kf8lf"]
+[ext_resource type="PackedScene" uid="uid://r1ki73v18ynn" path="res://src/levels/player_testing.tscn" id="1_mgm53"]
 [ext_resource type="PackedScene" uid="uid://nkccp7tqucmv" path="res://src/ui/in_game/hud.tscn" id="2_gh0ne"]
 [ext_resource type="Script" uid="uid://d21cqnj2kxrr" path="res://src/ui/ui_controller.gd" id="2_kf8lf"]
 [ext_resource type="PackedScene" uid="uid://cooakotr76fm4" path="res://src/ui/menus/main_menu.tscn" id="3_5q4o7"]
@@ -16,6 +17,8 @@ process_mode = 3
 [node name="Gameplay" type="Node" parent="." unique_id=890166657]
 
 [node name="LevelManager" type="Node2D" parent="Gameplay" unique_id=729005969]
+
+[node name="PlayerTesting" parent="Gameplay/LevelManager" unique_id=1048883764 instance=ExtResource("1_mgm53")]
 
 [node name="WaitingRoom" parent="Gameplay/LevelManager" unique_id=1930000640 instance=ExtResource("1_kf8lf")]
 

@@ -17,6 +17,10 @@ signal on_player_death
 @export var default_attack: PackedScene
 @export var new_attack: PackedScene
 
+#@export var mask_spawner: MaskSpawner
+#@export var mask_spawn_points: Node
+#var spawn_points = []
+
 var current_attack: BaseAttack
 
 func _physics_process(delta: float) -> void:
@@ -54,3 +58,7 @@ func _begin_death() -> void:
 	
 func set_input_data(input_data: InputData):
 	$StateMachine.set_input_data(input_data)
+
+func create_wearable_mask(mask):
+	print("MASK COLLECTED!!!! : ", mask)
+	 # TODO: Add creating wearable masks
