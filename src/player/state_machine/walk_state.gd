@@ -5,7 +5,7 @@ var speed = 150
 
 func enter():
 	print("entering WALK state...")
-	owner.get_node("AnimationPlayer").play("player_temp_walk")
+	owner.get_node("AnimationPlayer").play("walk")
 
 func physics_update(_delta:float):
 	
@@ -34,5 +34,5 @@ func handle_input(event:InputEvent):
 		state_machine.change_state("attackstate")
 	elif Input.is_action_just_pressed(input.jump):
 		state_machine.change_state("jumpstate")
-	elif Input.is_action_pressed("Shift"):
-		state_machine.change_state("runstate")
+	#elif Input.is_action_pressed("Shift"):
+		#state_machine.change_state("runstate")
