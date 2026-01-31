@@ -1,23 +1,37 @@
 [gd_scene format=3 uid="uid://cooakotr76fm4"]
 
 [ext_resource type="Script" uid="uid://luwldsgryie4" path="res://src/ui/menus/main_menu.gd" id="1_7lrnf"]
-[ext_resource type="Texture2D" uid="uid://dg6sg3et4yy3j" path="res://assets/Menu/IU/tlo_menu.png" id="2_ltlti"]
-[ext_resource type="Texture2D" uid="uid://bj5p2s6pyc4n2" path="res://assets/Menu/IU/przy2.png" id="3_l3u6v"]
-[ext_resource type="Texture2D" uid="uid://pwjejq1er13h" path="res://assets/Menu/IU/przy3.png" id="4_hcfgv"]
-[ext_resource type="Texture2D" uid="uid://dxx52b65lor4i" path="res://assets/Menu/IU/przy1.png" id="5_rs8ex"]
-[ext_resource type="Texture2D" uid="uid://ppufyqqllp42" path="res://assets/Menu/IU/icon_lubgame.png" id="6_yycut"]
-[ext_resource type="Texture2D" uid="uid://cwwwois32cwu3" path="res://assets/Menu/IU/icon_conductor.png" id="7_l2tv4"]
+[ext_resource type="Texture2D" path="res://src/ui/menus/borders/button_border_01.png" id="2_border1"]
+[ext_resource type="Texture2D" path="res://src/ui/menus/borders/button_border_02.png" id="3_border2"]
+[ext_resource type="Texture2D" path="res://src/ui/menus/borders/button_border_03.png" id="4_border3"]
 [ext_resource type="FontFile" uid="uid://cbf52hahephbu" path="res://assets/fonts/DK Crayon Crumble.ttf" id="8_o7egi"]
 [ext_resource type="Script" path="res://src/ui/menus/play.gd" id="9_l3u6v"]
-[ext_resource type="Script" uid="uid://bxa57ixpufgov" path="res://src/ui/menus/options.gd" id="10_yycut"]
+[ext_resource type="Script" uid="uid://b1ucuux38pr3j" path="res://src/ui/menus/options_button.gd" id="10_opbtn"]
 [ext_resource type="Script" uid="uid://dyw6l8t2c4ft" path="res://src/ui/menus/credits.gd" id="11_l2tv4"]
 [ext_resource type="Script" path="res://src/ui/menus/exit.gd" id="12_o7egi"]
+[ext_resource type="Script" uid="uid://d3ykuewpc5tp4" path="res://src/ui/menus/howtoplay.gd" id="13_htpgd"]
+[ext_resource type="Script" path="res://src/ui/menus/itchio_button.gd" id="14_itchio"]
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_hocew"]
-load_path = "res://.godot/imported/przy1.png-a0171bc283677cb9471cec4f7f07d1b7.ctex"
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_border1"]
+texture = ExtResource("2_border1")
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_p1gp2"]
-texture = SubResource("CompressedTexture2D_hocew")
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_border2"]
+texture = ExtResource("3_border2")
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_border3"]
+texture = ExtResource("4_border3")
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0
 
 [node name="MainMenu" type="Control" unique_id=801312819]
 layout_mode = 3
@@ -28,7 +42,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_7lrnf")
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=757648385]
+[node name="ColorBackground" type="ColorRect" parent="." unique_id=757648385]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -36,49 +50,22 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Textury" type="Node" parent="." unique_id=11989081]
-
-[node name="TloMenu" type="Sprite2D" parent="Textury" unique_id=785136180]
-position = Vector2(574.77783, 326.25)
-scale = Vector2(0.60601854, 0.6060185)
-texture = ExtResource("2_ltlti")
-
-[node name="Przy2" type="Sprite2D" parent="Textury" unique_id=2088311964]
-position = Vector2(338.34906, 259.625)
-scale = Vector2(0.412, 0.412)
-texture = ExtResource("3_l3u6v")
-
-[node name="Przy4" type="Sprite2D" parent="Textury" unique_id=38963068]
-position = Vector2(352.00003, 482.99997)
-rotation = -3.1297956
-scale = Vector2(0.553, 0.417)
-texture = ExtResource("3_l3u6v")
-
-[node name="Przy3" type="Sprite2D" parent="Textury" unique_id=1152707348]
-position = Vector2(341, 402)
-scale = Vector2(0.439, 0.439)
-texture = ExtResource("4_hcfgv")
-
-[node name="Przy5" type="Sprite2D" parent="Textury" unique_id=257172784]
-position = Vector2(340.00003, 547.00006)
-scale = Vector2(0.364, 0.364)
-texture = ExtResource("4_hcfgv")
-
-[node name="IconLubgame" type="Sprite2D" parent="Textury" unique_id=130213225]
-position = Vector2(86, 582)
-scale = Vector2(0.033210732, 0.033210732)
-texture = ExtResource("6_yycut")
-
-[node name="IconConductor" type="Sprite2D" parent="Textury" unique_id=326292478]
-position = Vector2(82.000015, 527.00006)
-rotation = 0.17045386
-scale = Vector2(0.12548256, 0.12548257)
-texture = ExtResource("7_l2tv4")
-
-[node name="Przy1" type="Sprite2D" parent="Textury" unique_id=444472018]
-position = Vector2(334, 330.00003)
-scale = Vector2(0.467, 0.467)
-texture = ExtResource("5_rs8ex")
+[node name="Title" type="Label" parent="." unique_id=301324429]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.25500003
+anchor_top = 0.142
+anchor_right = 0.74700004
+anchor_bottom = 0.32700002
+offset_left = 0.23995972
+offset_top = -0.01600647
+offset_right = 0.45593262
+offset_bottom = 0.10398865
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("8_o7egi")
+theme_override_font_sizes/font_size = 122
+text = "MAIN MENU"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1061333231]
 layout_mode = 1
@@ -103,9 +90,10 @@ theme_override_colors/font_pressed_color = Color(0, 0.28235295, 0.24313726, 1)
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("8_o7egi")
 theme_override_font_sizes/font_size = 52
-theme_override_styles/normal = SubResource("StyleBoxTexture_p1gp2")
-text = "Play "
-flat = true
+theme_override_styles/normal = SubResource("StyleBoxTexture_border1")
+theme_override_styles/hover = SubResource("StyleBoxTexture_border2")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_border3")
+text = "Play"
 icon_alignment = 1
 script = ExtResource("9_l3u6v")
 
@@ -116,9 +104,11 @@ theme_override_colors/font_pressed_color = Color(0, 0.28235295, 0.24313726, 1)
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("8_o7egi")
 theme_override_font_sizes/font_size = 52
+theme_override_styles/normal = SubResource("StyleBoxTexture_border1")
+theme_override_styles/hover = SubResource("StyleBoxTexture_border2")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_border3")
 text = "Options"
-flat = true
-script = ExtResource("10_yycut")
+script = ExtResource("10_opbtn")
 
 [node name="Credits" type="Button" parent="VBoxContainer" unique_id=319635158]
 layout_mode = 2
@@ -127,8 +117,10 @@ theme_override_colors/font_pressed_color = Color(0, 0.28235295, 0.24313726, 1)
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("8_o7egi")
 theme_override_font_sizes/font_size = 52
+theme_override_styles/normal = SubResource("StyleBoxTexture_border1")
+theme_override_styles/hover = SubResource("StyleBoxTexture_border2")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_border3")
 text = "Credits"
-flat = true
 script = ExtResource("11_l2tv4")
 
 [node name="Howtoplay" type="Button" parent="VBoxContainer" unique_id=322535304]
@@ -138,9 +130,11 @@ theme_override_colors/font_pressed_color = Color(0, 0.28235295, 0.24313726, 1)
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("8_o7egi")
 theme_override_font_sizes/font_size = 52
+theme_override_styles/normal = SubResource("StyleBoxTexture_border1")
+theme_override_styles/hover = SubResource("StyleBoxTexture_border2")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_border3")
 text = "How to play"
-flat = true
-script = ExtResource("11_l2tv4")
+script = ExtResource("13_htpgd")
 
 [node name="Exit" type="Button" parent="VBoxContainer" unique_id=178739138]
 layout_mode = 2
@@ -149,30 +143,56 @@ theme_override_colors/font_pressed_color = Color(0, 0.28235295, 0.24313726, 1)
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("8_o7egi")
 theme_override_font_sizes/font_size = 52
-text = "Exit
-"
-flat = true
+theme_override_styles/normal = SubResource("StyleBoxTexture_border1")
+theme_override_styles/hover = SubResource("StyleBoxTexture_border2")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_border3")
+text = "Exit"
 script = ExtResource("12_o7egi")
 
-[node name="Main_Menu" type="Label" parent="." unique_id=301324429]
+[node name="VersionLabel" type="Label" parent="."]
 layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.25500003
-anchor_top = 0.142
-anchor_right = 0.74700004
-anchor_bottom = 0.32700002
-offset_left = 0.23995972
-offset_top = -0.01600647
-offset_right = 0.45593262
-offset_bottom = 0.10398865
-grow_horizontal = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -80.0
+offset_top = -30.0
+offset_right = -10.0
+offset_bottom = -10.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.5, 0.5, 0.5, 0.8)
 theme_override_fonts/font = ExtResource("8_o7egi")
-theme_override_font_sizes/font_size = 122
-text = "MAIN MENU"
+theme_override_font_sizes/font_size = 20
+text = "v0.1.0"
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="ItchioButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = -45.0
+offset_right = 120.0
+offset_bottom = -10.0
+grow_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0.28235295, 0.24313726, 1)
+theme_override_colors/font_hover_color = Color(0.2, 0.2, 0.2, 1)
+theme_override_fonts/font = ExtResource("8_o7egi")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxTexture_border1")
+theme_override_styles/hover = SubResource("StyleBoxTexture_border2")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_border3")
+text = "itch.io"
+script = ExtResource("14_itchio")
 
 [connection signal="pressed" from="VBoxContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="VBoxContainer/Options" to="." method="_on_options_pressed"]
 [connection signal="pressed" from="VBoxContainer/Credits" to="." method="_on_credits_pressed"]
 [connection signal="pressed" from="VBoxContainer/Howtoplay" to="." method="_on_howtoplay_pressed"]
 [connection signal="pressed" from="VBoxContainer/Exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="ItchioButton" to="." method="_on_itchio_pressed"]
