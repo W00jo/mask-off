@@ -2,6 +2,11 @@ extends CharacterBody2D
 
 class_name Player
 
+@export var move_left: String
+@export var move_right: String
+@export var jump: String
+@export var attack: String
+
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var attack_parent: Node2D = $AttackParent 
 @onready var attack_holder: Node2D = $AttackParent/AttackHolder 
@@ -16,7 +21,7 @@ func _physics_process(delta: float) -> void:
 		
 func _ready():
 	$StateMachine.set_input_data(InputData.new(
-		"ui_left", "ui_right", "ui_accept", "attack"
+		move_left, move_right, jump, attack
 	))
 	$MaskSystem.on_attack_picked_up.connect(set_attack)
 	set_attack(default_attack.instantiate())
