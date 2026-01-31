@@ -43,7 +43,7 @@ func on_death() -> void:
 	on_player_death.emit()
 	queue_free()
 	
-func _update(delta):
+func _process(delta):
 	if(Input.is_action_just_pressed("add_attack")):
 		set_attack(new_attack)
 	elif(Input.is_action_just_pressed("reset_attack")):
