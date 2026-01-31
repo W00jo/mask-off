@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://fjhqoi1myrss"]
 
 [ext_resource type="Script" uid="uid://bxa57ixpufgov" path="res://src/ui/menus/options.gd" id="1_ckw4x"]
-[ext_resource type="Texture2D" uid="uid://cpx81f45uct5c" path="res://src/ui/menus/flag_icon_gb.png" id="2_8mfi6"]
-[ext_resource type="Texture2D" uid="uid://hhwr40w72ju" path="res://src/ui/menus/flag_icon_pl.png" id="3_lgb0q"]
+[ext_resource type="Texture2D" path="res://src/ui/menus/flag_icon_gb.png" id="2_8mfi6"]
+[ext_resource type="Texture2D" path="res://src/ui/menus/flag_icon_pl.png" id="3_lgb0q"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ckw4x"]
 font_size = 50
@@ -42,14 +42,14 @@ theme_override_constants/margin_bottom = 60
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=235257116]
 layout_mode = 2
-theme_override_constants/separation = 20
+theme_override_constants/separation = 25
 
 [node name="CenterContainer" type="CenterContainer" parent="MarginContainer/VBoxContainer" unique_id=1393467768]
 layout_mode = 2
 
 [node name="OptionsLabel" type="Label" parent="MarginContainer/VBoxContainer/CenterContainer" unique_id=847663559]
 layout_mode = 2
-text = "Options"
+text = "OPTIONS"
 label_settings = SubResource("LabelSettings_ckw4x")
 
 [node name="OptionComponents" type="VBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1366456265]
@@ -66,7 +66,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 1
 size_flags_stretch_ratio = 0.5
-text = "Music"
+text = "MUSIC"
 label_settings = SubResource("LabelSettings_hvdkm")
 horizontal_alignment = 2
 vertical_alignment = 1
@@ -87,7 +87,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 1
 size_flags_stretch_ratio = 0.5
-text = "Sound effects"
+text = "SOUND_EFFECTS"
 label_settings = SubResource("LabelSettings_hvdkm")
 horizontal_alignment = 2
 vertical_alignment = 1
@@ -108,7 +108,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 1
 size_flags_stretch_ratio = 0.5
-text = "Language"
+text = "LANGUAGE"
 label_settings = SubResource("LabelSettings_hvdkm")
 horizontal_alignment = 2
 vertical_alignment = 1
@@ -126,17 +126,17 @@ layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/separation = 50
 
-[node name="FlagEN" type="TextureButton" parent="MarginContainer/VBoxContainer/OptionComponents/Language/FlagButtons/HBoxContainer" unique_id=477247823]
-layout_mode = 2
-size_flags_horizontal = 3
-texture_normal = ExtResource("2_8mfi6")
-ignore_texture_size = true
-stretch_mode = 5
-
 [node name="FlagPL" type="TextureButton" parent="MarginContainer/VBoxContainer/OptionComponents/Language/FlagButtons/HBoxContainer" unique_id=454206710]
 layout_mode = 2
 size_flags_horizontal = 3
 texture_normal = ExtResource("3_lgb0q")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="FlagEN" type="TextureButton" parent="MarginContainer/VBoxContainer/OptionComponents/Language/FlagButtons/HBoxContainer" unique_id=477247823]
+layout_mode = 2
+size_flags_horizontal = 3
+texture_normal = ExtResource("2_8mfi6")
 ignore_texture_size = true
 stretch_mode = 5
 
@@ -151,4 +151,6 @@ text = "Back"
 
 [connection signal="value_changed" from="MarginContainer/VBoxContainer/OptionComponents/Music/MusicSlider" to="." method="_on_music_slider_value_changed"]
 [connection signal="value_changed" from="MarginContainer/VBoxContainer/OptionComponents/SFX/SFXSlider" to="." method="_on_sfx_slider_value_changed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/OptionComponents/Language/FlagButtons/HBoxContainer/FlagPL" to="." method="_on_language_selected"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/OptionComponents/Language/FlagButtons/HBoxContainer/FlagEN" to="." method="_on_language_selected"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/AspectRatioContainer/Back" to="." method="_on_back_pressed"]

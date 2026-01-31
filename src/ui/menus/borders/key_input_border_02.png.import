@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://s56gdcwcewmw"
-path="res://.godot/imported/klawisz2.png-7b8c9e056857988c88107b87e086a269.ctex"
+uid="uid://leonbg84vm6y"
+path="res://.godot/imported/key_input_border_02.png-510f9163c168fde833f37fcba3440873.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Menu/IU/klawisz2.png"
-dest_files=["res://.godot/imported/klawisz2.png-7b8c9e056857988c88107b87e086a269.ctex"]
+source_file="res://src/ui/menus/borders/key_input_border_02.png"
+dest_files=["res://.godot/imported/key_input_border_02.png-510f9163c168fde833f37fcba3440873.ctex"]
 
 [params]
 

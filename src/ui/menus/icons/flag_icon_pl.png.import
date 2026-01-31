@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cwwwois32cwu3"
-path="res://.godot/imported/icon_conductor.png-d277b96a0ac38bb30530af082e0acfed.ctex"
+uid="uid://hhwr40w72ju"
+path="res://.godot/imported/flag_icon_pl.png-8f5acbbc74cfe80b0bcaa05c7837f224.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Menu/IU/icon_conductor.png"
-dest_files=["res://.godot/imported/icon_conductor.png-d277b96a0ac38bb30530af082e0acfed.ctex"]
+source_file="res://src/ui/menus/icons/flag_icon_pl.png"
+dest_files=["res://.godot/imported/flag_icon_pl.png-8f5acbbc74cfe80b0bcaa05c7837f224.ctex"]
 
 [params]
 

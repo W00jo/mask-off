@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://l1crux0gfiid"]
 
-[ext_resource type="Script" uid="uid://dyw6l8t2c4ft" path="res://src/ui/menus/credits.gd" id="1_d82ik"]
+[ext_resource type="Script" path="res://src/ui/menus/credits.gd" id="1_d82ik"]
 
 [node name="Credits" type="Control" unique_id=1038357148]
 layout_mode = 3
@@ -20,20 +20,37 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.4380462, 0.11130827, 0.3530822, 1)
 
-[node name="Label" type="Label" parent="." unique_id=847663559]
+[node name="CreditsLabel" type="Label" parent="." unique_id=847663559]
 layout_mode = 0
 offset_left = 523.0
 offset_top = 153.0
-offset_right = 585.0
-offset_bottom = 176.0
-text = "Credits"
-
-[node name="Back" type="Button" parent="." unique_id=1482697108]
-layout_mode = 0
-offset_left = 542.0
-offset_top = 535.0
 offset_right = 587.0
-offset_bottom = 566.0
-text = "Back"
+offset_bottom = 176.0
+text = "CREDITS"
 
-[connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
+[node name="ConceptArtContainer" type="PanelContainer" parent="." unique_id=941470221]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureRect" type="TextureRect" parent="ConceptArtContainer" unique_id=1147035314]
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="ConceptArtContainer" unique_id=153091124]
+layout_mode = 2
+
+[node name="ConceptArtContainer2" type="PanelContainer" parent="." unique_id=915142353]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureRect" type="TextureRect" parent="ConceptArtContainer2" unique_id=2008920518]
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="ConceptArtContainer2" unique_id=1989014909]
+layout_mode = 2
+
+[node name="TextureButton" type="TextureButton" parent="." unique_id=575170188]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dxx52b65lor4i"
-path="res://.godot/imported/przy1.png-a0171bc283677cb9471cec4f7f07d1b7.ctex"
+uid="uid://ilatpxpi1yxb"
+path="res://.godot/imported/key_input_border_01.png-fb702c8f946148526bcd3b8950d5b476.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Menu/IU/przy1.png"
-dest_files=["res://.godot/imported/przy1.png-a0171bc283677cb9471cec4f7f07d1b7.ctex"]
+source_file="res://src/ui/menus/borders/key_input_border_01.png"
+dest_files=["res://.godot/imported/key_input_border_01.png-fb702c8f946148526bcd3b8950d5b476.ctex"]
 
 [params]
 
