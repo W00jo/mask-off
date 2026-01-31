@@ -26,6 +26,11 @@ func _physics_process(delta: float) -> void:
 func _ready():
 	$MaskSystem.on_attack_picked_up.connect(set_attack)
 	set_attack(default_attack)
+	
+func reset():
+	damage_target._ready()
+	set_attack(default_attack)
+	$StateMachine.change_state("fallstate")
 
 func set_attack(attack: PackedScene):
 	var new_attack: BaseAttack = attack.instantiate()
@@ -39,13 +44,6 @@ func clear_attack():
 
 func on_death() -> void:
 	on_player_death.emit()
-	queue_free()
-	
-func _process(delta):
-	if(Input.is_action_just_pressed("add_attack")):
-		set_attack(new_attack)
-	elif(Input.is_action_just_pressed("reset_attack")):
-		clear_attack()
 
 func _begin_death() -> void:
 	$StateMachine.change_state("deathstate")

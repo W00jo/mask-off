@@ -8,9 +8,11 @@ class_name Hud
 	$MarginContainer/HBoxContainer/Player3Display,
 	$MarginContainer/HBoxContainer/Player4Display
 ]
+@onready var play_game_popup := $PlayGamePopup
 
 # Max HP
 var max_health = 100
 
-func get_displays() -> Array[PlayerDisplay]:
-	return player_displays
+func show_play_game_popup():
+	play_game_popup.visible = true
+	$PlayGamePopup/AnimationPlayer.play("play_game_popup")

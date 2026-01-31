@@ -24,6 +24,6 @@ text = "Player 1"
 vertical_alignment = 1
 
 [node name="HealthBar" type="ProgressBar" parent="VBoxContainer" unique_id=1565973223]
+modulate = Color(1, 0.089999974, 0.089999974, 1)
 layout_mode = 2
-value = 100.0
 show_percentage = false
