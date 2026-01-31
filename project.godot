@@ -28,6 +28,10 @@ buses/default_bus_layout="res://src/ui/menus/default_bus_layout.tres"
 
 GameManager="*uid://dpifklg63k687"
 
+[display]
+
+mouse_cursor/custom_image="res://assets/cursor.svg"
+
 [dotnet]
 
 project/assembly_name="Mask Off"

@@ -21,12 +21,6 @@ func initialize() -> void:
 	randomize()
 	_start_timeout()
 
-func _ready() -> void:
-	pass
-
-func _process(delta: float) -> void:
-	pass
-	
 func _start_timeout():
 	_current_ticks = max_ticks
 	timer.timeout.connect(_on_timeout)

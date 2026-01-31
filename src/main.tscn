@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b8t7r3johr2yi"]
 
-[ext_resource type="PackedScene" uid="uid://b4ofyboy3t2d3" path="res://src/gamegame.tscn" id="1_eewff"]
+[ext_resource type="PackedScene" uid="uid://r1ki73v18ynn" path="res://src/levels/player_testing.tscn" id="1_kf8lf"]
 [ext_resource type="PackedScene" uid="uid://nkccp7tqucmv" path="res://src/ui/in_game/hud.tscn" id="2_gh0ne"]
 [ext_resource type="Script" uid="uid://d21cqnj2kxrr" path="res://src/ui/ui_controller.gd" id="2_kf8lf"]
 [ext_resource type="PackedScene" uid="uid://cooakotr76fm4" path="res://src/ui/menus/main_menu.tscn" id="3_5q4o7"]
@@ -15,8 +15,7 @@ process_mode = 3
 
 [node name="Gameplay" type="Node" parent="." unique_id=890166657]
 
-[node name="Node2D" parent="Gameplay" unique_id=1990880078 instance=ExtResource("1_eewff")]
-process_mode = 1
+[node name="NewPlayerTesting" parent="Gameplay" unique_id=1048883764 instance=ExtResource("1_kf8lf")]
 
 [node name="UI" type="Node" parent="." unique_id=65613235 node_paths=PackedStringArray("hud", "main_menu", "options", "credits", "how_to_play", "pause", "win_screen")]
 script = ExtResource("2_kf8lf")
