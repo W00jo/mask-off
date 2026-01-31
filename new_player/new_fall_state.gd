@@ -5,7 +5,7 @@ extends NewState
 func enter():
 	print("entering FALL state...")
 	owner.velocity.y = 0
-	$"../../Sprite2D".frame = 28
+	#$"../../Sprite2D".frame = 28
 
 func physics_update(delta:float):
 	owner.velocity.y += 980 * delta
