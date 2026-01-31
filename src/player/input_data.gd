@@ -8,12 +8,12 @@ var jump: String
 var attack: String
 
 func _init(
-	move_left: String,
-	move_right: String,
-	jump: String,
-	attack: String
+	_move_left: String,
+	_move_right: String,
+	_jump: String,
+	_attack: String
 ):
-	self.move_left = move_left
-	self.move_right = move_right
-	self.jump = jump
-	self.attack = attack
+	self.move_left = _move_left
+	self.move_right = _move_right
+	self.jump = _jump
+	self.attack = _attack

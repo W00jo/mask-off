@@ -23,7 +23,7 @@ func initialize() -> void:
 
 func _start_timeout():
 	_current_ticks = max_ticks
-	timer.timeout.connect(_on_timeout)
+	#timer.timeout.connect(_on_timeout)
 	_update_label()
 	
 func _on_timeout():

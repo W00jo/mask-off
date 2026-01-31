@@ -7,7 +7,7 @@ func _ready():
 	health_bar.max_value = damage_target.max_health
 	
 
-func _on_damage_target_on_damage_received(amount: int) -> void:
+func _on_damage_target_on_damage_received(_amount: int) -> void:
 	health_bar.value = damage_target.current_health
 
 

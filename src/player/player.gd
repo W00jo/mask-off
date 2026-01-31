@@ -39,10 +39,10 @@ func reset():
 	set_attack(default_attack)
 	$StateMachine.change_state("fallstate")
 
-func set_attack(attack: PackedScene):
-	var new_attack: BaseAttack = attack.instantiate()
-	new_attack.copy(default_attack)
-	current_attack = new_attack;
+func set_attack(_attack: PackedScene):
+	var _new_attack: BaseAttack = _attack.instantiate()
+	_new_attack.copy(default_attack)
+	current_attack = _new_attack;
 	attack_holder.add_child(current_attack)
 	
 func clear_attack():

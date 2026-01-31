@@ -29,7 +29,7 @@ func physics_update(_delta:float):
 		state_machine.change_state("fallstate")
 		return
 		
-func handle_input(event:InputEvent):
+func handle_input(_event:InputEvent):
 	if(Input.is_action_just_pressed(input.attack)):
 		state_machine.change_state("attackstate")
 	elif Input.is_action_just_pressed(input.jump):

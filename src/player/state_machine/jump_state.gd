@@ -8,7 +8,7 @@ func enter():
 	owner.velocity.y = jump_speed
 	owner.get_node("AnimationPlayer").play("player_temp_jump")
 	
-func handle_input(event: InputEvent):
+func handle_input(_event: InputEvent):
 	if(Input.is_action_just_pressed(input.attack)):
 		state_machine.change_state("attackstate")
 

@@ -30,7 +30,7 @@ func _ready() -> void:
 		var r = "[" + input_actions_names[i][1] + "]"
 		d.set_label_name(l + " + " + r)
 	
-func _input(event: InputEvent) -> void:
+func _input(_event: InputEvent) -> void:
 	for i in range(4):
 		if(_player_activated(i)):
 			_activate_player(i)
