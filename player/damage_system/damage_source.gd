@@ -2,14 +2,16 @@ extends Node
 
 class_name DamageSource
 
-@export var damage_data: DamageData
+@export var damage_value: int
 
 func _on_body_entered(body):
-	print(body.name + " - " + owner.name)
-	
 	var damage_target = body.get_node("DamageTarget")
 	if(damage_target == null):
 		pass
 		
-	#if(damage_target.has_method("receive_damage")):
-	#	damage_target.receive_damage(damage_data)
+	if(damage_target.owner == owner.get_parent().owner):
+		return
+		
+	if(damage_target.has_method("receive_damage")):
+		print(damage_value)
+		damage_target.receive_damage(DamageData.new(damage_value))

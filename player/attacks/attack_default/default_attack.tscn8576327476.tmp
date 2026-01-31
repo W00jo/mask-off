@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://yj6f456cfhy5" path="res://player/attacks/attack_default/default_attack.gd" id="1_bj1q2"]
 [ext_resource type="Texture2D" uid="uid://qix0oygodiat" path="res://icon.svg" id="2_gnt1h"]
 [ext_resource type="Script" uid="uid://wnlkpmaoqpcb" path="res://player/damage_system/damage_source.gd" id="3_u11b3"]
+[ext_resource type="Resource" uid="uid://hwivxx6esdg" path="res://player/attacks/attack_default/DefaultAttackDmg.tres" id="4_gnt1h"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_hg6s5"]
 radius = 75.16647
@@ -18,7 +19,7 @@ texture = ExtResource("2_gnt1h")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=914746674]
 script = ExtResource("3_u11b3")
-damage_value = 2
+damage_data = ExtResource("4_gnt1h")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=414727358]
 shape = SubResource("CircleShape2D_hg6s5")
