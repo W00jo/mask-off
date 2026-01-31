@@ -1,24 +1,102 @@
 [gd_scene format=3 uid="uid://dfa7acfcvc3yy"]
 
-[ext_resource type="Texture2D" uid="uid://qix0oygodiat" path="res://icon.svg" id="1_1jhsv"]
+[ext_resource type="Texture2D" uid="uid://b84s0qg2e1qju" path="res://assets/sprites/spritesheettest.png" id="1_p842g"]
 [ext_resource type="Script" uid="uid://bbaeadmys6i6j" path="res://new_player/new_state_machine.gd" id="2_sddtp"]
 [ext_resource type="Script" uid="uid://ca03ma24caxns" path="res://new_player/new_idle_state.gd" id="3_fv2d4"]
 [ext_resource type="Script" uid="uid://bat84jucrkcqd" path="res://new_player/new_walk_state.gd" id="4_p842g"]
 [ext_resource type="Script" uid="uid://djx2bb1xw15vw" path="res://new_player/new_jump_state.gd" id="5_dh4si"]
 [ext_resource type="Script" uid="uid://crqfi21e4cwo5" path="res://new_player/new_fall_state.gd" id="6_tcq0w"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_kyh7p"]
-size = Vector2(124, 125.5)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_p842g"]
+radius = 45.75
+height = 135.5
+
+[sub_resource type="Animation" id="Animation_dh4si"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_tcq0w"]
+resource_name = "idle"
+length = 0.07
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [3]
+}
+
+[sub_resource type="Animation" id="Animation_innbq"]
+resource_name = "jump"
+length = 0.07
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [6]
+}
+
+[sub_resource type="Animation" id="Animation_yp80l"]
+resource_name = "walk"
+length = 0.85714287
+loop_mode = 1
+step = 0.07
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.071428575, 0.14285715, 0.21428572, 0.2857143, 0.35714287, 0.42857143, 0.5, 0.5714286, 0.64285713, 0.71428573, 0.78571427),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6t6xx"]
+_data = {
+&"RESET": SubResource("Animation_dh4si"),
+&"idle": SubResource("Animation_tcq0w"),
+&"jump": SubResource("Animation_innbq"),
+&"walk": SubResource("Animation_yp80l")
+}
 
 [node name="PlayerNew" type="CharacterBody2D" unique_id=1053524098]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1375468071]
-modulate = Color(1, 0.2901961, 0.23529412, 1)
-texture = ExtResource("1_1jhsv")
+modulate = Color(0.47058824, 0.80784315, 1, 1)
+texture = ExtResource("1_p842g")
+hframes = 4
+vframes = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=503636172]
 position = Vector2(0, -0.75)
-shape = SubResource("RectangleShape2D_kyh7p")
+shape = SubResource("CapsuleShape2D_p842g")
 debug_color = Color(0.7041554, 0.45410562, 0.5027783, 0.41960785)
 
 [node name="NewStateMachine" type="Node" parent="." unique_id=1603580362 node_paths=PackedStringArray("initial_state")]
@@ -41,3 +119,6 @@ metadata/_custom_type_script = "uid://djx2bb1xw15vw"
 [node name="NewFallState" type="Node" parent="NewStateMachine" unique_id=564122780]
 script = ExtResource("6_tcq0w")
 metadata/_custom_type_script = "uid://crqfi21e4cwo5"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1450754490]
+libraries/ = SubResource("AnimationLibrary_6t6xx")
