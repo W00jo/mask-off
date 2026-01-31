@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://cooakotr76fm4"]
+
+[ext_resource type="Script" uid="uid://luwldsgryie4" path="res://src/ui/menus/main_menu.gd" id="1_7lrnf"]
+
+[node name="MainMenu" type="Control" unique_id=801312819]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7lrnf")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=757648385]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.3372549, 0.4117647, 1, 1)
+
+[node name="Label" type="Label" parent="." unique_id=301324429]
+layout_mode = 0
+offset_left = 510.0
+offset_top = 75.0
+offset_right = 606.0
+offset_bottom = 98.0
+text = "MAIN MENU"
+
+[node name="Play" type="Button" parent="." unique_id=2054431329]
+layout_mode = 0
+offset_left = 249.0
+offset_top = 248.0
+offset_right = 290.0
+offset_bottom = 279.0
+text = "Play"
+
+[node name="Options" type="Button" parent="." unique_id=180185656]
+layout_mode = 0
+offset_left = 249.0
+offset_top = 301.0
+offset_right = 319.0
+offset_bottom = 332.0
+text = "Options"
+
+[node name="Credits" type="Button" parent="." unique_id=319635158]
+layout_mode = 0
+offset_left = 251.0
+offset_top = 366.0
+offset_right = 314.0
+offset_bottom = 397.0
+text = "Credits"
+
+[node name="Exit" type="Button" parent="." unique_id=178739138]
+layout_mode = 0
+offset_left = 253.0
+offset_top = 422.0
+offset_right = 294.0
+offset_bottom = 453.0
+text = "Exit
+"
+
+[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="Credits" to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]
