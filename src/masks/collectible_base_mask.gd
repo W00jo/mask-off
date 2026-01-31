@@ -4,8 +4,8 @@ extends Area2D
 signal mask_picked_up(rand_mask)
 
 @onready var sprite: Sprite2D = $Sprite2D
-var types = {"bomberman": preload("res://icon.svg"),
-			"costam": preload("res://assets/ref.png")}
+var types = {"bomberman": preload("res://assets/sprites/maskaaaa.png"),
+			"costam": preload("res://assets/sprites/maskaaaa.png")}
 var duration := 10
 var random_mask
 

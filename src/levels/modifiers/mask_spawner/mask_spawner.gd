@@ -4,6 +4,7 @@ class_name MaskSpawner
 @export var spawn_parent: Node
 @export var max_ticks := 2
 @export var show_treshold := 5
+@export var level:Node2D
 var _current_ticks := 2
 #var spawned_mask: CollectibleBaseMask
 #@export var masks: Array[PackedScene]
@@ -48,16 +49,13 @@ func _update_label():
 	label.text = str(_current_ticks)
 	
 func _spawn_mask():
-	#print("spawn_point", spawn_point)
-	##var index := randi() % masks.size()
-	##spawned_mask = masks[index].instantiate()
 	var spawned_mask = preload("res://src/masks/collectible_base_mask.tscn").instantiate()
-	#spawn_point.add_child(spawned_mask)
 	for spawn in spawn_parent.get_children():
 		print("spawn", spawn)
 		spawn_points.append(spawn)
 	var random_spawn_point = spawn_points.pick_random()
 	random_spawn_point.add_child(spawned_mask)
+	level.connect_to_signal_from_mask(spawned_mask)
 	
 	particles_1.emitting = true
 	particles_2.emitting = true
