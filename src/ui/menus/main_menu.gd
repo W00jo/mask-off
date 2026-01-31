@@ -6,6 +6,9 @@ signal options_pressed
 signal credits_pressed
 signal exit_pressed
 
+
+
+
 func _on_play_pressed() -> void:
 	play_pressed.emit()
 
@@ -20,3 +23,7 @@ func _on_credits_pressed() -> void:
 
 func _on_exit_pressed() -> void:
 	exit_pressed.emit()
+	
+
+func _on_howtoplay_pressed() -> void:
+	get_tree().change_scene_to_file("res://src/ui/menus/how_to_play.tscn")

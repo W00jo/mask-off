@@ -1,16 +1,10 @@
-extends Control
+extends Button
+
 
 @export var max_rotation : float = 5.0 
 @export var shake_speed : float = 0.1
 
 var is_hovering : bool = false
-
-
-signal back_pressed
-
-func _on_back_pressed() -> void:
-	back_pressed.emit()
-
 
 func _ready():
 	pivot_offset = size / 4 
