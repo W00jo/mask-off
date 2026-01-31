@@ -9,6 +9,7 @@ Up to 4-player beat-each-other-up.
 res://
 <br/>├── **assets/** → Art, audio, fonts, shaders
 <br/>├── **config/** → Settings and translations
+<br/>├── **global/** → Global scripts, like `game_manager.gd` or state machines
 <br/>├── **docs/** → Notes and changelog
 <br/>└── **src/** → Game scenes and their respective `scripts`
 
