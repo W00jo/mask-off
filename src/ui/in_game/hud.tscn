@@ -1,6 +1,69 @@
 [gd_scene format=3 uid="uid://nkccp7tqucmv"]
 
 [ext_resource type="Script" uid="uid://br8jg2cv5rmlc" path="res://src/ui/in_game/hud.gd" id="1_3k8yq"]
+[ext_resource type="PackedScene" uid="uid://b2xkqxwyfnvwi" path="res://src/ui/player_display.tscn" id="2_5pipe"]
+
+[sub_resource type="Animation" id="Animation_5pipe"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.11170107]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_25hat"]
+resource_name = "play_game_popup"
+length = 5.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 4
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.1333333, 2.6666667, 3.8, 5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [-0.12217304763960307, 0.12217305, -0.12217304763960307, 0.12217305, -0.12217304763960307]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5, 1.0002431, 1.5002431, 2.000082, 2.500082, 3.0004213, 3.5004213, 4.0000854, 4.5000854, 5.0000086, 5.5000086),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.2, 1.2), Vector2(1, 1), Vector2(1.2, 1.2), Vector2(1, 1), Vector2(1.2, 1.2), Vector2(1, 1), Vector2(1.2, 1.2), Vector2(1, 1), Vector2(1.2, 1.2), Vector2(1, 1), Vector2(1.2, 1.2)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vxfxl"]
+_data = {
+&"RESET": SubResource("Animation_5pipe"),
+&"play_game_popup": SubResource("Animation_25hat")
+}
 
 [node name="HUD" type="Control" unique_id=53009314]
 layout_mode = 3
@@ -26,106 +89,40 @@ layout_mode = 2
 theme_override_constants/separation = 30
 alignment = 1
 
-[node name="Player1Display" type="PanelContainer" parent="MarginContainer/HBoxContainer" unique_id=742816203]
-custom_minimum_size = Vector2(200, 0)
+[node name="Player1Display" parent="MarginContainer/HBoxContainer" unique_id=1738070447 instance=ExtResource("2_5pipe")]
 layout_mode = 2
+label_name = "Player 1"
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/Player1Display" unique_id=1502676480]
+[node name="Player2Display" parent="MarginContainer/HBoxContainer" unique_id=949735045 instance=ExtResource("2_5pipe")]
 layout_mode = 2
+label_name = "Player 2"
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer/Player1Display/VBoxContainer" unique_id=451647109]
+[node name="Player3Display" parent="MarginContainer/HBoxContainer" unique_id=429529330 instance=ExtResource("2_5pipe")]
 layout_mode = 2
+label_name = "Player 3"
 
-[node name="PlayerIcon" type="ColorRect" parent="MarginContainer/HBoxContainer/Player1Display/VBoxContainer/HBoxContainer" unique_id=965672039]
-custom_minimum_size = Vector2(50, 50)
+[node name="Player4Display" parent="MarginContainer/HBoxContainer" unique_id=1113269457 instance=ExtResource("2_5pipe")]
 layout_mode = 2
+label_name = "Player 4"
 
-[node name="PlayerLabel" type="Label" parent="MarginContainer/HBoxContainer/Player1Display/VBoxContainer/HBoxContainer" unique_id=1600324450]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 1
-text = "Player 1"
-vertical_alignment = 1
+[node name="PlayGamePopup" type="Label" parent="." unique_id=518640298]
+visible = false
+modulate = Color(3.2720633, 3.2720633, 3.2720628, 1)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -198.5
+offset_top = 200.0
+offset_right = 198.5
+offset_bottom = 254.03482
+grow_horizontal = 2
+rotation = -0.11170107
+pivot_offset_ratio = Vector2(0.5, 0)
+theme_override_font_sizes/font_size = 39
+text = "[SPACE]: Let's BRAWL"
 
-[node name="HealthBar" type="ProgressBar" parent="MarginContainer/HBoxContainer/Player1Display/VBoxContainer" unique_id=1039091787]
-layout_mode = 2
-value = 100.0
-show_percentage = false
-
-[node name="Player2Display" type="PanelContainer" parent="MarginContainer/HBoxContainer" unique_id=1089437659]
-custom_minimum_size = Vector2(200, 0)
-layout_mode = 2
-
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/Player2Display" unique_id=554037835]
-layout_mode = 2
-
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer/Player2Display/VBoxContainer" unique_id=1613618751]
-layout_mode = 2
-
-[node name="PlayerIcon" type="ColorRect" parent="MarginContainer/HBoxContainer/Player2Display/VBoxContainer/HBoxContainer" unique_id=1195046442]
-custom_minimum_size = Vector2(50, 50)
-layout_mode = 2
-
-[node name="PlayerLabel" type="Label" parent="MarginContainer/HBoxContainer/Player2Display/VBoxContainer/HBoxContainer" unique_id=1606822771]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 1
-text = "Player 2"
-vertical_alignment = 1
-
-[node name="HealthBar" type="ProgressBar" parent="MarginContainer/HBoxContainer/Player2Display/VBoxContainer" unique_id=1935322382]
-layout_mode = 2
-value = 100.0
-show_percentage = false
-
-[node name="Player3Display" type="PanelContainer" parent="MarginContainer/HBoxContainer" unique_id=1382820925]
-custom_minimum_size = Vector2(200, 0)
-layout_mode = 2
-
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/Player3Display" unique_id=1188473942]
-layout_mode = 2
-
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer/Player3Display/VBoxContainer" unique_id=1070758740]
-layout_mode = 2
-
-[node name="PlayerIcon" type="ColorRect" parent="MarginContainer/HBoxContainer/Player3Display/VBoxContainer/HBoxContainer" unique_id=1019228012]
-custom_minimum_size = Vector2(50, 50)
-layout_mode = 2
-
-[node name="PlayerLabel" type="Label" parent="MarginContainer/HBoxContainer/Player3Display/VBoxContainer/HBoxContainer" unique_id=628793943]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 1
-text = "Player 3"
-vertical_alignment = 1
-
-[node name="HealthBar" type="ProgressBar" parent="MarginContainer/HBoxContainer/Player3Display/VBoxContainer" unique_id=1842541840]
-layout_mode = 2
-value = 100.0
-show_percentage = false
-
-[node name="Player4Display" type="PanelContainer" parent="MarginContainer/HBoxContainer" unique_id=180977210]
-custom_minimum_size = Vector2(200, 0)
-layout_mode = 2
-
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/Player4Display" unique_id=1510011239]
-layout_mode = 2
-
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer/Player4Display/VBoxContainer" unique_id=698386757]
-layout_mode = 2
-
-[node name="PlayerIcon" type="ColorRect" parent="MarginContainer/HBoxContainer/Player4Display/VBoxContainer/HBoxContainer" unique_id=1619528389]
-custom_minimum_size = Vector2(50, 50)
-layout_mode = 2
-
-[node name="PlayerLabel" type="Label" parent="MarginContainer/HBoxContainer/Player4Display/VBoxContainer/HBoxContainer" unique_id=495476400]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 1
-text = "Player 4"
-vertical_alignment = 1
-
-[node name="HealthBar" type="ProgressBar" parent="MarginContainer/HBoxContainer/Player4Display/VBoxContainer" unique_id=2081635096]
-layout_mode = 2
-value = 100.0
-show_percentage = false
+[node name="AnimationPlayer" type="AnimationPlayer" parent="PlayGamePopup" unique_id=1998844815]
+libraries/ = SubResource("AnimationLibrary_vxfxl")
+playback_auto_capture_transition_type = 1
+playback_auto_capture_ease_type = 2
