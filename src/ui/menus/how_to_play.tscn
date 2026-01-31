@@ -1,6 +1,9 @@
 [gd_scene format=3 uid="uid://crf8kbvbl8uu6"]
 
 [ext_resource type="Script" uid="uid://mnykhaxqggbi" path="res://src/ui/menus/how_to_play.gd" id="1_e1emm"]
+[ext_resource type="Texture2D" uid="uid://dg6sg3et4yy3j" path="res://assets/Menu/IU/tlo_menu.png" id="2_w0tpi"]
+[ext_resource type="FontFile" uid="uid://cbf52hahephbu" path="res://assets/fonts/DK Crayon Crumble.ttf" id="3_xq3li"]
+[ext_resource type="Texture2D" uid="uid://s56gdcwcewmw" path="res://assets/Menu/IU/klawisz2.png" id="4_xq3li"]
 
 [node name="HowToPlay" type="Control" unique_id=1391345934]
 layout_mode = 3
@@ -10,29 +13,315 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_e1emm")
+metadata/_edit_vertical_guides_ = [-2.0, 1151.0, 568.0]
+metadata/_edit_horizontal_guides_ = [387.0]
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=70648261]
-layout_mode = 0
-offset_left = 377.0
-offset_top = 85.0
-offset_right = 804.0
-offset_bottom = 501.0
-color = Color(0, 0.6431373, 0.27058825, 1)
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1640805211]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
-[node name="Label" type="Label" parent="." unique_id=373704017]
-layout_mode = 0
-offset_left = 535.0
-offset_top = 144.0
-offset_right = 644.0
-offset_bottom = 167.0
-text = "HOW TO PLAY"
+[node name="TloMenu" type="Sprite2D" parent="." unique_id=1067725585]
+position = Vector2(574.77783, 326.25)
+scale = Vector2(0.60601854, 0.6060185)
+texture = ExtResource("2_w0tpi")
 
-[node name="Start" type="Button" parent="." unique_id=859823348]
-layout_mode = 0
-offset_left = 574.0
-offset_top = 354.0
-offset_right = 625.0
-offset_bottom = 385.0
-text = "Start!"
+[node name="Main_Menu" type="Label" parent="." unique_id=1527825413]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -282.0
+offset_top = 92.0
+offset_right = 285.0
+offset_bottom = 212.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_xq3li")
+theme_override_font_sizes/font_size = 122
+text = "How to play"
 
-[connection signal="pressed" from="Start" to="." method="_on_start_pressed"]
+[node name="Button" type="Button" parent="." unique_id=640237646]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 994.0
+offset_top = 71.0
+offset_right = -82.0
+offset_bottom = -500.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_xq3li")
+theme_override_font_sizes/font_size = 70
+text = "X"
+flat = true
+
+[node name="GRACZ1" type="Node" parent="." unique_id=1419418145]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="GRACZ1" unique_id=1943881679]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Klawisz2" type="Sprite2D" parent="GRACZ1/VBoxContainer" unique_id=409664147]
+position = Vector2(124.031715, 357.2056)
+scale = Vector2(0.2966805, 0.2966805)
+texture = ExtResource("4_xq3li")
+
+[node name="Klawisz3" type="Sprite2D" parent="GRACZ1/VBoxContainer" unique_id=907983542]
+position = Vector2(125.03173, 290.20557)
+rotation = 1.5013714
+scale = Vector2(0.2966805, 0.2966805)
+texture = ExtResource("4_xq3li")
+
+[node name="Klawisz5" type="Sprite2D" parent="GRACZ1/VBoxContainer" unique_id=1379171416]
+position = Vector2(128.03171, 474.2056)
+rotation = -0.017078638
+scale = Vector2(0.2966805, 0.2966805)
+texture = ExtResource("4_xq3li")
+
+[node name="Klawisz4" type="Sprite2D" parent="GRACZ1/VBoxContainer" unique_id=594799998]
+position = Vector2(124.03173, 416.2056)
+rotation = -0.014787485
+scale = Vector2(0.2966805, 0.2966805)
+texture = ExtResource("4_xq3li")
+
+[node name="W" type="Label" parent="GRACZ1" unique_id=1130740559]
+offset_left = 108.0
+offset_top = 275.0
+offset_right = 148.0
+offset_bottom = 321.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_xq3li")
+theme_override_font_sizes/font_size = 47
+text = "W"
+
+[node name="D" type="Label" parent="GRACZ1" unique_id=71250038]
+offset_left = 119.0
+offset_top = 456.0
+offset_right = 159.0
+offset_bottom = 502.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_xq3li")
+theme_override_font_sizes/font_size = 47
+text = "D"
+
+[node name="A" type="Label" parent="GRACZ1" unique_id=1254459824]
+offset_left = 114.0
+offset_top = 399.0
+offset_right = 154.0
+offset_bottom = 445.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_xq3li")
+theme_override_font_sizes/font_size = 47
+text = "A"
+
+[node name="S" type="Label" parent="GRACZ1" unique_id=1199434059]
+offset_left = 112.0
+offset_top = 338.0
+offset_right = 152.0
+offset_bottom = 384.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_xq3li")
+theme_override_font_sizes/font_size = 47
+text = "S"
+
+[node name="GRACZ2" type="Node" parent="." unique_id=647484547]
+
+[node name="Klawisz2" type="Sprite2D" parent="GRACZ2" unique_id=19902521]
+position = Vector2(393.03174, 357.2056)
+scale = Vector2(0.2966805, 0.2966805)
+texture = ExtResource("4_xq3li")
+
+[node name="Klawisz3" type="Sprite2D" parent="GRACZ2" unique_id=1725336505]
+position = Vector2(394.03174, 290.20557)
+rotation = 1.5013714
+scale = Vector2(0.2966805, 0.2966805)
+texture = ExtResource("4_xq3li")
+
+[node name="Klawisz5" type="Sprite2D" parent="GRACZ2" unique_id=1808367138]
+position = Vector2(397.0318, 474.2056)
+rotation = -0.017078638
+scale = Vector2(0.2966805, 0.2966805)
+texture = ExtResource("4_xq3li")
+
+[node name="Klawisz4" type="Sprite2D" parent="GRACZ2" unique_id=246220861]
+position = Vector2(393.03174, 416.2056)
+rotation = -0.014787485
+scale = Vector2(0.2966805, 0.2966805)
+texture = ExtResource("4_xq3li")
+
+[node name="Strzalka1" type="Label" parent="GRACZ2" unique_id=245459461]
+offset_left = 384.0
+offset_top = 256.0
+offset_right = 425.0
+offset_bottom = 323.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_xq3li")
+theme_override_font_sizes/font_size = 47
+text = "↑ "
+
+[node name="Strzalka4" type="Label" parent="GRACZ2" unique_id=407194959]
+offset_left = 386.0
+offset_top = 440.0
+offset_right = 426.0
+offset_bottom = 507.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_xq3li")
+theme_override_font_sizes/font_size = 47
+text = "↓ "
+
+[node name="Strzalka3" type="Label" parent="GRACZ2" unique_id=132503624]
+offset_left = 374.0
+offset_top = 378.0
+offset_right = 415.0
+offset_bottom = 445.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_xq3li")
+theme_override_font_sizes/font_size = 47
+text = "→"
+
+[node name="Strzalka2" type="Label" parent="GRACZ2" unique_id=1295149494]
+offset_left = 374.0
+offset_top = 320.0
+offset_right = 415.0
+offset_bottom = 387.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_xq3li")
+theme_override_font_sizes/font_size = 47
+text = "←"
+
+[node name="GRACZ3" type="Node" parent="." unique_id=1344099233]
+
+[node name="Klawisz2" type="Sprite2D" parent="GRACZ3" unique_id=1233511362]
+position = Vector2(867.03174, 351.2056)
+scale = Vector2(0.2966805, 0.2966805)
+texture = ExtResource("4_xq3li")
+
+[node name="Klawisz3" type="Sprite2D" parent="GRACZ3" unique_id=1272057614]
+position = Vector2(868.03174, 284.20557)
+rotation = 1.5013714
+scale = Vector2(0.2966805, 0.2966805)
+texture = ExtResource("4_xq3li")
+
+[node name="Klawisz5" type="Sprite2D" parent="GRACZ3" unique_id=487409339]
+position = Vector2(871.032, 468.2056)
+rotation = -0.017078638
+scale = Vector2(0.2966805, 0.2966805)
+texture = ExtResource("4_xq3li")
+
+[node name="Klawisz4" type="Sprite2D" parent="GRACZ3" unique_id=2052209182]
+position = Vector2(867.03174, 410.2056)
+rotation = -0.014787486
+scale = Vector2(0.2966805, 0.2966805)
+texture = ExtResource("4_xq3li")
+
+[node name="J" type="Label" parent="GRACZ3" unique_id=462667975]
+offset_left = 866.0
+offset_top = 265.0
+offset_right = 906.0
+offset_bottom = 311.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_xq3li")
+theme_override_font_sizes/font_size = 47
+text = "J"
+
+[node name="K" type="Label" parent="GRACZ3" unique_id=216703871]
+offset_left = 862.0001
+offset_top = 450.0
+offset_right = 902.0001
+offset_bottom = 496.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_xq3li")
+theme_override_font_sizes/font_size = 47
+text = "K"
+
+[node name="I" type="Label" parent="GRACZ3" unique_id=960554934]
+offset_left = 857.0001
+offset_top = 393.0
+offset_right = 897.0001
+offset_bottom = 439.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_xq3li")
+theme_override_font_sizes/font_size = 47
+text = "I"
+
+[node name="L" type="Label" parent="GRACZ3" unique_id=1050364933]
+offset_left = 855.0001
+offset_top = 332.0
+offset_right = 895.0001
+offset_bottom = 378.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_xq3li")
+theme_override_font_sizes/font_size = 47
+text = "L"
+
+[node name="Node" type="Node" parent="." unique_id=159389926]
+
+[node name="Klawisz2" type="Sprite2D" parent="Node" unique_id=1058678319]
+position = Vector2(613.0317, 357.2056)
+scale = Vector2(0.2966805, 0.2966805)
+texture = ExtResource("4_xq3li")
+
+[node name="Klawisz3" type="Sprite2D" parent="Node" unique_id=1653812639]
+position = Vector2(614.0317, 290.20557)
+rotation = 1.5013714
+scale = Vector2(0.2966805, 0.2966805)
+texture = ExtResource("4_xq3li")
+
+[node name="Klawisz5" type="Sprite2D" parent="Node" unique_id=125304118]
+position = Vector2(617.03174, 474.2056)
+rotation = -0.017078638
+scale = Vector2(0.2966805, 0.2966805)
+texture = ExtResource("4_xq3li")
+
+[node name="Klawisz4" type="Sprite2D" parent="Node" unique_id=1403056038]
+position = Vector2(613.0317, 416.2056)
+rotation = -0.014787486
+scale = Vector2(0.2966805, 0.2966805)
+texture = ExtResource("4_xq3li")
+
+[node name="4" type="Label" parent="Node" unique_id=554743548]
+offset_left = 597.0
+offset_top = 275.0
+offset_right = 637.0
+offset_bottom = 321.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_xq3li")
+theme_override_font_sizes/font_size = 47
+text = "4"
+
+[node name="5" type="Label" parent="Node" unique_id=1233394703]
+offset_left = 608.0
+offset_top = 456.0
+offset_right = 648.0
+offset_bottom = 502.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_xq3li")
+theme_override_font_sizes/font_size = 47
+text = "5"
+
+[node name="8" type="Label" parent="Node" unique_id=1123617361]
+offset_left = 603.0
+offset_top = 399.0
+offset_right = 643.0
+offset_bottom = 445.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_xq3li")
+theme_override_font_sizes/font_size = 47
+text = "8"
+
+[node name="6" type="Label" parent="Node" unique_id=572549779]
+offset_left = 601.0
+offset_top = 338.0
+offset_right = 641.0
+offset_bottom = 384.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_xq3li")
+theme_override_font_sizes/font_size = 47
+text = "6"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

@@ -1,6 +1,19 @@
 [gd_scene format=3 uid="uid://cooakotr76fm4"]
 
 [ext_resource type="Script" uid="uid://luwldsgryie4" path="res://src/ui/menus/main_menu.gd" id="1_7lrnf"]
+[ext_resource type="Texture2D" uid="uid://dg6sg3et4yy3j" path="res://assets/Menu/IU/tlo_menu.png" id="2_ltlti"]
+[ext_resource type="Texture2D" uid="uid://bj5p2s6pyc4n2" path="res://assets/Menu/IU/przy2.png" id="3_l3u6v"]
+[ext_resource type="Texture2D" uid="uid://pwjejq1er13h" path="res://assets/Menu/IU/przy3.png" id="4_hcfgv"]
+[ext_resource type="Texture2D" uid="uid://dxx52b65lor4i" path="res://assets/Menu/IU/przy1.png" id="5_rs8ex"]
+[ext_resource type="Texture2D" uid="uid://ppufyqqllp42" path="res://assets/Menu/IU/icon_lubgame.png" id="6_yycut"]
+[ext_resource type="Texture2D" uid="uid://cwwwois32cwu3" path="res://assets/Menu/IU/icon_conductor.png" id="7_l2tv4"]
+[ext_resource type="FontFile" uid="uid://cbf52hahephbu" path="res://assets/fonts/DK Crayon Crumble.ttf" id="8_o7egi"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_hocew"]
+load_path = "res://.godot/imported/przy1.png-a0171bc283677cb9471cec4f7f07d1b7.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_p1gp2"]
+texture = SubResource("CompressedTexture2D_hocew")
 
 [node name="MainMenu" type="Control" unique_id=801312819]
 layout_mode = 3
@@ -18,50 +31,116 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.3372549, 0.4117647, 1, 1)
 
-[node name="Label" type="Label" parent="." unique_id=301324429]
-layout_mode = 0
-offset_left = 510.0
-offset_top = 75.0
-offset_right = 606.0
-offset_bottom = 98.0
-text = "MAIN MENU"
+[node name="Textury" type="Node" parent="." unique_id=11989081]
 
-[node name="Play" type="Button" parent="." unique_id=2054431329]
-layout_mode = 0
-offset_left = 249.0
-offset_top = 248.0
-offset_right = 290.0
-offset_bottom = 279.0
+[node name="TloMenu" type="Sprite2D" parent="Textury" unique_id=785136180]
+position = Vector2(574.77783, 326.25)
+scale = Vector2(0.60601854, 0.6060185)
+texture = ExtResource("2_ltlti")
+
+[node name="Przy2" type="Sprite2D" parent="Textury" unique_id=2088311964]
+position = Vector2(313.34906, 284.625)
+scale = Vector2(0.46161833, 0.4616183)
+texture = ExtResource("3_l3u6v")
+
+[node name="Przy4" type="Sprite2D" parent="Textury" unique_id=38963068]
+position = Vector2(310.3491, 529.625)
+rotation = -3.1297956
+scale = Vector2(0.46161836, 0.46161833)
+texture = ExtResource("3_l3u6v")
+
+[node name="Przy3" type="Sprite2D" parent="Textury" unique_id=1152707348]
+position = Vector2(305.34906, 445.625)
+scale = Vector2(0.43436292, 0.43436295)
+texture = ExtResource("4_hcfgv")
+
+[node name="Przy1" type="Sprite2D" parent="Textury" unique_id=444472018]
+position = Vector2(298.3491, 363.625)
+scale = Vector2(0.46727273, 0.46727273)
+texture = ExtResource("5_rs8ex")
+
+[node name="IconLubgame" type="Sprite2D" parent="Textury" unique_id=130213225]
+position = Vector2(86, 582)
+scale = Vector2(0.033210732, 0.033210732)
+texture = ExtResource("6_yycut")
+
+[node name="IconConductor" type="Sprite2D" parent="Textury" unique_id=326292478]
+position = Vector2(82.000015, 527.00006)
+rotation = 0.17045386
+scale = Vector2(0.12548256, 0.12548257)
+texture = ExtResource("7_l2tv4")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1061333231]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.194
+anchor_top = 0.41500002
+anchor_right = 0.34500003
+anchor_bottom = 0.87500006
+offset_left = -0.4880066
+offset_top = 0.07998657
+offset_right = 0.55996704
+offset_bottom = -6.1035156e-05
+pivot_offset_ratio = Vector2(0.48, 0)
+theme_override_constants/separation = 15
+
+[node name="Play" type="Button" parent="VBoxContainer" unique_id=2054431329]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("8_o7egi")
+theme_override_font_sizes/font_size = 59
+theme_override_styles/normal = SubResource("StyleBoxTexture_p1gp2")
 text = "Play"
+flat = true
+icon_alignment = 1
 
-[node name="Options" type="Button" parent="." unique_id=180185656]
-layout_mode = 0
-offset_left = 249.0
-offset_top = 301.0
-offset_right = 319.0
-offset_bottom = 332.0
+[node name="Options" type="Button" parent="VBoxContainer" unique_id=180185656]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("8_o7egi")
+theme_override_font_sizes/font_size = 59
 text = "Options"
+flat = true
 
-[node name="Credits" type="Button" parent="." unique_id=319635158]
-layout_mode = 0
-offset_left = 251.0
-offset_top = 366.0
-offset_right = 314.0
-offset_bottom = 397.0
+[node name="Credits" type="Button" parent="VBoxContainer" unique_id=319635158]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("8_o7egi")
+theme_override_font_sizes/font_size = 55
 text = "Credits"
+flat = true
 
-[node name="Exit" type="Button" parent="." unique_id=178739138]
-layout_mode = 0
-offset_left = 253.0
-offset_top = 422.0
-offset_right = 294.0
-offset_bottom = 453.0
+[node name="Exit" type="Button" parent="VBoxContainer" unique_id=178739138]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("8_o7egi")
+theme_override_font_sizes/font_size = 52
 text = "Exit
 "
+flat = true
 
-[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
-[connection signal="pressed" from="Options" to="." method="_on_options_pressed"]
-[connection signal="pressed" from="Credits" to="." method="_on_credits_pressed"]
-[connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]
+[node name="Main_Menu" type="Label" parent="." unique_id=301324429]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.25500003
+anchor_top = 0.142
+anchor_right = 0.74700004
+anchor_bottom = 0.32700002
+offset_left = 0.23995972
+offset_top = -0.01600647
+offset_right = 0.45593262
+offset_bottom = 0.10398865
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("8_o7egi")
+theme_override_font_sizes/font_size = 122
+text = "MAIN MENU"
+
+[connection signal="pressed" from="VBoxContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="VBoxContainer/Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="VBoxContainer/Credits" to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="VBoxContainer/Exit" to="." method="_on_exit_pressed"]
