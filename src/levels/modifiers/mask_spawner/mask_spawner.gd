@@ -5,8 +5,8 @@ class_name MaskSpawner
 @export var max_ticks := 2
 @export var show_treshold := 5
 var _current_ticks := 2
-var spawned_mask: BaseMask
-@export var masks: Array[PackedScene]
+#var spawned_mask: CollectibleBaseMask
+#@export var masks: Array[PackedScene]
 
 @onready var timer: Timer = $Timer
 @onready var label: Label = $MaskSpawnPoint/Label
@@ -48,8 +48,9 @@ func _update_label():
 	label.text = str(_current_ticks)
 	
 func _spawn_mask():
-	var index := randi() % masks.size()
-	spawned_mask = masks[index].instantiate()
+	#var index := randi() % masks.size()
+	#spawned_mask = masks[index].instantiate()
+	var spawned_mask = preload("uid://by66ymds8i5ef")
 	spawn_point.add_child(spawned_mask)
 	
 	particles_1.emitting = true

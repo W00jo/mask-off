@@ -1,16 +1,21 @@
+class_name CollectibleBaseMask
 extends Area2D
 
-class_name CollectibleMask
+signal mask_picked_up(rand_mask)
 
+@onready var sprite: Sprite2D = $Sprite2D
+var types = {"bomberman": preload("res://icon.svg"),
+			"costam": preload("res://assets/ref.png")}
 var duration := 10
-signal mask_picked_up
-
-func pick_up():
-	emit_signal("mask_picked_up")
-	queue_free()
+var random_mask
 
 func _ready() -> void:
-	pass 
+	random_mask = types.keys().pick_random()
+	$Sprite2D.texture = types.get(random_mask)
+
+func pick_up():
+	mask_picked_up.emit(random_mask)
+	queue_free()
 
 
 func _process(delta: float) -> void:

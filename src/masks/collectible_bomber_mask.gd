@@ -1,4 +1,4 @@
-extends CollectibleMask
+extends CollectibleBaseMask
 
 class_name BombermanMask
 

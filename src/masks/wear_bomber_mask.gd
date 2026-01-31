@@ -1,3 +1,4 @@
+class_name WearBomberMask
 extends WearBaseMask
 
 @export var bomb_scene: PackedScene
