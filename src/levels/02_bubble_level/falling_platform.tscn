@@ -18,12 +18,14 @@ scale = Vector2(0.25091973, 0.25091973)
 texture = ExtResource("2_crfo3")
 
 [node name="AreaForPlayer" type="Area2D" parent="." unique_id=1813862120]
+visible = false
 
 [node name="AreaForPlayerCollis" type="CollisionShape2D" parent="AreaForPlayer" unique_id=1138795461]
 position = Vector2(0, -20.5)
 shape = SubResource("RectangleShape2D_crfo3")
 
 [node name="Collision" type="CollisionShape2D" parent="." unique_id=900636146]
+visible = false
 position = Vector2(0, -12.5)
 shape = SubResource("RectangleShape2D_rsldh")
 one_way_collision = true
