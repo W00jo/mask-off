@@ -3,21 +3,28 @@
 [ext_resource type="PackedScene" uid="uid://n04qbcl6c0oe" path="res://src/levels/01_default_level/base_map.tscn" id="1_jkh1s"]
 [ext_resource type="PackedScene" uid="uid://cxeyem7cvvt27" path="res://src/levels/02_bubble_level/falling_platform.tscn" id="2_dgebn"]
 [ext_resource type="PackedScene" uid="uid://bnwj4t5xae30h" path="res://src/player/player_spawn.tscn" id="3_r03eq"]
+[ext_resource type="Texture2D" uid="uid://chns881flj3gc" path="res://assets/sprites/Background.png" id="4_y7f0c"]
+[ext_resource type="Texture2D" uid="uid://dcf82av43nh2b" path="res://assets/sprites/bomb.png" id="5_n7gt7"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_2hrto"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dgebn"]
-size = Vector2(540, 27)
+size = Vector2(511, 78)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y7f0c"]
 size = Vector2(233, 28.5)
 
 [node name="BaseMap" unique_id=1175649286 instance=ExtResource("1_jkh1s")]
 
-[node name="MaskSpawner" parent="." index="0" unique_id=1271967546]
+[node name="Background" type="Sprite2D" parent="." index="0" unique_id=1260132490]
+position = Vector2(575.8888, 323.25003)
+scale = Vector2(0.60046303, 0.600463)
+texture = ExtResource("4_y7f0c")
+
+[node name="MaskSpawner" parent="." index="1" unique_id=1271967546]
 position = Vector2(544, 101)
 
-[node name="Kolizja" type="StaticBody2D" parent="." index="1" unique_id=790272819]
+[node name="Kolizja" type="StaticBody2D" parent="." index="2" unique_id=790272819]
 
 [node name="Boki" type="CollisionShape2D" parent="Kolizja" index="0" unique_id=1581859798]
 position = Vector2(1154, 423)
@@ -30,11 +37,11 @@ rotation = 1.5707964
 shape = SubResource("WorldBoundaryShape2D_2hrto")
 
 [node name="Boki3" type="CollisionShape2D" parent="Kolizja" index="2" unique_id=1144619401]
-position = Vector2(223, 649.5)
+position = Vector2(208.5, 624)
 shape = SubResource("RectangleShape2D_dgebn")
 
 [node name="Boki4" type="CollisionShape2D" parent="Kolizja" index="3" unique_id=1119423278]
-position = Vector2(882, 647)
+position = Vector2(910, 625)
 shape = SubResource("RectangleShape2D_dgebn")
 
 [node name="Platform4" type="CollisionShape2D" parent="Kolizja" index="4" unique_id=1161780750]
@@ -57,7 +64,7 @@ position = Vector2(167, 287)
 shape = SubResource("RectangleShape2D_y7f0c")
 one_way_collision = true
 
-[node name="Falling_platforms" type="Node" parent="." index="2" unique_id=2083305250]
+[node name="Falling_platforms" type="Node" parent="." index="3" unique_id=2083305250]
 
 [node name="Falling_platform" parent="Falling_platforms" index="0" unique_id=435592318 instance=ExtResource("2_dgebn")]
 position = Vector2(185, 525)
@@ -77,16 +84,21 @@ position = Vector2(392, 425)
 [node name="Falling_platform6" parent="Falling_platforms" index="5" unique_id=1901377970 instance=ExtResource("2_dgebn")]
 position = Vector2(1034, 193)
 
-[node name="PlayerSpawner" type="Node" parent="." index="3" unique_id=1396417496]
+[node name="PlayerSpawner" type="Node" parent="." index="4" unique_id=1396417496]
 
-[node name="Player_Marker" parent="." index="4" unique_id=1255660246 instance=ExtResource("3_r03eq")]
+[node name="Player_Marker" parent="." index="5" unique_id=1255660246 instance=ExtResource("3_r03eq")]
 position = Vector2(52, 237)
 
-[node name="Player_Marker2" parent="." index="5" unique_id=66114077 instance=ExtResource("3_r03eq")]
+[node name="Player_Marker2" parent="." index="6" unique_id=66114077 instance=ExtResource("3_r03eq")]
 position = Vector2(1085, 317)
 
-[node name="Player_Marker3" parent="." index="6" unique_id=1598093390 instance=ExtResource("3_r03eq")]
+[node name="Player_Marker3" parent="." index="7" unique_id=1598093390 instance=ExtResource("3_r03eq")]
 position = Vector2(370, 312)
 
-[node name="Player_Marker4" parent="." index="7" unique_id=1965617713 instance=ExtResource("3_r03eq")]
+[node name="Player_Marker4" parent="." index="8" unique_id=1965617713 instance=ExtResource("3_r03eq")]
 position = Vector2(747, 586)
+
+[node name="Bomb" type="Sprite2D" parent="." index="9" unique_id=1329820755]
+position = Vector2(1148, 497)
+scale = Vector2(0.554945, 0.55494505)
+texture = ExtResource("5_n7gt7")
