@@ -13,7 +13,8 @@ signal on_player_death
 @onready var attack_parent: Node2D = $AttackParent 
 @onready var attack_holder: Node2D = $AttackParent/AttackHolder 
 
-@export var default_attack: PackedScene;
+@export var default_attack: PackedScene
+@export var new_attack: PackedScene
 
 var current_attack: BaseAttack
 
@@ -42,6 +43,11 @@ func on_death() -> void:
 	on_player_death.emit()
 	queue_free()
 	
+func _update(delta):
+	if(Input.is_action_just_pressed("add_attack")):
+		set_attack(new_attack)
+	elif(Input.is_action_just_pressed("reset_attack")):
+		clear_attack()
 
 func _begin_death() -> void:
 	$StateMachine.change_state("deathstate")

@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="DamageData" format=3 uid="uid://dbby1amebaj36"]
+
+[ext_resource type="Script" uid="uid://iup1kalmawok" path="res://player/damage_system/damage_data.gd" id="1_7pac2"]
+
+[resource]
+script = ExtResource("1_7pac2")
+metadata/_custom_type_script = "uid://iup1kalmawok"

@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://28nk623vek88" path="res://assets/sprites/PLAYER.png" id="1_p842g"]
 [ext_resource type="PackedScene" uid="uid://cr05qs3lbrrmq" path="res://player/attacks/attack_default/default_attack.tscn" id="2_rgyib"]
 [ext_resource type="Script" uid="uid://ca03ma24caxns" path="res://player/state_machine/idle_state.gd" id="3_fv2d4"]
+[ext_resource type="PackedScene" uid="uid://cmqf4erlp1v6g" path="res://player/attacks/attack_new_TEST/test_attack.tscn" id="3_kb6p2"]
 [ext_resource type="Script" uid="uid://bbaeadmys6i6j" path="res://player/state_machine/state_machine.gd" id="4_hg6s5"]
 [ext_resource type="Script" uid="uid://bat84jucrkcqd" path="res://player/state_machine/walk_state.gd" id="4_p842g"]
 [ext_resource type="Script" uid="uid://djx2bb1xw15vw" path="res://player/state_machine/jump_state.gd" id="5_dh4si"]
@@ -122,6 +123,21 @@ tracks/0/keys = {
 "values": [10]
 }
 
+[sub_resource type="Animation" id="Animation_yllr7"]
+resource_name = "player_temp_test_attack"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AttackParent/AttackHolder:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.21207985, 0.36163905, 0.49648753, 0.6435949),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 37), Vector2(-79, 38), Vector2(50, 8), Vector2(-61, -17), Vector2(38, -42)]
+}
+
 [sub_resource type="Animation" id="Animation_tcq0w"]
 resource_name = "player_temp_walk"
 length = 0.4
@@ -146,6 +162,7 @@ _data = {
 &"player_temp_death": SubResource("Animation_ebec5"),
 &"player_temp_idle": SubResource("Animation_dh4si"),
 &"player_temp_jump": SubResource("Animation_innbq"),
+&"player_temp_test_attack": SubResource("Animation_yllr7"),
 &"player_temp_walk": SubResource("Animation_tcq0w")
 }
 
@@ -155,6 +172,7 @@ size = Vector2(46, 68)
 [node name="Player" type="CharacterBody2D" unique_id=1053524098]
 script = ExtResource("1_0v0ik")
 default_attack = ExtResource("2_rgyib")
+new_attack = ExtResource("3_kb6p2")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1375468071]
 texture_filter = 1
@@ -195,6 +213,14 @@ script = ExtResource("9_8t03j")
 metadata/_custom_type_script = "uid://crqfi21e4cwo5"
 
 [node name="DeathState" type="Node" parent="StateMachine" unique_id=964425758]
+script = ExtResource("10_yllr7")
+metadata/_custom_type_script = "uid://crqfi21e4cwo5"
+
+[node name="DeathState" type="Node" parent="StateMachine/DeathState" unique_id=1473103208]
+script = ExtResource("10_yllr7")
+metadata/_custom_type_script = "uid://crqfi21e4cwo5"
+
+[node name="DeathState" type="Node" parent="StateMachine/DeathState/DeathState" unique_id=1220628141]
 script = ExtResource("10_yllr7")
 metadata/_custom_type_script = "uid://crqfi21e4cwo5"
 
