@@ -1,13 +1,13 @@
 class_name NewStateMachine
 extends Node
 
-@export var initial_state:NewState
-var current_state:NewState
+@export var initial_state:State
+var current_state:State
 var states:Dictionary = {}
 
 func _ready() -> void:
 	for child in get_children():
-		if child is NewState:
+		if child is State:
 			states[child.name.to_lower()] = child
 			child.state_machine = self
 			print(states)

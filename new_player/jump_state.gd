@@ -1,5 +1,5 @@
-class_name NewJumpState
-extends NewState
+class_name JumpState
+extends State
 
 
 var jump_speed = -900
@@ -7,12 +7,12 @@ var jump_speed = -900
 func enter():
 	print("entering JUMP state...")
 	owner.velocity.y = jump_speed
-	#owner.get_node("AnimationPlayer").play("jump")
+	owner.get_node("AnimationPlayer").play("player_temp_jump")
 
 func physics_update(delta:float):
 	owner.velocity.y += 1500 * delta
 	if owner.velocity.y > 0:
-		state_machine.change_state("newfallstate")
+		state_machine.change_state("fallstate")
 		return
 	
 	var direction = Input.get_axis("ui_left","ui_right")
@@ -27,8 +27,8 @@ func physics_update(delta:float):
 
 	if owner.is_on_floor():
 		if direction != 0:
-			state_machine.change_state("newwalkstate")
+			state_machine.change_state("walkstate")
 			return
 		else:
-			state_machine.change_state("newidlestate")
+			state_machine.change_state("idlestate")
 			return

@@ -1,11 +1,11 @@
-class_name NewWalkState
-extends NewState
+class_name WalkState
+extends State
 
 var speed = 150
 
 func enter():
 	print("entering WALK state...")
-	#owner.get_node("AnimationPlayer").play("walk")
+	owner.get_node("AnimationPlayer").play("player_temp_walk")
 
 func physics_update(_delta:float):
 	
@@ -18,18 +18,18 @@ func physics_update(_delta:float):
 			$"../../Sprite2D".flip_h = false
 		
 		if direction == 0:
-				state_machine.change_state("newidlestate")
+				state_machine.change_state("idlestate")
 				return
 				
 		owner.velocity.x = direction * speed
 		owner.move_and_slide()
 	else:
-		state_machine.change_state("newfallstate")
+		state_machine.change_state("fallstate")
 		return
 	
 
 func handle_input(event:InputEvent):
 	if Input.is_action_just_pressed("ui_accept"):
-		state_machine.change_state("newjumpstate")
+		state_machine.change_state("jumpstate")
 	if Input.is_action_pressed("Shift"):
-		state_machine.change_state("newrunstate")
+		state_machine.change_state("runstate")
