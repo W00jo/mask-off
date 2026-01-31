@@ -50,4 +50,5 @@ func _process(delta):
 		clear_attack()
 
 func _begin_death() -> void:
-	$StateMachine.change_state("deathstate")
+	get_tree().paused = true
+	print("player ded")

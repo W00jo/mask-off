@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://r1ki73v18ynn"]
 
 [ext_resource type="PackedScene" uid="uid://dfa7acfcvc3yy" path="res://src/player/player.tscn" id="1_mi0if"]
+[ext_resource type="PackedScene" uid="uid://crrflahojckb3" path="res://src/levels/modifiers/killzones/damage_place.tscn" id="2_cmjwt"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7ypsn"]
 size = Vector2(194, 39)
@@ -30,3 +31,7 @@ attack = "attack"
 
 [node name="Kukła Do bicia" parent="." unique_id=1469781152 instance=ExtResource("1_mi0if")]
 position = Vector2(836, 472)
+
+[node name="damage_place" parent="." unique_id=507009979 instance=ExtResource("2_cmjwt")]
+position = Vector2(692, 399)
+DMG_amount = 50

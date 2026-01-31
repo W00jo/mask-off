@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://cljbb4gn23ah0"]
+
+[ext_resource type="Script" path="res://src/levels/03_platform_level/train.gd" id="1_kkcak"]
+[ext_resource type="Texture2D" uid="uid://b50vv54ll0n30" path="res://assets/sprites/Logo1.png" id="2_7riek"]
+[ext_resource type="Texture2D" uid="uid://qix0oygodiat" path="res://icon.svg" id="3_7riek"]
+[ext_resource type="PackedScene" uid="uid://crrflahojckb3" path="res://src/levels/modifiers/killzones/damage_place.tscn" id="3_h288v"]
+
+[node name="Train" type="Node2D" unique_id=1260668841]
+script = ExtResource("1_kkcak")
+
+[node name="Train_sprite" type="Sprite2D" parent="." unique_id=1473381392]
+position = Vector2(2112.0002, 508)
+scale = Vector2(14.838539, 2.1585367)
+texture = ExtResource("2_7riek")
+
+[node name="damage_place" parent="Train_sprite" unique_id=507009979 instance=ExtResource("3_h288v")]
+position = Vector2(-53.104973, 30.57627)
+scale = Vector2(0.8884813, 3.1427617)
+DMG_amount = 999
+
+[node name="Warning_sprite" type="Sprite2D" parent="." unique_id=536064340]
+position = Vector2(576, 317)
+texture = ExtResource("3_7riek")
