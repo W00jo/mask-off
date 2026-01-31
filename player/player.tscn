@@ -2,11 +2,11 @@
 
 [ext_resource type="Script" uid="uid://dmg143wfbe7nl" path="res://src/player.gd" id="1_0v0ik"]
 [ext_resource type="Texture2D" uid="uid://28nk623vek88" path="res://assets/sprites/PLAYER.png" id="1_p842g"]
-[ext_resource type="Script" uid="uid://bbaeadmys6i6j" path="res://new_player/state_machine.gd" id="2_sddtp"]
-[ext_resource type="Script" uid="uid://ca03ma24caxns" path="res://new_player/idle_state.gd" id="3_fv2d4"]
-[ext_resource type="Script" uid="uid://bat84jucrkcqd" path="res://new_player/walk_state.gd" id="4_p842g"]
-[ext_resource type="Script" uid="uid://djx2bb1xw15vw" path="res://new_player/jump_state.gd" id="5_dh4si"]
-[ext_resource type="Script" uid="uid://crqfi21e4cwo5" path="res://new_player/fall_state.gd" id="6_tcq0w"]
+[ext_resource type="Script" uid="uid://bbaeadmys6i6j" path="res://player/state_machine.gd" id="2_sddtp"]
+[ext_resource type="Script" uid="uid://ca03ma24caxns" path="res://player/idle_state.gd" id="3_fv2d4"]
+[ext_resource type="Script" uid="uid://bat84jucrkcqd" path="res://player/walk_state.gd" id="4_p842g"]
+[ext_resource type="Script" uid="uid://djx2bb1xw15vw" path="res://player/jump_state.gd" id="5_dh4si"]
+[ext_resource type="Script" uid="uid://crqfi21e4cwo5" path="res://player/fall_state.gd" id="6_tcq0w"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kyh7p"]
 size = Vector2(46, 68)
@@ -101,24 +101,24 @@ position = Vector2(1, 28)
 shape = SubResource("RectangleShape2D_kyh7p")
 debug_color = Color(0.7041554, 0.45410562, 0.5027783, 0.41960785)
 
-[node name="NewStateMachine" type="Node" parent="." unique_id=1603580362 node_paths=PackedStringArray("initial_state")]
+[node name="StateMachine" type="Node" parent="." unique_id=1603580362 node_paths=PackedStringArray("initial_state")]
 script = ExtResource("2_sddtp")
 initial_state = NodePath("IdleState")
 metadata/_custom_type_script = "uid://bbaeadmys6i6j"
 
-[node name="IdleState" type="Node" parent="NewStateMachine" unique_id=2043604641]
+[node name="IdleState" type="Node" parent="StateMachine" unique_id=2043604641]
 script = ExtResource("3_fv2d4")
 metadata/_custom_type_script = "uid://ca03ma24caxns"
 
-[node name="WalkState" type="Node" parent="NewStateMachine" unique_id=1231467133]
+[node name="WalkState" type="Node" parent="StateMachine" unique_id=1231467133]
 script = ExtResource("4_p842g")
 metadata/_custom_type_script = "uid://bat84jucrkcqd"
 
-[node name="JumpState" type="Node" parent="NewStateMachine" unique_id=723755170]
+[node name="JumpState" type="Node" parent="StateMachine" unique_id=723755170]
 script = ExtResource("5_dh4si")
 metadata/_custom_type_script = "uid://djx2bb1xw15vw"
 
-[node name="FallState" type="Node" parent="NewStateMachine" unique_id=564122780]
+[node name="FallState" type="Node" parent="StateMachine" unique_id=564122780]
 script = ExtResource("6_tcq0w")
 metadata/_custom_type_script = "uid://crqfi21e4cwo5"
 

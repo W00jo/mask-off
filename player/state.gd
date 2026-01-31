@@ -2,7 +2,10 @@ class_name State
 extends Node
 
 var state_machine: NewStateMachine
+var input: InputData
 
+func set_input(new_input: InputData):
+	input = new_input
 
 func enter():
 	pass

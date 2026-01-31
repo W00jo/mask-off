@@ -10,7 +10,7 @@ func enter():
 func physics_update(_delta:float):
 	
 	if owner.is_on_floor():
-		var direction = Input.get_axis("ui_left","ui_right")
+		var direction = Input.get_axis(input.move_left,input.move_right)
 		
 		if direction < 0:
 			$"../../Sprite2D".flip_h = true
@@ -26,10 +26,9 @@ func physics_update(_delta:float):
 	else:
 		state_machine.change_state("fallstate")
 		return
-	
-
+		
 func handle_input(event:InputEvent):
-	if Input.is_action_just_pressed("ui_accept"):
+	if Input.is_action_just_pressed(input.jump):
 		state_machine.change_state("jumpstate")
 	if Input.is_action_pressed("Shift"):
 		state_machine.change_state("runstate")

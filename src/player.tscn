@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://dckgfslhmkth7"]
+
+[ext_resource type="Script" uid="uid://dmg143wfbe7nl" path="res://src/player.gd" id="1_gmfve"]
+[ext_resource type="Script" uid="uid://bbaeadmys6i6j" path="res://player/state_machine.gd" id="3_21lrq"]
+[ext_resource type="Script" uid="uid://ca03ma24caxns" path="res://player/idle_state.gd" id="4_rq7o7"]
+[ext_resource type="Script" uid="uid://bat84jucrkcqd" path="res://player/walk_state.gd" id="5_nrj4s"]
+[ext_resource type="Script" uid="uid://djx2bb1xw15vw" path="res://player/jump_state.gd" id="6_rclot"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_pg28d"]
+load_path = "res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gmfve"]
+size = Vector2(123, 122)
+
+[node name="Player" type="CharacterBody2D" unique_id=98183670]
+script = ExtResource("1_gmfve")
+
+[node name="CharacterSprite" type="Sprite2D" parent="." unique_id=124187322]
+texture = SubResource("CompressedTexture2D_pg28d")
+
+[node name="CharacterCollision" type="CollisionShape2D" parent="." unique_id=2102602728]
+position = Vector2(-1.5, -2)
+shape = SubResource("RectangleShape2D_gmfve")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=915304665]
+
+[node name="StateMachine" type="Node2D" parent="." unique_id=638512149 node_paths=PackedStringArray("initial_state")]
+script = ExtResource("3_21lrq")
+initial_state = NodePath("IdleStateMachine")
+
+[node name="IdleStateMachine" type="Node" parent="StateMachine" unique_id=530028852]
+script = ExtResource("4_rq7o7")
+
+[node name="WalkingStateMachine" type="Node" parent="StateMachine" unique_id=1738527426]
+script = ExtResource("5_nrj4s")
+
+[node name="JumpStateMachine" type="Node" parent="StateMachine" unique_id=1311794495]
+script = ExtResource("6_rclot")
