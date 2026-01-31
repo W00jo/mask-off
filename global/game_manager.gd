@@ -1,2 +1,7 @@
-#This file exists to keep the folder in version control when empty.
-#Remove it if you add real content.
+extends Node
+
+signal paused
+
+func _input(_event: InputEvent) -> void:
+	if Input.is_action_just_pressed("ui_cancel"):
+		paused.emit()

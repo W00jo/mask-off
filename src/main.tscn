@@ -11,10 +11,12 @@
 [ext_resource type="PackedScene" uid="uid://ce0ttob42nhv0" path="res://src/ui/in_game/win_screen.tscn" id="8_5mrjc"]
 
 [node name="Main" type="Node2D" unique_id=1058179015]
+process_mode = 3
 
 [node name="Gameplay" type="Node" parent="." unique_id=890166657]
 
 [node name="Node2D" parent="Gameplay" unique_id=1990880078 instance=ExtResource("1_eewff")]
+process_mode = 1
 
 [node name="UI" type="Node" parent="." unique_id=65613235 node_paths=PackedStringArray("hud", "main_menu", "options", "credits", "how_to_play", "pause", "win_screen")]
 script = ExtResource("2_kf8lf")

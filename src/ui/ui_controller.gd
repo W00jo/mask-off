@@ -31,6 +31,8 @@ func connect_signals():
 	
 	how_to_play.connect("start_pressed", _on_howto_start_pressed)
 	
+	GameManager.connect("paused", _on_paused)
+	
 	pause.connect("resume_pressed", _on_resume_pressed)
 	
 	win_screen.connect("new_game_pressed", _on_win_new_game_pressed)
@@ -75,9 +77,17 @@ func _on_howto_start_pressed():
 	hide_layer(how_to_play)
 	# TODO: Start the game
 
+func _on_paused():
+	# Checking if not in menu or sub-menus. Change later to check if game started.
+	if main_menu.get_parent().visible or options.get_parent().visible or credits.get_parent().visible:
+		return
+	else:
+		show_layer(pause)
+		get_tree().paused = true
+
 func _on_resume_pressed():
 	hide_layer(pause)
-	# TODO: Resume the game
+	get_tree().paused = false
 
 func _on_win_new_game_pressed():
 	hide_layer(win_screen)
