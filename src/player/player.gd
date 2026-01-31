@@ -23,6 +23,9 @@ func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity += get_gravity() * delta 
 		
+func get_direction() -> int:
+	return -1 if $Sprite2D.flip_h else 1
+		
 func _ready():
 	$StateMachine.set_input_data(InputData.new(
 		move_left, move_right, jump, attack

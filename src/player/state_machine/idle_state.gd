@@ -7,7 +7,8 @@ func enter():
 	
 	if(!owner.is_on_floor()):
 		state_machine.change_state("fallstate")
-		
+	else:
+		owner.velocity = Vector2(0, 0)
 
 func handle_input(_event:InputEvent):
 	if(Input.is_action_just_pressed(input.attack)):

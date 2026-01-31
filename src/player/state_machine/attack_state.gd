@@ -18,3 +18,6 @@ func enter():
 		state_machine.change_state("walkstate")
 	else:
 		state_machine.change_state("idlestate")
+		
+func _physics_process(delta: float) -> void:
+	owner.move_and_slide()

@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://cr05qs3lbrrmq"]
+
+[ext_resource type="Script" uid="uid://yj6f456cfhy5" path="res://src/player/attacks/attack_default/default_attack.gd" id="1_bj1q2"]
+[ext_resource type="Texture2D" uid="uid://qix0oygodiat" path="res://icon.svg" id="2_gnt1h"]
+[ext_resource type="Script" uid="uid://wnlkpmaoqpcb" path="res://src/player/damage_system/damage_source.gd" id="3_u11b3"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hg6s5"]
+radius = 75.16647
+
+[node name="DefaultAttack" type="Node2D" unique_id=121750398]
+scale = Vector2(0.2, 0.2)
+script = ExtResource("1_bj1q2")
+animName = "player_attack_default"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1455803832]
+scale = Vector2(0.99999994, 0.99999994)
+texture = ExtResource("2_gnt1h")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=914746674]
+collision_mask = 2
+script = ExtResource("3_u11b3")
+damage_value = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=414727358]
+shape = SubResource("CircleShape2D_hg6s5")
+disabled = true
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

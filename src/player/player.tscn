@@ -12,6 +12,7 @@
 [ext_resource type="Script" uid="uid://uck8pyr0up71" path="res://src/player/state_machine/attack_state.gd" id="9_8t03j"]
 [ext_resource type="Script" uid="uid://debf2l4kldxlb" path="res://src/player/damage_system/damage_target.gd" id="11_2ieo8"]
 [ext_resource type="Script" uid="uid://bwaqdqdr1hous" path="res://src/player/player_ui.gd" id="12_ebec5"]
+[ext_resource type="Script" uid="uid://c5py3fgmu8qra" path="res://src/player/player_sfx.gd" id="13_2smqc"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2smqc"]
 radius = 34.0
@@ -171,6 +172,10 @@ _data = {
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g6k8r"]
 size = Vector2(46, 68)
 
+[sub_resource type="Gradient" id="Gradient_cwolq"]
+offsets = PackedFloat32Array(0, 0.6423077, 1)
+colors = PackedColorArray(0.999999, 0.82097036, 0.797302, 1, 0.94695014, 0.61154056, 0.61153877, 1, 0.7750623, 0, 0.16677195, 1)
+
 [node name="PlayerNew" type="CharacterBody2D" unique_id=1053524098]
 collision_layer = 2
 script = ExtResource("1_0v0ik")
@@ -230,7 +235,7 @@ position = Vector2(0, 37)
 
 [node name="DamageTarget" type="Node2D" parent="." unique_id=724562669]
 script = ExtResource("11_2ieo8")
-max_health = 5
+max_health = 15
 
 [node name="UI" type="Node2D" parent="." unique_id=328246206]
 script = ExtResource("12_ebec5")
@@ -252,4 +257,22 @@ pivot_offset_ratio = Vector2(0.5, 0.5)
 value = 50.0
 show_percentage = false
 
+[node name="SFX" type="Node2D" parent="." unique_id=533740725]
+script = ExtResource("13_2smqc")
+
+[node name="DamagePrtcls" type="CPUParticles2D" parent="SFX" unique_id=346382218]
+scale = Vector2(5.23, 5.23)
+emitting = false
+amount = 300
+lifetime = 0.18000000000000002
+one_shot = true
+direction = Vector2(0, -1)
+spread = 113.05
+gravity = Vector2(0, 1109.235)
+initial_velocity_min = 6.95
+initial_velocity_max = 100.28
+scale_amount_max = 7.67
+color_ramp = SubResource("Gradient_cwolq")
+
 [connection signal="on_damage_received" from="DamageTarget" to="UI" method="_on_damage_target_on_damage_received"]
+[connection signal="on_damage_received" from="DamageTarget" to="SFX" method="_on_damage_received"]

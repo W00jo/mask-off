@@ -30,12 +30,10 @@ pause = NodePath("PauseLayer/Pause")
 win_screen = NodePath("WinLayer/WinScreen")
 
 [node name="HUDLayer" type="CanvasLayer" parent="UI" unique_id=908624174]
-visible = false
 
 [node name="HUD" parent="UI/HUDLayer" unique_id=53009314 instance=ExtResource("2_gh0ne")]
 
 [node name="MainMenuLayer" type="CanvasLayer" parent="UI" unique_id=592216844]
-visible = false
 
 [node name="MainMenu" parent="UI/MainMenuLayer" unique_id=801312819 instance=ExtResource("3_5q4o7")]
 
