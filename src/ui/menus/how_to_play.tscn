@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://crf8kbvbl8uu6"]
 
 [ext_resource type="Script" uid="uid://mnykhaxqggbi" path="res://src/ui/menus/how_to_play.gd" id="1_e1emm"]
-[ext_resource type="Texture2D" uid="uid://dg6sg3et4yy3j" path="res://assets/Menu/IU/tlo_menu.png" id="2_w0tpi"]
+[ext_resource type="Texture2D" path="res://assets/Menu/IU/tlo_menu.png" id="2_w0tpi"]
 [ext_resource type="FontFile" uid="uid://cbf52hahephbu" path="res://assets/fonts/DK Crayon Crumble.ttf" id="3_xq3li"]
-[ext_resource type="Texture2D" uid="uid://s56gdcwcewmw" path="res://assets/Menu/IU/klawisz2.png" id="4_xq3li"]
+[ext_resource type="StyleBox" uid="uid://cd2wm6cc576gr" path="res://src/ui/menus/menu_themes/key_input_container.tres" id="4_xq3li"]
 
-[node name="HowToPlay" type="Control" unique_id=1391345934]
+[node name="HowToPlay" type="Control" unique_id=1566090188]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -13,10 +13,8 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_e1emm")
-metadata/_edit_vertical_guides_ = [-2.0, 1151.0, 568.0]
-metadata/_edit_horizontal_guides_ = [387.0]
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=1640805211]
+[node name="ColorRect" type="ColorRect" parent="." unique_id=687503636]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -24,304 +22,543 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="TloMenu" type="Sprite2D" parent="." unique_id=1067725585]
-position = Vector2(574.77783, 326.25)
+[node name="MenuBackground" type="TextureRect" parent="." unique_id=1088462098]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
 scale = Vector2(0.60601854, 0.6060185)
 texture = ExtResource("2_w0tpi")
 
-[node name="Main_Menu" type="Label" parent="." unique_id=1527825413]
+[node name="HowToPlay" type="Label" parent="." unique_id=212005606]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -282.0
-offset_top = 92.0
+offset_top = 40.0
 offset_right = 285.0
-offset_bottom = 212.0
+offset_bottom = 160.0
 grow_horizontal = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_xq3li")
-theme_override_font_sizes/font_size = 122
-text = "How to play"
+theme_override_font_sizes/font_size = 100
+text = "HOW_TO_PLAY"
+horizontal_alignment = 1
 
-[node name="Button" type="Button" parent="." unique_id=640237646]
+[node name="CloseButton" type="Button" parent="." unique_id=1412249158]
 layout_mode = 1
-anchors_preset = 15
+anchors_preset = 1
+anchor_left = 1.0
 anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 994.0
-offset_top = 71.0
-offset_right = -82.0
-offset_bottom = -500.0
+offset_left = -120.0
+offset_top = 20.0
+offset_right = -40.0
+offset_bottom = 100.0
+grow_horizontal = 0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.5, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_xq3li")
-theme_override_font_sizes/font_size = 70
-text = "X"
+theme_override_font_sizes/font_size = 60
+text = "x"
 flat = true
 
-[node name="GRACZ1" type="Node" parent="." unique_id=1419418145]
+[node name="PlayersControlsContainer" type="HBoxContainer" parent="." unique_id=31193333]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -500.0
+offset_top = -100.0
+offset_right = 500.0
+offset_bottom = 200.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 30
 
-[node name="VBoxContainer" type="VBoxContainer" parent="GRACZ1" unique_id=1943881679]
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="Player1" type="VBoxContainer" parent="PlayersControlsContainer" unique_id=1207324329]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 15
 
-[node name="Klawisz2" type="Sprite2D" parent="GRACZ1/VBoxContainer" unique_id=409664147]
-position = Vector2(124.031715, 357.2056)
-scale = Vector2(0.2966805, 0.2966805)
-texture = ExtResource("4_xq3li")
-
-[node name="Klawisz3" type="Sprite2D" parent="GRACZ1/VBoxContainer" unique_id=907983542]
-position = Vector2(125.03173, 290.20557)
-rotation = 1.5013714
-scale = Vector2(0.2966805, 0.2966805)
-texture = ExtResource("4_xq3li")
-
-[node name="Klawisz5" type="Sprite2D" parent="GRACZ1/VBoxContainer" unique_id=1379171416]
-position = Vector2(128.03171, 474.2056)
-rotation = -0.017078638
-scale = Vector2(0.2966805, 0.2966805)
-texture = ExtResource("4_xq3li")
-
-[node name="Klawisz4" type="Sprite2D" parent="GRACZ1/VBoxContainer" unique_id=594799998]
-position = Vector2(124.03173, 416.2056)
-rotation = -0.014787485
-scale = Vector2(0.2966805, 0.2966805)
-texture = ExtResource("4_xq3li")
-
-[node name="W" type="Label" parent="GRACZ1" unique_id=1130740559]
-offset_left = 108.0
-offset_top = 275.0
-offset_right = 148.0
-offset_bottom = 321.0
+[node name="Player1Label" type="Label" parent="PlayersControlsContainer/Player1" unique_id=438950241]
+layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_xq3li")
-theme_override_font_sizes/font_size = 47
+theme_override_font_sizes/font_size = 32
+text = "PLAYER_1"
+horizontal_alignment = 1
+
+[node name="Controls" type="VBoxContainer" parent="PlayersControlsContainer/Player1" unique_id=407418141]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Jump" type="HBoxContainer" parent="PlayersControlsContainer/Player1/Controls" unique_id=1170135575]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Label" type="Label" parent="PlayersControlsContainer/Player1/Controls/Jump" unique_id=1615427072]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_xq3li")
+theme_override_font_sizes/font_size = 24
+text = "JUMP"
+
+[node name="KeyPanel" type="PanelContainer" parent="PlayersControlsContainer/Player1/Controls/Jump" unique_id=272838047]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = ExtResource("4_xq3li")
+
+[node name="Key" type="Label" parent="PlayersControlsContainer/Player1/Controls/Jump/KeyPanel" unique_id=1526715060]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_xq3li")
+theme_override_font_sizes/font_size = 32
 text = "W"
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="D" type="Label" parent="GRACZ1" unique_id=71250038]
-offset_left = 119.0
-offset_top = 456.0
-offset_right = 159.0
-offset_bottom = 502.0
+[node name="Left" type="HBoxContainer" parent="PlayersControlsContainer/Player1/Controls" unique_id=1983646494]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Label" type="Label" parent="PlayersControlsContainer/Player1/Controls/Left" unique_id=247064412]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_xq3li")
-theme_override_font_sizes/font_size = 47
-text = "D"
+theme_override_font_sizes/font_size = 24
+text = "LEFT"
 
-[node name="A" type="Label" parent="GRACZ1" unique_id=1254459824]
-offset_left = 114.0
-offset_top = 399.0
-offset_right = 154.0
-offset_bottom = 445.0
+[node name="KeyPanel" type="PanelContainer" parent="PlayersControlsContainer/Player1/Controls/Left" unique_id=836942779]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = ExtResource("4_xq3li")
+
+[node name="Key" type="Label" parent="PlayersControlsContainer/Player1/Controls/Left/KeyPanel" unique_id=643342088]
+layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_xq3li")
-theme_override_font_sizes/font_size = 47
+theme_override_font_sizes/font_size = 32
 text = "A"
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="S" type="Label" parent="GRACZ1" unique_id=1199434059]
-offset_left = 112.0
-offset_top = 338.0
-offset_right = 152.0
-offset_bottom = 384.0
+[node name="Right" type="HBoxContainer" parent="PlayersControlsContainer/Player1/Controls" unique_id=2129368167]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Label" type="Label" parent="PlayersControlsContainer/Player1/Controls/Right" unique_id=1578059467]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_xq3li")
-theme_override_font_sizes/font_size = 47
+theme_override_font_sizes/font_size = 24
+text = "RIGHT"
+
+[node name="KeyPanel" type="PanelContainer" parent="PlayersControlsContainer/Player1/Controls/Right" unique_id=303433375]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = ExtResource("4_xq3li")
+
+[node name="Key" type="Label" parent="PlayersControlsContainer/Player1/Controls/Right/KeyPanel" unique_id=1085667142]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_xq3li")
+theme_override_font_sizes/font_size = 32
+text = "D"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Attack" type="HBoxContainer" parent="PlayersControlsContainer/Player1/Controls" unique_id=701914764]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Label" type="Label" parent="PlayersControlsContainer/Player1/Controls/Attack" unique_id=1358884608]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_xq3li")
+theme_override_font_sizes/font_size = 24
+text = "ATTACK"
+
+[node name="KeyPanel" type="PanelContainer" parent="PlayersControlsContainer/Player1/Controls/Attack" unique_id=1673512226]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = ExtResource("4_xq3li")
+
+[node name="Key" type="Label" parent="PlayersControlsContainer/Player1/Controls/Attack/KeyPanel" unique_id=141016156]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_xq3li")
+theme_override_font_sizes/font_size = 32
 text = "S"
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="GRACZ2" type="Node" parent="." unique_id=647484547]
+[node name="Player2" type="VBoxContainer" parent="PlayersControlsContainer" unique_id=446330219]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 15
 
-[node name="Klawisz2" type="Sprite2D" parent="GRACZ2" unique_id=19902521]
-position = Vector2(393.03174, 357.2056)
-scale = Vector2(0.2966805, 0.2966805)
-texture = ExtResource("4_xq3li")
-
-[node name="Klawisz3" type="Sprite2D" parent="GRACZ2" unique_id=1725336505]
-position = Vector2(394.03174, 290.20557)
-rotation = 1.5013714
-scale = Vector2(0.2966805, 0.2966805)
-texture = ExtResource("4_xq3li")
-
-[node name="Klawisz5" type="Sprite2D" parent="GRACZ2" unique_id=1808367138]
-position = Vector2(397.0318, 474.2056)
-rotation = -0.017078638
-scale = Vector2(0.2966805, 0.2966805)
-texture = ExtResource("4_xq3li")
-
-[node name="Klawisz4" type="Sprite2D" parent="GRACZ2" unique_id=246220861]
-position = Vector2(393.03174, 416.2056)
-rotation = -0.014787485
-scale = Vector2(0.2966805, 0.2966805)
-texture = ExtResource("4_xq3li")
-
-[node name="Strzalka1" type="Label" parent="GRACZ2" unique_id=245459461]
-offset_left = 384.0
-offset_top = 256.0
-offset_right = 425.0
-offset_bottom = 323.0
+[node name="Player2Label" type="Label" parent="PlayersControlsContainer/Player2" unique_id=1291305735]
+layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_xq3li")
-theme_override_font_sizes/font_size = 47
-text = "↑ "
+theme_override_font_sizes/font_size = 32
+text = "PLAYER_2"
+horizontal_alignment = 1
 
-[node name="Strzalka4" type="Label" parent="GRACZ2" unique_id=407194959]
-offset_left = 386.0
-offset_top = 440.0
-offset_right = 426.0
-offset_bottom = 507.0
+[node name="Controls" type="VBoxContainer" parent="PlayersControlsContainer/Player2" unique_id=1492486971]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Jump" type="HBoxContainer" parent="PlayersControlsContainer/Player2/Controls" unique_id=1184840181]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Label" type="Label" parent="PlayersControlsContainer/Player2/Controls/Jump" unique_id=759421962]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_xq3li")
-theme_override_font_sizes/font_size = 47
-text = "↓ "
+theme_override_font_sizes/font_size = 24
+text = "JUMP"
 
-[node name="Strzalka3" type="Label" parent="GRACZ2" unique_id=132503624]
-offset_left = 374.0
-offset_top = 378.0
-offset_right = 415.0
-offset_bottom = 445.0
+[node name="KeyPanel" type="PanelContainer" parent="PlayersControlsContainer/Player2/Controls/Jump" unique_id=576071978]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = ExtResource("4_xq3li")
+
+[node name="Key" type="Label" parent="PlayersControlsContainer/Player2/Controls/Jump/KeyPanel" unique_id=1804153307]
+layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_xq3li")
-theme_override_font_sizes/font_size = 47
-text = "→"
+theme_override_font_sizes/font_size = 32
+text = "↑"
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="Strzalka2" type="Label" parent="GRACZ2" unique_id=1295149494]
-offset_left = 374.0
-offset_top = 320.0
-offset_right = 415.0
-offset_bottom = 387.0
+[node name="Left" type="HBoxContainer" parent="PlayersControlsContainer/Player2/Controls" unique_id=1401957737]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Label" type="Label" parent="PlayersControlsContainer/Player2/Controls/Left" unique_id=458481626]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_xq3li")
-theme_override_font_sizes/font_size = 47
+theme_override_font_sizes/font_size = 24
+text = "LEFT"
+
+[node name="KeyPanel" type="PanelContainer" parent="PlayersControlsContainer/Player2/Controls/Left" unique_id=193322135]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = ExtResource("4_xq3li")
+
+[node name="Key" type="Label" parent="PlayersControlsContainer/Player2/Controls/Left/KeyPanel" unique_id=614477598]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_xq3li")
+theme_override_font_sizes/font_size = 32
 text = "←"
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="GRACZ3" type="Node" parent="." unique_id=1344099233]
+[node name="Right" type="HBoxContainer" parent="PlayersControlsContainer/Player2/Controls" unique_id=2141633927]
+layout_mode = 2
+theme_override_constants/separation = 10
 
-[node name="Klawisz2" type="Sprite2D" parent="GRACZ3" unique_id=1233511362]
-position = Vector2(867.03174, 351.2056)
-scale = Vector2(0.2966805, 0.2966805)
-texture = ExtResource("4_xq3li")
-
-[node name="Klawisz3" type="Sprite2D" parent="GRACZ3" unique_id=1272057614]
-position = Vector2(868.03174, 284.20557)
-rotation = 1.5013714
-scale = Vector2(0.2966805, 0.2966805)
-texture = ExtResource("4_xq3li")
-
-[node name="Klawisz5" type="Sprite2D" parent="GRACZ3" unique_id=487409339]
-position = Vector2(871.032, 468.2056)
-rotation = -0.017078638
-scale = Vector2(0.2966805, 0.2966805)
-texture = ExtResource("4_xq3li")
-
-[node name="Klawisz4" type="Sprite2D" parent="GRACZ3" unique_id=2052209182]
-position = Vector2(867.03174, 410.2056)
-rotation = -0.014787486
-scale = Vector2(0.2966805, 0.2966805)
-texture = ExtResource("4_xq3li")
-
-[node name="J" type="Label" parent="GRACZ3" unique_id=462667975]
-offset_left = 866.0
-offset_top = 265.0
-offset_right = 906.0
-offset_bottom = 311.0
+[node name="Label" type="Label" parent="PlayersControlsContainer/Player2/Controls/Right" unique_id=1247791068]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_xq3li")
-theme_override_font_sizes/font_size = 47
-text = "J"
+theme_override_font_sizes/font_size = 24
+text = "RIGHT"
 
-[node name="K" type="Label" parent="GRACZ3" unique_id=216703871]
-offset_left = 862.0001
-offset_top = 450.0
-offset_right = 902.0001
-offset_bottom = 496.0
+[node name="KeyPanel" type="PanelContainer" parent="PlayersControlsContainer/Player2/Controls/Right" unique_id=10092826]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = ExtResource("4_xq3li")
+
+[node name="Key" type="Label" parent="PlayersControlsContainer/Player2/Controls/Right/KeyPanel" unique_id=479370704]
+layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_xq3li")
-theme_override_font_sizes/font_size = 47
-text = "K"
+theme_override_font_sizes/font_size = 32
+text = "→"
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="I" type="Label" parent="GRACZ3" unique_id=960554934]
-offset_left = 857.0001
-offset_top = 393.0
-offset_right = 897.0001
-offset_bottom = 439.0
+[node name="Attack" type="HBoxContainer" parent="PlayersControlsContainer/Player2/Controls" unique_id=847579788]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Label" type="Label" parent="PlayersControlsContainer/Player2/Controls/Attack" unique_id=1634827933]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_xq3li")
-theme_override_font_sizes/font_size = 47
-text = "I"
+theme_override_font_sizes/font_size = 24
+text = "ATTACK"
 
-[node name="L" type="Label" parent="GRACZ3" unique_id=1050364933]
-offset_left = 855.0001
-offset_top = 332.0
-offset_right = 895.0001
-offset_bottom = 378.0
+[node name="KeyPanel" type="PanelContainer" parent="PlayersControlsContainer/Player2/Controls/Attack" unique_id=2036515010]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = ExtResource("4_xq3li")
+
+[node name="Key" type="Label" parent="PlayersControlsContainer/Player2/Controls/Attack/KeyPanel" unique_id=857327336]
+layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_xq3li")
-theme_override_font_sizes/font_size = 47
-text = "L"
+theme_override_font_sizes/font_size = 32
+text = "↓"
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="Node" type="Node" parent="." unique_id=159389926]
+[node name="Player3" type="VBoxContainer" parent="PlayersControlsContainer" unique_id=338573182]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 15
 
-[node name="Klawisz2" type="Sprite2D" parent="Node" unique_id=1058678319]
-position = Vector2(613.0317, 357.2056)
-scale = Vector2(0.2966805, 0.2966805)
-texture = ExtResource("4_xq3li")
-
-[node name="Klawisz3" type="Sprite2D" parent="Node" unique_id=1653812639]
-position = Vector2(614.0317, 290.20557)
-rotation = 1.5013714
-scale = Vector2(0.2966805, 0.2966805)
-texture = ExtResource("4_xq3li")
-
-[node name="Klawisz5" type="Sprite2D" parent="Node" unique_id=125304118]
-position = Vector2(617.03174, 474.2056)
-rotation = -0.017078638
-scale = Vector2(0.2966805, 0.2966805)
-texture = ExtResource("4_xq3li")
-
-[node name="Klawisz4" type="Sprite2D" parent="Node" unique_id=1403056038]
-position = Vector2(613.0317, 416.2056)
-rotation = -0.014787486
-scale = Vector2(0.2966805, 0.2966805)
-texture = ExtResource("4_xq3li")
-
-[node name="4" type="Label" parent="Node" unique_id=554743548]
-offset_left = 597.0
-offset_top = 275.0
-offset_right = 637.0
-offset_bottom = 321.0
+[node name="Player3Label" type="Label" parent="PlayersControlsContainer/Player3" unique_id=2052459877]
+layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_xq3li")
-theme_override_font_sizes/font_size = 47
+theme_override_font_sizes/font_size = 32
+text = "PLAYER_3"
+horizontal_alignment = 1
+
+[node name="Controls" type="VBoxContainer" parent="PlayersControlsContainer/Player3" unique_id=784777512]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Jump" type="HBoxContainer" parent="PlayersControlsContainer/Player3/Controls" unique_id=1421369657]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Label" type="Label" parent="PlayersControlsContainer/Player3/Controls/Jump" unique_id=354400362]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_xq3li")
+theme_override_font_sizes/font_size = 24
+text = "JUMP"
+
+[node name="KeyPanel" type="PanelContainer" parent="PlayersControlsContainer/Player3/Controls/Jump" unique_id=622755330]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = ExtResource("4_xq3li")
+
+[node name="Key" type="Label" parent="PlayersControlsContainer/Player3/Controls/Jump/KeyPanel" unique_id=1792579452]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_xq3li")
+theme_override_font_sizes/font_size = 32
 text = "4"
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="5" type="Label" parent="Node" unique_id=1233394703]
-offset_left = 608.0
-offset_top = 456.0
-offset_right = 648.0
-offset_bottom = 502.0
+[node name="Left" type="HBoxContainer" parent="PlayersControlsContainer/Player3/Controls" unique_id=1840395642]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Label" type="Label" parent="PlayersControlsContainer/Player3/Controls/Left" unique_id=1822784642]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_xq3li")
-theme_override_font_sizes/font_size = 47
-text = "5"
+theme_override_font_sizes/font_size = 24
+text = "LEFT"
 
-[node name="8" type="Label" parent="Node" unique_id=1123617361]
-offset_left = 603.0
-offset_top = 399.0
-offset_right = 643.0
-offset_bottom = 445.0
+[node name="KeyPanel" type="PanelContainer" parent="PlayersControlsContainer/Player3/Controls/Left" unique_id=444196286]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = ExtResource("4_xq3li")
+
+[node name="Key" type="Label" parent="PlayersControlsContainer/Player3/Controls/Left/KeyPanel" unique_id=1592271004]
+layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_xq3li")
-theme_override_font_sizes/font_size = 47
+theme_override_font_sizes/font_size = 32
 text = "8"
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="6" type="Label" parent="Node" unique_id=572549779]
-offset_left = 601.0
-offset_top = 338.0
-offset_right = 641.0
-offset_bottom = 384.0
+[node name="Right" type="HBoxContainer" parent="PlayersControlsContainer/Player3/Controls" unique_id=1452152855]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Label" type="Label" parent="PlayersControlsContainer/Player3/Controls/Right" unique_id=2001622469]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_xq3li")
-theme_override_font_sizes/font_size = 47
-text = "6"
+theme_override_font_sizes/font_size = 24
+text = "RIGHT"
 
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[node name="KeyPanel" type="PanelContainer" parent="PlayersControlsContainer/Player3/Controls/Right" unique_id=971890992]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = ExtResource("4_xq3li")
+
+[node name="Key" type="Label" parent="PlayersControlsContainer/Player3/Controls/Right/KeyPanel" unique_id=305866792]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_xq3li")
+theme_override_font_sizes/font_size = 32
+text = "5"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Attack" type="HBoxContainer" parent="PlayersControlsContainer/Player3/Controls" unique_id=1368725172]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Label" type="Label" parent="PlayersControlsContainer/Player3/Controls/Attack" unique_id=847410216]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_xq3li")
+theme_override_font_sizes/font_size = 24
+text = "ATTACK"
+
+[node name="KeyPanel" type="PanelContainer" parent="PlayersControlsContainer/Player3/Controls/Attack" unique_id=319590295]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = ExtResource("4_xq3li")
+
+[node name="Key" type="Label" parent="PlayersControlsContainer/Player3/Controls/Attack/KeyPanel" unique_id=293980761]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_xq3li")
+theme_override_font_sizes/font_size = 32
+text = "6"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Player4" type="VBoxContainer" parent="PlayersControlsContainer" unique_id=457294560]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 15
+
+[node name="Player4Label" type="Label" parent="PlayersControlsContainer/Player4" unique_id=1168745374]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_xq3li")
+theme_override_font_sizes/font_size = 32
+text = "PLAYER_4"
+horizontal_alignment = 1
+
+[node name="Controls" type="VBoxContainer" parent="PlayersControlsContainer/Player4" unique_id=528928320]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Jump" type="HBoxContainer" parent="PlayersControlsContainer/Player4/Controls" unique_id=1678468576]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Label" type="Label" parent="PlayersControlsContainer/Player4/Controls/Jump" unique_id=107719438]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_xq3li")
+theme_override_font_sizes/font_size = 24
+text = "JUMP"
+
+[node name="KeyPanel" type="PanelContainer" parent="PlayersControlsContainer/Player4/Controls/Jump" unique_id=531335780]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = ExtResource("4_xq3li")
+
+[node name="Key" type="Label" parent="PlayersControlsContainer/Player4/Controls/Jump/KeyPanel" unique_id=816685711]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_xq3li")
+theme_override_font_sizes/font_size = 32
+text = "J"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Left" type="HBoxContainer" parent="PlayersControlsContainer/Player4/Controls" unique_id=981649192]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Label" type="Label" parent="PlayersControlsContainer/Player4/Controls/Left" unique_id=1616219202]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_xq3li")
+theme_override_font_sizes/font_size = 24
+text = "LEFT"
+
+[node name="KeyPanel" type="PanelContainer" parent="PlayersControlsContainer/Player4/Controls/Left" unique_id=674066324]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = ExtResource("4_xq3li")
+
+[node name="Key" type="Label" parent="PlayersControlsContainer/Player4/Controls/Left/KeyPanel" unique_id=628603872]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_xq3li")
+theme_override_font_sizes/font_size = 32
+text = "I"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Right" type="HBoxContainer" parent="PlayersControlsContainer/Player4/Controls" unique_id=1852858190]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Label" type="Label" parent="PlayersControlsContainer/Player4/Controls/Right" unique_id=1991294918]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_xq3li")
+theme_override_font_sizes/font_size = 24
+text = "RIGHT"
+
+[node name="KeyPanel" type="PanelContainer" parent="PlayersControlsContainer/Player4/Controls/Right" unique_id=583621633]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = ExtResource("4_xq3li")
+
+[node name="Key" type="Label" parent="PlayersControlsContainer/Player4/Controls/Right/KeyPanel" unique_id=949090799]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_xq3li")
+theme_override_font_sizes/font_size = 32
+text = "K"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Attack" type="HBoxContainer" parent="PlayersControlsContainer/Player4/Controls" unique_id=1056889594]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Label" type="Label" parent="PlayersControlsContainer/Player4/Controls/Attack" unique_id=2109337758]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_xq3li")
+theme_override_font_sizes/font_size = 24
+text = "ATTACK"
+
+[node name="KeyPanel" type="PanelContainer" parent="PlayersControlsContainer/Player4/Controls/Attack" unique_id=351509499]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = ExtResource("4_xq3li")
+
+[node name="Key" type="Label" parent="PlayersControlsContainer/Player4/Controls/Attack/KeyPanel" unique_id=510606592]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_xq3li")
+theme_override_font_sizes/font_size = 32
+text = "L"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="CloseButton" to="." method="_on_button_pressed"]

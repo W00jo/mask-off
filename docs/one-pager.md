@@ -7,7 +7,7 @@
 
 ## Game Summary
 
-Do you know beat 'em ups? Time to *beat-each-other-up*! Four players, three maps, many different masks. Grabbing a mask grants unique powers—from brute force to quirky tactical effects—to help you dominate your friends and clear the arena.
+Do you know beat 'em ups? Time to *beat-each-other-up*! Four players, three maps, many different masks. Grabbing a mask grants unique powers, from brute force to quirky tactical effects, to help you dominate your friends and clear the arena.
 
 ## Game Outline
 
