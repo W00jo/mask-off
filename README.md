@@ -1,10 +1,22 @@
-# Mask off
+# Mask Off
 
 ## Overview
+**Mask Off** is a fast-paced, local multiplayer beat-'em-up where players compete for powerful, game-changing masks. This project was developed for **LubJam 2026** / **Global Game Jam 2026**.
 
-Up to 4-player beat-each-other-up.
+## GGJ 2026 Diversifiers
+We have incorporated the following diversifiers:
+* **Many Hands Make Light Work**: Designed for local multiplayer with up to four players.
+* **The World is Alive**: Every stationary object in our levels features custom animations.
+* **Cartridge Ready**: The final build is optimized to be under 10 MB.
+* **Diverse**: By including the three diversifiers above, we have achieved the "Diverse" challenge.
 
-## Project structure
+## Game Design
+* **Core Loop**: Wait for the timer, grab the Mask, and use unique power-ups to outplay your opponents.
+* **USP**: Local 4-player mayhem, quirky mask-based power-ups, and three distinct maps.
+* **Target**: Family-friendly (Rating: E).
+
+## Project Structure
+Managed within the **Godot Engine** using **GDScript**.
 
 res://
 <br/>├── **assets/** → Art, audio, fonts, shaders
@@ -65,6 +77,6 @@ These naming conventions follow the Godot Engine style. Breaking these will make
 
 ## Credits
 
-List any free/paid assets, tools, or contributors.
-
-*Summarised from Godot Docs*.
+* **Engine**: Godot 4.6. .NET
+* **Design templates**: Based on Scott Rogers' *Level Up!*
+* **Team**: [TODO]
