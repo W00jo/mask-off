@@ -61,4 +61,4 @@ func set_input_data(input_data: InputData):
 
 func create_wearable_mask(mask):
 	print("MASK COLLECTED!!!! : ", mask)
-	 # TODO: Add creating wearable masks
+	 # TODO: Add creating wearable masksd

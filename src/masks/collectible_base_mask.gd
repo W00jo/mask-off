@@ -21,4 +21,4 @@ func _on_body_entered(body: Node2D) -> void:
 	print("body entered")
 	if body is Player:
 		pick_up()
-		body.receive_mask(random_mask)
+		body.create_wearable_mask(random_mask)
