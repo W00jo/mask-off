@@ -13,9 +13,12 @@ signal on_player_death
 @onready var attack_parent: Node2D = $AttackParent 
 @onready var attack_holder: Node2D = $AttackParent/AttackHolder
 @onready var damage_target: DamageTarget = $DamageTarget 
+@onready var wearable_mask_scene = preload("res://src/masks/werable_base_mask.tscn")
 
 @export var default_attack: PackedScene
 @export var new_attack: PackedScene
+
+@export var mask_parent: Node2D
 
 #@export var mask_spawner: MaskSpawner
 #@export var mask_spawn_points: Node
@@ -61,4 +64,9 @@ func set_input_data(input_data: InputData):
 
 func create_wearable_mask(mask):
 	print("MASK COLLECTED!!!! : ", mask)
-	 # TODO: Add creating wearable masksd
+	 # TODO: Add creating wearable masks
+	var wearable_mask_instance = wearable_mask_scene.instantiate()
+	mask_parent.add_child(wearable_mask_instance)
+	wearable_mask_instance.set_type(mask)
+	
+	

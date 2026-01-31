@@ -171,10 +171,11 @@ _data = {
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g6k8r"]
 size = Vector2(46, 68)
 
-[node name="PlayerNew" type="CharacterBody2D" unique_id=1053524098]
+[node name="PlayerNew" type="CharacterBody2D" unique_id=1053524098 node_paths=PackedStringArray("mask_parent")]
 collision_layer = 2
 script = ExtResource("1_0v0ik")
 default_attack = ExtResource("2_rgyib")
+mask_parent = NodePath("MaskParent")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1375468071]
 texture_filter = 1
@@ -251,5 +252,8 @@ grow_vertical = 2
 pivot_offset_ratio = Vector2(0.5, 0.5)
 value = 50.0
 show_percentage = false
+
+[node name="MaskParent" type="Node2D" parent="." unique_id=1472926769]
+position = Vector2(5, -22)
 
 [connection signal="on_damage_received" from="DamageTarget" to="UI" method="_on_damage_target_on_damage_received"]

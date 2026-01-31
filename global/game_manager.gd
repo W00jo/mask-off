@@ -5,6 +5,9 @@ signal language_changed(locale: String)
 
 const SAVE_PATH = "user://settings.cfg"
 
+var mask_types = {"bomberman": preload("res://assets/sprites/maskaaaa.png"),
+				"costam": preload("res://assets/sprites/maskaaaa.png")}
+
 func _ready() -> void:
 	_load_settings()
 

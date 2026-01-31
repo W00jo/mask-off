@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://b16lvx2svwcgy"]
+
+[ext_resource type="Texture2D" uid="uid://th7ronkdrg8s" path="res://assets/sprites/maskaaaa.png" id="1_ch3hh"]
+[ext_resource type="Script" uid="uid://nemq288fqk50" path="res://src/masks/wear_base_mask.gd" id="2_vglb0"]
+
+[node name="WerableBaseMask" type="Node2D" unique_id=454045348]
+script = ExtResource("2_vglb0")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=366379768]
+texture_filter = 1
+scale = Vector2(7, 7)
+texture = ExtResource("1_ch3hh")

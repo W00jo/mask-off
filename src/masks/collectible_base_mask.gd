@@ -6,12 +6,10 @@ signal mask_picked_up(rand_mask)
 @onready var sprite: Sprite2D = $Sprite2D
 var duration := 10
 var random_mask
-var types = {"bomberman": preload("res://assets/sprites/maskaaaa.png"),
-			"costam": preload("res://assets/sprites/maskaaaa.png")}
 
 func _ready() -> void:
-	random_mask = types.keys().pick_random()
-	sprite.texture = types.get(random_mask)
+	random_mask = GameManager.mask_types.keys().pick_random()
+	sprite.texture = GameManager.mask_types.get(random_mask)
 
 func pick_up():
 	mask_picked_up.emit(random_mask)
