@@ -10,6 +10,7 @@
 [ext_resource type="Script" uid="uid://crqfi21e4cwo5" path="res://player/state_machine/fall_state.gd" id="6_tcq0w"]
 [ext_resource type="Script" uid="uid://bqmioivprkl42" path="res://player/mask_system.gd" id="7_boad6"]
 [ext_resource type="Script" uid="uid://uck8pyr0up71" path="res://player/state_machine/attack_state.gd" id="9_8t03j"]
+[ext_resource type="Script" uid="uid://dvx22adu7ly4a" path="res://player/state_machine/death_state.gd" id="10_yllr7"]
 [ext_resource type="Script" uid="uid://debf2l4kldxlb" path="res://player/damage_system/damage_target.gd" id="11_2ieo8"]
 [ext_resource type="Script" uid="uid://bwaqdqdr1hous" path="res://player/player_ui.gd" id="12_ebec5"]
 
@@ -42,6 +43,18 @@ tracks/1/keys = {
 "update": 0,
 "values": [Vector2(0, 37)]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
 
 [sub_resource type="Animation" id="Animation_rgyib"]
 resource_name = "player_attack_default"
@@ -57,6 +70,22 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Vector2(0, 37), Vector2(80, 24), Vector2(4, 33)]
+}
+
+[sub_resource type="Animation" id="Animation_ebec5"]
+resource_name = "player_temp_death"
+length = 1.5333333
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6, 0.90232867, 1.2023287, 1.5023286),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 3.141592653589793, 6.2831855, 0.0, 3.141592653589793, 6.2831855]
 }
 
 [sub_resource type="Animation" id="Animation_dh4si"]
@@ -114,6 +143,7 @@ tracks/0/keys = {
 _data = {
 &"RESET": SubResource("Animation_p842g"),
 &"player_attack_default": SubResource("Animation_rgyib"),
+&"player_temp_death": SubResource("Animation_ebec5"),
 &"player_temp_idle": SubResource("Animation_dh4si"),
 &"player_temp_jump": SubResource("Animation_innbq"),
 &"player_temp_walk": SubResource("Animation_tcq0w")
@@ -164,6 +194,10 @@ metadata/_custom_type_script = "uid://crqfi21e4cwo5"
 script = ExtResource("9_8t03j")
 metadata/_custom_type_script = "uid://crqfi21e4cwo5"
 
+[node name="DeathState" type="Node" parent="StateMachine" unique_id=964425758]
+script = ExtResource("10_yllr7")
+metadata/_custom_type_script = "uid://crqfi21e4cwo5"
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=340885158]
 libraries/ = SubResource("AnimationLibrary_tcq0w")
 
@@ -204,5 +238,5 @@ value = 50.0
 show_percentage = false
 
 [connection signal="on_damage_received" from="DamageTarget" to="UI" method="_on_damage_target_on_damage_received"]
-[connection signal="on_death" from="DamageTarget" to="." method="_on_death"]
+[connection signal="on_death" from="DamageTarget" to="." method="_begin_death"]
 [connection signal="on_death" from="DamageTarget" to="UI" method="_on_death"]

@@ -38,6 +38,10 @@ func clear_attack():
 	current_attack.queue_free()
 	set_attack(default_attack)
 
-
-func _on_death() -> void:
+func on_death() -> void:
 	on_player_death.emit()
+	queue_free()
+	
+
+func _begin_death() -> void:
+	$StateMachine.change_state("deathstate")
