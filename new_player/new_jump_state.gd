@@ -7,7 +7,7 @@ var jump_speed = -900
 func enter():
 	print("entering JUMP state...")
 	owner.velocity.y = jump_speed
-	#owner.get_node("AnimationPlayer").play("jump")
+	owner.get_node("AnimationPlayer").play("jump")
 
 func physics_update(delta:float):
 	owner.velocity.y += 1500 * delta

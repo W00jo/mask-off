@@ -3,7 +3,7 @@ extends NewState
 
 func enter():
 	print("entering IDLE state...")
-	#owner.get_node("AnimationPlayer").play("idle")
+	owner.get_node("AnimationPlayer").play("idle")
 
 func handle_input(_event:InputEvent):
 	if Input.is_action_pressed("ui_left") or Input.is_action_pressed("ui_right"):
