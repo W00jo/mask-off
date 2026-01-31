@@ -20,6 +20,10 @@ config/features=PackedStringArray("4.6", "GL Compatibility")
 boot_splash/image="uid://b50vv54ll0n30"
 config/icon="uid://glb1vcybj4ar"
 
+[autoload]
+
+GameManager="*uid://dpifklg63k687"
+
 [dotnet]
 
 project/assembly_name="Mask Off"
