@@ -6,9 +6,9 @@
 ## [GGJ 2026 diversifiers](https://globalgamejam.org/global-game-jam-2026-diversifiers-have-arrived)
 We have incorporated the following diversifiers:
 * **Many Hands Make Light Work**: Designed for local multiplayer with up to four players.
-~~* **The World is Alive**: Every stationary object in our levels features custom animations.~~ [TODO]
-~~* **Cartridge Ready**: The final build is optimized to be under 10 MB.~~ [TODO].
-~~* **Diverse**: By including the three diversifiers above, we have achieved the "Diverse" challenge.~~
+* ~~**The World is Alive**: Every stationary object in our levels features custom animations.~~ [TODO]
+* ~~**Cartridge Ready**: The final build is optimized to be under 10 MB.~~ [TODO].
+* ~~**Diverse**: By including the three diversifiers above, we have achieved the "Diverse" challenge.~~
 
 ## Game design
 * **Core Loop**: Wait for the timer, grab the Mask, and use unique power-ups to outplay your opponents.
