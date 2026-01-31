@@ -1,13 +1,16 @@
 class_name JumpState
 extends State
 
-
 var jump_speed = -900
 
 func enter():
 	print("entering JUMP state...")
 	owner.velocity.y = jump_speed
 	owner.get_node("AnimationPlayer").play("player_temp_jump")
+	
+func handle_input(event: InputEvent):
+	if(Input.is_action_just_pressed(input.attack)):
+		state_machine.change_state("attackstate")
 
 func physics_update(delta:float):
 	owner.velocity.y += 1500 * delta
@@ -19,8 +22,10 @@ func physics_update(delta:float):
 	
 	if direction < 0:
 		$"../../Sprite2D".flip_h = true
+		owner.attack_holder.scale.x = -1
 	elif direction > 0:
 		$"../../Sprite2D".flip_h = false
+		owner.attack_holder.scale.x = 1
 	
 	owner.velocity.x = direction * 200
 	owner.move_and_slide()

@@ -14,8 +14,10 @@ func physics_update(_delta:float):
 		
 		if direction < 0:
 			$"../../Sprite2D".flip_h = true
+			owner.attack_parent.scale.x = -1
 		elif direction > 0:
 			$"../../Sprite2D".flip_h = false
+			owner.attack_parent.scale.x = 1
 		
 		if direction == 0:
 				state_machine.change_state("idlestate")
@@ -28,7 +30,9 @@ func physics_update(_delta:float):
 		return
 		
 func handle_input(event:InputEvent):
-	if Input.is_action_just_pressed(input.jump):
+	if(Input.is_action_just_pressed(input.attack)):
+		state_machine.change_state("attackstate")
+	elif Input.is_action_just_pressed(input.jump):
 		state_machine.change_state("jumpstate")
-	if Input.is_action_pressed("Shift"):
+	elif Input.is_action_pressed("Shift"):
 		state_machine.change_state("runstate")
