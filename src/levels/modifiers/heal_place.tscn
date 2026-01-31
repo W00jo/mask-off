@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c1476ft6gr25q"]
 
-[ext_resource type="Script" uid="uid://c361p8mo5hq0d" path="res://src/heal_place.gd" id="1_llhnd"]
+[ext_resource type="Script" uid="uid://c361p8mo5hq0d" path="res://src/levels/modifiers/resource_place.gd" id="1_llhnd"]
 [ext_resource type="Texture2D" uid="uid://qix0oygodiat" path="res://icon.svg" id="2_vysr0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gwqwp"]
