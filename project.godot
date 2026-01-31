@@ -20,6 +20,10 @@ config/features=PackedStringArray("4.6", "GL Compatibility")
 boot_splash/image="uid://b50vv54ll0n30"
 config/icon="uid://glb1vcybj4ar"
 
+[audio]
+
+buses/default_bus_layout="res://src/ui/menus/default_bus_layout.tres"
+
 [autoload]
 
 GameManager="*uid://dpifklg63k687"
