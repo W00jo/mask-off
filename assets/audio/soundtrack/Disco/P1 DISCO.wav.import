@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://fdndlsyh1npw"
+path="res://.godot/imported/P1 DISCO.wav-b0bb8189cc6d1aaeb08a524a7ea79a54.sample"
+
+[deps]
+
+source_file="res://assets/audio/soundtrack/Disco/P1 DISCO.wav"
+dest_files=["res://.godot/imported/P1 DISCO.wav-b0bb8189cc6d1aaeb08a524a7ea79a54.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
