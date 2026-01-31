@@ -1,6 +1,14 @@
 [gd_scene format=3 uid="uid://fjhqoi1myrss"]
 
 [ext_resource type="Script" uid="uid://bxa57ixpufgov" path="res://src/ui/menus/options.gd" id="1_ckw4x"]
+[ext_resource type="Texture2D" uid="uid://cpx81f45uct5c" path="res://src/ui/menus/flag_icon_gb.png" id="2_8mfi6"]
+[ext_resource type="Texture2D" uid="uid://hhwr40w72ju" path="res://src/ui/menus/flag_icon_pl.png" id="3_lgb0q"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ckw4x"]
+font_size = 50
+
+[sub_resource type="LabelSettings" id="LabelSettings_hvdkm"]
+font_size = 24
 
 [node name="Options" type="Control" unique_id=1038357148]
 layout_mode = 3
@@ -20,20 +28,127 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.3918066, 0.0009627594, 0.5565491, 1)
 
-[node name="Label" type="Label" parent="." unique_id=847663559]
-layout_mode = 0
-offset_left = 480.0
-offset_top = 105.0
-offset_right = 542.0
-offset_bottom = 128.0
-text = "Options"
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1682552393]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 260
+theme_override_constants/margin_top = 60
+theme_override_constants/margin_right = 260
+theme_override_constants/margin_bottom = 60
 
-[node name="Back" type="Button" parent="." unique_id=1482697108]
-layout_mode = 0
-offset_left = 542.0
-offset_top = 535.0
-offset_right = 587.0
-offset_bottom = 566.0
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=235257116]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="CenterContainer" type="CenterContainer" parent="MarginContainer/VBoxContainer" unique_id=1393467768]
+layout_mode = 2
+
+[node name="OptionsLabel" type="Label" parent="MarginContainer/VBoxContainer/CenterContainer" unique_id=847663559]
+layout_mode = 2
+text = "Options"
+label_settings = SubResource("LabelSettings_ckw4x")
+
+[node name="OptionComponents" type="VBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1366456265]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Music" type="HBoxContainer" parent="MarginContainer/VBoxContainer/OptionComponents" unique_id=1529962010]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 60
+
+[node name="MusicLabel" type="Label" parent="MarginContainer/VBoxContainer/OptionComponents/Music" unique_id=1703178224]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+size_flags_stretch_ratio = 0.5
+text = "Music"
+label_settings = SubResource("LabelSettings_hvdkm")
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="MusicSlider" type="HSlider" parent="MarginContainer/VBoxContainer/OptionComponents/Music" unique_id=2001618587]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+ticks_position = 3
+
+[node name="SFX" type="HBoxContainer" parent="MarginContainer/VBoxContainer/OptionComponents" unique_id=1704688958]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 60
+
+[node name="SFXLabel" type="Label" parent="MarginContainer/VBoxContainer/OptionComponents/SFX" unique_id=498556522]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+size_flags_stretch_ratio = 0.5
+text = "Sound effects"
+label_settings = SubResource("LabelSettings_hvdkm")
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="SFXSlider" type="HSlider" parent="MarginContainer/VBoxContainer/OptionComponents/SFX" unique_id=1611468628]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+ticks_position = 3
+
+[node name="Language" type="HBoxContainer" parent="MarginContainer/VBoxContainer/OptionComponents" unique_id=2097689647]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 60
+
+[node name="LangLabel" type="Label" parent="MarginContainer/VBoxContainer/OptionComponents/Language" unique_id=349611322]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+size_flags_stretch_ratio = 0.5
+text = "Language"
+label_settings = SubResource("LabelSettings_hvdkm")
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="FlagButtons" type="MarginContainer" parent="MarginContainer/VBoxContainer/OptionComponents/Language" unique_id=1905717990]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/OptionComponents/Language/FlagButtons" unique_id=203285165]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 50
+
+[node name="FlagEN" type="TextureButton" parent="MarginContainer/VBoxContainer/OptionComponents/Language/FlagButtons/HBoxContainer" unique_id=477247823]
+layout_mode = 2
+size_flags_horizontal = 3
+texture_normal = ExtResource("2_8mfi6")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="FlagPL" type="TextureButton" parent="MarginContainer/VBoxContainer/OptionComponents/Language/FlagButtons/HBoxContainer" unique_id=454206710]
+layout_mode = 2
+size_flags_horizontal = 3
+texture_normal = ExtResource("3_lgb0q")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="MarginContainer/VBoxContainer" unique_id=1714266056]
+layout_mode = 2
+ratio = 2.9593
+
+[node name="Back" type="Button" parent="MarginContainer/VBoxContainer/AspectRatioContainer" unique_id=1482697108]
+layout_mode = 2
+size_flags_vertical = 8
 text = "Back"
 
-[connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
+[connection signal="value_changed" from="MarginContainer/VBoxContainer/OptionComponents/Music/MusicSlider" to="." method="_on_music_slider_value_changed"]
+[connection signal="value_changed" from="MarginContainer/VBoxContainer/OptionComponents/SFX/SFXSlider" to="." method="_on_sfx_slider_value_changed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/AspectRatioContainer/Back" to="." method="_on_back_pressed"]
