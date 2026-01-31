@@ -9,7 +9,7 @@ func enter():
 func physics_update(delta:float):
 	owner.velocity.y += 980 * delta
 	
-	var direction = Input.get_axis("ui_left","ui_right")
+	var direction = Input.get_axis(input.move_left,input.move_right)
 	
 	if direction < 0:
 		$"../../Sprite2D".flip_h = true

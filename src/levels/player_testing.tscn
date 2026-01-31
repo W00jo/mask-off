@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://cw54x64sgkqv6" path="res://src/levels/level_test.gd" id="1_qykk4"]
 [ext_resource type="PackedScene" uid="uid://crrflahojckb3" path="res://src/levels/modifiers/killzones/damage_place.tscn" id="2_cmjwt"]
 [ext_resource type="PackedScene" uid="uid://vwin6y5xrqyc" path="res://src/levels/modifiers/mask_spawner/mask_spawner.tscn" id="3_n7tny"]
+[ext_resource type="PackedScene" uid="uid://cxeyem7cvvt27" path="res://src/levels/02_bubble_level/falling_platform.tscn" id="3_n7tny"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7ypsn"]
 size = Vector2(194, 39)
@@ -55,3 +56,5 @@ position = Vector2(157, 315)
 
 [node name="MaskSpawnPoint3" type="Node2D" parent="MaskSpawnPoints" unique_id=329397788]
 position = Vector2(716, 318)
+[node name="Falling_platform" parent="." unique_id=435592318 instance=ExtResource("3_n7tny")]
+position = Vector2(149, 511)

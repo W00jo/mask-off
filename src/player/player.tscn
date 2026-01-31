@@ -172,6 +172,7 @@ _data = {
 size = Vector2(46, 68)
 
 [node name="PlayerNew" type="CharacterBody2D" unique_id=1053524098]
+collision_layer = 2
 script = ExtResource("1_0v0ik")
 default_attack = ExtResource("2_rgyib")
 
@@ -251,4 +252,4 @@ pivot_offset_ratio = Vector2(0.5, 0.5)
 value = 50.0
 show_percentage = false
 
-[connection signal="on_death" from="DamageTarget" to="." method="_begin_on_death"]
+[connection signal="on_damage_received" from="DamageTarget" to="UI" method="_on_damage_target_on_damage_received"]

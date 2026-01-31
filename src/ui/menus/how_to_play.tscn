@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://crf8kbvbl8uu6"]
 
-[ext_resource type="Script" uid="uid://mnykhaxqggbi" path="res://src/ui/menus/how_to_play.gd" id="1_e1emm"]
+[ext_resource type="Script" path="res://src/ui/menus/how_to_play.gd" id="1_e1emm"]
 
 [node name="HowToPlay" type="Control" unique_id=1391345934]
 layout_mode = 3
@@ -34,5 +34,10 @@ offset_top = 354.0
 offset_right = 625.0
 offset_bottom = 385.0
 text = "Start!"
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1547345143]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
 
 [connection signal="pressed" from="Start" to="." method="_on_start_pressed"]

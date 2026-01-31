@@ -1,12 +1,22 @@
 extends Node
 
-@export var hud: Control
+class_name UI
+
+@export var hud: Hud
 @export var main_menu: Control
 @export var options: Control
 @export var credits: Control
 @export var how_to_play: Control
 @export var pause: Control
 @export var win_screen: Control
+
+static var Instance: UI = null
+
+func _init():
+	if(Instance == null):
+		Instance = self
+	else:
+		queue_free()
 
 
 func _ready() -> void:

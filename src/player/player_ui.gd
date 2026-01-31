@@ -8,7 +8,6 @@ func _ready():
 	
 
 func _on_damage_target_on_damage_received(amount: int) -> void:
-	print("lo " + str(damage_target.current_health))
 	health_bar.value = damage_target.current_health
 
 
