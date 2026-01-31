@@ -1,0 +1,205 @@
+[gd_scene format=3 uid="uid://cmtk5jkhwnmxv"]
+
+[ext_resource type="Script" uid="uid://d0qnl4mjb4t2l" path="res://src/waiting_room.gd" id="1_eqxna"]
+[ext_resource type="PackedScene" uid="uid://dfa7acfcvc3yy" path="res://src/player/player.tscn" id="2_jhs3w"]
+[ext_resource type="Texture2D" uid="uid://hhwr40w72ju" path="res://src/ui/menus/flag_icon_pl.png" id="3_lxmfo"]
+[ext_resource type="Texture2D" uid="uid://mvhsta70hn0q" path="res://assets/sprites/fredifnaf.png" id="4_06jn0"]
+[ext_resource type="Script" uid="uid://cjrscpoxhm7vk" path="res://src/doskozza.gd" id="5_lg5xu"]
+[ext_resource type="Texture2D" uid="uid://qsevh0bb7qlp" path="res://assets/sprites/elysium.png" id="6_o1hh2"]
+[ext_resource type="Texture2D" uid="uid://qix0oygodiat" path="res://icon.svg" id="7_jhs3w"]
+[ext_resource type="Script" uid="uid://bl2rk8tlbm3sg" path="res://src/levels/laser.gd" id="8_lxmfo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5mrjc"]
+size = Vector2(609.90576, 342)
+
+[sub_resource type="Animation" id="Animation_srxbw"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.5235988]
+}
+
+[sub_resource type="Animation" id="Animation_d3u4l"]
+resource_name = "discodisocodisco"
+length = 4.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2, 4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.5235988, -0.5235988, 0.5235988]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_mlv6i"]
+_data = {
+&"RESET": SubResource("Animation_srxbw"),
+&"discodisocodisco": SubResource("Animation_d3u4l")
+}
+
+[sub_resource type="Animation" id="Animation_06jn0"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:skew")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.6702064]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(44, 261)]
+}
+
+[sub_resource type="Animation" id="Animation_lg5xu"]
+resource_name = "laserrr"
+length = 4.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:skew")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3, 6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [-0.523598775598299, 0.5235987755982988, -0.523598775598299]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 3, 6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(548, 261), Vector2(44, 261), Vector2(548, 261)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_o1hh2"]
+_data = {
+&"RESET": SubResource("Animation_06jn0"),
+&"laserrr": SubResource("Animation_lg5xu")
+}
+
+[node name="WaitingRoom" type="Node2D" unique_id=1930000640]
+script = ExtResource("1_eqxna")
+packedPlayer = ExtResource("2_jhs3w")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=447522031]
+position = Vector2(589, 621)
+scale = Vector2(2.12, 0.120000005)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=2140050071]
+position = Vector2(1.1791992, 0)
+shape = SubResource("RectangleShape2D_5mrjc")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=2100795486]
+texture = ExtResource("3_lxmfo")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=522369015]
+position = Vector2(-53, 335)
+rotation = -1.5800136
+scale = Vector2(2.12, 0.120000005)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=2050045438]
+position = Vector2(1.1791992, 0)
+shape = SubResource("RectangleShape2D_5mrjc")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D2" unique_id=1276179601]
+texture = ExtResource("3_lxmfo")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="." unique_id=1748671674]
+position = Vector2(1109.0001, 342)
+rotation = -1.5800136
+scale = Vector2(2.12, 0.120000005)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3" unique_id=441952017]
+position = Vector2(1.1791992, 0)
+shape = SubResource("RectangleShape2D_5mrjc")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D3" unique_id=1014286323]
+texture = ExtResource("3_lxmfo")
+
+[node name="Background" type="Sprite2D" parent="." unique_id=169839398]
+position = Vector2(594.00006, 307)
+scale = Vector2(0.66, 0.66)
+texture = ExtResource("4_06jn0")
+
+[node name="Doskozza" type="Node2D" parent="." unique_id=75712821]
+position = Vector2(579, -19)
+rotation = 0.5235988
+script = ExtResource("5_lg5xu")
+
+[node name="Sprite" type="Sprite2D" parent="Doskozza" unique_id=1589283670]
+position = Vector2(-8.999939, 310)
+scale = Vector2(0.58, 0.58)
+texture = ExtResource("6_o1hh2")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Doskozza" unique_id=1488062690]
+libraries/ = SubResource("AnimationLibrary_mlv6i")
+
+[node name="Laser" type="Node2D" parent="." unique_id=93041545]
+visible = false
+position = Vector2(92, 114)
+
+[node name="LaserLight" type="PointLight2D" parent="Laser" unique_id=1463416149]
+position = Vector2(44, 261)
+scale = Vector2(0.2, 3.455)
+skew = -0.6702064
+color = Color(1, 1, 1, 0.30100003)
+energy = 13.0
+texture = ExtResource("7_jhs3w")
+texture_scale = 2.6
+script = ExtResource("8_lxmfo")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Laser/LaserLight" unique_id=1606669932]
+libraries/ = SubResource("AnimationLibrary_o1hh2")
+
+[node name="Laser2" type="Node2D" parent="." unique_id=1008621038]
+visible = false
+position = Vector2(1053, 116)
+scale = Vector2(-1, 1)
+
+[node name="LaserLight" type="PointLight2D" parent="Laser2" unique_id=563159465]
+position = Vector2(44, 261)
+scale = Vector2(0.2, 3.455)
+skew = -0.6702064
+color = Color(1, 1, 1, 0.30100003)
+energy = 13.0
+texture = ExtResource("7_jhs3w")
+texture_scale = 2.6
+script = ExtResource("8_lxmfo")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Laser2/LaserLight" unique_id=1368524164]
+libraries/ = SubResource("AnimationLibrary_o1hh2")
