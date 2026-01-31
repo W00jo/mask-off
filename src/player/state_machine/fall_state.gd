@@ -13,8 +13,10 @@ func physics_update(delta:float):
 	
 	if direction < 0:
 		$"../../Sprite2D".flip_h = true
+		owner.attack_parent.scale.x = -1
 	elif direction > 0:
 		$"../../Sprite2D".flip_h = false
+		owner.attack_parent.scale.x = 1
 	
 	owner.velocity.x = direction * 200
 	owner.move_and_slide()

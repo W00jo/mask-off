@@ -40,5 +40,5 @@ func change_state(new_state_name:String):
 		
 func set_input_data(input: InputData):
 	input_data = input
-	for state in states.values():
-		state.set_input(input)
+	#for state in states.values():
+	#	state.set_input(input_data)

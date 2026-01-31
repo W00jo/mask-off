@@ -1,6 +1,5 @@
 [gd_scene format=3 uid="uid://b8t7r3johr2yi"]
 
-[ext_resource type="PackedScene" uid="uid://r1ki73v18ynn" path="res://src/levels/player_testing.tscn" id="1_kf8lf"]
 [ext_resource type="Texture2D" uid="uid://hhwr40w72ju" path="res://src/ui/menus/flag_icon_pl.png" id="1_kf8lf"]
 [ext_resource type="Script" uid="uid://d0qnl4mjb4t2l" path="res://src/waiting_room.gd" id="1_mgm53"]
 [ext_resource type="PackedScene" uid="uid://nkccp7tqucmv" path="res://src/ui/in_game/hud.tscn" id="2_gh0ne"]
