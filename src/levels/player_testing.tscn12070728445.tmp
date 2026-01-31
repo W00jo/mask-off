@@ -41,8 +41,7 @@ position = Vector2(836, 472)
 position = Vector2(692, 399)
 DMG_amount = 50
 
-[node name="MaskSpawner" parent="." unique_id=1271967546 node_paths=PackedStringArray("spawn_parent") instance=ExtResource("3_n7tny")]
-spawn_parent = NodePath("../MaskSpawnPoints")
+[node name="MaskSpawner" parent="." unique_id=1271967546 instance=ExtResource("3_n7tny")]
 
 [node name="MaskSpawnPoints" type="Node" parent="." unique_id=1890485271]
 
