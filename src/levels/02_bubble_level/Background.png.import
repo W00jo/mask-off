@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://drhh6sfy36v02"
-path="res://.godot/imported/bubbles.png-1477874c2c313c33f023b0ecf3127471.ctex"
+uid="uid://chns881flj3gc"
+path="res://.godot/imported/Background.png-e08e3f0ff461ea3d64b72d6d9db6a411.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/bubbles.png"
-dest_files=["res://.godot/imported/bubbles.png-1477874c2c313c33f023b0ecf3127471.ctex"]
+source_file="res://src/levels/02_bubble_level/Background.png"
+dest_files=["res://.godot/imported/Background.png-e08e3f0ff461ea3d64b72d6d9db6a411.ctex"]
 
 [params]
 

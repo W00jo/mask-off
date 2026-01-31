@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c6yylbsw0j2wl"
-path="res://.godot/imported/platform.png-a428a3ba0628329910ed419e428080c2.ctex"
+uid="uid://2owirsfp3mpm"
+path="res://.godot/imported/Cubic_96.png-848c4ae6320791549021786b40baef89.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/platform.png"
-dest_files=["res://.godot/imported/platform.png-a428a3ba0628329910ed419e428080c2.ctex"]
+source_file="res://src/masks/masks_blender/Cubic_96.png"
+dest_files=["res://.godot/imported/Cubic_96.png-848c4ae6320791549021786b40baef89.ctex"]
 
 [params]
 

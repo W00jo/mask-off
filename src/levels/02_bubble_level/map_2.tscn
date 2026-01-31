@@ -3,9 +3,9 @@
 [ext_resource type="PackedScene" uid="uid://n04qbcl6c0oe" path="res://src/levels/01_default_level/base_map.tscn" id="1_jkh1s"]
 [ext_resource type="PackedScene" uid="uid://cxeyem7cvvt27" path="res://src/levels/02_bubble_level/falling_platform.tscn" id="2_dgebn"]
 [ext_resource type="PackedScene" uid="uid://bnwj4t5xae30h" path="res://src/player/player_spawn.tscn" id="3_r03eq"]
-[ext_resource type="Texture2D" uid="uid://chns881flj3gc" path="res://assets/sprites/Background.png" id="4_y7f0c"]
-[ext_resource type="Texture2D" uid="uid://dcf82av43nh2b" path="res://assets/sprites/bomb.png" id="5_n7gt7"]
-[ext_resource type="Texture2D" uid="uid://c6yylbsw0j2wl" path="res://assets/sprites/platform.png" id="6_wlwq4"]
+[ext_resource type="Texture2D" uid="uid://chns881flj3gc" path="res://src/levels/02_bubble_level/Background.png" id="4_y7f0c"]
+[ext_resource type="Texture2D" uid="uid://dcf82av43nh2b" path="res://src/levels/02_bubble_level/bomb.png" id="5_n7gt7"]
+[ext_resource type="Texture2D" uid="uid://c6yylbsw0j2wl" path="res://src/levels/02_bubble_level/platform.png" id="6_wlwq4"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_2hrto"]
 

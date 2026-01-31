@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://2owirsfp3mpm"
-path="res://.godot/imported/Cubic_96.png-efb49d7abef4489944a8832f29872bcb.ctex"
+uid="uid://dmn2vw0ntbtmd"
+path="res://.godot/imported/top.png-2e797970f8bd4d298427f94299db8dcf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/Cubic_96.png"
-dest_files=["res://.godot/imported/Cubic_96.png-efb49d7abef4489944a8832f29872bcb.ctex"]
+source_file="res://src/levels/03_platform_level/top.png"
+dest_files=["res://.godot/imported/top.png-2e797970f8bd4d298427f94299db8dcf.ctex"]
 
 [params]
 
