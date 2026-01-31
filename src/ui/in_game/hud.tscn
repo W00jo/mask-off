@@ -1,29 +1,131 @@
 [gd_scene format=3 uid="uid://nkccp7tqucmv"]
 
-[node name="HUD" type="Control" unique_id=1872890660]
+[ext_resource type="Script" uid="uid://br8jg2cv5rmlc" path="res://src/ui/in_game/hud.gd" id="1_3k8yq"]
+
+[node name="HUD" type="Control" unique_id=53009314]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_3k8yq")
 
-[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1131526487]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=2124395983]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 120.0
+grow_horizontal = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
 
-[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer" unique_id=421894671]
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer" unique_id=1060112876]
+layout_mode = 2
+theme_override_constants/separation = 30
+alignment = 1
+
+[node name="Player1Display" type="PanelContainer" parent="MarginContainer/HBoxContainer" unique_id=742816203]
+custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/HBoxContainer" unique_id=1828645379]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/Player1Display" unique_id=1502676480]
 layout_mode = 2
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="PanelContainer/HBoxContainer" unique_id=1494983212]
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer/Player1Display/VBoxContainer" unique_id=451647109]
 layout_mode = 2
 
-[node name="HBoxContainer3" type="HBoxContainer" parent="PanelContainer/HBoxContainer" unique_id=941877014]
+[node name="PlayerIcon" type="ColorRect" parent="MarginContainer/HBoxContainer/Player1Display/VBoxContainer/HBoxContainer" unique_id=965672039]
+custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 
-[node name="HBoxContainer4" type="HBoxContainer" parent="PanelContainer/HBoxContainer" unique_id=686289681]
+[node name="PlayerLabel" type="Label" parent="MarginContainer/HBoxContainer/Player1Display/VBoxContainer/HBoxContainer" unique_id=1600324450]
 layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+text = "Player 1"
+vertical_alignment = 1
+
+[node name="HealthBar" type="ProgressBar" parent="MarginContainer/HBoxContainer/Player1Display/VBoxContainer" unique_id=1039091787]
+layout_mode = 2
+value = 100.0
+show_percentage = false
+
+[node name="Player2Display" type="PanelContainer" parent="MarginContainer/HBoxContainer" unique_id=1089437659]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/Player2Display" unique_id=554037835]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer/Player2Display/VBoxContainer" unique_id=1613618751]
+layout_mode = 2
+
+[node name="PlayerIcon" type="ColorRect" parent="MarginContainer/HBoxContainer/Player2Display/VBoxContainer/HBoxContainer" unique_id=1195046442]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+
+[node name="PlayerLabel" type="Label" parent="MarginContainer/HBoxContainer/Player2Display/VBoxContainer/HBoxContainer" unique_id=1606822771]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+text = "Player 2"
+vertical_alignment = 1
+
+[node name="HealthBar" type="ProgressBar" parent="MarginContainer/HBoxContainer/Player2Display/VBoxContainer" unique_id=1935322382]
+layout_mode = 2
+value = 100.0
+show_percentage = false
+
+[node name="Player3Display" type="PanelContainer" parent="MarginContainer/HBoxContainer" unique_id=1382820925]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/Player3Display" unique_id=1188473942]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer/Player3Display/VBoxContainer" unique_id=1070758740]
+layout_mode = 2
+
+[node name="PlayerIcon" type="ColorRect" parent="MarginContainer/HBoxContainer/Player3Display/VBoxContainer/HBoxContainer" unique_id=1019228012]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+
+[node name="PlayerLabel" type="Label" parent="MarginContainer/HBoxContainer/Player3Display/VBoxContainer/HBoxContainer" unique_id=628793943]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+text = "Player 3"
+vertical_alignment = 1
+
+[node name="HealthBar" type="ProgressBar" parent="MarginContainer/HBoxContainer/Player3Display/VBoxContainer" unique_id=1842541840]
+layout_mode = 2
+value = 100.0
+show_percentage = false
+
+[node name="Player4Display" type="PanelContainer" parent="MarginContainer/HBoxContainer" unique_id=180977210]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/Player4Display" unique_id=1510011239]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer/Player4Display/VBoxContainer" unique_id=698386757]
+layout_mode = 2
+
+[node name="PlayerIcon" type="ColorRect" parent="MarginContainer/HBoxContainer/Player4Display/VBoxContainer/HBoxContainer" unique_id=1619528389]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+
+[node name="PlayerLabel" type="Label" parent="MarginContainer/HBoxContainer/Player4Display/VBoxContainer/HBoxContainer" unique_id=495476400]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+text = "Player 4"
+vertical_alignment = 1
+
+[node name="HealthBar" type="ProgressBar" parent="MarginContainer/HBoxContainer/Player4Display/VBoxContainer" unique_id=2081635096]
+layout_mode = 2
+value = 100.0
+show_percentage = false
