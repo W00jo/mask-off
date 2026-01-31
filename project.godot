@@ -30,7 +30,7 @@ GameManager="*uid://dpifklg63k687"
 
 [display]
 
-mouse_cursor/custom_image="uid://ddixqwdbfplxl"
+mouse_cursor/custom_image="res://assets/cursor.svg"
 
 [dotnet]
 
