@@ -2,7 +2,31 @@
 
 [ext_resource type="PackedScene" uid="uid://n04qbcl6c0oe" path="res://src/levels/01_default_level/base_map.tscn" id="1_tkn72"]
 
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_c27ss"]
+normal = Vector2(0.006756603, -0.9999772)
+
 [node name="BaseMap" unique_id=1175649286 instance=ExtResource("1_tkn72")]
 
 [node name="MaskSpawner" parent="." index="0" unique_id=1271967546]
 position = Vector2(677, 482)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." index="1" unique_id=940238489]
+
+[node name="Bloki" type="CollisionShape2D" parent="StaticBody2D" index="0" unique_id=1296590344]
+position = Vector2(586, 637)
+shape = SubResource("WorldBoundaryShape2D_c27ss")
+
+[node name="Bloki2" type="CollisionShape2D" parent="StaticBody2D" index="1" unique_id=428945251]
+position = Vector2(-2, 362)
+rotation = 1.5707964
+shape = SubResource("WorldBoundaryShape2D_c27ss")
+
+[node name="Bloki3" type="CollisionShape2D" parent="StaticBody2D" index="2" unique_id=1101417804]
+position = Vector2(561, -136)
+rotation = -3.1415927
+shape = SubResource("WorldBoundaryShape2D_c27ss")
+
+[node name="Bloki4" type="CollisionShape2D" parent="StaticBody2D" index="3" unique_id=1394717790]
+position = Vector2(1153, 518)
+rotation = -1.5707964
+shape = SubResource("WorldBoundaryShape2D_c27ss")

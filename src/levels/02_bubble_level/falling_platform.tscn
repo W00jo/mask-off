@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cxeyem7cvvt27"]
 
 [ext_resource type="Script" uid="uid://jnsyxaeijlfv" path="res://src/levels/02_bubble_level/falling_platform.gd" id="1_crfo3"]
-[ext_resource type="Texture2D" uid="uid://drhh6sfy36v02" path="res://assets/sprites/bubbles.png" id="2_crfo3"]
+[ext_resource type="Texture2D" uid="uid://drhh6sfy36v02" path="res://src/levels/02_bubble_level/bubbles.png" id="2_crfo3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_crfo3"]
 size = Vector2(128, 9)

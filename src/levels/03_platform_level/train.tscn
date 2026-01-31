@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cvh50d2a553ry"]
 
 [ext_resource type="Script" uid="uid://boq6ktmncn0q6" path="res://src/levels/03_platform_level/train.gd" id="1_kkcak"]
-[ext_resource type="Texture2D" uid="uid://b50vv54ll0n30" path="res://assets/sprites/Logo1.png" id="2_7riek"]
+[ext_resource type="Texture2D" uid="uid://cl3cwkei0qmi6" path="res://src/levels/03_platform_level/Pociag.png" id="2_h288v"]
 [ext_resource type="Texture2D" uid="uid://qix0oygodiat" path="res://icon.svg" id="3_7riek"]
 [ext_resource type="PackedScene" uid="uid://crrflahojckb3" path="res://src/levels/modifiers/killzones/damage_place.tscn" id="3_h288v"]
 
@@ -9,12 +9,12 @@
 script = ExtResource("1_kkcak")
 
 [node name="Train_sprite" type="Sprite2D" parent="." unique_id=1473381392]
-position = Vector2(2112.0002, 508)
-scale = Vector2(14.838539, 2.1585367)
-texture = ExtResource("2_7riek")
+position = Vector2(1687, 477.00003)
+scale = Vector2(1.9485936, 1.9485937)
+texture = ExtResource("2_h288v")
 
 [node name="damage_place" parent="Train_sprite" unique_id=507009979 instance=ExtResource("3_h288v")]
-position = Vector2(-53.104973, 30.57627)
+position = Vector2(-249.49509, 42.689186)
 scale = Vector2(0.8884813, 3.1427617)
 DMG_amount = 999
 
