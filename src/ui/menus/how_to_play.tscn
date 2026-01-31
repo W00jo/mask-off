@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://crf8kbvbl8uu6"]
 
 [ext_resource type="Script" uid="uid://mnykhaxqggbi" path="res://src/ui/menus/how_to_play.gd" id="1_e1emm"]
-[ext_resource type="Texture2D" path="res://assets/Menu/IU/tlo_menu.png" id="2_w0tpi"]
+[ext_resource type="Texture2D" uid="uid://dc78bcjlxhw3g" path="res://src/ui/menus/menu_background.png" id="2_xq3li"]
 [ext_resource type="FontFile" uid="uid://cbf52hahephbu" path="res://assets/fonts/DK Crayon Crumble.ttf" id="3_xq3li"]
 [ext_resource type="StyleBox" uid="uid://cd2wm6cc576gr" path="res://src/ui/menus/menu_themes/key_input_container.tres" id="4_xq3li"]
 
@@ -27,7 +27,7 @@ layout_mode = 0
 offset_right = 1920.0
 offset_bottom = 1080.0
 scale = Vector2(0.60601854, 0.6060185)
-texture = ExtResource("2_w0tpi")
+texture = ExtResource("2_xq3li")
 
 [node name="HowToPlay" type="Label" parent="." unique_id=212005606]
 layout_mode = 1
