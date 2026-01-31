@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://crf8kbvbl8uu6"]
 
+[ext_resource type="Script" uid="uid://mnykhaxqggbi" path="res://src/ui/menus/how_to_play.gd" id="1_e1emm"]
+
 [node name="HowToPlay" type="Control" unique_id=1391345934]
 layout_mode = 3
 anchors_preset = 15
@@ -7,3 +9,30 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_e1emm")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=70648261]
+layout_mode = 0
+offset_left = 377.0
+offset_top = 85.0
+offset_right = 804.0
+offset_bottom = 501.0
+color = Color(0, 0.6431373, 0.27058825, 1)
+
+[node name="Label" type="Label" parent="." unique_id=373704017]
+layout_mode = 0
+offset_left = 535.0
+offset_top = 144.0
+offset_right = 644.0
+offset_bottom = 167.0
+text = "HOW TO PLAY"
+
+[node name="Start" type="Button" parent="." unique_id=859823348]
+layout_mode = 0
+offset_left = 574.0
+offset_top = 354.0
+offset_right = 625.0
+offset_bottom = 385.0
+text = "Start!"
+
+[connection signal="pressed" from="Start" to="." method="_on_start_pressed"]

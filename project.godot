@@ -15,7 +15,7 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 [application]
 
 config/name="Mask Off"
-run/main_scene="uid://b4ofyboy3t2d3"
+run/main_scene="uid://b8t7r3johr2yi"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 boot_splash/image="uid://b50vv54ll0n30"
 config/icon="uid://glb1vcybj4ar"

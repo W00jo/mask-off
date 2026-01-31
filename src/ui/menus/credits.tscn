@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://l1crux0gfiid"]
+
+[ext_resource type="Script" uid="uid://dyw6l8t2c4ft" path="res://src/ui/menus/credits.gd" id="1_d82ik"]
+
+[node name="Credits" type="Control" unique_id=1038357148]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_d82ik")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=36128387]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.4380462, 0.11130827, 0.3530822, 1)
+
+[node name="Label" type="Label" parent="." unique_id=847663559]
+layout_mode = 0
+offset_left = 523.0
+offset_top = 153.0
+offset_right = 585.0
+offset_bottom = 176.0
+text = "Credits"
+
+[node name="Back" type="Button" parent="." unique_id=1482697108]
+layout_mode = 0
+offset_left = 542.0
+offset_top = 535.0
+offset_right = 587.0
+offset_bottom = 566.0
+text = "Back"
+
+[connection signal="pressed" from="Back" to="." method="_on_back_pressed"]

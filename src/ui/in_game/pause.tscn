@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://cxrtc71l5s4xu"]
+
+[ext_resource type="Script" uid="uid://imddjfbm0vd4" path="res://src/ui/in_game/pause.gd" id="1_xamp5"]
+
+[node name="Pause" type="Control" unique_id=1320695175]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xamp5")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=512153113]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 270.0
+offset_top = 77.0
+offset_right = -301.0
+offset_bottom = -103.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.25909853, 0.2722536, 0.13289934, 1)
+
+[node name="Label" type="Label" parent="." unique_id=1944757000]
+layout_mode = 0
+offset_left = 527.0
+offset_top = 159.0
+offset_right = 584.0
+offset_bottom = 182.0
+text = "Paused"
+
+[node name="Resume" type="Button" parent="." unique_id=362874251]
+layout_mode = 0
+offset_left = 531.0
+offset_top = 379.0
+offset_right = 576.0
+offset_bottom = 410.0
+text = "Resume"
+
+[connection signal="pressed" from="Resume" to="." method="_on_resume_pressed"]
