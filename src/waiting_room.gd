@@ -1,6 +1,7 @@
 extends Node2D
 
 var _activated_players: Array[bool] = [false, false, false, false]
+var _players: Array[Player] = []
 var input_actions = [
 	["p1_move_left", "p1_move_right", "p1_jump", "p1_attack"],
 	["p2_move_left", "p2_move_right", "p2_jump", "p2_attack"],
@@ -52,4 +53,5 @@ func _activate_player(index: int):
 	player.set_input_data(InputData.new(input[0], input[1], input[2], input[3]))
 	add_child(player)
 	player.position = Vector2(600, 300)
+	_players.append(player)
 	

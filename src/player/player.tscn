@@ -172,6 +172,7 @@ _data = {
 size = Vector2(46, 68)
 
 [node name="PlayerNew" type="CharacterBody2D" unique_id=1053524098]
+collision_layer = 2
 script = ExtResource("1_0v0ik")
 default_attack = ExtResource("2_rgyib")
 
