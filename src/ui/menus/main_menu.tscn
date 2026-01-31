@@ -2,16 +2,17 @@
 
 [ext_resource type="Script" uid="uid://luwldsgryie4" path="res://src/ui/menus/main_menu.gd" id="1_7lrnf"]
 [ext_resource type="Texture2D" uid="uid://bgxgigi7hnsr6" path="res://src/ui/menus/borders/button_border_01.png" id="2_border1"]
+[ext_resource type="Material" uid="uid://cf5mvpkmoli0k" path="res://assets/shaders/new_shader_material.tres" id="2_l2tv4"]
 [ext_resource type="Texture2D" uid="uid://b41l3fil5sl57" path="res://src/ui/menus/menu_splash_art.png" id="2_yycut"]
 [ext_resource type="Texture2D" uid="uid://dfiyb3by5xfqr" path="res://src/ui/menus/borders/button_border_02.png" id="3_border2"]
 [ext_resource type="Texture2D" uid="uid://cal7kp3k3boxq" path="res://src/ui/menus/borders/button_border_03.png" id="4_border3"]
 [ext_resource type="FontFile" uid="uid://cbf52hahephbu" path="res://assets/fonts/DK Crayon Crumble.ttf" id="8_o7egi"]
-[ext_resource type="Script" path="res://src/ui/menus/play.gd" id="9_l3u6v"]
-[ext_resource type="Script" uid="uid://b1ucuux38pr3j" path="res://src/ui/menus/options_button.gd" id="10_opbtn"]
+[ext_resource type="Script" uid="uid://24ugtq5kc2rr" path="res://src/ui/menus/play.gd" id="9_l3u6v"]
+[ext_resource type="Script" path="res://src/ui/menus/options_button.gd" id="10_opbtn"]
 [ext_resource type="Script" uid="uid://dyw6l8t2c4ft" path="res://src/ui/menus/credits.gd" id="11_l2tv4"]
-[ext_resource type="Script" path="res://src/ui/menus/exit.gd" id="12_o7egi"]
-[ext_resource type="Script" uid="uid://d3ykuewpc5tp4" path="res://src/ui/menus/howtoplay.gd" id="13_htpgd"]
-[ext_resource type="Script" uid="uid://c2tsi1x7a2bys" path="res://src/ui/menus/itchio_button.gd" id="14_itchio"]
+[ext_resource type="Script" uid="uid://20t4hdkrl1tq" path="res://src/ui/menus/exit.gd" id="12_o7egi"]
+[ext_resource type="Script" path="res://src/ui/menus/howtoplay.gd" id="13_htpgd"]
+[ext_resource type="Script" path="res://src/ui/menus/itchio_button.gd" id="14_itchio"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_border1"]
 texture = ExtResource("2_border1")
@@ -52,6 +53,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="SplashArt" type="TextureRect" parent="." unique_id=828286346]
+material = ExtResource("2_l2tv4")
 layout_mode = 0
 offset_top = -8.0
 offset_right = 1145.0612
