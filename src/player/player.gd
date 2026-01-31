@@ -48,17 +48,9 @@ func clear_attack():
 func on_death() -> void:
 	on_player_death.emit()
 	queue_free()
-	
-func _process(delta):
-	if(Input.is_action_just_pressed("add_attack")):
-		set_attack(new_attack)
-	elif(Input.is_action_just_pressed("reset_attack")):
-		clear_attack()
 
 func _begin_death() -> void:
 	$StateMachine.change_state("deathstate")
 	
 func set_input_data(input_data: InputData):
 	$StateMachine.set_input_data(input_data)
-	#get_tree().paused = true
-	print("player ded")
