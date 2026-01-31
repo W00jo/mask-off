@@ -3,7 +3,7 @@ class_name IdleState
 
 func enter():
 	print("entering IDLE state...")
-	owner.get_node("AnimationPlayer").play("player_temp_idle")
+	owner.get_node("AnimationPlayer").play("idle")
 	
 	if(!owner.is_on_floor()):
 		state_machine.change_state("fallstate")
