@@ -4,7 +4,7 @@ class_name MaskSpawner
 @export var spawn_parent: Node
 @export var max_ticks := 2
 @export var show_treshold := 5
-@export var level:Node2D
+#@export var level:Node2D
 var _current_ticks := 2
 #var spawned_mask: CollectibleBaseMask
 #@export var masks: Array[PackedScene]
@@ -49,7 +49,9 @@ func _spawn_mask():
 		spawn_points.append(spawn)
 	var random_spawn_point = spawn_points.pick_random()
 	random_spawn_point.add_child(spawned_mask)
-	level.connect_to_signal_from_mask(spawned_mask)
+	#for child in owner.get_parent().get_children():
+		#if child is CharacterBody2D:
+			#child.connect_to_signal_from_mask(spawned_mask)
 	
 	particles_1.emitting = true
 	particles_2.emitting = true
