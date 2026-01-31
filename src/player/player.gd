@@ -60,5 +60,5 @@ func _begin_death() -> void:
 	
 func set_input_data(input_data: InputData):
 	$StateMachine.set_input_data(input_data)
-	get_tree().paused = true
+	#get_tree().paused = true
 	print("player ded")
