@@ -251,3 +251,5 @@ grow_vertical = 2
 pivot_offset_ratio = Vector2(0.5, 0.5)
 value = 50.0
 show_percentage = false
+
+[connection signal="on_damage_received" from="DamageTarget" to="UI" method="_on_damage_target_on_damage_received"]
