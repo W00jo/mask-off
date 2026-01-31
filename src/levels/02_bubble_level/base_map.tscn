@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://n04qbcl6c0oe"]
 
 [ext_resource type="Script" uid="uid://nqgsj2lvc458" path="res://scripts/base_map.gd" id="1_pbl6r"]
-[ext_resource type="PackedScene" uid="uid://vwin6y5xrqyc" path="res://src/mask_spawner.tscn" id="2_6iggk"]
+[ext_resource type="PackedScene" uid="uid://vwin6y5xrqyc" path="res://src/levels/modifiers/mask_spawner/mask_spawner.tscn" id="2_6iggk"]
 
 [node name="BaseMap" type="Node2D" unique_id=1175649286]
 script = ExtResource("1_pbl6r")

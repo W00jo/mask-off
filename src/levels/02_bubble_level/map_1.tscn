@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://d0e8l1jy46mm3"]
 
-[ext_resource type="PackedScene" uid="uid://n04qbcl6c0oe" path="res://src/levels/bubble_level/base_map.tscn" id="1_tkn72"]
+[ext_resource type="PackedScene" uid="uid://n04qbcl6c0oe" path="res://src/levels/02_bubble_level/base_map.tscn" id="1_tkn72"]
 
 [node name="BaseMap" unique_id=1175649286 instance=ExtResource("1_tkn72")]
 

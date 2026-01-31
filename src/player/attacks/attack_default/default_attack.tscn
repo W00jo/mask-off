@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://cr05qs3lbrrmq"]
 
-[ext_resource type="Script" uid="uid://yj6f456cfhy5" path="res://player/attacks/attack_default/default_attack.gd" id="1_bj1q2"]
+[ext_resource type="Script" uid="uid://yj6f456cfhy5" path="res://src/player/attacks/attack_default/default_attack.gd" id="1_bj1q2"]
 [ext_resource type="Texture2D" uid="uid://qix0oygodiat" path="res://icon.svg" id="2_gnt1h"]
-[ext_resource type="Script" uid="uid://wnlkpmaoqpcb" path="res://player/damage_system/damage_source.gd" id="3_u11b3"]
-[ext_resource type="Script" uid="uid://iup1kalmawok" path="res://player/damage_system/damage_data.gd" id="4_gnt1h"]
+[ext_resource type="Script" uid="uid://wnlkpmaoqpcb" path="res://src/player/damage_system/damage_source.gd" id="3_u11b3"]
+[ext_resource type="Script" uid="uid://iup1kalmawok" path="res://src/player/damage_system/damage_data.gd" id="4_gnt1h"]
 
 [sub_resource type="Resource" id="Resource_u11b3"]
 script = ExtResource("4_gnt1h")

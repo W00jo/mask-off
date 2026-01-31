@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://vwin6y5xrqyc"]
 
-[ext_resource type="Script" uid="uid://bebxhv88yhyu2" path="res://scripts/mask_spawner.gd" id="1_5skxl"]
-[ext_resource type="PackedScene" uid="uid://iqg132wfdqt0" path="res://src/masks/test_mask.tscn" id="2_hbtf8"]
+[ext_resource type="Script" uid="uid://bebxhv88yhyu2" path="res://src/levels/modifiers/mask_spawner/mask_spawner.gd" id="1_0m02b"]
+[ext_resource type="PackedScene" uid="uid://iqg132wfdqt0" path="res://src/masks/test_mask.tscn" id="2_834hu"]
 
 [sub_resource type="Animation" id="Animation_hxats"]
 length = 0.001
@@ -59,9 +59,9 @@ offsets = PackedFloat32Array(0, 0.48846152, 1)
 colors = PackedColorArray(1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0.19607843)
 
 [node name="MaskSpawner" type="Node2D" unique_id=1271967546]
-script = ExtResource("1_5skxl")
+script = ExtResource("1_0m02b")
 max_ticks = 10
-masks = Array[PackedScene]([ExtResource("2_hbtf8")])
+masks = Array[PackedScene]([ExtResource("2_834hu")])
 
 [node name="Timer" type="Timer" parent="." unique_id=179535140]
 autostart = true

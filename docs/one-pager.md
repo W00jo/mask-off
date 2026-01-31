@@ -1,8 +1,9 @@
 # Mask Off
-
-Intended game systems: PC (Windows/Linux), Itch.io
-Target: Family and friends
-Rating: E (Everyone)
+---
+- Intended game systems: PC (Windows/Linux), Itch.io
+- Target: Family and friends
+- Rating: E (Everyone)
+---
 
 ## Game Summary
 
@@ -19,7 +20,7 @@ Each players starts with a basic form, waiting for the visible timer to run down
 - **"The World is Alive":** Fight in interactive environments where every stationary object is animated and reacting to the chaos!
 - Built with the fondness of the era gone by. Remind yourself how it felt playing beat 'em ups with friends and family, on one keyboard!
 
-## Similar competetive products
+## Similar products
 
 *Smash Bros*, *Electric Man*, *Co-Optimus*.
 
