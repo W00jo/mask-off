@@ -1,6 +1,6 @@
 extends Area2D
 
-class_name BaseMask
+class_name CollectibleMask
 
 var duration := 10
 signal mask_picked_up
@@ -14,5 +14,7 @@ func _ready() -> void:
 
 
 func _process(delta: float) -> void:
-	if(Input.is_action_just_pressed("press_z")):
+	pass
+func _on_body_entered(body: Node2D) -> void:
+	if body is CharacterBody2D:
 		pick_up()

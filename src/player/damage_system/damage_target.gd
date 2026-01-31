@@ -15,12 +15,13 @@ func receive_damage(damage_data: DamageData):
 	if(damage_data == null):
 		return
 	
-	var fixed_amount = min(current_health, damage_data.damage_value)
-	current_health -= fixed_amount
+	#var fixed_amount = min(current_health, damage_data.damage_value)
+	current_health -= damage_data.damage_value
 	
-	on_damage_received.emit(fixed_amount)
+	on_damage_received.emit(damage_data.damage_value)
+	print("zycie: ", current_health)
 	
-	if(current_health == 0):
+	if(current_health <= 0):
 		death()
 	
 func death():

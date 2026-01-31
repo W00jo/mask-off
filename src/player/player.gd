@@ -49,6 +49,6 @@ func _process(delta):
 	elif(Input.is_action_just_pressed("reset_attack")):
 		clear_attack()
 
-func _begin_death() -> void:
+func _begin_on_death() -> void:
 	get_tree().paused = true
 	print("player ded")
