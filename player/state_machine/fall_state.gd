@@ -1,11 +1,10 @@
-class_name NewFallState
-extends NewState
+class_name FallState
+extends State
 
 
 func enter():
 	print("entering FALL state...")
 	owner.velocity.y = 0
-	#$"../../Sprite2D".frame = 28
 
 func physics_update(delta:float):
 	owner.velocity.y += 980 * delta
@@ -24,8 +23,12 @@ func physics_update(delta:float):
 		#owner.get_node("AnimationPlayer").play("land")
 		#await $"../../AnimationPlayer".animation_finished
 		if direction != 0:
-			state_machine.change_state("newwalkstate")
+			state_machine.change_state("walkstate")
 			return
 		else:
-			state_machine.change_state("newidlestate")
+			state_machine.change_state("idlestate")
 			return
+			
+func handle_input(event: InputEvent):
+	if(Input.is_action_just_pressed(input.attack)):
+		state_machine.change_state("attackstate")
