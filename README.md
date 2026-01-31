@@ -1,8 +1,8 @@
-# Game title
+# Mask off
 
 ## Overview
 
-Short description of the game and its genre.
+Up to 4-player beat-each-other-up.
 
 ## Project structure
 
