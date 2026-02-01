@@ -98,12 +98,12 @@ func _input(event):
 			last_input_time = now
 			if combo_index == combo.size():
 				combo_index = 0
-				const GRACZ = preload("uid://d2shfa5tq007h")
+				const GRACZ = preload("res://src/player/player.tscn")
 				var new_gracz = GRACZ.instantiate()
 				new_gracz.position = Vector2(500,numer -100)
 				add_child(new_gracz)
 				print("test")
-				icy_tower()
+				#icy_tower()
 				var tween = get_tree().create_tween()
 				tween.tween_property(self, "position", Vector2(0,1300), 4.0)
 				tween.tween_property(self, "position", Vector2(0,7000), 40.0).set_trans(Tween.TRANS_CIRC).set_ease(0)
@@ -112,13 +112,13 @@ func _input(event):
 	elif event.is_pressed() and event.as_text() != "":
 		combo_index = 0
 
-func icy_tower():
-	const KLAWISZ = preload("uid://befng7nqcmpkt")
-	var new_klawisz = KLAWISZ.instantiate()
-	new_klawisz.position = Vector2(randf_range(300,1000),numer)
-	var platform = KLAWISZ.instantiate()
-	platform.position = Vector2(0,0)
-	numer -= 200
-	add_child(new_klawisz)
-	if numer >= -100000:
-		icy_tower()
+#func icy_tower():
+	#const KLAWISZ = preload("uid://befng7nqcmpkt")
+	#var new_klawisz = KLAWISZ.instantiate()
+	#new_klawisz.position = Vector2(randf_range(300,1000),numer)
+	#var platform = KLAWISZ.instantiate()
+	#platform.position = Vector2(0,0)
+	#numer -= 200
+	#add_child(new_klawisz)
+	#if numer >= -100000:
+		#icy_tower()

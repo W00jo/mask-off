@@ -36,6 +36,7 @@ func _spawn_map_and_players(players):
 
 func on_player_death(player: Player) -> void:
 	active_players.erase(player)
+	print(active_players.size())
 	if(active_players.size() > 1):
 		return
 		

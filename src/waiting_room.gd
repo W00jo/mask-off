@@ -68,7 +68,7 @@ func _activate_player(index: int):
 	player.scale = Vector2(0.75, 0.75)
 	add_sibling(player)
 	
-	
+	await get_tree().create_timer(0.02).timeout
 	UI.Instance.hud.player_displays[index].set_profile_color(color)
 	UI.Instance.hud.player_displays[index].show_profile()
 	UI.Instance.hud.player_displays[index].bind_player(player)
