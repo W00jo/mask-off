@@ -76,12 +76,12 @@ position = Vector2(1085.0001, 479.00003)
 scale = Vector2(0.4248598, 0.4248598)
 texture = ExtResource("6_wlwq4")
 
-[node name="damage_place" parent="Sprites" index="6" unique_id=507009979 instance=ExtResource("6_iw40w")]
+[node name="damage_place" parent="Sprites" index="6" unique_id=507009979 instance=ExtResource("5_iw40w")]
 position = Vector2(90.99997, 540)
 scale = Vector2(5.655264, 3.3792992)
 DMG_amount = 5
 
-[node name="damage_place2" parent="Sprites" index="7" unique_id=209513220 instance=ExtResource("6_iw40w")]
+[node name="damage_place2" parent="Sprites" index="7" unique_id=209513220 instance=ExtResource("5_iw40w")]
 position = Vector2(1106, 573.00006)
 scale = Vector2(4.1353908, 3.4739025)
 DMG_amount = 5
