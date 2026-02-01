@@ -2,12 +2,12 @@ class_name WearBaseMask
 extends Node2D
 
 var type
-@onready var sprite:Sprite2D = $Sprite2D
+@onready var anim:AnimationPlayer = $AnimationPlayer
 
 
 func set_type(mask):
 	type = mask
-	setup_sprite()
+	setup_animation()
 
-func setup_sprite():
-	sprite.texture = GameManager.mask_types.get(type)
+func setup_animation():
+	anim.play(GameManager.mask_types.get(type))

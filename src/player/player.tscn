@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dmg143wfbe7nl" path="res://src/player/player.gd" id="1_0v0ik"]
 [ext_resource type="PackedScene" uid="uid://cr05qs3lbrrmq" path="res://src/player/attacks/attack_default/default_attack.tscn" id="2_rgyib"]
-[ext_resource type="Texture2D" uid="uid://c8rhwlkas41d4" path="res://assets/sprites/Spritesheetplaceholder.png" id="3_cwolq"]
+[ext_resource type="Texture2D" uid="uid://5yvvngenplqp" path="res://assets/sprites/player_animation_sheet.png" id="3_2smqc"]
 [ext_resource type="Script" uid="uid://ca03ma24caxns" path="res://src/player/state_machine/idle_state.gd" id="3_fv2d4"]
 [ext_resource type="Script" uid="uid://bbaeadmys6i6j" path="res://src/player/state_machine/state_machine.gd" id="4_hg6s5"]
 [ext_resource type="Script" uid="uid://bat84jucrkcqd" path="res://src/player/state_machine/walk_state.gd" id="4_p842g"]
@@ -181,7 +181,7 @@ state_machine = NodePath("StateMachine")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1375468071]
 texture_filter = 1
-texture = ExtResource("3_cwolq")
+texture = ExtResource("3_2smqc")
 hframes = 5
 vframes = 4
 region_rect = Rect2(0, 0, 32, 32)
@@ -260,6 +260,5 @@ value = 50.0
 show_percentage = false
 
 [node name="MaskParent" type="Node2D" parent="." unique_id=1472926769]
-position = Vector2(5, -22)
 
 [connection signal="on_damage_received" from="DamageTarget" to="UI" method="_on_damage_target_on_damage_received"]

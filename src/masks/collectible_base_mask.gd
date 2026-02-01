@@ -5,12 +5,13 @@ signal mask_picked_up(rand_mask)
 
 var duration := 10
 var random_mask
-@onready var sprite: Sprite2D = $Sprite2D
+@onready var anim: AnimationPlayer = $AnimationPlayer
+
 
 
 func _ready() -> void:
 	random_mask = GameManager.mask_types.keys().pick_random()
-	sprite.texture = GameManager.mask_types.get(random_mask)
+	anim.play(GameManager.mask_types.get(random_mask))
 
 func pick_up():
 	mask_picked_up.emit(random_mask)
