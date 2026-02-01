@@ -4,9 +4,9 @@
 [ext_resource type="Texture2D" uid="uid://cmu5t3aganmp8" path="res://src/levels/03_platform_level/backgrund.png" id="2_pp341"]
 [ext_resource type="Texture2D" uid="uid://dmn2vw0ntbtmd" path="res://src/levels/03_platform_level/top.png" id="3_abyff"]
 [ext_resource type="Texture2D" uid="uid://cj0frqxfmxdlq" path="res://src/levels/03_platform_level/vendingMachine.png" id="4_63sm1"]
-[ext_resource type="Texture2D" uid="uid://das4a7mbnqn46" path="res://src/levels/03_platform_level/bot.png" id="4_pp341"]
-[ext_resource type="Texture2D" uid="uid://beox271w218l8" path="res://src/levels/03_platform_level/chair.png" id="5_uad0n"]
-[ext_resource type="Texture2D" uid="uid://ddgjlj5lpmdyq" path="res://src/levels/03_platform_level/lampa.png" id="6_m1eih"]
+[ext_resource type="Texture2D" uid="uid://das4a7mbnqn46" path="res://src/levels/03_platform_level/bot.png" id="5_pp341"]
+[ext_resource type="Texture2D" uid="uid://beox271w218l8" path="res://src/levels/03_platform_level/chair.png" id="6_uad0n"]
+[ext_resource type="Texture2D" uid="uid://ddgjlj5lpmdyq" path="res://src/levels/03_platform_level/lampa.png" id="7_m1eih"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_2joc0"]
 
