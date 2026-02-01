@@ -5,6 +5,7 @@ extends BaseAttack
 
 
 func start_attack(player: Player):
+	super(player)
 	$Area2D.set_custom_parent(player)
 	collider.disabled = false
 	player.animation_player.play(animName)
