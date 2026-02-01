@@ -1,4 +1,4 @@
-class_name DeathState
+class_name AttackState
 extends State
 
 

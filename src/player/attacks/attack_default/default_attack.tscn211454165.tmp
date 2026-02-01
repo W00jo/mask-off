@@ -20,7 +20,7 @@ texture = ExtResource("2_gnt1h")
 collision_mask = 2
 script = ExtResource("3_u11b3")
 damage_value = 2
-knockback_strength = Vector2(40, 0)
+knockback_strength = Vector2(7, 3)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=414727358]
 shape = SubResource("CircleShape2D_hg6s5")

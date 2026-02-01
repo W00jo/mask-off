@@ -10,7 +10,7 @@
 [ext_resource type="Script" uid="uid://crqfi21e4cwo5" path="res://src/player/state_machine/fall_state.gd" id="6_tcq0w"]
 [ext_resource type="Script" uid="uid://bqmioivprkl42" path="res://src/player/mask_system.gd" id="7_boad6"]
 [ext_resource type="Script" uid="uid://uck8pyr0up71" path="res://src/player/state_machine/attack_state.gd" id="9_8t03j"]
-[ext_resource type="Script" path="res://src/player/state_machine/death_state.gd" id="10_2smqc"]
+[ext_resource type="Script" uid="uid://dvx22adu7ly4a" path="res://src/player/state_machine/death_state.gd" id="10_2smqc"]
 [ext_resource type="Script" uid="uid://debf2l4kldxlb" path="res://src/player/damage_system/damage_target.gd" id="11_2ieo8"]
 [ext_resource type="Script" uid="uid://bwaqdqdr1hous" path="res://src/player/player_ui.gd" id="12_ebec5"]
 
@@ -237,7 +237,7 @@ position = Vector2(0, 37)
 
 [node name="DamageTarget" type="Node2D" parent="." unique_id=724562669]
 script = ExtResource("11_2ieo8")
-max_health = 5
+max_health = 999
 
 [node name="UI" type="Node2D" parent="." unique_id=328246206]
 script = ExtResource("12_ebec5")
@@ -262,3 +262,4 @@ show_percentage = false
 [node name="MaskParent" type="Node2D" parent="." unique_id=1472926769]
 
 [connection signal="on_damage_received" from="DamageTarget" to="UI" method="_on_damage_target_on_damage_received"]
+[connection signal="on_knockback" from="DamageTarget" to="." method="_on_knockback"]

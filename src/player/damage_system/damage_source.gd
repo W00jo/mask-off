@@ -16,6 +16,8 @@ func _on_body_entered(body):
 	if(damage_target.owner == owner.get_parent().owner):
 		return
 		
+	var origin = parent.position if has_custom_parent else position
+	var from: Vector2 = origin - body.position
 	if(damage_target.has_method("receive_damage")):
 		damage_target.receive_damage(DamageData.new(damage_value))
 		damage_target.receive_damage(DamageData.new(damage_value, from, knockback_strength))

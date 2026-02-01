@@ -7,8 +7,6 @@ func enter():
 	
 	if(!owner.is_on_floor()):
 		state_machine.change_state("fallstate")
-	else:
-		owner.velocity = Vector2(0, 0)
 		
 func _physics_process(delta: float) -> void:
 	if(!Input.is_action_pressed(input.move_left) and !Input.is_action_pressed(input.move_right)):
