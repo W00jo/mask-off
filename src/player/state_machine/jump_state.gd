@@ -6,7 +6,6 @@ var jump_speed = -800
 
 
 func enter():
-	print("entering JUMP state...")
 	owner.velocity.y = jump_speed
 	owner.get_node("AnimationPlayer").play("player_temp_jump")
 	

@@ -6,8 +6,6 @@ var jump_speed = -900
 
 
 func enter():
-	print("entering ATTACK state...")
-	
 	if(!owner.did_attack):
 		owner.current_attack.start_attack(owner)
 		await owner.current_attack.attack_finished
