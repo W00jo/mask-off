@@ -151,7 +151,7 @@ position = Vector2(157, 315)
 [node name="MaskSpawnPoint3" type="Node2D" parent="MaskSpawnPoints" index="2" unique_id=1299778320]
 position = Vector2(716, 318)
 
-[node name="damage_place" parent="." index="7" unique_id=2001838863 instance=ExtResource("6_iw40w")]
+[node name="damage_place" parent="." index="7" unique_id=2001838863 instance=ExtResource("5_iw40w")]
 position = Vector2(553, 682)
 scale = Vector2(18.885777, 2.6667345)
 DMG_amount = 999
