@@ -58,7 +58,7 @@ texture = ExtResource("6_wlwq4")
 [node name="Bomb2" type="Sprite2D" parent="Sprites" index="2" unique_id=681015014]
 position = Vector2(400.00003, 385)
 scale = Vector2(0.45027822, 0.4502783)
-texture = ExtResource("5_n7gt7")
+texture = ExtResource("4_n7gt7")
 
 [node name="Platform2" type="Sprite2D" parent="Sprites" index="3" unique_id=1136730871]
 position = Vector2(214.00002, 403.00003)
