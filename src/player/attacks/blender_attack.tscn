@@ -1,7 +1,7 @@
-[gd_scene format=3 uid="uid://c2wsqbmxwudpk"]
+[gd_scene format=3 uid="uid://6bxirhubuc1l"]
 
-[ext_resource type="Script" uid="uid://dum7h4wwrtnm5" path="res://src/player/attacks/blender_attack.gd" id="1_plpl5"]
-[ext_resource type="PackedScene" uid="uid://bcu1l2xqigbam" path="res://src/player/attacks/cube.tscn" id="2_cqfbb"]
+[ext_resource type="Script" path="res://src/player/attacks/blender_attack.gd" id="1_plpl5"]
+[ext_resource type="PackedScene" path="res://src/player/attacks/cube.tscn" id="2_cqfbb"]
 [ext_resource type="Script" uid="uid://wnlkpmaoqpcb" path="res://src/player/damage_system/damage_source.gd" id="3_uu7sf"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_yvmjs"]

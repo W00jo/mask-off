@@ -3,6 +3,8 @@ extends Node
 
 var camera_2d
 
+signal on_attack_end
+
 func _ready():
 	#print(get_parent().get_parent().get_parent().get_node("BaseMap/Camera2D"))
 	pass
