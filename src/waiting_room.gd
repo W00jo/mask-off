@@ -3,6 +3,14 @@ extends Node2D
 signal on_game_start(players: Array[Player])
 
 @export var packedPlayer: PackedScene
+
+var disco_tracks := [
+	preload("res://assets/audio/soundtrack/Disco/P1 DISCO.wav"),
+	preload("res://assets/audio/soundtrack/Disco/P2 DISCO.wav"),
+	preload("res://assets/audio/soundtrack/Disco/P3 DISCO.wav"),
+	preload("res://assets/audio/soundtrack/Disco/P4 DISCO.wav")
+]
+var disco_players: Array[AudioStreamPlayer] = []
 var _activated_players: Array[bool] = [false, false, false, false]
 var _players: Array[Player] = []
 var input_actions = [
@@ -29,15 +37,28 @@ var player_colors = [
 	"#60e5bb",
 	"#ce9a40"]
 
-
 func _ready() -> void:
-	await get_tree().create_timer(0.1).timeout
+	_start_disco_music()
+	
+	# Wait for UI to be available
+	while UI.Instance == null or UI.Instance.hud == null:
+		await get_tree().create_timer(0.1).timeout
+	
 	var displays = UI.Instance.hud.player_displays
 	for i in range(displays.size()):
 		var d: PlayerDisplay = displays[i]
 		var l = "[" + input_actions_names[i][0] + "]"
 		var r = "[" + input_actions_names[i][1] + "]"
 		d.set_label_name(l + " + " + r)
+
+func _start_disco_music() -> void:
+	for track in disco_tracks:
+		var player = AudioStreamPlayer.new()
+		player.stream = track
+		player.finished.connect(player.play)
+		add_child(player)
+		player.play()
+		disco_players.append(player)
 	
 func _input(_event: InputEvent) -> void:
 	for i in range(4):
@@ -101,4 +122,3 @@ func get_rand_color() -> Color:
 	var hex = player_colors[index]
 	player_colors.remove_at(index)
 	return Color.from_string(hex, Color.WHITE)
-	
