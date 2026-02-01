@@ -2,9 +2,13 @@
 
 [ext_resource type="Script" uid="uid://dmd6e88hlbur5" path="res://src/ui/player_display.gd" id="1_rhhb7"]
 [ext_resource type="Texture2D" uid="uid://bnoj75f1r3j7v" path="res://assets/sprites/znak_zapytania.png" id="2_75uhc"]
+[ext_resource type="FontFile" uid="uid://dg4utm6nyqq2b" path="res://assets/fonts/headers_font.ttf" id="3_jncfx"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_75uhc"]
 
 [node name="Player1Display" type="PanelContainer" unique_id=1738070447]
 custom_minimum_size = Vector2(200, 0)
+theme_override_styles/panel = SubResource("StyleBoxEmpty_75uhc")
 script = ExtResource("1_rhhb7")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1307540134]
@@ -22,10 +26,10 @@ stretch_mode = 1
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 1
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("3_jncfx")
+theme_override_font_sizes/font_size = 24
 text = "Player 1"
 vertical_alignment = 1
-
-[node name="HealthBar" type="ProgressBar" parent="VBoxContainer" unique_id=1565973223]
-modulate = Color(1, 0.089999974, 0.089999974, 1)
-layout_mode = 2
-show_percentage = false

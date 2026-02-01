@@ -4,12 +4,14 @@
 [ext_resource type="Texture2D" uid="uid://bbi0ym12jj8ok" path="res://src/ui/menus/prettiers/grid.png" id="2_lgb0q"]
 [ext_resource type="Texture2D" uid="uid://cpx81f45uct5c" path="res://src/ui/menus/icons/flag_icon_gb.png" id="3_8mfi6"]
 [ext_resource type="Texture2D" uid="uid://hhwr40w72ju" path="res://src/ui/menus/icons/flag_icon_pl.png" id="3_lgb0q"]
+[ext_resource type="FontFile" uid="uid://dg4utm6nyqq2b" path="res://assets/fonts/headers_font.ttf" id="5_bkwvr"]
+[ext_resource type="FontFile" uid="uid://cdv28u2sltsxo" path="res://assets/fonts/text_font.ttf" id="6_text"]
 
-[sub_resource type="LabelSettings" id="LabelSettings_ckw4x"]
-font_size = 50
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_d308x"]
 
-[sub_resource type="LabelSettings" id="LabelSettings_hvdkm"]
-font_size = 24
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_opgd2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ql2u4"]
 
 [node name="Options" type="Control" unique_id=1038357148]
 layout_mode = 3
@@ -20,7 +22,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ckw4x")
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=36128387]
+[node name="BackgroundColor" type="ColorRect" parent="." unique_id=36128387]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -44,9 +46,9 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/margin_left = 260
-theme_override_constants/margin_top = 60
+theme_override_constants/margin_top = 30
 theme_override_constants/margin_right = 260
-theme_override_constants/margin_bottom = 60
+theme_override_constants/margin_bottom = 30
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=235257116]
 layout_mode = 2
@@ -57,8 +59,12 @@ layout_mode = 2
 
 [node name="OptionsLabel" type="Label" parent="MarginContainer/VBoxContainer/CenterContainer" unique_id=847663559]
 layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_bkwvr")
+theme_override_font_sizes/font_size = 96
 text = "OPTIONS"
-label_settings = SubResource("LabelSettings_ckw4x")
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="OptionComponents" type="VBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1366456265]
 layout_mode = 2
@@ -74,8 +80,10 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 1
 size_flags_stretch_ratio = 0.5
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_text")
+theme_override_font_sizes/font_size = 32
 text = "MUSIC"
-label_settings = SubResource("LabelSettings_hvdkm")
 horizontal_alignment = 2
 vertical_alignment = 1
 
@@ -95,8 +103,10 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 1
 size_flags_stretch_ratio = 0.5
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_text")
+theme_override_font_sizes/font_size = 32
 text = "SOUND_EFFECTS"
-label_settings = SubResource("LabelSettings_hvdkm")
 horizontal_alignment = 2
 vertical_alignment = 1
 
@@ -105,9 +115,6 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 1
 ticks_position = 3
-
-[node name="HSeparator" type="HSeparator" parent="MarginContainer/VBoxContainer/OptionComponents" unique_id=132007451]
-layout_mode = 2
 
 [node name="Language" type="HBoxContainer" parent="MarginContainer/VBoxContainer/OptionComponents" unique_id=2097689647]
 layout_mode = 2
@@ -119,8 +126,10 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 1
 size_flags_stretch_ratio = 0.5
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_text")
+theme_override_font_sizes/font_size = 32
 text = "LANGUAGE"
-label_settings = SubResource("LabelSettings_hvdkm")
 horizontal_alignment = 2
 vertical_alignment = 1
 
@@ -151,17 +160,25 @@ texture_normal = ExtResource("3_8mfi6")
 ignore_texture_size = true
 stretch_mode = 5
 
-[node name="AspectRatioContainer" type="AspectRatioContainer" parent="MarginContainer/VBoxContainer" unique_id=1714266056]
-layout_mode = 2
-ratio = 2.9593
-
-[node name="Back" type="Button" parent="MarginContainer/VBoxContainer/AspectRatioContainer" unique_id=1482697108]
-layout_mode = 2
+[node name="Back" type="Button" parent="." unique_id=1482697108]
+layout_mode = 0
+offset_left = 1016.0
+offset_top = 48.0
+offset_right = 1096.0
+offset_bottom = 128.0
 size_flags_vertical = 8
-text = "Back"
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.27450982, 0.50980395, 0.7058824, 1)
+theme_override_fonts/font = ExtResource("5_bkwvr")
+theme_override_font_sizes/font_size = 64
+theme_override_styles/normal = SubResource("StyleBoxEmpty_d308x")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_opgd2")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_ql2u4")
+text = "x"
 
 [connection signal="value_changed" from="MarginContainer/VBoxContainer/OptionComponents/Music/MusicSlider" to="." method="_on_music_slider_value_changed"]
 [connection signal="value_changed" from="MarginContainer/VBoxContainer/OptionComponents/SFX/SFXSlider" to="." method="_on_sfx_slider_value_changed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/OptionComponents/Language/FlagButtons/HBoxContainer/FlagPL" to="." method="_on_language_selected"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/OptionComponents/Language/FlagButtons/HBoxContainer/FlagEN" to="." method="_on_language_selected"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/AspectRatioContainer/Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
