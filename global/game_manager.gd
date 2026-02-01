@@ -5,8 +5,14 @@ signal language_changed(locale: String)
 
 const SAVE_PATH = "user://settings.cfg"
 
-var mask_types = {"bomberman": preload("res://assets/sprites/maskaaaa.png"),
-				"costam": preload("res://assets/sprites/maskaaaa.png")}
+var mask_types = {"godot": "mask_godot",
+				"isaac": "mask_isaac",
+				"konduktor": "mask_konduktor",
+				"plague_doc": "mask_plague",
+				"bomberman": "mask_bomberman",
+				"blender": "mask_blender",
+				"catboy": "mask_catboy",
+				"pig": "mask_pig"}
 
 
 func _ready() -> void:
