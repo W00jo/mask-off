@@ -2,7 +2,7 @@ extends Node2D
 
 signal on_game_start(players: Array[Player])
 
-@export var packedPlayer: PackedScene
+const PACKED_PLAYER = preload("res://src/player/player.tscn")
 
 const DISCO_MUSIC = preload("res://assets/audio/soundtrack/SOUNDTRACK/Disco.wav")
 var music_player: AudioStreamPlayer
@@ -74,7 +74,7 @@ func _activate_player(index: int):
 		
 	UI.Instance.hud.player_displays[index].set_label_name("Player " + str(index + 1))
 	
-	var player: Player = packedPlayer.instantiate()
+	var player: Player = PACKED_PLAYER.instantiate()
 	var input = input_actions[index]
 	player.set_input_data(InputData.new(input[0], input[1], input[2], input[3]))
 	var color = get_rand_color()
