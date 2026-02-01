@@ -1,5 +1,6 @@
-extends State
 class_name IdleState
+extends State
+
 
 func enter():
 	print("entering IDLE state...")
@@ -7,7 +8,6 @@ func enter():
 	
 	if(!owner.is_on_floor()):
 		state_machine.change_state("fallstate")
-		
 
 func handle_input(_event:InputEvent):
 	if(Input.is_action_just_pressed(input.attack)):

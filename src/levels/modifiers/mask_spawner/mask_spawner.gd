@@ -1,21 +1,17 @@
+class_name MaskSpawner
 extends Node2D
 
-class_name MaskSpawner
 @export var spawn_parent: Node
 @export var max_ticks := 2
 @export var show_treshold := 5
-#@export var level:Node2D
 var _current_ticks := 2
-#var spawned_mask: CollectibleBaseMask
-#@export var masks: Array[PackedScene]
-
+var spawn_points = []
 @onready var timer: Timer = $Timer
 @onready var label: Label = $MaskSpawnPoint/Label
 @onready var anim: AnimationPlayer = $MaskSpawnPoint/Label/AnimationPlayer
-#@onready var spawn_point = $"../MaskSpawnPoints"
 @onready var particles_1 = $"MaskSpawnPoint/Particles!!!"
 @onready var particles_2 = $"MaskSpawnPoint/Particles!!!/MORE PARTICLES"
-var spawn_points = []
+
 
 func initialize() -> void:
 	randomize()
@@ -23,9 +19,8 @@ func initialize() -> void:
 
 func _start_timeout():
 	_current_ticks = max_ticks
-	#timer.timeout.connect(_on_timeout)
 	_update_label()
-	
+
 func _on_timeout():
 	if(_current_ticks <= show_treshold):
 		_update_label()
@@ -38,10 +33,10 @@ func _on_timeout():
 		_spawn_mask()
 		label.visible = false
 		timer.stop()
-		
+
 func _update_label():
 	label.text = str(_current_ticks)
-	
+
 func _spawn_mask():
 	var spawned_mask = preload("res://src/masks/collectible_base_mask.tscn").instantiate()
 	for spawn in spawn_parent.get_children():

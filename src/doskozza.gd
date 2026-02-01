@@ -1,4 +1,7 @@
 extends Node2D
 
+@onready var anim: AnimationPlayer = $AnimationPlayer
+
+
 func _ready() -> void:
-	$AnimationPlayer.play("discodisocodisco")
+	anim.play("discodisocodisco")

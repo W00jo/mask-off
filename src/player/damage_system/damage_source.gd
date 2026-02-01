@@ -1,8 +1,8 @@
+class_name DamageSource
 extends Node
 
-class_name DamageSource
-
 @export var damage_value: int
+
 
 func _on_body_entered(body):
 	var damage_target = body.get_node("DamageTarget")
@@ -13,5 +13,4 @@ func _on_body_entered(body):
 		return
 		
 	if(damage_target.has_method("receive_damage")):
-		print(damage_value)
 		damage_target.receive_damage(DamageData.new(damage_value))

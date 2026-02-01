@@ -1,10 +1,11 @@
-extends Node
 class_name StateMachine
+extends Node
 
 @export var initial_state:State
 var current_state:State
 var input_data: InputData
 var states:Dictionary = {}
+
 
 func _ready() -> void:
 	for child in get_children():
@@ -12,7 +13,6 @@ func _ready() -> void:
 			states[child.name.to_lower()] = child
 			child.state_machine = self
 			child.set_input(input_data)
-			print(states)
 	
 	if initial_state:
 		change_state(initial_state.name.to_lower())

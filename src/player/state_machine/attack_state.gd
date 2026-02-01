@@ -1,6 +1,5 @@
-class_name DeathState
+class_name AttackState
 extends State
-
 
 var jump_speed = -900
 
@@ -10,7 +9,6 @@ func enter():
 	
 	owner.current_attack.start_attack(owner)
 	await owner.current_attack.attack_finished
-	
 	
 	if(owner.velocity.y > 0):
 		state_machine.change_state("fallstate")

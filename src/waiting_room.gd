@@ -2,6 +2,7 @@ extends Node2D
 
 signal on_game_start(players: Array[Player])
 
+@export var packedPlayer: PackedScene
 var _activated_players: Array[bool] = [false, false, false, false]
 var _players: Array[Player] = []
 var input_actions = [
@@ -10,15 +11,12 @@ var input_actions = [
 	["p3_move_left", "p3_move_right", "p3_jump", "p3_attack"],
 	["p4_move_left", "p4_move_right", "p4_jump", "p4_attack"]
 ]
-
 var input_actions_names = [
 	["Left", "Right", "Up", "Down"],
 	["A", "D", "W", "S"],
 	["Num4", "Num6", "Num8", "Num5"],
 	["J", "L", "I", "K"],
 ]
-
-@export var packedPlayer: PackedScene
 
 
 func _ready() -> void:

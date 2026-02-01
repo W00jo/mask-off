@@ -1,6 +1,8 @@
 class_name FallState
 extends State
 
+@onready var sprite: Sprite2D = $"../../Sprite2D"
+
 
 func enter():
 	print("entering FALL state...")
@@ -12,10 +14,10 @@ func physics_update(delta:float):
 	var direction = Input.get_axis(input.move_left,input.move_right)
 	
 	if direction < 0:
-		$"../../Sprite2D".flip_h = true
+		sprite.flip_h = true
 		owner.attack_parent.scale.x = -1
 	elif direction > 0:
-		$"../../Sprite2D".flip_h = false
+		sprite.flip_h = false
 		owner.attack_parent.scale.x = 1
 	
 	owner.velocity.x = direction * 200
@@ -30,7 +32,7 @@ func physics_update(delta:float):
 		else:
 			state_machine.change_state("idlestate")
 			return
-			
+
 func handle_input(_event: InputEvent):
-	if(Input.is_action_just_pressed(input.attack)):
+	if Input.is_action_just_pressed(input.attack):
 		state_machine.change_state("attackstate")

@@ -2,8 +2,8 @@ extends Button
 
 @export var max_rotation : float = 5.0 
 @export var shake_speed : float = 0.1
-
 var is_hovering : bool = false
+
 
 func _ready():
 	pivot_offset = size / 4 

@@ -10,6 +10,7 @@
 [ext_resource type="Script" uid="uid://crqfi21e4cwo5" path="res://src/player/state_machine/fall_state.gd" id="6_tcq0w"]
 [ext_resource type="Script" uid="uid://bqmioivprkl42" path="res://src/player/mask_system.gd" id="7_boad6"]
 [ext_resource type="Script" uid="uid://uck8pyr0up71" path="res://src/player/state_machine/attack_state.gd" id="9_8t03j"]
+[ext_resource type="Script" uid="uid://dvx22adu7ly4a" path="res://src/player/state_machine/death_state.gd" id="10_2smqc"]
 [ext_resource type="Script" uid="uid://debf2l4kldxlb" path="res://src/player/damage_system/damage_target.gd" id="11_2ieo8"]
 [ext_resource type="Script" uid="uid://bwaqdqdr1hous" path="res://src/player/player_ui.gd" id="12_ebec5"]
 
@@ -171,11 +172,12 @@ _data = {
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g6k8r"]
 size = Vector2(46, 68)
 
-[node name="PlayerNew" type="CharacterBody2D" unique_id=1053524098 node_paths=PackedStringArray("mask_parent")]
+[node name="PlayerNew" type="CharacterBody2D" unique_id=1053524098 node_paths=PackedStringArray("mask_parent", "state_machine")]
 collision_layer = 2
 script = ExtResource("1_0v0ik")
 default_attack = ExtResource("2_rgyib")
 mask_parent = NodePath("MaskParent")
+state_machine = NodePath("StateMachine")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1375468071]
 texture_filter = 1
@@ -213,6 +215,10 @@ metadata/_custom_type_script = "uid://crqfi21e4cwo5"
 [node name="AttackState" type="Node" parent="StateMachine" unique_id=625954773]
 script = ExtResource("9_8t03j")
 metadata/_custom_type_script = "uid://crqfi21e4cwo5"
+
+[node name="DeathState" type="Node" parent="StateMachine" unique_id=758476619]
+script = ExtResource("10_2smqc")
+metadata/_custom_type_script = "uid://dvx22adu7ly4a"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=340885158]
 libraries/ = SubResource("AnimationLibrary_tcq0w")

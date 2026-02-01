@@ -2,6 +2,8 @@ class_name WalkState
 extends State
 
 var speed = 150
+@onready var sprite: Sprite2D = $"../../Sprite2D"
+
 
 func enter():
 	print("entering WALK state...")
@@ -13,10 +15,10 @@ func physics_update(_delta:float):
 		var direction = Input.get_axis(input.move_left,input.move_right)
 		
 		if direction < 0:
-			$"../../Sprite2D".flip_h = true
+			sprite.flip_h = true
 			owner.attack_parent.scale.x = -1
 		elif direction > 0:
-			$"../../Sprite2D".flip_h = false
+			sprite.flip_h = false
 			owner.attack_parent.scale.x = 1
 		
 		if direction == 0:
@@ -28,11 +30,9 @@ func physics_update(_delta:float):
 	else:
 		state_machine.change_state("fallstate")
 		return
-		
+
 func handle_input(_event:InputEvent):
 	if(Input.is_action_just_pressed(input.attack)):
 		state_machine.change_state("attackstate")
 	elif Input.is_action_just_pressed(input.jump):
 		state_machine.change_state("jumpstate")
-	#elif Input.is_action_pressed("Shift"):
-		#state_machine.change_state("runstate")

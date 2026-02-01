@@ -1,6 +1,6 @@
+class_name InputData
 extends Node
 
-class_name InputData
 
 var move_left: String
 var move_right: String
