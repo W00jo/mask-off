@@ -122,3 +122,7 @@ position = Vector2(157, 315)
 
 [node name="MaskSpawnPoint3" type="Node2D" parent="MaskSpawnPoints" index="2" unique_id=145732782]
 position = Vector2(716, 318)
+
+[node name="Camera2D" type="Camera2D" parent="." index="5" unique_id=628659851]
+position = Vector2(570, 331)
+position_smoothing_enabled = true

@@ -5,6 +5,7 @@ extends BaseAttack
 
 
 func start_attack(player: Player):
+	super(player)
 	collider.disabled = false
 	player.animation_player.play(animName)
 	await player.animation_player.animation_finished
