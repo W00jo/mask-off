@@ -1,6 +1,52 @@
 [gd_scene format=3 uid="uid://l1crux0gfiid"]
 
-[ext_resource type="Script" path="res://src/ui/menus/credits.gd" id="1_d82ik"]
+[ext_resource type="Script" uid="uid://dyw6l8t2c4ft" path="res://src/ui/menus/credits.gd" id="1_d82ik"]
+[ext_resource type="Texture2D" uid="uid://da64jreuytyb6" path="res://src/ui/menus/prettiers/cork_board.jpg" id="2_mvcab"]
+[ext_resource type="Texture2D" uid="uid://c4s7ycx24ujb0" path="res://assets/concept_arts/concept_art_gabriela_1.png" id="2_ttxch"]
+[ext_resource type="Texture2D" uid="uid://c8g3t7pnv3c5d" path="res://assets/concept_arts/concept_art_gabriela_2.png" id="3_mvcab"]
+[ext_resource type="Texture2D" uid="uid://cbpu5hei326qf" path="res://assets/concept_arts/concept_art_julia_1.png" id="4_3kdyq"]
+[ext_resource type="Texture2D" uid="uid://cjx7bofmmjd7r" path="res://assets/concept_arts/concept_art_julia_2.png" id="5_s8f31"]
+[ext_resource type="Texture2D" uid="uid://eb1adwsgb20v" path="res://src/ui/menus/prettiers/pin.png" id="7_3kdyq"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_white1"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+shadow_size = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_photo"]
+bg_color = Color(1, 0.88774997, 0.9017154, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_white2"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+shadow_size = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_white3"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+shadow_size = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_white4"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+shadow_size = 2
 
 [node name="Credits" type="Control" unique_id=1038357148]
 layout_mode = 3
@@ -16,41 +62,279 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_right = -5.432251
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.4380462, 0.11130827, 0.3530822, 1)
+scale = Vector2(1.0047379, 1)
+color = Color(0.95686275, 0.8901961, 0.8235294, 1)
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1033723844]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 768.0
+texture = ExtResource("2_mvcab")
+expand_mode = 1
 
 [node name="CreditsLabel" type="Label" parent="." unique_id=847663559]
-layout_mode = 0
-offset_left = 523.0
-offset_top = 153.0
-offset_right = 587.0
-offset_bottom = 176.0
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 144.0
+offset_top = 192.0
+offset_right = 444.0
+offset_bottom = 242.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 32
 text = "CREDITS"
+horizontal_alignment = 1
 
-[node name="ConceptArtContainer" type="PanelContainer" parent="." unique_id=941470221]
+[node name="ConceptArt1" type="PanelContainer" parent="." unique_id=1499955022]
+custom_minimum_size = Vector2(220, 260)
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 40.0
+offset_top = 40.0
+offset_right = 260.0
+offset_bottom = 300.0
+rotation = -0.0698132
+theme_override_styles/panel = SubResource("StyleBoxFlat_white1")
 
-[node name="TextureRect" type="TextureRect" parent="ConceptArtContainer" unique_id=1147035314]
+[node name="MarginContainer" type="MarginContainer" parent="ConceptArt1" unique_id=1079710957]
 layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
 
-[node name="Panel" type="Panel" parent="ConceptArtContainer" unique_id=153091124]
+[node name="VBox" type="VBoxContainer" parent="ConceptArt1/MarginContainer" unique_id=1996128107]
 layout_mode = 2
+theme_override_constants/separation = 0
 
-[node name="ConceptArtContainer2" type="PanelContainer" parent="." unique_id=915142353]
+[node name="PhotoFrame" type="Panel" parent="ConceptArt1/MarginContainer/VBox" unique_id=1111246631]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_photo")
+
+[node name="MarginContainer" type="MarginContainer" parent="ConceptArt1/MarginContainer/VBox/PhotoFrame" unique_id=18489616]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 0.86839676
+offset_right = -0.39318848
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 0
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 0
+theme_override_constants/margin_bottom = 0
+
+[node name="ConceptArt" type="TextureRect" parent="ConceptArt1/MarginContainer/VBox/PhotoFrame/MarginContainer" unique_id=1262967737]
+layout_mode = 2
+texture = ExtResource("2_ttxch")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Description" type="Label" parent="ConceptArt1/MarginContainer/VBox" unique_id=331794515]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 14
+text = "BUBBLE_LEVEL"
+horizontal_alignment = 1
+
+[node name="Author" type="Label" parent="ConceptArt1/MarginContainer/VBox" unique_id=1822367485]
+layout_mode = 2
+text = "Gabriela"
+horizontal_alignment = 1
+
+[node name="Pin1" type="TextureRect" parent="." unique_id=829047412]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 118.0
+offset_top = 13.0
+offset_right = 170.0
+offset_bottom = 67.0
+texture = ExtResource("7_3kdyq")
 
-[node name="TextureRect" type="TextureRect" parent="ConceptArtContainer2" unique_id=2008920518]
-layout_mode = 2
-
-[node name="Panel" type="Panel" parent="ConceptArtContainer2" unique_id=1989014909]
-layout_mode = 2
-
-[node name="TextureButton" type="TextureButton" parent="." unique_id=575170188]
+[node name="ConceptArt2" type="PanelContainer" parent="." unique_id=880812433]
+custom_minimum_size = Vector2(220, 260)
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 64.0
+offset_top = 336.0
+offset_right = 284.0
+offset_bottom = 596.0
+rotation = 0.055036273
+theme_override_styles/panel = SubResource("StyleBoxFlat_white2")
+
+[node name="MarginContainer" type="MarginContainer" parent="ConceptArt2" unique_id=1581773005]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBox" type="VBoxContainer" parent="ConceptArt2/MarginContainer" unique_id=1432980582]
+layout_mode = 2
+
+[node name="PhotoFrame" type="Panel" parent="ConceptArt2/MarginContainer/VBox" unique_id=1009724317]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_photo")
+
+[node name="MarginContainer" type="MarginContainer" parent="ConceptArt2/MarginContainer/VBox/PhotoFrame" unique_id=1008144511]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.124919
+offset_top = 1.0134869
+offset_right = -1.1249237
+offset_bottom = -0.59591675
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 0
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 0
+theme_override_constants/margin_bottom = 0
+
+[node name="ConceptArt" type="TextureRect" parent="ConceptArt2/MarginContainer/VBox/PhotoFrame/MarginContainer" unique_id=1663427837]
+layout_mode = 2
+texture = ExtResource("3_mvcab")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Caption" type="Label" parent="ConceptArt2/MarginContainer/VBox" unique_id=1253162510]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 14
+text = "Gabriela"
+horizontal_alignment = 1
+
+[node name="Pin2" type="TextureRect" parent="." unique_id=1949611868]
+layout_mode = 0
+offset_left = 144.0
+offset_top = 320.0
+offset_right = 196.0
+offset_bottom = 374.0
+texture = ExtResource("7_3kdyq")
+
+[node name="ConceptArt3" type="PanelContainer" parent="." unique_id=1212362813]
+custom_minimum_size = Vector2(220, 260)
+layout_mode = 0
+offset_left = 352.0
+offset_top = 32.0
+offset_right = 572.0
+offset_bottom = 292.0
+rotation = 0.03442717
+theme_override_styles/panel = SubResource("StyleBoxFlat_white3")
+
+[node name="MarginContainer" type="MarginContainer" parent="ConceptArt3" unique_id=1724758057]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBox" type="VBoxContainer" parent="ConceptArt3/MarginContainer" unique_id=494326840]
+layout_mode = 2
+
+[node name="PhotoFrame" type="Panel" parent="ConceptArt3/MarginContainer/VBox" unique_id=1074524996]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_photo")
+
+[node name="MarginContainer" type="MarginContainer" parent="ConceptArt3/MarginContainer/VBox/PhotoFrame" unique_id=574760570]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.345398
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 0
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 0
+theme_override_constants/margin_bottom = 0
+
+[node name="ConceptArt" type="TextureRect" parent="ConceptArt3/MarginContainer/VBox/PhotoFrame/MarginContainer" unique_id=1561374519]
+layout_mode = 2
+texture = ExtResource("4_3kdyq")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Caption" type="Label" parent="ConceptArt3/MarginContainer/VBox" unique_id=737479895]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 14
+text = "Julia"
+horizontal_alignment = 1
+
+[node name="Pin3" type="TextureRect" parent="." unique_id=633848480]
+layout_mode = 0
+offset_left = 440.0
+offset_top = 16.0
+offset_right = 492.0
+offset_bottom = 70.0
+texture = ExtResource("7_3kdyq")
+
+[node name="ConceptArt4" type="PanelContainer" parent="." unique_id=584844007]
+custom_minimum_size = Vector2(220, 260)
+layout_mode = 0
+offset_left = 320.0
+offset_top = 352.00003
+offset_right = 540.0
+offset_bottom = 612.00006
+rotation = -0.12307395
+theme_override_styles/panel = SubResource("StyleBoxFlat_white4")
+
+[node name="MarginContainer" type="MarginContainer" parent="ConceptArt4" unique_id=1296067687]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBox" type="VBoxContainer" parent="ConceptArt4/MarginContainer" unique_id=1112008655]
+layout_mode = 2
+
+[node name="PhotoFrame" type="Panel" parent="ConceptArt4/MarginContainer/VBox" unique_id=1417269509]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_photo")
+
+[node name="MarginContainer" type="MarginContainer" parent="ConceptArt4/MarginContainer/VBox/PhotoFrame" unique_id=896427314]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.2322388
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 0
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 0
+theme_override_constants/margin_bottom = 0
+
+[node name="ConceptArt" type="TextureRect" parent="ConceptArt4/MarginContainer/VBox/PhotoFrame/MarginContainer" unique_id=1907385882]
+layout_mode = 2
+texture = ExtResource("5_s8f31")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Caption" type="Label" parent="ConceptArt4/MarginContainer/VBox" unique_id=1005624090]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 14
+text = "Julia"
+horizontal_alignment = 1
+
+[node name="Pin4" type="TextureRect" parent="." unique_id=760243975]
+layout_mode = 0
+offset_left = 400.0
+offset_top = 320.0
+offset_right = 452.0
+offset_bottom = 374.0
+texture = ExtResource("7_3kdyq")

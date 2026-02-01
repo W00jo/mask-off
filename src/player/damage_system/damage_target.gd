@@ -3,6 +3,7 @@ extends Node
 
 signal on_death
 signal on_damage_received(amount: int)
+signal on_knockback(data: KnockbackData)
 
 @export var max_health: int
 var current_health: int
@@ -19,7 +20,7 @@ func receive_damage(damage_data: DamageData):
 	current_health -= damage_data.damage_value
 	
 	on_damage_received.emit(damage_data.damage_value)
-	print("zycie: ", current_health)
+	on_knockback.emit(damage_data.knockback_data)
 	
 	if(current_health <= 0):
 		death()

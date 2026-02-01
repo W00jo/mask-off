@@ -2,17 +2,21 @@
 
 [ext_resource type="Script" uid="uid://luwldsgryie4" path="res://src/ui/menus/main_menu.gd" id="1_7lrnf"]
 [ext_resource type="Texture2D" uid="uid://bgxgigi7hnsr6" path="res://src/ui/menus/borders/button_border_01.png" id="2_border1"]
-[ext_resource type="Material" uid="uid://cf5mvpkmoli0k" path="res://assets/shaders/new_shader_material.tres" id="2_l2tv4"]
-[ext_resource type="Texture2D" uid="uid://b41l3fil5sl57" path="res://src/ui/menus/menu_splash_art.png" id="2_yycut"]
+[ext_resource type="Material" uid="uid://cf5mvpkmoli0k" path="res://assets/shaders/rays.tres" id="2_l2tv4"]
+[ext_resource type="Texture2D" uid="uid://bbi0ym12jj8ok" path="res://src/ui/menus/prettiers/grid.png" id="2_o7egi"]
 [ext_resource type="Texture2D" uid="uid://dfiyb3by5xfqr" path="res://src/ui/menus/borders/button_border_02.png" id="3_border2"]
+[ext_resource type="Texture2D" uid="uid://cua4qrw158iii" path="res://assets/splash_art.png" id="3_l2tv4"]
 [ext_resource type="Texture2D" uid="uid://cal7kp3k3boxq" path="res://src/ui/menus/borders/button_border_03.png" id="4_border3"]
+[ext_resource type="Texture2D" uid="uid://7ii1mqyff8w3" path="res://assets/mask-off-icon.png" id="6_rs8ex"]
 [ext_resource type="FontFile" uid="uid://cbf52hahephbu" path="res://assets/fonts/DK Crayon Crumble.ttf" id="8_o7egi"]
-[ext_resource type="Script" uid="uid://24ugtq5kc2rr" path="res://src/ui/menus/play.gd" id="9_l3u6v"]
-[ext_resource type="Script" path="res://src/ui/menus/options_button.gd" id="10_opbtn"]
-[ext_resource type="Script" uid="uid://dyw6l8t2c4ft" path="res://src/ui/menus/credits.gd" id="11_l2tv4"]
-[ext_resource type="Script" uid="uid://20t4hdkrl1tq" path="res://src/ui/menus/exit.gd" id="12_o7egi"]
-[ext_resource type="Script" path="res://src/ui/menus/howtoplay.gd" id="13_htpgd"]
-[ext_resource type="Script" path="res://src/ui/menus/itchio_button.gd" id="14_itchio"]
+[ext_resource type="AudioStream" uid="uid://dis4hw72jkf3m" path="res://src/ui/menus/click_sfx/fart.mp3" id="10_hcfgv"]
+[ext_resource type="Script" uid="uid://c2tsi1x7a2bys" path="res://src/ui/menus/itchio_button.gd" id="14_itchio"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_l3u6v"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hcfgv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rs8ex"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_border1"]
 texture = ExtResource("2_border1")
@@ -45,137 +49,105 @@ grow_vertical = 2
 script = ExtResource("1_7lrnf")
 
 [node name="ColorBackground" type="ColorRect" parent="." unique_id=757648385]
+material = ExtResource("2_l2tv4")
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+color = Color(0.95686275, 0.8901961, 0.8235294, 1)
+
+[node name="Grid" type="TextureRect" parent="." unique_id=2115536794]
+modulate = Color(0, 0, 0, 0.078431375)
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("2_o7egi")
 
 [node name="SplashArt" type="TextureRect" parent="." unique_id=828286346]
-material = ExtResource("2_l2tv4")
 layout_mode = 0
 offset_top = -8.0
-offset_right = 1145.0612
-offset_bottom = 656.0
-texture = ExtResource("2_yycut")
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("3_l2tv4")
+expand_mode = 1
 
-[node name="Title" type="Label" parent="." unique_id=301324429]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.25500003
-anchor_top = 0.142
-anchor_right = 0.74700004
-anchor_bottom = 0.32700002
-offset_left = -245.76004
-offset_top = -44.016006
-offset_right = -245.54407
-offset_bottom = -43.89601
-grow_horizontal = 2
+[node name="Butt" type="Button" parent="SplashArt" unique_id=1795486041]
+layout_mode = 0
+offset_left = 726.78577
+offset_top = 428.51608
+offset_right = 737.0438
+offset_bottom = 438.80933
+rotation = 0.3614871
+scale = Vector2(10, 5)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_l3u6v")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_hcfgv")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_rs8ex")
+
+[node name="MenuInterface" type="VBoxContainer" parent="." unique_id=204113689]
+layout_mode = 0
+offset_left = 104.0
+offset_top = 88.0
+offset_right = 394.0
+offset_bottom = 551.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MenuInterface" unique_id=741143386]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="MenuInterface/HBoxContainer" unique_id=198295224]
+layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("8_o7egi")
 theme_override_font_sizes/font_size = 122
-text = "TITLE"
+text = "MASK OFF"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1061333231]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.194
-anchor_top = 0.41500002
-anchor_right = 0.34500003
-anchor_bottom = 0.87500006
-offset_left = -0.4880066
-offset_top = -26.920013
-offset_right = 71.55997
-offset_bottom = 41.99994
-pivot_offset_ratio = Vector2(0.48, 0)
-theme_override_constants/separation = -5
+[node name="MenuButtons" type="VBoxContainer" parent="MenuInterface" unique_id=1061333231]
+layout_mode = 2
+theme_override_constants/separation = 5
 
-[node name="Play" type="Button" parent="VBoxContainer" unique_id=2054431329]
+[node name="Play" type="Button" parent="MenuInterface/MenuButtons" unique_id=325514470]
+layout_mode = 2
+
+[node name="HowToPlay" type="Button" parent="MenuInterface/MenuButtons" unique_id=1210959728]
+layout_mode = 2
+
+[node name="Options" type="Button" parent="MenuInterface/MenuButtons" unique_id=40699872]
+layout_mode = 2
+
+[node name="Credits" type="Button" parent="MenuInterface/MenuButtons" unique_id=90327146]
+layout_mode = 2
+
+[node name="Exit" type="Button" parent="MenuInterface/MenuButtons" unique_id=1059157821]
+layout_mode = 2
+
+[node name="MenuLogos" type="VBoxContainer" parent="MenuInterface" unique_id=779523893]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="MenuInterface/MenuLogos" unique_id=1039052294]
+layout_mode = 2
+
+[node name="TextEdit" type="TextEdit" parent="MenuInterface/MenuLogos" unique_id=557039146]
+layout_mode = 2
+
+[node name="Version" type="VBoxContainer" parent="." unique_id=1481010372]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 504.0
+offset_right = 109.0
+offset_bottom = 608.0
+
+[node name="GameLogo" type="TextureRect" parent="Version" unique_id=271259770]
 layout_mode = 2
 size_flags_horizontal = 4
-size_flags_vertical = 4
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(0, 0.28235295, 0.24313726, 1)
-theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("8_o7egi")
-theme_override_font_sizes/font_size = 52
-theme_override_styles/normal = SubResource("StyleBoxTexture_border1")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_border3")
-theme_override_styles/hover = SubResource("StyleBoxTexture_border2")
-text = "Play"
-icon_alignment = 1
-script = ExtResource("9_l3u6v")
+texture = ExtResource("6_rs8ex")
+stretch_mode = 4
 
-[node name="Howtoplay" type="Button" parent="VBoxContainer" unique_id=322535304]
+[node name="VersionLabel" type="Label" parent="Version" unique_id=145812126]
 layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(0, 0.28235295, 0.24313726, 1)
-theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 1
-theme_override_constants/h_separation = 4
-theme_override_fonts/font = ExtResource("8_o7egi")
-theme_override_font_sizes/font_size = 52
-theme_override_styles/normal = SubResource("StyleBoxTexture_border1")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_border3")
-theme_override_styles/hover = SubResource("StyleBoxTexture_border2")
-text = "How to play"
-script = ExtResource("13_htpgd")
-
-[node name="Options" type="Button" parent="VBoxContainer" unique_id=180185656]
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(0, 0.28235295, 0.24313726, 1)
-theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("8_o7egi")
-theme_override_font_sizes/font_size = 52
-theme_override_styles/normal = SubResource("StyleBoxTexture_border1")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_border3")
-theme_override_styles/hover = SubResource("StyleBoxTexture_border2")
-text = "Options"
-script = ExtResource("10_opbtn")
-
-[node name="Credits" type="Button" parent="VBoxContainer" unique_id=319635158]
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(0, 0.28235295, 0.24313726, 1)
-theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("8_o7egi")
-theme_override_font_sizes/font_size = 52
-theme_override_styles/normal = SubResource("StyleBoxTexture_border1")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_border3")
-theme_override_styles/hover = SubResource("StyleBoxTexture_border2")
-text = "Credits"
-script = ExtResource("11_l2tv4")
-
-[node name="Exit" type="Button" parent="VBoxContainer" unique_id=178739138]
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(0, 0.28235295, 0.24313726, 1)
-theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("8_o7egi")
-theme_override_font_sizes/font_size = 52
-theme_override_styles/normal = SubResource("StyleBoxTexture_border1")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_border3")
-theme_override_styles/hover = SubResource("StyleBoxTexture_border2")
-text = "Exit"
-script = ExtResource("12_o7egi")
-
-[node name="VersionLabel" type="Label" parent="." unique_id=145812126]
-layout_mode = 1
-anchors_preset = 3
-anchor_left = 1.0
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -1128.0
-offset_top = -40.0
-offset_right = -1058.0
-offset_bottom = -20.0
-grow_horizontal = 0
-grow_vertical = 0
+size_flags_horizontal = 4
 theme_override_colors/font_color = Color(0, 0, 0, 0.8)
 theme_override_fonts/font = ExtResource("8_o7egi")
 theme_override_font_sizes/font_size = 20
@@ -204,9 +176,15 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_border2")
 text = "itch.io"
 script = ExtResource("14_itchio")
 
-[connection signal="pressed" from="VBoxContainer/Play" to="." method="_on_play_pressed"]
-[connection signal="pressed" from="VBoxContainer/Howtoplay" to="." method="_on_howtoplay_pressed"]
-[connection signal="pressed" from="VBoxContainer/Options" to="." method="_on_options_pressed"]
-[connection signal="pressed" from="VBoxContainer/Credits" to="." method="_on_credits_pressed"]
-[connection signal="pressed" from="VBoxContainer/Exit" to="." method="_on_exit_pressed"]
+[node name="ClickSFX" type="AudioStreamPlayer" parent="." unique_id=1667146083]
+
+[node name="FartSFX" type="AudioStreamPlayer" parent="." unique_id=639848665]
+stream = ExtResource("10_hcfgv")
+
+[connection signal="pressed" from="SplashArt/Butt" to="." method="_on_butt_pressed"]
+[connection signal="pressed" from="MenuInterface/MenuButtons/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="MenuInterface/MenuButtons/HowToPlay" to="." method="_on_how_to_play_pressed"]
+[connection signal="pressed" from="MenuInterface/MenuButtons/Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="MenuInterface/MenuButtons/Credits" to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="MenuInterface/MenuButtons/Exit" to="." method="_on_exit_pressed"]
 [connection signal="pressed" from="ItchioButton" to="." method="_on_itchio_pressed"]

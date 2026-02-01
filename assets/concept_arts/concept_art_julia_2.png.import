@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dc78bcjlxhw3g"
-path="res://.godot/imported/menu_background.png-ce4bc3a793b3686d4aed5c3e59e15ed4.ctex"
+uid="uid://cjx7bofmmjd7r"
+path="res://.godot/imported/concept_art_julia_2.png-f25a0f6150268c12a3a81470ed9a94a3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/ui/menus/menu_background.png"
-dest_files=["res://.godot/imported/menu_background.png-ce4bc3a793b3686d4aed5c3e59e15ed4.ctex"]
+source_file="res://assets/concept_arts/concept_art_julia_2.png"
+dest_files=["res://.godot/imported/concept_art_julia_2.png-f25a0f6150268c12a3a81470ed9a94a3.ctex"]
 
 [params]
 

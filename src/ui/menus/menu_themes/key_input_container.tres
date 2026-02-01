@@ -1,6 +1,0 @@
-[gd_resource type="StyleBoxTexture" format=3 uid="uid://cd2wm6cc576gr"]
-
-[ext_resource type="Texture2D" uid="uid://ilatpxpi1yxb" path="res://src/ui/menus/borders/key_input_border_01.png" id="1_i4w42"]
-
-[resource]
-texture = ExtResource("1_i4w42")
