@@ -5,6 +5,10 @@
 [ext_resource type="FontFile" uid="uid://cbf52hahephbu" path="res://assets/fonts/DK Crayon Crumble.ttf" id="3_xq3li"]
 [ext_resource type="StyleBox" uid="uid://cd2wm6cc576gr" path="res://src/ui/menus/menu_themes/key_input_container.tres" id="4_xq3li"]
 
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_separator"]
+color = Color(0, 0, 0, 0.5)
+thickness = 2
+
 [node name="HowToPlay" type="Control" unique_id=1566090188]
 layout_mode = 3
 anchors_preset = 15
@@ -74,6 +78,11 @@ theme_override_constants/separation = 30
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/separation = 15
+
+[node name="Separator1" type="VSeparator" parent="PlayersControlsContainer"]
+layout_mode = 2
+theme_override_constants/separation = 5
+theme_override_styles/separator = SubResource("StyleBoxLine_separator")
 
 [node name="Player1Label" type="Label" parent="PlayersControlsContainer/Player1" unique_id=438950241]
 layout_mode = 2
@@ -196,6 +205,11 @@ layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/separation = 15
 
+[node name="Separator2" type="VSeparator" parent="PlayersControlsContainer"]
+layout_mode = 2
+theme_override_constants/separation = 5
+theme_override_styles/separator = SubResource("StyleBoxLine_separator")
+
 [node name="Player2Label" type="Label" parent="PlayersControlsContainer/Player2" unique_id=1291305735]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -316,6 +330,11 @@ vertical_alignment = 1
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/separation = 15
+
+[node name="Separator3" type="VSeparator" parent="PlayersControlsContainer"]
+layout_mode = 2
+theme_override_constants/separation = 5
+theme_override_styles/separator = SubResource("StyleBoxLine_separator")
 
 [node name="Player3Label" type="Label" parent="PlayersControlsContainer/Player3" unique_id=2052459877]
 layout_mode = 2
