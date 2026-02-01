@@ -5,9 +5,6 @@ extends BaseAttack
 
 
 func start_attack(player: Player):
-	print("anim name: ",animName)
-	print("collider: ",collider)
-	print("owner", owner)
 	super(player)
 	$Area2D.set_custom_parent(player)
 	collider.disabled = false
@@ -21,4 +18,5 @@ func start_attack(player: Player):
 	await player.animation_player.animation_finished
 	player.velocity.y = 98
 	collider.disabled = true
+	print("start default attack")
 	attack_finished.emit()
