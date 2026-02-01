@@ -65,6 +65,7 @@ func _activate_player(index: int):
 	player.set_input_data(InputData.new(input[0], input[1], input[2], input[3]))
 	var color = get_rand_color()
 	player.set_color(color)
+	player.scale = Vector2(0.75, 0.75)
 	UI.Instance.hud.player_displays[index].set_profile_color(color)
 	UI.Instance.hud.player_displays[index].show_profile()
 	add_sibling(player)

@@ -1,7 +1,7 @@
 class_name JumpState
 extends State
 
-var jump_speed = -900
+var jump_speed = -800
 @onready var sprite: Sprite2D = $"../../Sprite2D"
 
 

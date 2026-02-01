@@ -6,8 +6,11 @@
 [ext_resource type="Texture2D" uid="uid://dcijx7etyjim5" path="res://src/levels/01_default_level/krzak.png" id="4_326ku"]
 [ext_resource type="Texture2D" uid="uid://bx8eaiqjxwufu" path="res://src/levels/01_default_level/UwagaSlisku.png" id="5_326ku"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ltctc"]
+size = Vector2(1010.9358, 104)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1lhyj"]
-size = Vector2(949, 104)
+size = Vector2(891.0642, 104)
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_c27ss"]
 normal = Vector2(0.006756603, -0.9999772)
@@ -56,11 +59,11 @@ texture = ExtResource("5_326ku")
 [node name="StaticBody2D" type="StaticBody2D" parent="." index="2" unique_id=940238489]
 
 [node name="Bloki5" type="CollisionShape2D" parent="StaticBody2D" index="0" unique_id=2011681761]
-position = Vector2(1532.4358, 633)
-shape = SubResource("RectangleShape2D_1lhyj")
+position = Vector2(1501.4679, 633)
+shape = SubResource("RectangleShape2D_ltctc")
 
 [node name="Bloki" type="CollisionShape2D" parent="StaticBody2D" index="1" unique_id=1296590344]
-position = Vector2(413.43576, 634)
+position = Vector2(384.4679, 634)
 shape = SubResource("RectangleShape2D_1lhyj")
 
 [node name="Bloki2" type="CollisionShape2D" parent="StaticBody2D" index="2" unique_id=428945251]
@@ -104,7 +107,7 @@ one_way_collision = true
 position = Vector2(121, 317)
 
 [node name="Marker2D2" type="Marker2D" parent="PlayerSpawners" index="1" unique_id=537807400]
-position = Vector2(984, 283)
+position = Vector2(1076, 290)
 
 [node name="Marker2D3" type="Marker2D" parent="PlayerSpawners" index="2" unique_id=1123289738]
 position = Vector2(407, 131)
