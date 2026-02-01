@@ -20,6 +20,8 @@ var current_attack: BaseAttack
 @onready var mask_system: Area2D = $MaskSystem
 @onready var wearable_mask_scene = preload("res://src/masks/werable_base_mask.tscn")
 
+var player_color: Color = Color.WHITE
+
 func _ready():
 	print("StateMAchine: ", state_machine)
 	state_machine.set_input_data(InputData.new(
@@ -78,4 +80,5 @@ func _on_knockback(data: KnockbackData) -> void:
 	velocity -= from
 	
 func set_color(color: Color):
+	player_color = color
 	$Sprite2D.modulate = color

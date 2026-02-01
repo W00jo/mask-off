@@ -86,6 +86,9 @@ func _activate_player(index: int):
 func start_game():
 	on_game_start.emit(_players)
 	UI.Instance.hud.hide_play_game_popup()
+	for i in 4:
+		if(!_activated_players[i]):
+			UI.Instance.hud.hide_player_display(i)
 	queue_free()
 	
 func ressurect_player(player: Player):
