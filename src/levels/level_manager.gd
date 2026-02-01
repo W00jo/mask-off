@@ -10,6 +10,11 @@ func spawn_waiting_room():
 	var waiting_room_instance = waiting_room_scene.instantiate()
 	add_child(waiting_room_instance)
 	waiting_room_instance.connect("on_game_start", start_new_game)
+	
+func remove_level():
+	for i in active_players.size():
+		active_players[i].queue_free()
+	_current_map.queue_free()
 
 func start_new_game(players):
 	randomize()
@@ -36,12 +41,28 @@ func on_player_death(player: Player) -> void:
 		
 	await get_tree().create_timer(1).timeout
 	
-	var win_screen = UI.Instance.win_screen
+	var win_screen: WinScreen = UI.Instance.win_screen
+	UI.Instance.hide_layer(UI.Instance.hud)
 	UI.Instance.show_layer(win_screen)
 	win_screen.set_winner(active_players[0])
+	win_screen.on_new_game_pressed.connect(new_game)
+	win_screen.on_back_to_menu_pressed.connect(to_main_menu)
 
 func add_player():
 	var spawn_point = _current_map.get_free_spawn_point()
 	
 	if(spawn_point == null):
 		pass
+		
+func new_game():
+	UI.Instance.hud.reset()
+	UI.Instance.hide_layer(UI.Instance.win_screen)
+	UI.Instance.show_layer(UI.Instance.hud)
+	remove_level()
+	spawn_waiting_room()
+	
+func to_main_menu():
+	remove_level()
+	UI.Instance.hide_layer(UI.Instance.win_screen)
+	UI.Instance.show_layer(UI.Instance.main_menu)
+	UI.Instance.hud.reset()

@@ -22,3 +22,8 @@ func hide_play_game_popup():
 	
 func hide_player_display(index: int):
 	player_displays[index].hide()
+	
+func reset():
+	for i in 4:
+		player_displays[i].show()
+		player_displays[i].reset()
