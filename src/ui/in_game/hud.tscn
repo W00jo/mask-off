@@ -2,6 +2,9 @@
 
 [ext_resource type="Script" uid="uid://br8jg2cv5rmlc" path="res://src/ui/in_game/hud.gd" id="1_3k8yq"]
 [ext_resource type="PackedScene" uid="uid://b2xkqxwyfnvwi" path="res://src/ui/player_display.tscn" id="2_5pipe"]
+[ext_resource type="FontFile" uid="uid://dg4utm6nyqq2b" path="res://assets/fonts/headers_font.ttf" id="3_25hat"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vxfxl"]
 
 [sub_resource type="Animation" id="Animation_5pipe"]
 length = 0.001
@@ -94,6 +97,7 @@ alignment = 1
 
 [node name="Player1Display" parent="MarginContainer/HBoxContainer" unique_id=1738070447 instance=ExtResource("2_5pipe")]
 layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_vxfxl")
 label_name = "Player 1"
 
 [node name="Player2Display" parent="MarginContainer/HBoxContainer" unique_id=949735045 instance=ExtResource("2_5pipe")]
@@ -108,8 +112,7 @@ label_name = "Player 3"
 layout_mode = 2
 label_name = "Player 4"
 
-[node name="PlayGamePopup" type="Label" parent="." unique_id=518640298]
-visible = false
+[node name="PlayGamePopup" type="RichTextLabel" parent="." unique_id=2014369923]
 modulate = Color(3.2720633, 3.2720633, 3.2720628, 1)
 layout_mode = 1
 anchors_preset = 5
@@ -122,8 +125,14 @@ offset_bottom = 254.03482
 grow_horizontal = 2
 rotation = -0.11170107
 pivot_offset_ratio = Vector2(0.5, 0)
-theme_override_font_sizes/font_size = 39
-text = "[SPACE]: Let's BRAWL"
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/normal_font = ExtResource("3_25hat")
+theme_override_fonts/bold_font = ExtResource("3_25hat")
+theme_override_font_sizes/normal_font_size = 40
+theme_override_font_sizes/bold_font_size = 40
+bbcode_enabled = true
+text = "[color=#4682b4](SPACE):[/color] Let's BRAWL!"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="PlayGamePopup" unique_id=1998844815]
 libraries/ = SubResource("AnimationLibrary_vxfxl")

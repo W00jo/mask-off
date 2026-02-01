@@ -7,6 +7,9 @@
 [ext_resource type="Texture2D" uid="uid://cbpu5hei326qf" path="res://assets/concept_arts/concept_art_julia_1.png" id="4_3kdyq"]
 [ext_resource type="Texture2D" uid="uid://cjx7bofmmjd7r" path="res://assets/concept_arts/concept_art_julia_2.png" id="5_s8f31"]
 [ext_resource type="Texture2D" uid="uid://eb1adwsgb20v" path="res://src/ui/menus/prettiers/pin.png" id="7_3kdyq"]
+[ext_resource type="FontFile" uid="uid://dg4utm6nyqq2b" path="res://assets/fonts/headers_font.ttf" id="8_yhbge"]
+[ext_resource type="Texture2D" uid="uid://d14tl15eh2vgs" path="res://src/ui/menus/borders/kenney.png" id="9_5sbyp"]
+[ext_resource type="FontFile" uid="uid://cdv28u2sltsxo" path="res://assets/fonts/text_font.ttf" id="10_textf"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_white1"]
 bg_color = Color(1, 1, 1, 1)
@@ -48,6 +51,17 @@ corner_radius_bottom_right = 3
 corner_radius_bottom_left = 3
 shadow_size = 2
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6xbll"]
+texture = ExtResource("9_5sbyp")
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0
+expand_margin_left = 10.0
+expand_margin_top = 10.0
+expand_margin_right = 10.0
+expand_margin_bottom = 10.0
+
 [node name="Credits" type="Control" unique_id=1038357148]
 layout_mode = 3
 anchors_preset = 15
@@ -57,18 +71,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_d82ik")
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=36128387]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_right = -5.432251
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(1.0047379, 1)
-color = Color(0.95686275, 0.8901961, 0.8235294, 1)
-
-[node name="TextureRect" type="TextureRect" parent="." unique_id=1033723844]
+[node name="BackgroundCorkBoard" type="TextureRect" parent="." unique_id=1033723844]
 layout_mode = 0
 offset_top = -104.0
 offset_right = 1152.0
@@ -76,27 +79,244 @@ offset_bottom = 664.0
 texture = ExtResource("2_mvcab")
 expand_mode = 1
 
-[node name="CreditsLabel" type="Label" parent="." unique_id=847663559]
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1234567890]
 layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = 144.0
-offset_top = 72.0
-offset_right = 444.0
-offset_bottom = 122.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 732.0
+offset_top = 88.0
+offset_right = -128.0
+offset_bottom = -128.0
 grow_horizontal = 2
-theme_override_font_sizes/font_size = 32
+grow_vertical = 2
+theme_override_constants/separation = 8
+
+[node name="CreditsLabel" type="Label" parent="VBoxContainer" unique_id=847663559]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("8_yhbge")
+theme_override_font_sizes/font_size = 36
 text = "CREDITS"
 horizontal_alignment = 1
+
+[node name="Credit1" type="HBoxContainer" parent="VBoxContainer" unique_id=1234567910]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Name" type="Label" parent="VBoxContainer/Credit1" unique_id=1234567911]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.27, 0.51, 0.71, 1)
+theme_override_fonts/font = ExtResource("8_yhbge")
+theme_override_font_sizes/font_size = 14
+text = "Gabriela"
+horizontal_alignment = 2
+
+[node name="Role" type="Label" parent="VBoxContainer/Credit1" unique_id=1234567913]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("10_textf")
+theme_override_font_sizes/font_size = 14
+text = "Level Design, 2D Artist"
+autowrap_mode = 3
+
+[node name="Credit2" type="HBoxContainer" parent="VBoxContainer" unique_id=1234567920]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Name" type="Label" parent="VBoxContainer/Credit2" unique_id=1234567921]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.27, 0.51, 0.71, 1)
+theme_override_fonts/font = ExtResource("8_yhbge")
+theme_override_font_sizes/font_size = 14
+text = "Janek"
+horizontal_alignment = 2
+
+[node name="Role" type="Label" parent="VBoxContainer/Credit2" unique_id=1234567923]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("10_textf")
+theme_override_font_sizes/font_size = 14
+text = "Programmer, QA Tester"
+autowrap_mode = 3
+
+[node name="Credit3" type="HBoxContainer" parent="VBoxContainer" unique_id=1234567930]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Name" type="Label" parent="VBoxContainer/Credit3" unique_id=1234567931]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.27, 0.51, 0.71, 1)
+theme_override_fonts/font = ExtResource("8_yhbge")
+theme_override_font_sizes/font_size = 14
+text = "Zuza"
+horizontal_alignment = 2
+
+[node name="Role" type="Label" parent="VBoxContainer/Credit3" unique_id=1234567933]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("10_textf")
+theme_override_font_sizes/font_size = 14
+text = "Sound Designer"
+autowrap_mode = 3
+
+[node name="Credit4" type="HBoxContainer" parent="VBoxContainer" unique_id=1234567940]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Name" type="Label" parent="VBoxContainer/Credit4" unique_id=1234567941]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.27, 0.51, 0.71, 1)
+theme_override_fonts/font = ExtResource("8_yhbge")
+theme_override_font_sizes/font_size = 14
+text = "Julia"
+horizontal_alignment = 2
+
+[node name="Role" type="Label" parent="VBoxContainer/Credit4" unique_id=1234567943]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("10_textf")
+theme_override_font_sizes/font_size = 14
+text = "Character Artist, Animator"
+autowrap_mode = 3
+
+[node name="Credit5" type="HBoxContainer" parent="VBoxContainer" unique_id=1234567950]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Name" type="Label" parent="VBoxContainer/Credit5" unique_id=1234567951]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.27, 0.51, 0.71, 1)
+theme_override_fonts/font = ExtResource("8_yhbge")
+theme_override_font_sizes/font_size = 14
+text = "Wujo"
+horizontal_alignment = 2
+
+[node name="Role" type="Label" parent="VBoxContainer/Credit5" unique_id=1234567953]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("10_textf")
+theme_override_font_sizes/font_size = 14
+text = "Game Designer, UI Designer, Producer"
+autowrap_mode = 3
+
+[node name="Credit6" type="HBoxContainer" parent="VBoxContainer" unique_id=1234567960]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Name" type="Label" parent="VBoxContainer/Credit6" unique_id=1234567961]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.27, 0.51, 0.71, 1)
+theme_override_fonts/font = ExtResource("8_yhbge")
+theme_override_font_sizes/font_size = 14
+text = "Filip"
+horizontal_alignment = 2
+
+[node name="Role" type="Label" parent="VBoxContainer/Credit6" unique_id=1234567963]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("10_textf")
+theme_override_font_sizes/font_size = 14
+text = "Level Designer"
+autowrap_mode = 3
+
+[node name="Credit7" type="HBoxContainer" parent="VBoxContainer" unique_id=1904744721]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Name" type="Label" parent="VBoxContainer/Credit7" unique_id=143753807]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.27, 0.51, 0.71, 1)
+theme_override_fonts/font = ExtResource("8_yhbge")
+theme_override_font_sizes/font_size = 14
+text = "Roksana"
+horizontal_alignment = 2
+
+[node name="Role" type="Label" parent="VBoxContainer/Credit7" unique_id=1285802259]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("10_textf")
+theme_override_font_sizes/font_size = 14
+text = "Marketing, UI Designer"
+autowrap_mode = 3
+
+[node name="Credit8" type="HBoxContainer" parent="VBoxContainer" unique_id=957133587]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Name" type="Label" parent="VBoxContainer/Credit8" unique_id=1227393930]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.27, 0.51, 0.71, 1)
+theme_override_fonts/font = ExtResource("8_yhbge")
+theme_override_font_sizes/font_size = 14
+text = "Dominik"
+horizontal_alignment = 2
+
+[node name="Role" type="Label" parent="VBoxContainer/Credit8" unique_id=1611791936]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("10_textf")
+theme_override_font_sizes/font_size = 14
+text = "Programmer, QA Tester"
+autowrap_mode = 3
+
+[node name="Credit9" type="HBoxContainer" parent="VBoxContainer" unique_id=957133588]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Name" type="Label" parent="VBoxContainer/Credit9" unique_id=1227393931]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.27, 0.51, 0.71, 1)
+theme_override_fonts/font = ExtResource("8_yhbge")
+theme_override_font_sizes/font_size = 14
+text = "Julia (rzabka)"
+horizontal_alignment = 2
+
+[node name="Role" type="Label" parent="VBoxContainer/Credit9" unique_id=1611791937]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("10_textf")
+theme_override_font_sizes/font_size = 14
+text = "Programmer, QA Tester, 2D Artist"
+autowrap_mode = 3
+
+[node name="Credit10" type="HBoxContainer" parent="VBoxContainer" unique_id=1035672377]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Name2" type="Label" parent="VBoxContainer/Credit10" unique_id=2122627925]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.27, 0.51, 0.71, 1)
+theme_override_fonts/font = ExtResource("8_yhbge")
+theme_override_font_sizes/font_size = 14
+text = "Zuza"
+horizontal_alignment = 2
+
+[node name="Role2" type="Label" parent="VBoxContainer/Credit10" unique_id=107323624]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("10_textf")
+theme_override_font_sizes/font_size = 14
+text = "Audio"
+autowrap_mode = 3
 
 [node name="ConceptArt1" type="PanelContainer" parent="." unique_id=1499955022]
 custom_minimum_size = Vector2(220, 260)
 layout_mode = 0
 offset_left = 40.0
-offset_top = 40.0
+offset_top = 59.0
 offset_right = 260.0
-offset_bottom = 300.0
+offset_bottom = 322.0
 rotation = -0.0698132
 theme_override_styles/panel = SubResource("StyleBoxFlat_white1")
 
@@ -152,18 +372,18 @@ horizontal_alignment = 1
 [node name="Pin1" type="TextureRect" parent="." unique_id=829047412]
 layout_mode = 0
 offset_left = 118.0
-offset_top = 13.0
+offset_top = 32.0
 offset_right = 170.0
-offset_bottom = 67.0
+offset_bottom = 86.0
 texture = ExtResource("7_3kdyq")
 
 [node name="ConceptArt2" type="PanelContainer" parent="." unique_id=880812433]
 custom_minimum_size = Vector2(220, 260)
 layout_mode = 0
 offset_left = 64.0
-offset_top = 336.0
+offset_top = 355.0
 offset_right = 284.0
-offset_bottom = 596.0
+offset_bottom = 615.0
 rotation = 0.055036273
 theme_override_styles/panel = SubResource("StyleBoxFlat_white2")
 
@@ -215,18 +435,18 @@ horizontal_alignment = 1
 [node name="Pin2" type="TextureRect" parent="." unique_id=1949611868]
 layout_mode = 0
 offset_left = 144.0
-offset_top = 320.0
+offset_top = 339.0
 offset_right = 196.0
-offset_bottom = 374.0
+offset_bottom = 393.0
 texture = ExtResource("7_3kdyq")
 
 [node name="ConceptArt3" type="PanelContainer" parent="." unique_id=1212362813]
 custom_minimum_size = Vector2(220, 260)
 layout_mode = 0
 offset_left = 352.0
-offset_top = 32.0
+offset_top = 51.0
 offset_right = 572.0
-offset_bottom = 292.0
+offset_bottom = 311.0
 rotation = 0.03442717
 theme_override_styles/panel = SubResource("StyleBoxFlat_white3")
 
@@ -275,18 +495,18 @@ horizontal_alignment = 1
 [node name="Pin3" type="TextureRect" parent="." unique_id=633848480]
 layout_mode = 0
 offset_left = 440.0
-offset_top = 16.0
+offset_top = 35.0
 offset_right = 492.0
-offset_bottom = 70.0
+offset_bottom = 89.0
 texture = ExtResource("7_3kdyq")
 
 [node name="ConceptArt4" type="PanelContainer" parent="." unique_id=584844007]
 custom_minimum_size = Vector2(220, 260)
 layout_mode = 0
 offset_left = 320.0
-offset_top = 352.00003
+offset_top = 371.00003
 offset_right = 540.0
-offset_bottom = 612.00006
+offset_bottom = 631.00006
 rotation = -0.12307395
 theme_override_styles/panel = SubResource("StyleBoxFlat_white4")
 
@@ -335,7 +555,28 @@ horizontal_alignment = 1
 [node name="Pin4" type="TextureRect" parent="." unique_id=760243975]
 layout_mode = 0
 offset_left = 400.0
-offset_top = 320.0
+offset_top = 339.0
 offset_right = 452.0
-offset_bottom = 374.0
+offset_bottom = 393.0
+texture = ExtResource("7_3kdyq")
+
+[node name="Label" type="Label" parent="." unique_id=647818613]
+modulate = Color(1, 1, 0.53333336, 1)
+layout_mode = 0
+offset_left = 208.0
+offset_top = 24.0
+offset_right = 399.0
+offset_bottom = 75.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("8_yhbge")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxTexture_6xbll")
+text = "CONCEPT_ARTS"
+
+[node name="Pin5" type="TextureRect" parent="." unique_id=1386069064]
+layout_mode = 0
+offset_left = 280.0
+offset_top = -8.0
+offset_right = 332.0
+offset_bottom = 46.0
 texture = ExtResource("7_3kdyq")

@@ -11,6 +11,12 @@ load_path = "res://.godot/imported/key_input_border_01.png-fb702c8f946148526bcd3
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fyenn"]
 texture = SubResource("CompressedTexture2D_xq3li")
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xq3li"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_c80qg"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fyenn"]
+
 [node name="HowToPlay" type="Control" unique_id=1566090188]
 layout_mode = 3
 anchors_preset = 15
@@ -20,7 +26,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_e1emm")
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=687503636]
+[node name="BackgroundColor" type="ColorRect" parent="." unique_id=687503636]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -29,7 +35,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.95686275, 0.8901961, 0.8235294, 1)
 
-[node name="MenuBackground" type="TextureRect" parent="." unique_id=1088462098]
+[node name="Grid" type="TextureRect" parent="." unique_id=1088462098]
 modulate = Color(0.8627451, 0.8627451, 0.8627451, 0.31764707)
 layout_mode = 0
 offset_right = 1900.9319
@@ -37,38 +43,21 @@ offset_bottom = 1069.2743
 scale = Vector2(0.60601854, 0.6060185)
 texture = ExtResource("2_xq3li")
 
-[node name="HowToPlay" type="Label" parent="." unique_id=212005606]
+[node name="HowToPlayLabel" type="Label" parent="." unique_id=212005606]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -282.0
-offset_top = 40.0
-offset_right = 285.0
-offset_bottom = 160.0
+offset_left = -329.5
+offset_top = 32.0
+offset_right = 332.5
+offset_bottom = 152.0
 grow_horizontal = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_xq3li")
-theme_override_font_sizes/font_size = 100
+theme_override_font_sizes/font_size = 96
 text = "HOW_TO_PLAY"
 horizontal_alignment = 1
-
-[node name="CloseButton" type="Button" parent="." unique_id=1412249158]
-layout_mode = 1
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -120.0
-offset_top = 20.0
-offset_right = -40.0
-offset_bottom = 100.0
-grow_horizontal = 0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_color = Color(0.5, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_xq3li")
-theme_override_font_sizes/font_size = 60
-text = "x"
-flat = true
 
 [node name="PlayersControlsContainer" type="HBoxContainer" parent="." unique_id=31193333]
 layout_mode = 1
@@ -569,4 +558,21 @@ text = "L"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[connection signal="pressed" from="CloseButton" to="." method="_on_button_pressed"]
+[node name="Back" type="Button" parent="." unique_id=1426950646]
+layout_mode = 0
+offset_left = 1016.0
+offset_top = 48.0
+offset_right = 1096.0
+offset_bottom = 128.0
+size_flags_vertical = 8
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.27450982, 0.50980395, 0.7058824, 1)
+theme_override_fonts/font = ExtResource("3_xq3li")
+theme_override_font_sizes/font_size = 64
+theme_override_styles/normal = SubResource("StyleBoxEmpty_xq3li")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_c80qg")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_fyenn")
+text = "x"
+
+[connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
