@@ -90,22 +90,22 @@ texture = ExtResource("4_63sm1")
 [node name="Chair" type="Sprite2D" parent="." index="8" unique_id=448665041]
 position = Vector2(757.01935, 347.94836)
 scale = Vector2(0.5239785, 0.5239785)
-texture = ExtResource("5_uad0n")
+texture = ExtResource("6_uad0n")
 
 [node name="Chair3" type="Sprite2D" parent="." index="9" unique_id=974403196]
 position = Vector2(1112.0195, 349.73404)
 scale = Vector2(0.5239786, 0.5239786)
-texture = ExtResource("5_uad0n")
+texture = ExtResource("6_uad0n")
 
 [node name="Lampa2" type="Sprite2D" parent="." index="10" unique_id=1332192393]
 position = Vector2(673.0001, 365)
 scale = Vector2(-0.448, 0.448)
-texture = ExtResource("6_m1eih")
+texture = ExtResource("7_m1eih")
 
 [node name="Lampa" type="Sprite2D" parent="." index="11" unique_id=133572543]
 position = Vector2(541.00006, 343.00003)
 scale = Vector2(0.5350196, 0.5350196)
-texture = ExtResource("6_m1eih")
+texture = ExtResource("7_m1eih")
 
 [node name="Kolizje" type="StaticBody2D" parent="." index="12" unique_id=365756288]
 
