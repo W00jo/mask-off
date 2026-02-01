@@ -20,6 +20,7 @@ func initialize() -> void:
 func _start_timeout():
 	_current_ticks = max_ticks
 	_update_label()
+	$"Timer".start()
 
 func _on_timeout():
 	if(_current_ticks <= show_treshold):
