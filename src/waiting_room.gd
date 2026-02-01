@@ -65,16 +65,16 @@ func _activate_player(index: int):
 	player.set_input_data(InputData.new(input[0], input[1], input[2], input[3]))
 	var color = get_rand_color()
 	player.set_color(color)
+	add_sibling(player)
+	
+	
 	UI.Instance.hud.player_displays[index].set_profile_color(color)
 	UI.Instance.hud.player_displays[index].show_profile()
-	add_sibling(player)
+	UI.Instance.hud.player_displays[index].bind_player(player)
 	player.position = Vector2(600, 300)
 	player.damage_target.on_death.connect(
 	Callable(self, "ressurect_player").bind(player)
 	)
-	
-	UI.Instance.hud.player_displays[index].set_max_health(player.damage_target.max_health)
-	player.damage_target.on_damage_received.connect(UI.Instance.hud.player_displays[index].set_current_health)
 	
 	_players.append(player)
 	
