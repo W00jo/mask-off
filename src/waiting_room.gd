@@ -66,9 +66,12 @@ func _activate_player(index: int):
 	var color = get_rand_color()
 	player.set_color(color)
 	player.scale = Vector2(0.75, 0.75)
+	add_sibling(player)
+	
+	
 	UI.Instance.hud.player_displays[index].set_profile_color(color)
 	UI.Instance.hud.player_displays[index].show_profile()
-	add_sibling(player)
+	UI.Instance.hud.player_displays[index].bind_player(player)
 	player.position = Vector2(600, 300)
 	player.damage_target.on_death.connect(
 	Callable(self, "ressurect_player").bind(player)

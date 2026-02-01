@@ -39,7 +39,8 @@ func get_direction() -> int:
 	return -1 if $Sprite2D.flip_h else 1
 	
 func reset():
-	damage_target._ready()
+	damage_target.reset()
+	$UI._ready()
 	set_attack(default_attack)
 	state_machine.change_state("fallstate")
 
@@ -71,7 +72,6 @@ func create_wearable_mask(mask):
 
 
 func _on_knockback(data: KnockbackData) -> void:
-	print("from: ", data.from, " force: ", data.force)
 	var from = data.from
 	from *= data.force 
 	velocity -= from

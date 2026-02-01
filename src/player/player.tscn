@@ -238,7 +238,7 @@ position = Vector2(0, 37)
 
 [node name="DamageTarget" type="Node2D" parent="." unique_id=724562669]
 script = ExtResource("11_2ieo8")
-max_health = 999
+max_health = 15
 
 [node name="UI" type="Node2D" parent="." unique_id=328246206]
 script = ExtResource("12_ebec5")
