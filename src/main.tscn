@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://cooakotr76fm4" path="res://src/ui/menus/main_menu.tscn" id="3_5q4o7"]
 [ext_resource type="PackedScene" uid="uid://cw58umx5qon26" path="res://src/levels/02_bubble_level/map_2.tscn" id="3_kqbth"]
 [ext_resource type="PackedScene" uid="uid://fjhqoi1myrss" path="res://src/ui/menus/options.tscn" id="4_3cfgd"]
-[ext_resource type="PackedScene" path="res://global/map_3.tscn" id="4_kqbth"]
+[ext_resource type="PackedScene" uid="uid://du82m1e2nx6e4" path="res://src/levels/03_platform_level/map_3.tscn" id="4_srxbw"]
 [ext_resource type="PackedScene" uid="uid://l1crux0gfiid" path="res://src/ui/menus/credits.tscn" id="5_fyndt"]
 [ext_resource type="PackedScene" uid="uid://crf8kbvbl8uu6" path="res://src/ui/menus/how_to_play.tscn" id="6_kmhfv"]
 [ext_resource type="PackedScene" uid="uid://cxrtc71l5s4xu" path="res://src/ui/in_game/pause.tscn" id="7_rlaii"]
@@ -21,7 +21,7 @@ process_mode = 1
 
 [node name="LevelManager" type="Node2D" parent="Gameplay" unique_id=729005969]
 script = ExtResource("1_mgm53")
-maps = Array[PackedScene]([ExtResource("2_kqbth"), ExtResource("3_kqbth"), ExtResource("4_kqbth")])
+maps = Array[PackedScene]([ExtResource("2_kqbth"), ExtResource("3_kqbth"), ExtResource("4_srxbw")])
 
 [node name="UI" type="Node" parent="." unique_id=65613235 node_paths=PackedStringArray("hud", "main_menu", "options", "credits", "how_to_play", "pause", "win_screen", "level_manager")]
 process_mode = 3

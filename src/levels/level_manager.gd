@@ -29,6 +29,7 @@ func _spawn_map_and_players(players):
 	_current_map.z_index = -1
 	
 	var pl_spawner_parent = _current_map.get_node("PlayerSpawners")
+	print("pl spawn parent : ", pl_spawner_parent)
 	for i in players.size():
 		players[i].position = pl_spawner_parent.get_child(i).position
 		players[i].on_player_death.connect(on_player_death)
