@@ -4,13 +4,8 @@ signal on_game_start(players: Array[Player])
 
 @export var packedPlayer: PackedScene
 
-var disco_tracks := [
-	preload("res://assets/audio/soundtrack/Disco/P1 DISCO.wav"),
-	preload("res://assets/audio/soundtrack/Disco/P2 DISCO.wav"),
-	preload("res://assets/audio/soundtrack/Disco/P3 DISCO.wav"),
-	preload("res://assets/audio/soundtrack/Disco/P4 DISCO.wav")
-]
-var disco_players: Array[AudioStreamPlayer] = []
+const DISCO_MUSIC = preload("res://assets/audio/soundtrack/SOUNDTRACK/Disco.wav")
+var music_player: AudioStreamPlayer
 var _activated_players: Array[bool] = [false, false, false, false]
 var _players: Array[Player] = []
 var input_actions = [
@@ -52,13 +47,11 @@ func _ready() -> void:
 		d.set_label_name(l + " + " + r)
 
 func _start_disco_music() -> void:
-	for track in disco_tracks:
-		var player = AudioStreamPlayer.new()
-		player.stream = track
-		player.finished.connect(player.play)
-		add_child(player)
-		player.play()
-		disco_players.append(player)
+	music_player = AudioStreamPlayer.new()
+	music_player.stream = DISCO_MUSIC
+	music_player.finished.connect(music_player.play)
+	add_child(music_player)
+	music_player.play()
 	
 func _input(_event: InputEvent) -> void:
 	for i in range(4):

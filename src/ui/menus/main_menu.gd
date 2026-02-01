@@ -51,6 +51,11 @@ func _play_menu_music() -> void:
 func _on_menu_music_finished() -> void:
 	main_menu_music.play()
 
+func _stop_menu_music() -> void:
+	var fade_tween = create_tween().set_ease(Tween.EASE_IN).set_trans(Tween.TRANS_CUBIC)
+	fade_tween.tween_property(main_menu_music, "volume_db", -40.0, 0.5)
+	fade_tween.tween_callback(main_menu_music.stop)
+
 func _update_translations() -> void:
 	play_button.text = tr("PLAY")
 	options_button.text = tr("OPTIONS")
@@ -69,6 +74,7 @@ func _play_click_sound() -> void:
 
 func _on_play_pressed() -> void:
 	_play_click_sound()
+	_stop_menu_music()
 	play_pressed.emit()
 
 func _on_how_to_play_pressed() -> void:

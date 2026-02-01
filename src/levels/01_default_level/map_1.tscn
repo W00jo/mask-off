@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dcijx7etyjim5" path="res://src/levels/01_default_level/krzak.png" id="4_326ku"]
 [ext_resource type="Texture2D" uid="uid://bx8eaiqjxwufu" path="res://src/levels/01_default_level/UwagaSlisku.png" id="5_326ku"]
 [ext_resource type="Texture2D" uid="uid://c7cvcta6gh8br" path="res://src/levels/01_default_level/Dol.png" id="6_326ku"]
+[ext_resource type="AudioStream" path="res://assets/audio/soundtrack/SOUNDTRACK/Doodle.wav" id="7_music"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ltctc"]
 size = Vector2(1010.9358, 104)
@@ -29,6 +30,7 @@ size = Vector2(116, 63)
 size = Vector2(72, 60)
 
 [node name="BaseMap" unique_id=1175649286 instance=ExtResource("1_tkn72")]
+level_music = ExtResource("7_music")
 
 [node name="MaskSpawner" parent="." index="0" unique_id=1271967546 node_paths=PackedStringArray("spawn_parent")]
 position = Vector2(677, 482)

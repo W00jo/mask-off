@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://dhwk7tbublbg3"
-path="res://.godot/imported/P1 BUBBLE.wav-5b4780808f97575c23a6ca2a6b65af2b.sample"
+path="res://.godot/imported/P1 BUBBLE.wav-eda8c201ccadbd587838ff951218af94.sample"
 
 [deps]
 
-source_file="res://assets/audio/soundtrack/Bubble/P1 BUBBLE.wav"
-dest_files=["res://.godot/imported/P1 BUBBLE.wav-5b4780808f97575c23a6ca2a6b65af2b.sample"]
+source_file="res://assets/audio/soundtrack/4players/Bubble/P1 BUBBLE.wav"
+dest_files=["res://.godot/imported/P1 BUBBLE.wav-eda8c201ccadbd587838ff951218af94.sample"]
 
 [params]
 

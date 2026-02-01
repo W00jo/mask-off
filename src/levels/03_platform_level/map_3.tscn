@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://das4a7mbnqn46" path="res://src/levels/03_platform_level/bot.png" id="5_pp341"]
 [ext_resource type="Texture2D" uid="uid://beox271w218l8" path="res://src/levels/03_platform_level/chair.png" id="6_uad0n"]
 [ext_resource type="Texture2D" uid="uid://ddgjlj5lpmdyq" path="res://src/levels/03_platform_level/lampa.png" id="7_m1eih"]
+[ext_resource type="AudioStream" path="res://assets/audio/soundtrack/SOUNDTRACK/3lvl.wav" id="8_music"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_2joc0"]
 
@@ -44,6 +45,7 @@ size = Vector2(225, 20)
 size = Vector2(139, 19.5)
 
 [node name="BaseMap" unique_id=1175649286 instance=ExtResource("1_as2kr")]
+level_music = ExtResource("8_music")
 
 [node name="MaskSpawner" parent="." index="0" unique_id=1271967546 node_paths=PackedStringArray("spawn_parent")]
 position = Vector2(556, 589)

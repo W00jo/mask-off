@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dcf82av43nh2b" path="res://src/levels/02_bubble_level/bomb.png" id="4_n7gt7"]
 [ext_resource type="PackedScene" uid="uid://crrflahojckb3" path="res://src/levels/modifiers/killzones/damage_place.tscn" id="5_iw40w"]
 [ext_resource type="Texture2D" uid="uid://c6yylbsw0j2wl" path="res://src/levels/02_bubble_level/platform.png" id="6_wlwq4"]
+[ext_resource type="AudioStream" path="res://assets/audio/soundtrack/SOUNDTRACK/bubble.wav" id="7_music"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_2hrto"]
 
@@ -16,6 +17,7 @@ size = Vector2(511, 78)
 size = Vector2(210, 16.25)
 
 [node name="BaseMap" unique_id=1175649286 instance=ExtResource("1_jkh1s")]
+level_music = ExtResource("7_music")
 
 [node name="Background" type="Sprite2D" parent="." index="0" unique_id=1260132490]
 position = Vector2(575.8888, 323.25003)
