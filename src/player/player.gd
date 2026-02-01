@@ -19,6 +19,7 @@ var current_attack: BaseAttack
 @onready var damage_target: DamageTarget = $DamageTarget 
 @onready var mask_system: Area2D = $MaskSystem
 @onready var wearable_mask_scene = preload("res://src/masks/werable_base_mask.tscn")
+@onready var sprite_2d: Sprite2D = $Sprite2D
 
 var player_color: Color = Color.WHITE
 

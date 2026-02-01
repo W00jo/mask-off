@@ -47,26 +47,26 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Sprite2D/DeathSprite:texture")
+tracks/2/path = NodePath("Explosion:visible")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("3_2smqc")]
+"values": [false]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Sprite2D/DeathSprite:frame")
+tracks/3/path = NodePath("Explosion:frame")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [26]
+"values": [27]
 }
 
 [sub_resource type="Animation" id="Animation_rl62b"]
@@ -126,42 +126,43 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_oyld2"]
 resource_name = "player_death"
-length = 0.46666667
+length = 0.5
+step = 0.07
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D/DeathSprite:texture")
+tracks/0/path = NodePath("Explosion:visible")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("3_2smqc")]
+"values": [true]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Sprite2D/DeathSprite:frame")
+tracks/1/path = NodePath("Explosion:frame")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(-0.0005706996, 0.06666667, 0.13333334, 0.2, 0.26666668, 0.33333334, 0.4),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.14285715, 0.21428573, 0.2857143, 0.35714287, 0.42857143),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [26, 27, 28, 29, 30, 31, 32]
+"values": [27, 28, 29, 30, 31, 32]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Sprite2D:frame")
+tracks/2/path = NodePath("Sprite2D:visible")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0.20338802),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 0.21428573),
+"transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [26]
+"values": [true, false]
 }
 
 [sub_resource type="Animation" id="Animation_dh4si"]
@@ -263,6 +264,15 @@ texture_filter = 1
 texture = ExtResource("3_2smqc")
 hframes = 7
 vframes = 5
+region_rect = Rect2(0, 0, 32, 32)
+
+[node name="Explosion" type="Sprite2D" parent="." unique_id=257244923]
+visible = false
+texture_filter = 1
+texture = ExtResource("3_2smqc")
+hframes = 7
+vframes = 5
+frame = 27
 region_rect = Rect2(0, 0, 32, 32)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=503636172]
