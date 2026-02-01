@@ -15,6 +15,7 @@ func remove_level():
 	for i in active_players.size():
 		active_players[i].queue_free()
 	_current_map.queue_free()
+	active_players.clear()
 
 func start_new_game(players):
 	randomize()

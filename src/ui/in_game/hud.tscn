@@ -83,9 +83,11 @@ anchors_preset = 12
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -132.0
+offset_top = -124.150024
+offset_bottom = 3.5
 grow_horizontal = 2
 grow_vertical = 0
+pivot_offset_ratio = Vector2(0, 1)
 theme_override_constants/margin_left = 20
 theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 20
@@ -97,6 +99,7 @@ alignment = 1
 
 [node name="Player1Display" parent="MarginContainer/HBoxContainer" unique_id=1738070447 instance=ExtResource("2_5pipe")]
 layout_mode = 2
+size_flags_stretch_ratio = 1.42
 theme_override_styles/panel = SubResource("StyleBoxEmpty_vxfxl")
 label_name = "Player 1"
 
@@ -113,6 +116,7 @@ layout_mode = 2
 label_name = "Player 4"
 
 [node name="PlayGamePopup" type="RichTextLabel" parent="." unique_id=2014369923]
+visible = false
 modulate = Color(3.2720633, 3.2720633, 3.2720628, 1)
 layout_mode = 1
 anchors_preset = 5

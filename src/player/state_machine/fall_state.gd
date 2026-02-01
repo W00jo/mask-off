@@ -1,6 +1,8 @@
 class_name FallState
 extends State
 
+var speed = 200
+
 @onready var sprite: Sprite2D = $"../../Sprite2D"
 
 
@@ -22,6 +24,8 @@ func physics_update(delta:float):
 		owner.attack_parent.scale.x = 1
 		if owner.mask_parent.get_children().size() > 0:
 			owner.mask_parent.get_child(0).scale.x = 1
+			
+	owner.velocity.x = direction * speed
 	
 	#owner.velocity.x = direction * 200
 	owner.move_and_slide()
