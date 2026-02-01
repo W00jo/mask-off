@@ -44,11 +44,7 @@ func set_max_health(max_health: int):
 	health_bar.max_value = max_health
 	health_bar.value = max_health
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta: float) -> void:
-	pass 
+func reset():
+	$VBoxContainer/HBoxContainer/PlayerIcon.texture = load("res://assets/sprites/znak_zapytania.png")
+	$VBoxContainer/HBoxContainer/PlayerIcon.modulate = Color.WHITE
+	$VBoxContainer/HealthBar.max_value = 0
