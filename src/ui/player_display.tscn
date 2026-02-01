@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://b2xkqxwyfnvwi"]
 
 [ext_resource type="Script" uid="uid://dmd6e88hlbur5" path="res://src/ui/player_display.gd" id="1_rhhb7"]
+[ext_resource type="Texture2D" uid="uid://bnoj75f1r3j7v" path="res://assets/sprites/znak_zapytania.png" id="2_75uhc"]
 
 [node name="Player1Display" type="PanelContainer" unique_id=1738070447]
 custom_minimum_size = Vector2(200, 0)
@@ -12,9 +13,10 @@ layout_mode = 2
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=347745801]
 layout_mode = 2
 
-[node name="PlayerIcon" type="ColorRect" parent="VBoxContainer/HBoxContainer" unique_id=647063618]
-custom_minimum_size = Vector2(50, 50)
+[node name="PlayerIcon" type="TextureRect" parent="VBoxContainer/HBoxContainer" unique_id=124840341]
 layout_mode = 2
+texture = ExtResource("2_75uhc")
+stretch_mode = 1
 
 [node name="PlayerLabel" type="Label" parent="VBoxContainer/HBoxContainer" unique_id=1315835411]
 layout_mode = 2

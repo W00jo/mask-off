@@ -11,6 +11,12 @@ func set_label_name(value: String):
 	var label = $VBoxContainer/HBoxContainer/PlayerLabel
 	label.text = value
 	
+func set_profile_color(color: Color):
+	$VBoxContainer/HBoxContainer/PlayerIcon.modulate = color
+	
+func show_profile():
+	$VBoxContainer/HBoxContainer/PlayerIcon.texture = load("res://assets/sprites/ziomek_profilowe.png")
+
 func set_current_health(health: int):
 	health_bar.value = health
 	
