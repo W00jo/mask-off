@@ -20,7 +20,7 @@ size = Vector2(210, 16.25)
 [node name="Background" type="Sprite2D" parent="." index="0" unique_id=1260132490]
 position = Vector2(575.8888, 323.25003)
 scale = Vector2(0.60046303, 0.600463)
-texture = ExtResource("2_wlwq4")
+texture = ExtResource("3_wlwq4")
 
 [node name="MaskSpawner" parent="." index="1" unique_id=1271967546 node_paths=PackedStringArray("spawn_parent")]
 position = Vector2(544, 101)
