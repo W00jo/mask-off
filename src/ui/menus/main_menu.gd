@@ -70,7 +70,7 @@ func _on_exit_pressed() -> void:
 
 func _on_itchio_pressed() -> void:
 	_play_click_sound()
-	OS.shell_open("https://itch.io/jam/your-game-page")
+	OS.shell_open("https://itch.io/")
 
 func _on_butt_pressed() -> void:
 	fart.play()
