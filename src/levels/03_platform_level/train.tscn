@@ -2,10 +2,14 @@
 
 [ext_resource type="Script" uid="uid://boq6ktmncn0q6" path="res://src/levels/03_platform_level/train.gd" id="1_kkcak"]
 [ext_resource type="Texture2D" uid="uid://cl3cwkei0qmi6" path="res://src/levels/03_platform_level/Pociag.png" id="2_h288v"]
-[ext_resource type="PackedScene" uid="uid://crrflahojckb3" path="res://src/levels/modifiers/killzones/damage_place.tscn" id="3_h288v"]
 [ext_resource type="Texture2D" uid="uid://cpgs5pu5pihli" path="res://src/levels/03_platform_level/warning.png" id="4_h288v"]
 
-[node name="Train" type="Node2D" unique_id=1260668841]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7riek"]
+size = Vector2(1010.99994, 223.00009)
+
+[node name="Train" type="Area2D" unique_id=1893369949]
+collision_layer = 2
+collision_mask = 2
 script = ExtResource("1_kkcak")
 
 [node name="Train_sprite" type="Sprite2D" parent="." unique_id=1473381392]
@@ -13,12 +17,13 @@ position = Vector2(1687, 477.00003)
 scale = Vector2(1.9485936, 1.9485937)
 texture = ExtResource("2_h288v")
 
-[node name="damage_place" parent="Train_sprite" unique_id=507009979 instance=ExtResource("3_h288v")]
-position = Vector2(-249.49509, 42.689186)
-scale = Vector2(0.8884813, 3.1427617)
-DMG_amount = 999
-
 [node name="Warning_sprite" type="Sprite2D" parent="." unique_id=536064340]
 position = Vector2(595, 686)
 scale = Vector2(0.34817073, 0.34817073)
 texture = ExtResource("4_h288v")
+
+[node name="DamageCollision" type="CollisionShape2D" parent="." unique_id=1391015048]
+position = Vector2(1646.5002, 494)
+shape = SubResource("RectangleShape2D_7riek")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
