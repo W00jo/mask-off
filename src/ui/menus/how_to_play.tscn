@@ -2,11 +2,14 @@
 
 [ext_resource type="Script" uid="uid://mnykhaxqggbi" path="res://src/ui/menus/how_to_play.gd" id="1_e1emm"]
 [ext_resource type="Texture2D" uid="uid://bbi0ym12jj8ok" path="res://src/ui/menus/prettiers/grid.png" id="2_xq3li"]
-[ext_resource type="FontFile" uid="uid://cbf52hahephbu" path="res://assets/fonts/DK Crayon Crumble.ttf" id="3_xq3li"]
-[ext_resource type="Texture2D" uid="uid://ilatpxpi1yxb" path="res://src/ui/menus/borders/key_input_border_01.png" id="4_c80qg"]
+[ext_resource type="FontFile" uid="uid://dg4utm6nyqq2b" path="res://assets/fonts/headers_font.ttf" id="3_xq3li"]
+[ext_resource type="FontFile" uid="uid://cdv28u2sltsxo" path="res://assets/fonts/text_font.ttf" id="4_fyenn"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_xq3li"]
+load_path = "res://.godot/imported/key_input_border_01.png-fb702c8f946148526bcd3b8950d5b476.ctex"
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fyenn"]
-texture = ExtResource("4_c80qg")
+texture = SubResource("CompressedTexture2D_xq3li")
 
 [node name="HowToPlay" type="Control" unique_id=1566090188]
 layout_mode = 3
@@ -107,7 +110,7 @@ theme_override_constants/separation = 10
 custom_minimum_size = Vector2(80, 0)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_xq3li")
+theme_override_fonts/font = ExtResource("4_fyenn")
 theme_override_font_sizes/font_size = 24
 text = "JUMP"
 
@@ -133,7 +136,7 @@ theme_override_constants/separation = 10
 custom_minimum_size = Vector2(80, 0)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_xq3li")
+theme_override_fonts/font = ExtResource("4_fyenn")
 theme_override_font_sizes/font_size = 24
 text = "LEFT"
 
@@ -159,7 +162,7 @@ theme_override_constants/separation = 10
 custom_minimum_size = Vector2(80, 0)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_xq3li")
+theme_override_fonts/font = ExtResource("4_fyenn")
 theme_override_font_sizes/font_size = 24
 text = "RIGHT"
 
@@ -185,7 +188,7 @@ theme_override_constants/separation = 10
 custom_minimum_size = Vector2(80, 0)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_xq3li")
+theme_override_fonts/font = ExtResource("4_fyenn")
 theme_override_font_sizes/font_size = 24
 text = "ATTACK"
 
@@ -228,7 +231,7 @@ theme_override_constants/separation = 10
 custom_minimum_size = Vector2(80, 0)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_xq3li")
+theme_override_fonts/font = ExtResource("4_fyenn")
 theme_override_font_sizes/font_size = 24
 text = "JUMP"
 
@@ -254,7 +257,7 @@ theme_override_constants/separation = 10
 custom_minimum_size = Vector2(80, 0)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_xq3li")
+theme_override_fonts/font = ExtResource("4_fyenn")
 theme_override_font_sizes/font_size = 24
 text = "LEFT"
 
@@ -280,7 +283,7 @@ theme_override_constants/separation = 10
 custom_minimum_size = Vector2(80, 0)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_xq3li")
+theme_override_fonts/font = ExtResource("4_fyenn")
 theme_override_font_sizes/font_size = 24
 text = "RIGHT"
 
@@ -306,7 +309,7 @@ theme_override_constants/separation = 10
 custom_minimum_size = Vector2(80, 0)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_xq3li")
+theme_override_fonts/font = ExtResource("4_fyenn")
 theme_override_font_sizes/font_size = 24
 text = "ATTACK"
 
@@ -349,7 +352,7 @@ theme_override_constants/separation = 10
 custom_minimum_size = Vector2(80, 0)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_xq3li")
+theme_override_fonts/font = ExtResource("4_fyenn")
 theme_override_font_sizes/font_size = 24
 text = "JUMP"
 
@@ -375,7 +378,7 @@ theme_override_constants/separation = 10
 custom_minimum_size = Vector2(80, 0)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_xq3li")
+theme_override_fonts/font = ExtResource("4_fyenn")
 theme_override_font_sizes/font_size = 24
 text = "LEFT"
 
@@ -401,7 +404,7 @@ theme_override_constants/separation = 10
 custom_minimum_size = Vector2(80, 0)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_xq3li")
+theme_override_fonts/font = ExtResource("4_fyenn")
 theme_override_font_sizes/font_size = 24
 text = "RIGHT"
 
@@ -427,7 +430,7 @@ theme_override_constants/separation = 10
 custom_minimum_size = Vector2(80, 0)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_xq3li")
+theme_override_fonts/font = ExtResource("4_fyenn")
 theme_override_font_sizes/font_size = 24
 text = "ATTACK"
 
@@ -470,7 +473,7 @@ theme_override_constants/separation = 10
 custom_minimum_size = Vector2(80, 0)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_xq3li")
+theme_override_fonts/font = ExtResource("4_fyenn")
 theme_override_font_sizes/font_size = 24
 text = "JUMP"
 
@@ -496,7 +499,7 @@ theme_override_constants/separation = 10
 custom_minimum_size = Vector2(80, 0)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_xq3li")
+theme_override_fonts/font = ExtResource("4_fyenn")
 theme_override_font_sizes/font_size = 24
 text = "LEFT"
 
@@ -522,7 +525,7 @@ theme_override_constants/separation = 10
 custom_minimum_size = Vector2(80, 0)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_xq3li")
+theme_override_fonts/font = ExtResource("4_fyenn")
 theme_override_font_sizes/font_size = 24
 text = "RIGHT"
 
@@ -548,7 +551,7 @@ theme_override_constants/separation = 10
 custom_minimum_size = Vector2(80, 0)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_xq3li")
+theme_override_fonts/font = ExtResource("4_fyenn")
 theme_override_font_sizes/font_size = 24
 text = "ATTACK"
 

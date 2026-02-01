@@ -10,11 +10,11 @@ signal exit_pressed
 	preload("res://src/ui/menus/click_sfx/click_01.ogg"),
 	preload("res://src/ui/menus/click_sfx/click_02.ogg"),
 	preload("res://src/ui/menus/click_sfx/click_03.ogg"),
+	preload("res://src/ui/menus/click_sfx/fart.mp3"),
 	preload("res://src/ui/menus/click_sfx/click_04.ogg"),
 	preload("res://src/ui/menus/click_sfx/click_05.ogg")
 ]
 
-@onready var title_label = $MenuInterface/Title
 @onready var play_button = $MenuInterface/MenuButtons/Play
 @onready var howtoplay_button = $MenuInterface/MenuButtons/HowToPlay
 @onready var options_button = $MenuInterface/MenuButtons/Options

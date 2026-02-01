@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://cbf52hahephbu"
-path="res://.godot/imported/DK Crayon Crumble.ttf-da81d3299ea3f8fe552c0c97d2abb050.fontdata"
+uid="uid://cdv28u2sltsxo"
+path="res://.godot/imported/text_font.ttf-080c68c05b126682abe174dfac0d546d.fontdata"
 
 [deps]
 
-source_file="res://assets/fonts/DK Crayon Crumble.ttf"
-dest_files=["res://.godot/imported/DK Crayon Crumble.ttf-da81d3299ea3f8fe552c0c97d2abb050.fontdata"]
+source_file="res://assets/fonts/text_font.ttf"
+dest_files=["res://.godot/imported/text_font.ttf-080c68c05b126682abe174dfac0d546d.fontdata"]
 
 [params]
 
