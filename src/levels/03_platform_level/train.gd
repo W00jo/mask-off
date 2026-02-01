@@ -1,7 +1,8 @@
-extends Node2D
+extends Area2D
 
-@onready var train: Sprite2D = $Train_sprite
+
 @onready var warning: Sprite2D = $Warning_sprite
+@onready var train: Area2D = $"."
 
 
 func _ready() -> void:
@@ -20,3 +21,10 @@ func _process(delta: float) -> void:
 	train.position.x -= 3000 * delta
 	if train.position.x <= -5000:
 		queue_free()
+		
+
+
+func _on_body_entered(body: Node2D) -> void:
+	if body is CharacterBody2D:
+		print("Zadaje obrazenia",)
+		body.get_node("DamageTarget").receive_damage(DamageData.new(90))

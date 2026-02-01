@@ -5,6 +5,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gwqwp"]
 
 [node name="damage_place" type="Area2D" unique_id=507009979]
+collision_layer = 2
 script = ExtResource("1_cxoe2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1183227868]

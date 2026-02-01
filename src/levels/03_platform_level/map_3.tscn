@@ -10,9 +10,10 @@
 [ext_resource type="AudioStream" path="res://assets/audio/soundtrack/SOUNDTRACK/3lvl.wav" id="8_music"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_2joc0"]
+distance = -200.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ox4q2"]
-size = Vector2(214.09375, 20)
+size = Vector2(390, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_31w4d"]
 size = Vector2(187, 17)
@@ -40,6 +41,9 @@ size = Vector2(350.5, 39.5625)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2ce46"]
 size = Vector2(225, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pp341"]
+size = Vector2(1157.5, 86)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q40ac"]
 size = Vector2(139, 19.5)
@@ -111,78 +115,79 @@ texture = ExtResource("7_m1eih")
 
 [node name="Kolizje" type="StaticBody2D" parent="." index="12" unique_id=365756288]
 
-[node name="Boki" type="CollisionShape2D" parent="Kolizje" index="0" unique_id=1059267917]
-position = Vector2(555, 631)
-shape = SubResource("WorldBoundaryShape2D_2joc0")
-
-[node name="Boki2" type="CollisionShape2D" parent="Kolizje" index="1" unique_id=192434694]
+[node name="Boki2" type="CollisionShape2D" parent="Kolizje" index="0" unique_id=192434694]
 position = Vector2(-1, 297)
 rotation = 1.5707964
 shape = SubResource("WorldBoundaryShape2D_2joc0")
 
-[node name="Boki3" type="CollisionShape2D" parent="Kolizje" index="2" unique_id=532034385]
+[node name="Boki3" type="CollisionShape2D" parent="Kolizje" index="1" unique_id=532034385]
 position = Vector2(1154, 378)
 rotation = -1.5707964
 shape = SubResource("WorldBoundaryShape2D_2joc0")
 
-[node name="Boki4" type="CollisionShape2D" parent="Kolizje" index="3" unique_id=140625836]
+[node name="Boki4" type="CollisionShape2D" parent="Kolizje" index="2" unique_id=140625836]
 position = Vector2(576, -69)
 rotation = 3.1415927
 shape = SubResource("WorldBoundaryShape2D_2joc0")
 
-[node name="Platforma2" type="CollisionShape2D" parent="Kolizje" index="4" unique_id=1313624170]
-position = Vector2(414.04688, 480)
+[node name="Platforma2" type="CollisionShape2D" parent="Kolizje" index="3" unique_id=1313624170]
+position = Vector2(502, 480)
 shape = SubResource("RectangleShape2D_ox4q2")
 one_way_collision = true
 
-[node name="Platforma3" type="CollisionShape2D" parent="Kolizje" index="5" unique_id=297556079]
+[node name="Platforma3" type="CollisionShape2D" parent="Kolizje" index="4" unique_id=297556079]
 position = Vector2(791.5, 478.5)
 shape = SubResource("RectangleShape2D_31w4d")
 one_way_collision = true
 
-[node name="Platforma4" type="CollisionShape2D" parent="Kolizje" index="6" unique_id=150988462]
+[node name="Platforma4" type="CollisionShape2D" parent="Kolizje" index="5" unique_id=150988462]
 position = Vector2(51, 398)
 shape = SubResource("RectangleShape2D_lq6pl")
 
-[node name="Platforma5" type="CollisionShape2D" parent="Kolizje" index="7" unique_id=1523048279]
+[node name="Platforma5" type="CollisionShape2D" parent="Kolizje" index="6" unique_id=1523048279]
 position = Vector2(1130, 398)
 shape = SubResource("RectangleShape2D_lq6pl")
 
-[node name="Ławki" type="CollisionShape2D" parent="Kolizje" index="8" unique_id=1971945163]
+[node name="Ławki" type="CollisionShape2D" parent="Kolizje" index="7" unique_id=1971945163]
 position = Vector2(378, 444)
 shape = SubResource("SegmentShape2D_2joc0")
 one_way_collision = true
 
-[node name="Ławki4" type="CollisionShape2D" parent="Kolizje" index="9" unique_id=2007117492]
+[node name="Ławki4" type="CollisionShape2D" parent="Kolizje" index="8" unique_id=2007117492]
 position = Vector2(901, 241)
 shape = SubResource("SegmentShape2D_3d7po")
 one_way_collision = true
 
-[node name="Ławki2" type="CollisionShape2D" parent="Kolizje" index="10" unique_id=1887724123]
+[node name="Ławki2" type="CollisionShape2D" parent="Kolizje" index="9" unique_id=1887724123]
 position = Vector2(268, 195)
 shape = SubResource("SegmentShape2D_pp341")
 one_way_collision = true
 
-[node name="Ławki3" type="CollisionShape2D" parent="Kolizje" index="11" unique_id=981025760]
+[node name="Ławki3" type="CollisionShape2D" parent="Kolizje" index="10" unique_id=981025760]
 position = Vector2(732.6033, 447)
 shape = SubResource("SegmentShape2D_2joc0")
 one_way_collision = true
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="Kolizje" index="12" unique_id=767435340]
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Kolizje" index="11" unique_id=767435340]
 position = Vector2(651.5, 86.5)
 shape = SubResource("RectangleShape2D_reel7")
 
-[node name="PlatformaWyz2" type="CollisionShape2D" parent="Kolizje" index="13" unique_id=1163264304]
+[node name="PlatformaWyz2" type="CollisionShape2D" parent="Kolizje" index="12" unique_id=1163264304]
 position = Vector2(1173.75, 95.65625)
 shape = SubResource("RectangleShape2D_xnjqu")
 
-[node name="PlatformaWyz" type="CollisionShape2D" parent="Kolizje" index="14" unique_id=1400947263]
+[node name="PlatformaWyz" type="CollisionShape2D" parent="Kolizje" index="13" unique_id=1400947263]
 position = Vector2(46, 85)
 shape = SubResource("RectangleShape2D_xnjqu")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Kolizje" index="15" unique_id=842694225]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Kolizje" index="14" unique_id=842694225]
 position = Vector2(38, 479)
 shape = SubResource("RectangleShape2D_2ce46")
+one_way_collision = true
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Kolizje" index="15" unique_id=1121229153]
+position = Vector2(576.25, 695)
+shape = SubResource("RectangleShape2D_pp341")
 one_way_collision = true
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Kolizje" index="16" unique_id=639934384]
