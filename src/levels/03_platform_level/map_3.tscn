@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cmu5t3aganmp8" path="res://src/levels/03_platform_level/backgrund.png" id="2_pp341"]
 [ext_resource type="Texture2D" uid="uid://dmn2vw0ntbtmd" path="res://src/levels/03_platform_level/top.png" id="3_abyff"]
 [ext_resource type="Texture2D" uid="uid://cj0frqxfmxdlq" path="res://src/levels/03_platform_level/vendingMachine.png" id="4_63sm1"]
+[ext_resource type="Texture2D" uid="uid://das4a7mbnqn46" path="res://src/levels/03_platform_level/bot.png" id="4_pp341"]
 [ext_resource type="Texture2D" uid="uid://beox271w218l8" path="res://src/levels/03_platform_level/chair.png" id="5_uad0n"]
 [ext_resource type="Texture2D" uid="uid://ddgjlj5lpmdyq" path="res://src/levels/03_platform_level/lampa.png" id="6_m1eih"]
 
@@ -23,8 +24,12 @@ a = Vector2(-12, 1)
 b = Vector2(73, -1)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_3d7po"]
-a = Vector2(-51, 3)
-b = Vector2(76, 1)
+a = Vector2(-64, 3)
+b = Vector2(69, 4)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_pp341"]
+a = Vector2(72, 3)
+b = Vector2(-76, 8)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_reel7"]
 size = Vector2(241, 41)
@@ -50,50 +55,62 @@ scale = Vector2(0.6, 0.5999999)
 texture = ExtResource("2_pp341")
 
 [node name="Top2" type="Sprite2D" parent="." index="2" unique_id=605389517]
+z_index = 10
 position = Vector2(626.7776, 308)
 rotation = -3.1415925
 scale = Vector2(0.602, -0.602)
 texture = ExtResource("3_abyff")
 
 [node name="Top" type="Sprite2D" parent="." index="3" unique_id=382698070]
+z_index = 10
 position = Vector2(-526.22217, 308)
 scale = Vector2(0.6018518, 0.6018518)
 texture = ExtResource("3_abyff")
 
-[node name="VendingMachine" type="Sprite2D" parent="." index="4" unique_id=2031315408]
+[node name="Bot2" type="Sprite2D" parent="." index="4" unique_id=1419628783]
+position = Vector2(627, 306)
+scale = Vector2(-0.602, 0.602)
+texture = ExtResource("4_pp341")
+
+[node name="Bot" type="Sprite2D" parent="." index="5" unique_id=982222737]
+position = Vector2(-525, 307)
+scale = Vector2(0.602, 0.602)
+texture = ExtResource("4_pp341")
+
+[node name="VendingMachine" type="Sprite2D" parent="." index="6" unique_id=2031315408]
 position = Vector2(-177, 395)
 scale = Vector2(0.30366477, 0.30366477)
 texture = ExtResource("4_63sm1")
 
-[node name="VendingMachine2" type="Sprite2D" parent="." index="5" unique_id=561689721]
+[node name="VendingMachine2" type="Sprite2D" parent="." index="7" unique_id=561689721]
 position = Vector2(903, 396.97897)
 scale = Vector2(0.30366477, 0.30366477)
 texture = ExtResource("4_63sm1")
 
-[node name="Chair" type="Sprite2D" parent="." index="6" unique_id=448665041]
-position = Vector2(640.60315, 384.21432)
-scale = Vector2(0.3652117, 0.3652117)
+[node name="Chair" type="Sprite2D" parent="." index="8" unique_id=448665041]
+position = Vector2(757.01935, 347.94836)
+scale = Vector2(0.5239785, 0.5239785)
 texture = ExtResource("5_uad0n")
 
-[node name="Chair3" type="Sprite2D" parent="." index="7" unique_id=974403196]
-position = Vector2(995.6033, 386)
-scale = Vector2(0.3652117, 0.3652117)
+[node name="Chair3" type="Sprite2D" parent="." index="9" unique_id=974403196]
+position = Vector2(1112.0195, 349.73404)
+scale = Vector2(0.5239786, 0.5239786)
 texture = ExtResource("5_uad0n")
 
-[node name="Lampa2" type="Sprite2D" parent="." index="8" unique_id=1332192393]
+[node name="Lampa2" type="Sprite2D" parent="." index="10" unique_id=1332192393]
 position = Vector2(673.0001, 365)
 scale = Vector2(-0.448, 0.448)
 texture = ExtResource("6_m1eih")
 
-[node name="Lampa" type="Sprite2D" parent="." index="9" unique_id=133572543]
-position = Vector2(503.00003, 367)
-scale = Vector2(0.44796458, 0.44796458)
+[node name="Lampa" type="Sprite2D" parent="." index="11" unique_id=133572543]
+position = Vector2(541.00006, 343.00003)
+scale = Vector2(0.5350196, 0.5350196)
 texture = ExtResource("6_m1eih")
 
-[node name="Kolizje" type="StaticBody2D" parent="." index="10" unique_id=365756288]
+[node name="Kolizje" type="StaticBody2D" parent="." index="12" unique_id=365756288]
 
 [node name="Boki" type="CollisionShape2D" parent="Kolizje" index="0" unique_id=1059267917]
-position = Vector2(555, 649)
+position = Vector2(555, 631)
 shape = SubResource("WorldBoundaryShape2D_2joc0")
 
 [node name="Boki2" type="CollisionShape2D" parent="Kolizje" index="1" unique_id=192434694]
@@ -132,23 +149,26 @@ shape = SubResource("RectangleShape2D_lq6pl")
 [node name="Ławki" type="CollisionShape2D" parent="Kolizje" index="8" unique_id=1971945163]
 position = Vector2(378, 444)
 shape = SubResource("SegmentShape2D_2joc0")
+one_way_collision = true
 
 [node name="Ławki4" type="CollisionShape2D" parent="Kolizje" index="9" unique_id=2007117492]
-position = Vector2(891, 240)
+position = Vector2(901, 241)
 shape = SubResource("SegmentShape2D_3d7po")
+one_way_collision = true
 
 [node name="Ławki2" type="CollisionShape2D" parent="Kolizje" index="10" unique_id=1887724123]
-position = Vector2(260, 243)
-shape = SubResource("SegmentShape2D_3d7po")
+position = Vector2(268, 195)
+shape = SubResource("SegmentShape2D_pp341")
+one_way_collision = true
 
 [node name="Ławki3" type="CollisionShape2D" parent="Kolizje" index="11" unique_id=981025760]
 position = Vector2(732.6033, 447)
 shape = SubResource("SegmentShape2D_2joc0")
+one_way_collision = true
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Kolizje" index="12" unique_id=767435340]
 position = Vector2(651.5, 86.5)
 shape = SubResource("RectangleShape2D_reel7")
-one_way_collision = true
 
 [node name="PlatformaWyz2" type="CollisionShape2D" parent="Kolizje" index="13" unique_id=1163264304]
 position = Vector2(1173.75, 95.65625)
@@ -167,7 +187,7 @@ one_way_collision = true
 position = Vector2(1128.5, 479.25)
 shape = SubResource("RectangleShape2D_q40ac")
 
-[node name="PlayerSpawners" type="Node" parent="." index="11" unique_id=1116052806]
+[node name="PlayerSpawners" type="Node" parent="." index="13" unique_id=1116052806]
 
 [node name="Marker2D" type="Marker2D" parent="PlayerSpawners" index="0" unique_id=1659074161]
 position = Vector2(48, 264)
@@ -181,7 +201,7 @@ position = Vector2(801, 194)
 [node name="Marker2D2" type="Marker2D" parent="PlayerSpawners" index="3" unique_id=490805476]
 position = Vector2(1095, 254)
 
-[node name="MaskSpawnPoints" type="Node" parent="." index="12" unique_id=1747793806]
+[node name="MaskSpawnPoints" type="Node" parent="." index="14" unique_id=1747793806]
 
 [node name="MaskSpawnPoint" type="Node2D" parent="MaskSpawnPoints" index="0" unique_id=633641578]
 position = Vector2(284, 435)
@@ -192,6 +212,14 @@ position = Vector2(157, 315)
 [node name="MaskSpawnPoint3" type="Node2D" parent="MaskSpawnPoints" index="2" unique_id=673866011]
 position = Vector2(716, 318)
 
+<<<<<<< Updated upstream
 [node name="Camera2D" type="Camera2D" parent="." index="13" unique_id=1732638474]
 position = Vector2(570, 331)
 position_smoothing_enabled = true
+=======
+[node name="Timer" type="Timer" parent="." index="15" unique_id=443749033]
+wait_time = 20.0
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+>>>>>>> Stashed changes

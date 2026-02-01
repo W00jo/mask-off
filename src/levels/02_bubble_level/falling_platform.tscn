@@ -4,12 +4,13 @@
 [ext_resource type="Texture2D" uid="uid://drhh6sfy36v02" path="res://src/levels/02_bubble_level/bubbles.png" id="2_crfo3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_crfo3"]
-size = Vector2(128, 9)
+size = Vector2(128, 12.368351)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rsldh"]
 size = Vector2(124, 13)
 
 [node name="Falling_platform" type="StaticBody2D" unique_id=435592318]
+scale = Vector2(1.8330287, 1.8330287)
 script = ExtResource("1_crfo3")
 
 [node name="Sprite" type="Sprite2D" parent="." unique_id=561821022]
@@ -18,15 +19,16 @@ scale = Vector2(0.25091973, 0.25091973)
 texture = ExtResource("2_crfo3")
 
 [node name="AreaForPlayer" type="Area2D" parent="." unique_id=1813862120]
-visible = false
+collision_layer = 255
+collision_mask = 255
 
 [node name="AreaForPlayerCollis" type="CollisionShape2D" parent="AreaForPlayer" unique_id=1138795461]
-position = Vector2(0, -20.5)
+position = Vector2(0, -85.650604)
+scale = Vector2(0.99999994, 0.99999994)
 shape = SubResource("RectangleShape2D_crfo3")
 
 [node name="Collision" type="CollisionShape2D" parent="." unique_id=900636146]
-visible = false
-position = Vector2(0, -12.5)
+position = Vector2(-1.6366355, -4.364362)
 shape = SubResource("RectangleShape2D_rsldh")
 one_way_collision = true
 

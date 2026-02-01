@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" uid="uid://boq6ktmncn0q6" path="res://src/levels/03_platform_level/train.gd" id="1_kkcak"]
 [ext_resource type="Texture2D" uid="uid://cl3cwkei0qmi6" path="res://src/levels/03_platform_level/Pociag.png" id="2_cotcv"]
-[ext_resource type="Texture2D" uid="uid://qix0oygodiat" path="res://icon.svg" id="3_7riek"]
 [ext_resource type="PackedScene" uid="uid://crrflahojckb3" path="res://src/levels/modifiers/killzones/damage_place.tscn" id="3_h288v"]
+[ext_resource type="Texture2D" uid="uid://cpgs5pu5pihli" path="res://src/levels/03_platform_level/warning.png" id="4_cotcv"]
 
 [node name="Train" type="Node2D" unique_id=1260668841]
 script = ExtResource("1_kkcak")
@@ -19,5 +19,6 @@ scale = Vector2(0.8884813, 3.1427617)
 DMG_amount = 999
 
 [node name="Warning_sprite" type="Sprite2D" parent="." unique_id=536064340]
-position = Vector2(576, 317)
-texture = ExtResource("3_7riek")
+position = Vector2(586, 694)
+scale = Vector2(0.38292685, 0.38292685)
+texture = ExtResource("4_cotcv")

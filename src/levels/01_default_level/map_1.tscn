@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://51jwkaa5vsy7" path="res://src/levels/01_default_level/dziura.png" id="3_ltctc"]
 [ext_resource type="Texture2D" uid="uid://dcijx7etyjim5" path="res://src/levels/01_default_level/krzak.png" id="4_326ku"]
 [ext_resource type="Texture2D" uid="uid://bx8eaiqjxwufu" path="res://src/levels/01_default_level/UwagaSlisku.png" id="5_326ku"]
+[ext_resource type="Texture2D" uid="uid://c7cvcta6gh8br" path="res://src/levels/01_default_level/Dol.png" id="6_326ku"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ltctc"]
 size = Vector2(1010.9358, 104)
@@ -52,18 +53,26 @@ scale = Vector2(0.49289238, 0.49289238)
 texture = ExtResource("4_326ku")
 
 [node name="Whoo" type="Sprite2D" parent="Sprites" index="3" unique_id=1657457720]
-position = Vector2(564.00006, 439.00003)
+position = Vector2(582, 441.00003)
 scale = Vector2(0.57383114, 0.57383114)
 texture = ExtResource("5_326ku")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." index="2" unique_id=940238489]
 
 [node name="Bloki5" type="CollisionShape2D" parent="StaticBody2D" index="0" unique_id=2011681761]
+<<<<<<< Updated upstream
 position = Vector2(1501.4679, 633)
 shape = SubResource("RectangleShape2D_ltctc")
 
 [node name="Bloki" type="CollisionShape2D" parent="StaticBody2D" index="1" unique_id=1296590344]
 position = Vector2(384.4679, 634)
+=======
+position = Vector2(1478, 632)
+shape = SubResource("RectangleShape2D_1lhyj")
+
+[node name="Bloki" type="CollisionShape2D" parent="StaticBody2D" index="1" unique_id=1296590344]
+position = Vector2(358, 635)
+>>>>>>> Stashed changes
 shape = SubResource("RectangleShape2D_1lhyj")
 
 [node name="Bloki2" type="CollisionShape2D" parent="StaticBody2D" index="2" unique_id=428945251]
@@ -82,7 +91,7 @@ rotation = -1.5707964
 shape = SubResource("WorldBoundaryShape2D_c27ss")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" index="5" unique_id=620819220]
-position = Vector2(119.75, 410)
+position = Vector2(121, 382)
 shape = SubResource("RectangleShape2D_vlr0w")
 one_way_collision = true
 
@@ -91,15 +100,26 @@ position = Vector2(580.75, 199.5)
 shape = SubResource("RectangleShape2D_viicd")
 one_way_collision = true
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" index="7" unique_id=794005380]
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D" index="7" unique_id=700065248]
+position = Vector2(123, 472)
+shape = SubResource("RectangleShape2D_vlr0w")
+one_way_collision = true
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" index="8" unique_id=794005380]
 position = Vector2(980, 357.5)
 shape = SubResource("RectangleShape2D_fo6le")
 one_way_collision = true
 
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D" index="8" unique_id=736288482]
-position = Vector2(780, 511)
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D" index="9" unique_id=736288482]
+position = Vector2(795, 513)
 shape = SubResource("RectangleShape2D_inifa")
 one_way_collision = true
+
+[node name="Dol" type="Sprite2D" parent="StaticBody2D" index="10" unique_id=751332257]
+z_index = 10
+position = Vector2(578.00006, 667.36975)
+scale = Vector2(0.599, -1.0025288)
+texture = ExtResource("6_326ku")
 
 [node name="PlayerSpawners" type="Node" parent="." index="3" unique_id=839232508]
 
