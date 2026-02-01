@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://ppufyqqllp42" path="res://src/ui/menus/icons/lubgame_icon.png" id="6_yycut"]
 [ext_resource type="Texture2D" uid="uid://wcigl4j8f0jj" path="res://src/ui/menus/icons/ggj_icon.png" id="7_l2tv4"]
 [ext_resource type="Texture2D" uid="uid://d14tl15eh2vgs" path="res://src/ui/menus/borders/kenney.png" id="7_yycut"]
+[ext_resource type="StyleBox" uid="uid://duc874svdeq1n" path="res://new_style_box_texture.tres" id="8_l2tv4"]
 [ext_resource type="AudioStream" uid="uid://dis4hw72jkf3m" path="res://src/ui/menus/click_sfx/fart.mp3" id="10_hcfgv"]
 [ext_resource type="Script" uid="uid://c2tsi1x7a2bys" path="res://src/ui/menus/itchio_button.gd" id="14_itchio"]
 
@@ -27,17 +28,6 @@ expand_margin_bottom = 5.0
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hover_yycut"]
 content_margin_left = 2.0
 content_margin_top = 2.0
-texture = ExtResource("7_yycut")
-texture_margin_left = 5.0
-texture_margin_top = 5.0
-texture_margin_right = 5.0
-texture_margin_bottom = 5.0
-expand_margin_left = 5.0
-expand_margin_top = 5.0
-expand_margin_right = 5.0
-expand_margin_bottom = 5.0
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_l2tv4"]
 texture = ExtResource("7_yycut")
 texture_margin_left = 5.0
 texture_margin_top = 5.0
@@ -163,7 +153,7 @@ theme_override_colors/font_pressed_color = Color(0.27, 0.51, 0.71, 1)
 theme_override_colors/font_hover_color = Color(0.27, 0.51, 0.71, 1)
 theme_override_fonts/font = ExtResource("6_o7egi")
 theme_override_font_sizes/font_size = 32
-theme_override_styles/normal = SubResource("StyleBoxTexture_l2tv4")
+theme_override_styles/normal = ExtResource("8_l2tv4")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_hover_l2tv4")
 theme_override_styles/hover = SubResource("StyleBoxTexture_hover_l2tv4")
 text = "HOW_TO_PLAY"
@@ -175,7 +165,7 @@ theme_override_colors/font_pressed_color = Color(0.27, 0.51, 0.71, 1)
 theme_override_colors/font_hover_color = Color(0.27, 0.51, 0.71, 1)
 theme_override_fonts/font = ExtResource("6_o7egi")
 theme_override_font_sizes/font_size = 32
-theme_override_styles/normal = SubResource("StyleBoxTexture_l2tv4")
+theme_override_styles/normal = ExtResource("8_l2tv4")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_hover_l2tv4")
 theme_override_styles/hover = SubResource("StyleBoxTexture_hover_l2tv4")
 text = "OPTIONS"
@@ -187,7 +177,7 @@ theme_override_colors/font_pressed_color = Color(0.27, 0.51, 0.71, 1)
 theme_override_colors/font_hover_color = Color(0.27, 0.51, 0.71, 1)
 theme_override_fonts/font = ExtResource("6_o7egi")
 theme_override_font_sizes/font_size = 32
-theme_override_styles/normal = SubResource("StyleBoxTexture_l2tv4")
+theme_override_styles/normal = ExtResource("8_l2tv4")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_hover_l2tv4")
 theme_override_styles/hover = SubResource("StyleBoxTexture_hover_l2tv4")
 text = "CREDITS"
@@ -199,7 +189,7 @@ theme_override_colors/font_pressed_color = Color(0.27, 0.51, 0.71, 1)
 theme_override_colors/font_hover_color = Color(0.27, 0.51, 0.71, 1)
 theme_override_fonts/font = ExtResource("6_o7egi")
 theme_override_font_sizes/font_size = 32
-theme_override_styles/normal = SubResource("StyleBoxTexture_l2tv4")
+theme_override_styles/normal = ExtResource("8_l2tv4")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_hover_l2tv4")
 theme_override_styles/hover = SubResource("StyleBoxTexture_hover_l2tv4")
 text = "EXIT"
