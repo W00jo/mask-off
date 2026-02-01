@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://befng7nqcmpkt"]
+
+[ext_resource type="Texture2D" uid="uid://ddgjlj5lpmdyq" path="res://src/levels/03_platform_level/lampa.png" id="1_clxov"]
+[ext_resource type="Texture2D" uid="uid://u54dwy2am6ja" path="res://src/masks/masks_blender/Cubic_96.png" id="2_nv1gr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5ofrm"]
+size = Vector2(369, 42)
+
+[node name="Options" type="StaticBody2D" unique_id=2096943734]
+
+[node name="Guzik" type="Sprite2D" parent="." unique_id=462348784]
+position = Vector2(2.9999924, -267.0001)
+rotation = -1.5707964
+scale = Vector2(0.70485604, 0.70485604)
+texture = ExtResource("1_clxov")
+
+[node name="Klik" type="CollisionShape2D" parent="." unique_id=742508214]
+position = Vector2(-5.5, 11)
+shape = SubResource("RectangleShape2D_5ofrm")
+one_way_collision = true
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=979709384]
+
+[node name="Cubic96" type="Sprite2D" parent="." unique_id=2070726002]
+position = Vector2(-565, 15)
+texture = ExtResource("2_nv1gr")
+hframes = 32
+vframes = 3
+frame = 11
+
+[node name="Cubic96" type="Sprite2D" parent="Cubic96" unique_id=823251815]
+position = Vector2(971, -9)
+texture = ExtResource("2_nv1gr")
+hframes = 32
+vframes = 3
+frame = 36

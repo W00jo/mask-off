@@ -9,7 +9,7 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	position.y += 500 * delta 
-	if position.y >= 1000:
+	if position.y >= 5000:
 		position.y = starting_position.y
 		set_process(false)
 

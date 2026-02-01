@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://d2shfa5tq007h"]
+
+[ext_resource type="Script" uid="uid://05t7sk0vgjdo" path="res://src/levels/03_platform_level/train_incoming.gd" id="1_amscj"]
+[ext_resource type="Texture2D" uid="uid://5yvvngenplqp" path="res://assets/sprites/player_animation_sheet.png" id="1_ppjyw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_amscj"]
+size = Vector2(60.5, 20)
+
+[node name="Incomin_Train" type="CharacterBody2D" unique_id=1549620568]
+script = ExtResource("1_amscj")
+
+[node name="Train_sheet" type="Sprite2D" parent="." unique_id=887471991]
+position = Vector2(-2, -69)
+texture = ExtResource("1_ppjyw")
+hframes = 5
+vframes = 4
+
+[node name="Train_collis" type="CollisionShape2D" parent="." unique_id=46227026]
+position = Vector2(-6.25, -12)
+shape = SubResource("RectangleShape2D_amscj")
