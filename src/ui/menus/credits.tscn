@@ -160,7 +160,7 @@ size_flags_horizontal = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("10_textf")
 theme_override_font_sizes/font_size = 14
-text = "Sound Designer"
+text = "Audio, Sound Designer"
 autowrap_mode = 3
 
 [node name="Credit4" type="HBoxContainer" parent="VBoxContainer" unique_id=1234567940]
@@ -289,26 +289,11 @@ theme_override_font_sizes/font_size = 14
 text = "Programmer, QA Tester, 2D Artist"
 autowrap_mode = 3
 
-[node name="Credit10" type="HBoxContainer" parent="VBoxContainer" unique_id=1035672377]
+[node name="MadeWith" type="Label" parent="VBoxContainer" unique_id=1892146470]
 layout_mode = 2
-theme_override_constants/separation = 10
-
-[node name="Name2" type="Label" parent="VBoxContainer/Credit10" unique_id=2122627925]
-layout_mode = 2
-theme_override_colors/font_color = Color(0.27, 0.51, 0.71, 1)
-theme_override_fonts/font = ExtResource("8_yhbge")
-theme_override_font_sizes/font_size = 14
-text = "Zuza"
-horizontal_alignment = 2
-
-[node name="Role2" type="Label" parent="VBoxContainer/Credit10" unique_id=107323624]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0.27450982, 0.50980395, 0.7058824, 1)
 theme_override_fonts/font = ExtResource("10_textf")
-theme_override_font_sizes/font_size = 14
-text = "Audio"
-autowrap_mode = 3
+text = "MADE_WITH_GODOT"
 
 [node name="ConceptArt1" type="PanelContainer" parent="." unique_id=1499955022]
 custom_minimum_size = Vector2(220, 260)
@@ -489,8 +474,11 @@ stretch_mode = 5
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 14
-text = "Julia"
 horizontal_alignment = 1
+
+[node name="Author" type="Label" parent="ConceptArt3/MarginContainer/VBox" unique_id=1085587681]
+layout_mode = 2
+text = "Julia"
 
 [node name="Pin3" type="TextureRect" parent="." unique_id=633848480]
 layout_mode = 0

@@ -45,8 +45,8 @@ func connect_signals():
 	
 	pause.connect("resume_pressed", _on_resume_pressed)
 	
-	win_screen.connect("new_game_pressed", _on_win_new_game_pressed)
-	win_screen.connect("back_to_menu_pressed", _on_win_back_to_menu_pressed)
+	win_screen.connect("on_new_game_pressed", _on_win_new_game_pressed)
+	win_screen.connect("on_back_to_menu_pressed", _on_win_back_to_menu_pressed)
 
 func show_layer(component:Control):
 	if component.get_parent() is CanvasLayer:

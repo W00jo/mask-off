@@ -4,7 +4,6 @@ extends Control
 class_name PlayerDisplay
 
 @export var label_name: String = "" : set = set_label_name
-@onready var health_bar: ProgressBar = $VBoxContainer/HealthBar
 
 var player: Player
 

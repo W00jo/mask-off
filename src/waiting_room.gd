@@ -90,7 +90,6 @@ func _activate_player(index: int):
 	player.on_player_death.connect(ressurect_player)
 	
 	UI.Instance.hud.player_displays[index].set_max_health(player.damage_target.max_health)
-	player.damage_target.on_damage_received.connect(UI.Instance.hud.player_displays[index].set_current_health)
 	
 	_players.append(player)
 	
