@@ -5,8 +5,7 @@ extends State
 
 
 func enter():
-	print("entering FALL state...")
-	#owner.velocity.y = 0
+	pass
 
 func physics_update(delta:float):
 	owner.velocity.y += 980 * delta

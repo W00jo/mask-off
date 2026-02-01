@@ -6,7 +6,6 @@ var speed = 200
 
 
 func enter():
-	print("entering WALK state...")
 	owner.get_node("AnimationPlayer").play("walk")
 
 func physics_update(_delta:float):
