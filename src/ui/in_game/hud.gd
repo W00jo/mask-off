@@ -16,3 +16,6 @@ var max_health = 100
 func show_play_game_popup():
 	play_game_popup.visible = true
 	$PlayGamePopup/AnimationPlayer.play("play_game_popup")
+
+func hide_play_game_popup():
+	play_game_popup.hide()

@@ -1,7 +1,7 @@
 class_name WalkState
 extends State
 
-var speed = 150
+var speed = 200
 @onready var sprite: Sprite2D = $"../../Sprite2D"
 
 

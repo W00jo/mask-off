@@ -30,7 +30,7 @@ size = Vector2(72, 60)
 position = Vector2(677, 482)
 spawn_parent = NodePath("../MaskSpawnPoints")
 
-[node name="Sprites" type="Node" parent="." index="1" unique_id=1325012231]
+[node name="Sprites" type="Node2D" parent="." index="1" unique_id=1460004430]
 
 [node name="Backgrund" type="Sprite2D" parent="Sprites" index="0" unique_id=960014258]
 position = Vector2(577.3117, 324.61285)
@@ -39,7 +39,8 @@ texture = ExtResource("2_kcnsx")
 
 [node name="Dziura" type="Sprite2D" parent="Sprites" index="1" unique_id=1802883576]
 position = Vector2(1164, 342)
-scale = Vector2(-0.514, 0.514)
+rotation = -3.1415927
+scale = Vector2(0.514, -0.514)
 texture = ExtResource("3_ltctc")
 
 [node name="Krzak" type="Sprite2D" parent="Sprites" index="2" unique_id=423844434]

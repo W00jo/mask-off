@@ -40,10 +40,11 @@ func _update_label():
 func _spawn_mask():
 	var spawned_mask = preload("res://src/masks/collectible_base_mask.tscn").instantiate()
 	for spawn in spawn_parent.get_children():
-		print("spawn", spawn)
 		spawn_points.append(spawn)
 	var random_spawn_point = spawn_points.pick_random()
-	random_spawn_point.add_child(spawned_mask)
+	position = random_spawn_point.position
+	add_child(spawned_mask)
+	spawned_mask.z_index = 2
 	
 	particles_1.emitting = true
 	particles_2.emitting = true
