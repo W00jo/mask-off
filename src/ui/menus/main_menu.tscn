@@ -12,7 +12,6 @@
 [ext_resource type="Texture2D" uid="uid://d14tl15eh2vgs" path="res://src/ui/menus/borders/kenney.png" id="7_yycut"]
 [ext_resource type="StyleBox" uid="uid://duc874svdeq1n" path="res://new_style_box_texture.tres" id="8_l2tv4"]
 [ext_resource type="AudioStream" uid="uid://dis4hw72jkf3m" path="res://src/ui/menus/click_sfx/fart.mp3" id="10_hcfgv"]
-[ext_resource type="Script" uid="uid://c2tsi1x7a2bys" path="res://src/ui/menus/itchio_button.gd" id="14_itchio"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yycut"]
 texture = ExtResource("7_yycut")
@@ -58,14 +57,9 @@ texture_margin_top = 10.0
 texture_margin_right = 10.0
 texture_margin_bottom = 10.0
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_border3"]
-texture = ExtResource("7_yycut")
-texture_margin_left = 10.0
-texture_margin_top = 10.0
-texture_margin_right = 10.0
-texture_margin_bottom = 10.0
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_border2"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_itchio_hover"]
+content_margin_left = 2.0
+content_margin_top = 2.0
 texture = ExtResource("7_yycut")
 texture_margin_left = 10.0
 texture_margin_top = 10.0
@@ -253,10 +247,9 @@ theme_override_colors/font_hover_color = Color(0.27, 0.51, 0.71, 1)
 theme_override_fonts/font = ExtResource("5_o7egi")
 theme_override_font_sizes/font_size = 24
 theme_override_styles/normal = SubResource("StyleBoxTexture_border1")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_border3")
-theme_override_styles/hover = SubResource("StyleBoxTexture_border2")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_itchio_hover")
+theme_override_styles/hover = SubResource("StyleBoxTexture_itchio_hover")
 text = "itch.io"
-script = ExtResource("14_itchio")
 
 [node name="Butt" type="Button" parent="." unique_id=816053452]
 layout_mode = 0
