@@ -20,6 +20,8 @@ var current_attack: BaseAttack
 @onready var mask_system: Area2D = $MaskSystem
 @onready var wearable_mask_scene = preload("res://src/masks/werable_base_mask.tscn")
 
+var player_color: Color = Color.WHITE
+
 func _ready():
 	print("StateMAchine: ", state_machine)
 	state_machine.set_input_data(InputData.new(
@@ -49,6 +51,7 @@ func set_attack(_attack: PackedScene):
 	var _new_attack: BaseAttack = _attack.instantiate()
 	_new_attack.copy(default_attack)
 	current_attack = _new_attack;
+	print("current_attack", current_attack)
 	attack_holder.add_child(current_attack)
 	
 func clear_attack():
@@ -77,4 +80,5 @@ func _on_knockback(data: KnockbackData) -> void:
 	velocity -= from
 	
 func set_color(color: Color):
+	player_color = color
 	$Sprite2D.modulate = color

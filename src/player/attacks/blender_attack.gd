@@ -1,12 +1,15 @@
 extends BaseAttack
 
+
 @export var animName: String 
-@onready var collider := $Area2D/CollisionShape2D
+@onready var collider: CollisionShape2D = $BlenderArea/CollisionShape2D
+@export var cube_scene: PackedScene 
 
 
 func start_attack(player: Player):
+	
 	super(player)
-	$Area2D.set_custom_parent(player)
+	$BlenderArea.set_custom_parent(player)
 	collider.disabled = false
 	player.animation_player.play(animName)
 	var initVel = player.velocity
@@ -18,5 +21,13 @@ func start_attack(player: Player):
 	await player.animation_player.animation_finished
 	player.velocity.y = 98
 	collider.disabled = true
-	print("start default attack")
+	print("blender atak ")
 	attack_finished.emit()
+	
+
+func cube_throw():
+	var new_cube = cube_scene.instantiate()
+	print("spawnuje kubik")
+	add_child(new_cube)
+	
+	

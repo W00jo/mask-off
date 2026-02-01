@@ -5,7 +5,7 @@ extends Node2D
 var _used_spawn_points := 0
 @onready var mask_spawner: MaskSpawner = $MaskSpawner
 @onready var timer: Timer = $Timer
-const TRAIN = preload("uid://xd0fr7jnrjqc")
+const TRAIN = preload("res://src/levels/03_platform_level/train.tscn")
 
 
 func start():
