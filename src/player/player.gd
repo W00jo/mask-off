@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 class_name Player
 
-signal on_player_death
+signal on_player_death(Player)
 
 @export var move_left: String
 @export var move_right: String
@@ -43,6 +43,7 @@ func reset():
 	$UI._ready()
 	set_attack(default_attack)
 	state_machine.change_state("fallstate")
+	$Sprite2D.frame = 25
 
 func set_attack(_attack: PackedScene):
 	var _new_attack: BaseAttack = _attack.instantiate()
@@ -56,8 +57,7 @@ func clear_attack():
 	set_attack(default_attack)
 
 func on_death() -> void:
-	on_player_death.emit()
-	queue_free()
+	on_player_death.emit(self)
 
 func _begin_death() -> void:
 	state_machine.change_state("deathstate")

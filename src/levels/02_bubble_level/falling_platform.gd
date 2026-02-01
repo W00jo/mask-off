@@ -15,5 +15,5 @@ func _process(delta: float) -> void:
 
 func _on_area_for_player_body_entered(body: Node2D) -> void:
 	if body is CharacterBody2D:
-		await get_tree().create_timer(randf_range(1,3)).timeout
+		await get_tree().create_timer(1,5).timeout
 		set_process(true)

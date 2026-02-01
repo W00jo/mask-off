@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ppufyqqllp42"
-path="res://.godot/imported/icon_lubgame.png-37a493bf186095a66e001517ebd64aec.ctex"
+uid="uid://wcigl4j8f0jj"
+path="res://.godot/imported/ggj_icon.png-a42949e63f3f7b09b11b494181773ac1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/ui/menus/icons/icon_lubgame.png"
-dest_files=["res://.godot/imported/icon_lubgame.png-37a493bf186095a66e001517ebd64aec.ctex"]
+source_file="res://src/ui/menus/icons/ggj_icon.png"
+dest_files=["res://.godot/imported/ggj_icon.png-a42949e63f3f7b09b11b494181773ac1.ctex"]
 
 [params]
 

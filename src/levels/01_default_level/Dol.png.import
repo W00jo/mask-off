@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://chns881flj3gc"
-path="res://.godot/imported/Background.png-e08e3f0ff461ea3d64b72d6d9db6a411.ctex"
+uid="uid://c7cvcta6gh8br"
+path="res://.godot/imported/Dol.png-52de3e47e765d466c7fb2c2dd689dfb3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/levels/02_bubble_level/Background.png"
-dest_files=["res://.godot/imported/Background.png-e08e3f0ff461ea3d64b72d6d9db6a411.ctex"]
+source_file="res://src/levels/01_default_level/Dol.png"
+dest_files=["res://.godot/imported/Dol.png-52de3e47e765d466c7fb2c2dd689dfb3.ctex"]
 
 [params]
 

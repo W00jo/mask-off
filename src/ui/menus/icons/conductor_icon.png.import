@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bvu7limi84qcm"
-path="res://.godot/imported/button_border_02.png-fbb59f1c6caadf9a8f36ef69aeaea460.ctex"
+uid="uid://cwwwois32cwu3"
+path="res://.godot/imported/conductor_icon.png-3666f095f7eb5e8b157ab0f065940996.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/ui/menus/borders/button_border_02.png"
-dest_files=["res://.godot/imported/button_border_02.png-fbb59f1c6caadf9a8f36ef69aeaea460.ctex"]
+source_file="res://src/ui/menus/icons/conductor_icon.png"
+dest_files=["res://.godot/imported/conductor_icon.png-3666f095f7eb5e8b157ab0f065940996.ctex"]
 
 [params]
 

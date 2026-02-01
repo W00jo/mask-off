@@ -73,9 +73,7 @@ func _activate_player(index: int):
 	UI.Instance.hud.player_displays[index].show_profile()
 	UI.Instance.hud.player_displays[index].bind_player(player)
 	player.position = Vector2(600, 300)
-	player.damage_target.on_death.connect(
-	Callable(self, "ressurect_player").bind(player)
-	)
+	player.on_player_death.connect(ressurect_player)
 	
 	UI.Instance.hud.player_displays[index].set_max_health(player.damage_target.max_health)
 	player.damage_target.on_damage_received.connect(UI.Instance.hud.player_displays[index].set_current_health)
@@ -91,6 +89,7 @@ func start_game():
 	queue_free()
 	
 func ressurect_player(player: Player):
+	await get_tree().create_timer(1).timeout
 	player.position = Vector2(600, 300)
 	player.reset()
 	

@@ -2,7 +2,6 @@ extends State
 class_name IdleState
 
 func enter():
-	print("entering IDLE state...")
 	owner.get_node("AnimationPlayer").play("idle")
 	
 	if(!owner.is_on_floor()):

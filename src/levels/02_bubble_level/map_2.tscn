@@ -2,8 +2,9 @@
 
 [ext_resource type="PackedScene" uid="uid://n04qbcl6c0oe" path="res://src/levels/01_default_level/base_map.tscn" id="1_jkh1s"]
 [ext_resource type="PackedScene" uid="uid://cxeyem7cvvt27" path="res://src/levels/02_bubble_level/falling_platform.tscn" id="2_dgebn"]
-[ext_resource type="Texture2D" uid="uid://chns881flj3gc" path="res://src/levels/02_bubble_level/Background.png" id="4_y7f0c"]
-[ext_resource type="Texture2D" uid="uid://dcf82av43nh2b" path="res://src/levels/02_bubble_level/bomb.png" id="5_n7gt7"]
+[ext_resource type="Texture2D" uid="uid://bp67wp465n4b8" path="res://src/levels/02_bubble_level/backgrund.png" id="3_wlwq4"]
+[ext_resource type="Texture2D" uid="uid://dcf82av43nh2b" path="res://src/levels/02_bubble_level/bomb.png" id="4_n7gt7"]
+[ext_resource type="PackedScene" uid="uid://crrflahojckb3" path="res://src/levels/modifiers/killzones/damage_place.tscn" id="5_iw40w"]
 [ext_resource type="Texture2D" uid="uid://c6yylbsw0j2wl" path="res://src/levels/02_bubble_level/platform.png" id="6_wlwq4"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_2hrto"]
@@ -19,7 +20,7 @@ size = Vector2(210, 16.25)
 [node name="Background" type="Sprite2D" parent="." index="0" unique_id=1260132490]
 position = Vector2(575.8888, 323.25003)
 scale = Vector2(0.60046303, 0.600463)
-texture = ExtResource("4_y7f0c")
+texture = ExtResource("3_wlwq4")
 
 [node name="MaskSpawner" parent="." index="1" unique_id=1271967546 node_paths=PackedStringArray("spawn_parent")]
 position = Vector2(544, 101)
@@ -27,54 +28,65 @@ spawn_parent = NodePath("../MaskSpawnPoints")
 
 [node name="Falling_platforms" type="Node2D" parent="." index="2" unique_id=295666664]
 
-[node name="Falling_platform" parent="Falling_platforms" index="0" unique_id=435592318 instance=ExtResource("2_dgebn")]
-position = Vector2(185, 525)
+[node name="Falling_platform2" parent="Falling_platforms" index="0" unique_id=1790417555 instance=ExtResource("2_dgebn")]
+position = Vector2(765, 495.99997)
 
-[node name="Falling_platform2" parent="Falling_platforms" index="1" unique_id=1790417555 instance=ExtResource("2_dgebn")]
-position = Vector2(785, 501)
+[node name="Falling_platform3" parent="Falling_platforms" index="1" unique_id=651720618 instance=ExtResource("2_dgebn")]
+position = Vector2(233, 175)
 
-[node name="Falling_platform3" parent="Falling_platforms" index="2" unique_id=651720618 instance=ExtResource("2_dgebn")]
-position = Vector2(232, 158)
+[node name="Falling_platform4" parent="Falling_platforms" index="2" unique_id=99510088 instance=ExtResource("2_dgebn")]
+position = Vector2(555, 211)
 
-[node name="Falling_platform4" parent="Falling_platforms" index="3" unique_id=99510088 instance=ExtResource("2_dgebn")]
-position = Vector2(540, 158)
+[node name="Falling_platform5" parent="Falling_platforms" index="3" unique_id=1153680053 instance=ExtResource("2_dgebn")]
+position = Vector2(197, 482.99997)
 
-[node name="Falling_platform5" parent="Falling_platforms" index="4" unique_id=1153680053 instance=ExtResource("2_dgebn")]
-position = Vector2(392, 425)
-
-[node name="Falling_platform6" parent="Falling_platforms" index="5" unique_id=1901377970 instance=ExtResource("2_dgebn")]
-position = Vector2(1034, 193)
+[node name="Falling_platform6" parent="Falling_platforms" index="4" unique_id=1901377970 instance=ExtResource("2_dgebn")]
+position = Vector2(1035, 173)
 
 [node name="Sprites" type="Node2D" parent="." index="3" unique_id=1320609599]
 
 [node name="Bomb" type="Sprite2D" parent="Sprites" index="0" unique_id=1329820755]
-position = Vector2(1148, 497)
+position = Vector2(1497, 372.00003)
 scale = Vector2(0.554945, 0.55494505)
-texture = ExtResource("5_n7gt7")
+texture = ExtResource("4_n7gt7")
 
 [node name="Platform" type="Sprite2D" parent="Sprites" index="1" unique_id=2019154368]
-position = Vector2(793, 350)
+position = Vector2(841, 372)
 scale = Vector2(0.44277477, 0.44277477)
 texture = ExtResource("6_wlwq4")
 
-[node name="Platform2" type="Sprite2D" parent="Sprites" index="2" unique_id=1136730871]
-position = Vector2(203.00003, 374.00003)
+[node name="Bomb2" type="Sprite2D" parent="Sprites" index="2" unique_id=681015014]
+position = Vector2(400.00003, 385)
+scale = Vector2(0.45027822, 0.4502783)
+texture = ExtResource("4_n7gt7")
+
+[node name="Platform2" type="Sprite2D" parent="Sprites" index="3" unique_id=1136730871]
+position = Vector2(214.00002, 403.00003)
 scale = Vector2(0.4248598, 0.4248598)
 texture = ExtResource("6_wlwq4")
 
-[node name="Platform3" type="Sprite2D" parent="Sprites" index="3" unique_id=1248822110]
-position = Vector2(285.99994, 374)
+[node name="Platform3" type="Sprite2D" parent="Sprites" index="4" unique_id=1248822110]
+position = Vector2(306, 402.99997)
 rotation = 3.1415925
 scale = Vector2(0.425, -0.425)
 texture = ExtResource("6_wlwq4")
 
-[node name="Platform4" type="Sprite2D" parent="Sprites" index="4" unique_id=375407529]
+[node name="Platform4" type="Sprite2D" parent="Sprites" index="5" unique_id=375407529]
 position = Vector2(1085.0001, 479.00003)
 scale = Vector2(0.4248598, 0.4248598)
 texture = ExtResource("6_wlwq4")
 
+[node name="damage_place" parent="Sprites" index="6" unique_id=507009979 instance=ExtResource("5_iw40w")]
+position = Vector2(90.99997, 540)
+scale = Vector2(5.655264, 3.3792992)
+DMG_amount = 5
+
+[node name="damage_place2" parent="Sprites" index="7" unique_id=209513220 instance=ExtResource("5_iw40w")]
+position = Vector2(1106, 573.00006)
+scale = Vector2(4.1353908, 3.4739025)
+DMG_amount = 5
+
 [node name="Kolizja" type="StaticBody2D" parent="." index="4" unique_id=790272819]
-visible = false
 
 [node name="Boki" type="CollisionShape2D" parent="Kolizja" index="0" unique_id=1581859798]
 position = Vector2(1154, 423)
@@ -100,17 +112,17 @@ shape = SubResource("RectangleShape2D_y7f0c")
 one_way_collision = true
 
 [node name="Platform3" type="CollisionShape2D" parent="Kolizja" index="5" unique_id=500565447]
-position = Vector2(737, 255)
+position = Vector2(787, 276)
 shape = SubResource("RectangleShape2D_y7f0c")
 one_way_collision = true
 
 [node name="Platform2" type="CollisionShape2D" parent="Kolizja" index="6" unique_id=1791566440]
-position = Vector2(338, 287)
+position = Vector2(361, 314)
 shape = SubResource("RectangleShape2D_y7f0c")
 one_way_collision = true
 
 [node name="Platform" type="CollisionShape2D" parent="Kolizja" index="7" unique_id=1968227494]
-position = Vector2(152, 287)
+position = Vector2(170, 314)
 shape = SubResource("RectangleShape2D_y7f0c")
 one_way_collision = true
 
@@ -139,6 +151,7 @@ position = Vector2(157, 315)
 [node name="MaskSpawnPoint3" type="Node2D" parent="MaskSpawnPoints" index="2" unique_id=1299778320]
 position = Vector2(716, 318)
 
-[node name="Camera2D" type="Camera2D" parent="." index="7" unique_id=1136039569]
-position = Vector2(570, 331)
-position_smoothing_enabled = true
+[node name="damage_place" parent="." index="7" unique_id=2001838863 instance=ExtResource("5_iw40w")]
+position = Vector2(553, 682)
+scale = Vector2(18.885777, 2.6667345)
+DMG_amount = 999

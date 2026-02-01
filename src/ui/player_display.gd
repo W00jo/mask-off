@@ -13,7 +13,8 @@ func bind_player(player: Player):
 	player.damage_target.on_damage_received.connect(
 		func(val): set_current_health()
 	)
-	player.damage_target.on_reset.connect(set_current_health)
+	player.damage_target.on_reset.connect(on_reset)
+	player.damage_target.on_death.connect(on_player_death)
 	set_max_health(player.damage_target.max_health)
 
 func set_label_name(value: String):
@@ -29,6 +30,15 @@ func show_profile():
 
 func set_current_health():
 	health_bar.value = player.damage_target.current_health
+	
+func on_reset():
+	set_current_health()
+	$VBoxContainer/HBoxContainer/PlayerIcon.texture = load("res://assets/sprites/ziomek_profilowe.png")
+	$VBoxContainer/HBoxContainer/PlayerLabel.text = label_name
+	
+func on_player_death():	
+	$VBoxContainer/HBoxContainer/PlayerIcon.texture = load("res://assets/sprites/ziomek_nie_zyje.png")
+	$VBoxContainer/HBoxContainer/PlayerLabel.text = label_name + "\n" + "DEAD"
 	
 func set_max_health(max_health: int):
 	health_bar.max_value = max_health

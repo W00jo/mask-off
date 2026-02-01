@@ -70,8 +70,9 @@ color = Color(0.95686275, 0.8901961, 0.8235294, 1)
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1033723844]
 layout_mode = 0
+offset_top = -104.0
 offset_right = 1152.0
-offset_bottom = 768.0
+offset_bottom = 664.0
 texture = ExtResource("2_mvcab")
 expand_mode = 1
 
@@ -81,9 +82,9 @@ anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = 144.0
-offset_top = 192.0
+offset_top = 72.0
 offset_right = 444.0
-offset_bottom = 242.0
+offset_bottom = 122.0
 grow_horizontal = 2
 theme_override_font_sizes/font_size = 32
 text = "CREDITS"

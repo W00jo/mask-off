@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://crrflahojckb3"]
 
 [ext_resource type="Script" uid="uid://c361p8mo5hq0d" path="res://src/levels/modifiers/killzones/resource_place.gd" id="1_cxoe2"]
-[ext_resource type="Texture2D" uid="uid://qix0oygodiat" path="res://icon.svg" id="2_huomu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gwqwp"]
 
@@ -10,12 +9,5 @@ script = ExtResource("1_cxoe2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1183227868]
 shape = SubResource("RectangleShape2D_gwqwp")
-
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1892675530]
-modulate = Color(0.7202103, 0.7202103, 0.7202103, 1)
-self_modulate = Color(2.8165433, 0, 0, 1)
-position = Vector2(1.9073486e-06, -1.9073486e-06)
-scale = Vector2(0.15625, 0.15625)
-texture = ExtResource("2_huomu")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
