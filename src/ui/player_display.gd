@@ -37,7 +37,7 @@ func on_reset():
 	$VBoxContainer/HBoxContainer/PlayerLabel.text = label_name
 	
 func on_player_death():	
-	$VBoxContainer/HBoxContainer/PlayerIcon.texture = load("res://assets/sprites/ziomek_profilowe.png")
+	$VBoxContainer/HBoxContainer/PlayerIcon.texture = load("res://assets/sprites/ziomek_nie_zyje.png")
 	$VBoxContainer/HBoxContainer/PlayerLabel.text = label_name + "\n" + "DEAD"
 	
 func set_max_health(max_health: int):
