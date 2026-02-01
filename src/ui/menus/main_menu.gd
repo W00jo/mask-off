@@ -22,6 +22,10 @@ signal exit_pressed
 @onready var exit_button = $MenuInterface/MenuButtons/Exit
 @onready var audio_player = $ClickSFX
 @onready var fart = $FartSFX
+@onready var main_menu_music = $MainMenuMusic
+
+const MENU_MUSIC = preload("res://assets/audio/soundtrack/Menu.wav")
+const MUSIC_FADE_DURATION := 1.5
 
 func _ready() -> void:
 	_update_translations()
@@ -31,6 +35,21 @@ func _ready() -> void:
 	modulate.a = 0.0
 	var tween = create_tween().set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_CUBIC)
 	tween.tween_property(self, "modulate:a", 1.0, 0.5)
+	
+	# Start music with fade-in
+	_play_menu_music()
+
+func _play_menu_music() -> void:
+	main_menu_music.stream = MENU_MUSIC
+	main_menu_music.volume_db = -40.0
+	main_menu_music.play()
+	main_menu_music.finished.connect(_on_menu_music_finished)
+	
+	var music_tween = create_tween().set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_CUBIC)
+	music_tween.tween_property(main_menu_music, "volume_db", 0.0, MUSIC_FADE_DURATION)
+
+func _on_menu_music_finished() -> void:
+	main_menu_music.play()
 
 func _update_translations() -> void:
 	play_button.text = tr("PLAY")
@@ -75,14 +94,11 @@ func _on_itchio_pressed() -> void:
 func _on_butt_pressed() -> void:
 	fart.play()
 
-
 var combo = ["ui_up", "ui_up", "ui_down", "ui_down", "ui_left", "ui_right", "ui_left", "ui_right", "B", "A"]
 var combo_index := 0
 var combo_time := 5
 var last_input_time := 0
 var numer : int = -750
-
-
 
 func _input(event):
 	if not event is InputEventKey:

@@ -48,12 +48,20 @@ theme_override_font_sizes/font_size = 111
 text = "WINNER"
 
 [node name="WinnerPic" type="TextureRect" parent="." unique_id=956575932]
-layout_mode = 0
-offset_left = 512.0
-offset_top = 295.0
-offset_right = 619.0
-offset_bottom = 399.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -53.5
+offset_top = -52.0
+offset_right = 53.5
+offset_bottom = 52.0
+grow_horizontal = 2
+grow_vertical = 2
 texture = ExtResource("3_yvci4")
+metadata/_edit_use_anchors_ = true
 
 [node name="MenuBackground" type="TextureRect" parent="." unique_id=1056284674]
 modulate = Color(0.8627451, 0.8627451, 0.8627451, 0.31764707)
