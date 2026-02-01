@@ -70,12 +70,12 @@ texture = ExtResource("3_abyff")
 [node name="Bot2" type="Sprite2D" parent="." index="4" unique_id=1419628783]
 position = Vector2(627, 306)
 scale = Vector2(-0.602, 0.602)
-texture = ExtResource("4_pp341")
+texture = ExtResource("5_pp341")
 
 [node name="Bot" type="Sprite2D" parent="." index="5" unique_id=982222737]
 position = Vector2(-525, 307)
 scale = Vector2(0.602, 0.602)
-texture = ExtResource("4_pp341")
+texture = ExtResource("5_pp341")
 
 [node name="VendingMachine" type="Sprite2D" parent="." index="6" unique_id=2031315408]
 position = Vector2(-177, 395)
