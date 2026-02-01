@@ -1,8 +1,7 @@
 [gd_scene format=3 uid="uid://ce0ttob42nhv0"]
 
 [ext_resource type="Script" uid="uid://cpvsr6xqvnirj" path="res://src/ui/in_game/win_screen.gd" id="1_65oyn"]
-[ext_resource type="FontFile" uid="uid://cbf52hahephbu" path="res://assets/fonts/DK Crayon Crumble.ttf" id="2_6by6w"]
-[ext_resource type="FontFile" uid="uid://cgwhuhab2ugx0" path="res://assets/fonts/Mansalva-Regular.ttf" id="3_b1wth"]
+[ext_resource type="Texture2D" uid="uid://bchspf21u5uwh" path="res://assets/sprites/ziomek_profilowe.png" id="3_yvci4"]
 [ext_resource type="Texture2D" uid="uid://bbi0ym12jj8ok" path="res://src/ui/menus/prettiers/grid.png" id="4_yv8pq"]
 
 [node name="WinScreen" type="Control" unique_id=1320695175]
@@ -45,7 +44,6 @@ offset_bottom = -58.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_6by6w")
 theme_override_font_sizes/font_size = 111
 text = "WINNER"
 
@@ -69,7 +67,6 @@ layout_mode = 2
 size_flags_horizontal = 4
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_constants/h_separation = 2
-theme_override_fonts/font = ExtResource("3_b1wth")
 theme_override_font_sizes/font_size = 21
 text = "PLAY_AGAIN"
 flat = true
@@ -78,7 +75,6 @@ flat = true
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_constants/h_separation = 2
-theme_override_fonts/font = ExtResource("3_b1wth")
 theme_override_font_sizes/font_size = 21
 text = "RETURN_TO_MENU"
 flat = true
@@ -93,20 +89,13 @@ offset_bottom = 853.20404
 scale = Vector2(0.60601854, 0.6060185)
 texture = ExtResource("4_yv8pq")
 
-[node name="ColorRect2" type="ColorRect" parent="." unique_id=1249331827]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -36.5
-offset_top = -36.5
-offset_right = 36.5
-offset_bottom = 36.5
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0, 0, 0, 1)
+[node name="WinnerPic" type="TextureRect" parent="." unique_id=956575932]
+layout_mode = 0
+offset_left = 512.0
+offset_top = 295.0
+offset_right = 619.0
+offset_bottom = 399.0
+texture = ExtResource("3_yvci4")
 
 [connection signal="pressed" from="HBoxContainer/NewGame" to="." method="_on_new_game_pressed"]
 [connection signal="pressed" from="HBoxContainer/BackToMenu" to="." method="_on_back_to_menu_pressed"]

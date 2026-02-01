@@ -19,3 +19,6 @@ func show_play_game_popup():
 
 func hide_play_game_popup():
 	play_game_popup.hide()
+	
+func hide_player_display(index: int):
+	player_displays[index].hide()
