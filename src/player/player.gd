@@ -19,6 +19,8 @@ signal on_player_death
 
 var current_attack: BaseAttack
 
+var did_attack = false
+
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity += get_gravity() * delta 
@@ -59,6 +61,7 @@ func set_input_data(input_data: InputData):
 	$StateMachine.set_input_data(input_data)
 
 
-func _on_knockback(from: Vector2) -> void:
-	from *= Vector2(50, 1) 
+func _on_knockback(data: KnockbackData) -> void:
+	var from = data.from
+	from *= data.force 
 	velocity -= from

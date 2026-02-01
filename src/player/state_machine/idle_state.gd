@@ -12,7 +12,7 @@ func enter():
 		
 func _physics_process(delta: float) -> void:
 	if(!Input.is_action_pressed(input.move_left) and !Input.is_action_pressed(input.move_right)):
-		owner.velocity.x /= 1.1
+		owner.velocity.x /= 1.3
 
 func handle_input(_event:InputEvent):
 	if(Input.is_action_just_pressed(input.attack)):
