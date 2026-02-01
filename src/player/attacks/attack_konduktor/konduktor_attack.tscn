@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://csjhmv4df2yek"]
+
+[ext_resource type="Script" uid="uid://yj6f456cfhy5" path="res://src/player/attacks/attack_default/default_attack.gd" id="1_efysa"]
+[ext_resource type="Texture2D" uid="uid://qix0oygodiat" path="res://icon.svg" id="2_7oths"]
+[ext_resource type="Script" uid="uid://wnlkpmaoqpcb" path="res://src/player/damage_system/damage_source.gd" id="3_vs4ry"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hg6s5"]
+radius = 75.16647
+
+[node name="KonduktorAttack" type="Node2D" unique_id=121750398]
+scale = Vector2(0.2, 0.2)
+script = ExtResource("1_efysa")
+animName = "attack_default"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1455803832]
+scale = Vector2(0.99999994, 0.99999994)
+texture = ExtResource("2_7oths")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=914746674]
+collision_mask = 2
+script = ExtResource("3_vs4ry")
+damage_value = 4
+knockback_strength = Vector2(150, -30)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=414727358]
+shape = SubResource("CircleShape2D_hg6s5")
+disabled = true
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

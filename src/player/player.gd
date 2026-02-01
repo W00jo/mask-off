@@ -18,7 +18,15 @@ var current_attack: BaseAttack
 @onready var attack_holder: Node2D = $AttackParent/AttackHolder
 @onready var damage_target: DamageTarget = $DamageTarget 
 @onready var mask_system: Area2D = $MaskSystem
-@onready var wearable_mask_scene = preload("res://src/masks/werable_base_mask.tscn")
+
+@export var godot_attack: PackedScene
+@export var isaac_attack: PackedScene
+@export var konduktor_attack: PackedScene
+@export var konduktor_mask = preload("res://src/masks/werable_konduktor_mask.tscn")
+@export var plague_attack: PackedScene
+@export var bomberman_attack: PackedScene
+@export var catboy_attack: PackedScene
+@export var pig_attack: PackedScene
 
 var player_color: Color = Color.WHITE
 
@@ -69,9 +77,17 @@ func set_input_data(input_data: InputData):
 
 func create_wearable_mask(mask):
 	print("MASK COLLECTED!!!! : ", mask)
-	var wearable_mask_instance = wearable_mask_scene.instantiate()
+	var wearable_mask_instance
+	
+	if(mask == "konduktor"):
+		set_attack(konduktor_attack)
+		wearable_mask_instance = konduktor_mask.instantiate()
+		
 	mask_parent.add_child(wearable_mask_instance)
 	wearable_mask_instance.set_type(mask)
+		
+func clear_mask():
+	mask_parent.remove_child(mask_parent.get_child(0))
 
 
 func _on_knockback(data: KnockbackData) -> void:

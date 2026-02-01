@@ -11,6 +11,9 @@ func enter():
 	if(!owner.did_attack):
 		owner.current_attack.start_attack(owner)
 		await owner.current_attack.attack_finished
+		if(owner.current_attack.name != "default_attack"):
+			owner.clear_attack()
+			owner.clear_mask()
 		
 	owner.did_attack = true
 	

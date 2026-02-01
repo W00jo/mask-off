@@ -50,5 +50,6 @@ func _spawn_mask():
 	particles_2.emitting = true
 	
 	await spawned_mask.mask_picked_up
+	print("???")
 	
 	_start_timeout()

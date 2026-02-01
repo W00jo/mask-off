@@ -5,12 +5,17 @@ signal mask_picked_up(rand_mask)
 
 var duration := 10
 var random_mask
+@export var debug = false
+@export var mask_name: String
 @onready var anim: AnimationPlayer = $AnimationPlayer
 
 
 
 func _ready() -> void:
-	random_mask = GameManager.mask_types.keys().pick_random()
+	if(debug):
+		random_mask = mask_name
+	else:
+		random_mask = GameManager.mask_types.keys().pick_random()
 	anim.play(GameManager.mask_types.get(random_mask))
 
 func pick_up():
