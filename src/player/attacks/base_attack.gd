@@ -1,8 +1,8 @@
+class_name BaseAttack
 extends Node
 
-class_name BaseAttack
-
 signal attack_finished
+
 
 func get_attack_owner() -> Node2D:
 	return owner

@@ -15,6 +15,7 @@
 process_mode = 3
 
 [node name="Gameplay" type="Node" parent="." unique_id=890166657]
+process_mode = 1
 
 [node name="LevelManager" type="Node2D" parent="Gameplay" unique_id=729005969]
 
@@ -23,6 +24,7 @@ process_mode = 3
 [node name="WaitingRoom" parent="Gameplay/LevelManager" unique_id=1930000640 instance=ExtResource("1_kf8lf")]
 
 [node name="UI" type="Node" parent="." unique_id=65613235 node_paths=PackedStringArray("hud", "main_menu", "options", "credits", "how_to_play", "pause", "win_screen")]
+process_mode = 3
 script = ExtResource("2_kf8lf")
 hud = NodePath("HUDLayer/HUD")
 main_menu = NodePath("MainMenuLayer/MainMenu")

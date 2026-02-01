@@ -1,6 +1,5 @@
-extends Node
-
 class_name UI
+extends Node
 
 @export var hud: Hud
 @export var main_menu: Control

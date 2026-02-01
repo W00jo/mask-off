@@ -5,7 +5,6 @@ var state_machine: StateMachine
 var input: InputData
 
 func set_input(new_input: InputData):
-	print(name, new_input.move_left, new_input.move_right, new_input.jump)
 	input = new_input
 
 func enter():

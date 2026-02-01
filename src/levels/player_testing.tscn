@@ -1,17 +1,13 @@
 [gd_scene format=3 uid="uid://r1ki73v18ynn"]
 
-[ext_resource type="Script" uid="uid://cw54x64sgkqv6" path="res://src/levels/level_test.gd" id="1_qykk4"]
 [ext_resource type="PackedScene" uid="uid://crrflahojckb3" path="res://src/levels/modifiers/killzones/damage_place.tscn" id="2_cmjwt"]
-[ext_resource type="PackedScene" path="res://src/levels/02_bubble_level/falling_platform.tscn" id="3_n7tny"]
+[ext_resource type="PackedScene" uid="uid://cxeyem7cvvt27" path="res://src/levels/02_bubble_level/falling_platform.tscn" id="3_n7tny"]
 [ext_resource type="PackedScene" uid="uid://vwin6y5xrqyc" path="res://src/levels/modifiers/mask_spawner/mask_spawner.tscn" id="4_7r3fj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7ypsn"]
 size = Vector2(194, 39)
 
-[node name="PlayerTesting" type="Node2D" unique_id=1048883764 node_paths=PackedStringArray("mask_spawner", "mask_spawn_points")]
-script = ExtResource("1_qykk4")
-mask_spawner = NodePath("")
-mask_spawn_points = NodePath("MaskSpawnPoints")
+[node name="PlayerTesting" type="Node2D" unique_id=1048883764]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=2052164583]
 position = Vector2(-163, 445)

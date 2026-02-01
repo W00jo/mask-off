@@ -1,9 +1,9 @@
 extends Node2D
 
 @export var maps: Array[PackedScene]
-
 var _current_map: BaseMap
 var players: Array[Node2D]
+
 
 func _ready() -> void:
 	randomize()

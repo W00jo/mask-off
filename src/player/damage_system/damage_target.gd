@@ -1,12 +1,12 @@
-extends Node
-
 class_name DamageTarget
+extends Node
 
 signal on_death
 signal on_damage_received(amount: int)
 
 @export var max_health: int
 var current_health: int
+
 
 func _ready():
 	current_health = max_health

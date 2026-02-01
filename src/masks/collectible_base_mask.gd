@@ -3,9 +3,10 @@ extends Area2D
 
 signal mask_picked_up(rand_mask)
 
-@onready var sprite: Sprite2D = $Sprite2D
 var duration := 10
 var random_mask
+@onready var sprite: Sprite2D = $Sprite2D
+
 
 func _ready() -> void:
 	random_mask = GameManager.mask_types.keys().pick_random()
@@ -16,7 +17,6 @@ func pick_up():
 	queue_free()
 
 func _on_body_entered(body: Node2D) -> void:
-	print("body entered")
 	if body is Player:
 		pick_up()
 		body.create_wearable_mask(random_mask)

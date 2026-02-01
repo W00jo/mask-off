@@ -2,6 +2,8 @@ class_name JumpState
 extends State
 
 var jump_speed = -900
+@onready var sprite: Sprite2D = $"../../Sprite2D"
+
 
 func enter():
 	print("entering JUMP state...")
@@ -21,10 +23,10 @@ func physics_update(delta:float):
 	var direction = Input.get_axis(input.move_left, input.move_right)
 	
 	if direction < 0:
-		$"../../Sprite2D".flip_h = true
+		sprite.flip_h = true
 		owner.attack_holder.scale.x = -1
 	elif direction > 0:
-		$"../../Sprite2D".flip_h = false
+		sprite.flip_h = false
 		owner.attack_holder.scale.x = 1
 	
 	owner.velocity.x = direction * 200

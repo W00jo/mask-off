@@ -4,7 +4,6 @@ extends Node2D
 @onready var warning: Sprite2D = $Warning_sprite
 
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	warning.visible = false
 	set_process(false)
@@ -13,7 +12,7 @@ func _ready() -> void:
 		await get_tree().create_timer(0.1).timeout
 		warning.visible = false
 		await get_tree().create_timer(0.1).timeout
-
+		
 		if a == 4:
 			set_process(true)
 

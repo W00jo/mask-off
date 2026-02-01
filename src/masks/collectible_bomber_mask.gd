@@ -1,6 +1,7 @@
 class_name BombermanMask
 extends CollectibleBaseMask
 
+
 func pick_up():
 	emit_signal("mask_picked_up")
 	queue_free()
