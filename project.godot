@@ -15,6 +15,8 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 [application]
 
 config/name="Mask Off"
+config/description="Do you know beat 'em ups? Time to beat-each-other-up! Four players, three maps, many different masks. Grabbing a mask grants unique powers, from brute force to quirky tactical effects, to help you dominate your friends and clear the arena."
+config/version="v0.1.0"
 run/main_scene="uid://b8t7r3johr2yi"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 boot_splash/bg_color=Color(0.47254592, 0.5644224, 0.658798, 1)
