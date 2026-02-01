@@ -212,14 +212,8 @@ position = Vector2(157, 315)
 [node name="MaskSpawnPoint3" type="Node2D" parent="MaskSpawnPoints" index="2" unique_id=673866011]
 position = Vector2(716, 318)
 
-<<<<<<< Updated upstream
-[node name="Camera2D" type="Camera2D" parent="." index="13" unique_id=1732638474]
-position = Vector2(570, 331)
-position_smoothing_enabled = true
-=======
 [node name="Timer" type="Timer" parent="." index="15" unique_id=443749033]
 wait_time = 20.0
 autostart = true
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
->>>>>>> Stashed changes
