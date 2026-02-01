@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://cyftffr6m7wr1"
-path="res://.godot/imported/P1 DOODLE.wav-a2ecac975ca79003f89c6ffd5e1d1cec.sample"
+path="res://.godot/imported/P1 DOODLE.wav-1092b7a7e08f62b4e0076e6fb9046460.sample"
 
 [deps]
 
-source_file="res://assets/audio/soundtrack/Doodle/P1 DOODLE.wav"
-dest_files=["res://.godot/imported/P1 DOODLE.wav-a2ecac975ca79003f89c6ffd5e1d1cec.sample"]
+source_file="res://assets/audio/soundtrack/4players/Doodle/P1 DOODLE.wav"
+dest_files=["res://.godot/imported/P1 DOODLE.wav-1092b7a7e08f62b4e0076e6fb9046460.sample"]
 
 [params]
 
