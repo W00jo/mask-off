@@ -67,7 +67,6 @@ autostart = true
 [node name="MaskSpawnPoint" type="Node2D" parent="." unique_id=1049850504]
 
 [node name="Label" type="Label" parent="MaskSpawnPoint" unique_id=530201785]
-visible = false
 offset_left = -39.000008
 offset_top = -55.0
 offset_right = 61.999992

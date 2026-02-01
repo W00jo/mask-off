@@ -1,7 +1,7 @@
 class_name JumpState
 extends State
 
-var jump_speed = -900
+var jump_speed = -800
 @onready var sprite: Sprite2D = $"../../Sprite2D"
 
 
@@ -20,14 +20,18 @@ func physics_update(delta:float):
 		state_machine.change_state("fallstate")
 		return
 	
-	var direction = Input.get_axis(input.move_left, input.move_right)
+	var direction = Input.get_axis(input.move_left,input.move_right)
 	
 	if direction < 0:
 		sprite.flip_h = true
-		owner.attack_holder.scale.x = -1
+		owner.attack_parent.scale.x = -1
+		if owner.mask_parent.get_children().size() > 0:
+			owner.mask_parent.get_child(0).scale.x = -1
 	elif direction > 0:
 		sprite.flip_h = false
-		owner.attack_holder.scale.x = 1
+		owner.attack_parent.scale.x = 1
+		if owner.mask_parent.get_children().size() > 0:
+			owner.mask_parent.get_child(0).scale.x = 1
 	
 	owner.velocity.x = direction * 200
 	owner.move_and_slide()

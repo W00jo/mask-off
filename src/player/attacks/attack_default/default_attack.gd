@@ -5,6 +5,10 @@ extends BaseAttack
 
 
 func start_attack(player: Player):
+	print("anim name: ",animName)
+	print("collider: ",collider)
+	print("owner", owner)
+	super(player)
 	$Area2D.set_custom_parent(player)
 	collider.disabled = false
 	player.animation_player.play(animName)

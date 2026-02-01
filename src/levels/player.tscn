@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://bgruo56nt4bxn"]
+[gd_scene format=3 uid="uid://dieg7tov6oy5d"]
 
 [ext_resource type="Script" uid="uid://dmg143wfbe7nl" path="res://src/player/player.gd" id="1_87vpk"]
 [ext_resource type="Script" uid="uid://bbaeadmys6i6j" path="res://src/player/state_machine/state_machine.gd" id="2_cvutn"]
@@ -21,8 +21,6 @@ texture = SubResource("CompressedTexture2D_pg28d")
 [node name="CharacterCollision" type="CollisionShape2D" parent="." unique_id=2102602728]
 position = Vector2(-1.5, -2)
 shape = SubResource("RectangleShape2D_gmfve")
-
-[node name="Camera2D" type="Camera2D" parent="." unique_id=915304665]
 
 [node name="StateMachine" type="Node2D" parent="." unique_id=638512149 node_paths=PackedStringArray("initial_state")]
 script = ExtResource("2_cvutn")

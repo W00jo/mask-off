@@ -10,7 +10,7 @@ radius = 75.16647
 [node name="DefaultAttack" type="Node2D" unique_id=121750398]
 scale = Vector2(0.2, 0.2)
 script = ExtResource("1_bj1q2")
-animName = "player_attack_default"
+animName = "attack_default"
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1455803832]
 scale = Vector2(0.99999994, 0.99999994)
@@ -20,7 +20,7 @@ texture = ExtResource("2_gnt1h")
 collision_mask = 2
 script = ExtResource("3_u11b3")
 damage_value = 2
-knockback_strength = Vector2(40, 0)
+knockback_strength = Vector2(20, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=414727358]
 shape = SubResource("CircleShape2D_hg6s5")

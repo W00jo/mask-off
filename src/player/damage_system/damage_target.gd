@@ -4,6 +4,7 @@ extends Node
 signal on_death
 signal on_damage_received(amount: int)
 signal on_knockback(data: KnockbackData)
+signal on_reset
 
 @export var max_health: int
 var current_health: int
@@ -11,6 +12,10 @@ var current_health: int
 
 func _ready():
 	current_health = max_health
+	
+func reset():
+	current_health = max_health
+	on_reset.emit()
 	
 func receive_damage(damage_data: DamageData):
 	if(damage_data == null):

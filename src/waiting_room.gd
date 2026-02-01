@@ -17,6 +17,17 @@ var input_actions_names = [
 	["Num4", "Num6", "Num8", "Num5"],
 	["J", "L", "I", "K"],
 ]
+var player_colors = [
+	"#FFFFFF", 
+	"#efecac", 
+	"#90eda7", 
+	"#90ede5", 
+	"#7384d6", 
+	"#9e73d6", 
+	"#e579cc",
+	"#e5607f",
+	"#60e5bb",
+	"#ce9a40"]
 
 
 func _ready() -> void:
@@ -52,7 +63,15 @@ func _activate_player(index: int):
 	var player: Player = packedPlayer.instantiate()
 	var input = input_actions[index]
 	player.set_input_data(InputData.new(input[0], input[1], input[2], input[3]))
+	var color = get_rand_color()
+	player.set_color(color)
+	player.scale = Vector2(0.75, 0.75)
 	add_sibling(player)
+	
+	
+	UI.Instance.hud.player_displays[index].set_profile_color(color)
+	UI.Instance.hud.player_displays[index].show_profile()
+	UI.Instance.hud.player_displays[index].bind_player(player)
 	player.position = Vector2(600, 300)
 	player.damage_target.on_death.connect(
 	Callable(self, "ressurect_player").bind(player)
@@ -74,3 +93,10 @@ func start_game():
 func ressurect_player(player: Player):
 	player.position = Vector2(600, 300)
 	player.reset()
+	
+func get_rand_color() -> Color:
+	var index = randi() % player_colors.size()
+	var hex = player_colors[index]
+	player_colors.remove_at(index)
+	return Color.from_string(hex, Color.WHITE)
+	

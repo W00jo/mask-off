@@ -4,7 +4,9 @@ extends Node
 @onready var damage_target:DamageTarget = $"../DamageTarget"
 
 func _ready():
+	health_bar.visible = true
 	health_bar.max_value = damage_target.max_health
+	health_bar.value = health_bar.max_value
 	
 
 func _on_damage_target_on_damage_received(_amount: int) -> void:
