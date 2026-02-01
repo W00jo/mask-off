@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dfa7acfcvc3yy"]
 
 [ext_resource type="Script" uid="uid://dmg143wfbe7nl" path="res://src/player/player.gd" id="1_0v0ik"]
-[ext_resource type="PackedScene" uid="uid://c2wsqbmxwudpk" path="res://src/player/attacks/blender_attack.tscn" id="2_2smqc"]
+[ext_resource type="PackedScene" path="res://src/player/attacks/blender_attack.tscn" id="2_2smqc"]
 [ext_resource type="Texture2D" uid="uid://b0f3n0netrmcw" path="res://assets/sprites/player_animation_sheet_final.png" id="3_2smqc"]
 [ext_resource type="Script" uid="uid://ca03ma24caxns" path="res://src/player/state_machine/idle_state.gd" id="3_fv2d4"]
 [ext_resource type="Script" uid="uid://bbaeadmys6i6j" path="res://src/player/state_machine/state_machine.gd" id="4_hg6s5"]
@@ -342,4 +342,5 @@ show_percentage = false
 
 [connection signal="on_damage_received" from="DamageTarget" to="UI" method="_on_damage_target_on_damage_received"]
 [connection signal="on_death" from="DamageTarget" to="." method="_begin_death"]
+[connection signal="on_death" from="DamageTarget" to="UI" method="_on_death"]
 [connection signal="on_knockback" from="DamageTarget" to="." method="_on_knockback"]
