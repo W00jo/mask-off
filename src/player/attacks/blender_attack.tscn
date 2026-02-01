@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://c2wsqbmxwudpk"]
+
+[ext_resource type="Script" uid="uid://dum7h4wwrtnm5" path="res://src/player/attacks/blender_attack.gd" id="1_plpl5"]
+[ext_resource type="PackedScene" uid="uid://bcu1l2xqigbam" path="res://src/player/attacks/cube.tscn" id="2_cqfbb"]
+[ext_resource type="Script" uid="uid://wnlkpmaoqpcb" path="res://src/player/damage_system/damage_source.gd" id="3_uu7sf"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_yvmjs"]
+radius = 75.16647
+
+[node name="Blender" type="Node2D" unique_id=307013437]
+script = ExtResource("1_plpl5")
+animName = "attack_default"
+cube_scene = ExtResource("2_cqfbb")
+
+[node name="BlenderArea" type="Area2D" parent="." unique_id=1446140552]
+collision_mask = 2
+script = ExtResource("3_uu7sf")
+damage_value = 2
+knockback_strength = Vector2(20, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BlenderArea" unique_id=1775135718]
+shape = SubResource("CircleShape2D_yvmjs")
+disabled = true
+
+[connection signal="body_entered" from="BlenderArea" to="BlenderArea" method="_on_body_entered"]

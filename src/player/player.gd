@@ -49,6 +49,7 @@ func set_attack(_attack: PackedScene):
 	var _new_attack: BaseAttack = _attack.instantiate()
 	_new_attack.copy(default_attack)
 	current_attack = _new_attack;
+	print("current_attack", current_attack)
 	attack_holder.add_child(current_attack)
 	
 func clear_attack():

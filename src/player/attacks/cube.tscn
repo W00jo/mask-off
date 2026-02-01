@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://bcu1l2xqigbam"]
+
+[ext_resource type="Texture2D" uid="uid://2owirsfp3mpm" path="res://src/masks/masks_blender/Cubic_96.png" id="1_hwhb8"]
+[ext_resource type="Script" uid="uid://bjqaw28o1fan5" path="res://src/player/attacks/cube_projectile.gd" id="1_swpes"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_swpes"]
+radius = 38.052597
+
+[node name="Cube" type="Area2D" unique_id=2080351660]
+script = ExtResource("1_swpes")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2102756521]
+shape = SubResource("CircleShape2D_swpes")
+
+[node name="Cubic96" type="Sprite2D" parent="." unique_id=67166056]
+position = Vector2(-0.99999994, -1.9999998)
+scale = Vector2(0.18556578, 0.3000141)
+texture = ExtResource("1_hwhb8")
+hframes = 96
