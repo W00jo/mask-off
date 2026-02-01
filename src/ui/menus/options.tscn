@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://fjhqoi1myrss"]
 
 [ext_resource type="Script" uid="uid://bxa57ixpufgov" path="res://src/ui/menus/options.gd" id="1_ckw4x"]
+[ext_resource type="Texture2D" uid="uid://bbi0ym12jj8ok" path="res://src/ui/menus/prettiers/grid.png" id="2_lgb0q"]
 [ext_resource type="Texture2D" uid="uid://cpx81f45uct5c" path="res://src/ui/menus/icons/flag_icon_gb.png" id="3_8mfi6"]
 [ext_resource type="Texture2D" uid="uid://hhwr40w72ju" path="res://src/ui/menus/icons/flag_icon_pl.png" id="3_lgb0q"]
 
@@ -27,6 +28,13 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.95686275, 0.8901961, 0.8235294, 1)
+
+[node name="Grid" type="TextureRect" parent="." unique_id=575104390]
+modulate = Color(0, 0, 0, 0.078431375)
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("2_lgb0q")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=1682552393]
 layout_mode = 1

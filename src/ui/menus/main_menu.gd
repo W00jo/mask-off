@@ -24,7 +24,6 @@ signal exit_pressed
 @onready var fart = $FartSFX
 
 func _ready() -> void:
-	
 	_update_translations()
 	GameManager.language_changed.connect(_on_language_changed)
 	
