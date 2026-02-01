@@ -75,3 +75,6 @@ func _on_knockback(data: KnockbackData) -> void:
 	var from = data.from
 	from *= data.force 
 	velocity -= from
+	
+func set_color(color: Color):
+	$Sprite2D.modulate = color
