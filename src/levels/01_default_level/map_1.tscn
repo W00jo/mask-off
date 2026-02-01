@@ -60,19 +60,11 @@ texture = ExtResource("5_326ku")
 [node name="StaticBody2D" type="StaticBody2D" parent="." index="2" unique_id=940238489]
 
 [node name="Bloki5" type="CollisionShape2D" parent="StaticBody2D" index="0" unique_id=2011681761]
-<<<<<<< Updated upstream
-position = Vector2(1501.4679, 633)
-shape = SubResource("RectangleShape2D_ltctc")
-
-[node name="Bloki" type="CollisionShape2D" parent="StaticBody2D" index="1" unique_id=1296590344]
-position = Vector2(384.4679, 634)
-=======
 position = Vector2(1478, 632)
 shape = SubResource("RectangleShape2D_1lhyj")
 
 [node name="Bloki" type="CollisionShape2D" parent="StaticBody2D" index="1" unique_id=1296590344]
 position = Vector2(358, 635)
->>>>>>> Stashed changes
 shape = SubResource("RectangleShape2D_1lhyj")
 
 [node name="Bloki2" type="CollisionShape2D" parent="StaticBody2D" index="2" unique_id=428945251]
