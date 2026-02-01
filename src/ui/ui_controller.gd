@@ -8,6 +8,7 @@ extends Node
 @export var how_to_play: Control
 @export var pause: Control
 @export var win_screen: Control
+@export var level_manager: Node2D
 
 static var Instance: UI = null
 
@@ -17,9 +18,9 @@ func _init():
 	else:
 		queue_free()
 
-
 func _ready() -> void:
 	connect_signals()
+	print("Instance",Instance)
 	
 	# Hide all UI layers
 	for child in get_children():
@@ -38,7 +39,7 @@ func connect_signals():
 	options.connect("back_pressed", _on_options_back_pressed)
 	credits.connect("back_pressed", _on_credits_pressed)
 	
-	how_to_play.connect("start_pressed", _on_howto_start_pressed)
+	#how_to_play.connect("start_pressed", _on_howto_start_pressed)
 	
 	GameManager.connect("paused", _on_paused)
 	
@@ -62,6 +63,7 @@ func hide_layer(component:Control):
 func _on_menu_play_pressed():
 	hide_layer(main_menu)
 	show_layer(hud)
+	level_manager.spawn_waiting_room()
 
 func _on_menu_options_pressed():
 	hide_layer(main_menu)
@@ -82,9 +84,9 @@ func _on_credits_pressed():
 	hide_layer(credits)
 	show_layer(main_menu)
 
-func _on_howto_start_pressed():
-	hide_layer(how_to_play)
-	# TODO: Start the game
+#func _on_howto_start_pressed():
+	#hide_layer(how_to_play)
+	## TODO: Start the game
 
 func _on_paused():
 	# Checking if not in menu or sub-menus. Change later to check if game started.

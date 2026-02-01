@@ -2,7 +2,6 @@
 
 [ext_resource type="PackedScene" uid="uid://n04qbcl6c0oe" path="res://src/levels/01_default_level/base_map.tscn" id="1_jkh1s"]
 [ext_resource type="PackedScene" uid="uid://cxeyem7cvvt27" path="res://src/levels/02_bubble_level/falling_platform.tscn" id="2_dgebn"]
-[ext_resource type="PackedScene" uid="uid://bnwj4t5xae30h" path="res://src/player/player_spawn.tscn" id="3_r03eq"]
 [ext_resource type="Texture2D" uid="uid://chns881flj3gc" path="res://src/levels/02_bubble_level/Background.png" id="4_y7f0c"]
 [ext_resource type="Texture2D" uid="uid://dcf82av43nh2b" path="res://src/levels/02_bubble_level/bomb.png" id="5_n7gt7"]
 [ext_resource type="Texture2D" uid="uid://c6yylbsw0j2wl" path="res://src/levels/02_bubble_level/platform.png" id="6_wlwq4"]
@@ -22,8 +21,9 @@ position = Vector2(575.8888, 323.25003)
 scale = Vector2(0.60046303, 0.600463)
 texture = ExtResource("4_y7f0c")
 
-[node name="MaskSpawner" parent="." index="1" unique_id=1271967546]
+[node name="MaskSpawner" parent="." index="1" unique_id=1271967546 node_paths=PackedStringArray("spawn_parent")]
 position = Vector2(544, 101)
+spawn_parent = NodePath("../MaskSpawnPoints")
 
 [node name="Falling_platforms" type="Node" parent="." index="2" unique_id=2083305250]
 
@@ -45,18 +45,18 @@ position = Vector2(392, 425)
 [node name="Falling_platform6" parent="Falling_platforms" index="5" unique_id=1901377970 instance=ExtResource("2_dgebn")]
 position = Vector2(1034, 193)
 
-[node name="PlayerSpawner" type="Node" parent="." index="3" unique_id=1396417496]
+[node name="PlayerSpawners" type="Node" parent="." index="3" unique_id=1396417496]
 
-[node name="Player_Marker" parent="PlayerSpawner" index="0" unique_id=1255660246 instance=ExtResource("3_r03eq")]
+[node name="Marker2D" type="Marker2D" parent="PlayerSpawners" index="0" unique_id=527420452]
 position = Vector2(52, 237)
 
-[node name="Player_Marker2" parent="PlayerSpawner" index="1" unique_id=66114077 instance=ExtResource("3_r03eq")]
+[node name="Marker2D2" type="Marker2D" parent="PlayerSpawners" index="1" unique_id=1222560604]
 position = Vector2(1085, 317)
 
-[node name="Player_Marker3" parent="PlayerSpawner" index="2" unique_id=1598093390 instance=ExtResource("3_r03eq")]
+[node name="Marker2D3" type="Marker2D" parent="PlayerSpawners" index="2" unique_id=843066717]
 position = Vector2(375, 235)
 
-[node name="Player_Marker4" parent="PlayerSpawner" index="3" unique_id=1965617713 instance=ExtResource("3_r03eq")]
+[node name="Marker2D4" type="Marker2D" parent="PlayerSpawners" index="3" unique_id=1469619229]
 position = Vector2(778, 448)
 
 [node name="Sprites" type="Node" parent="." index="4" unique_id=2022225253]
@@ -127,3 +127,14 @@ one_way_collision = true
 position = Vector2(152, 287)
 shape = SubResource("RectangleShape2D_y7f0c")
 one_way_collision = true
+
+[node name="MaskSpawnPoints" type="Node" parent="." index="6" unique_id=831274589]
+
+[node name="MaskSpawnPoint" type="Node2D" parent="MaskSpawnPoints" index="0" unique_id=1481516044]
+position = Vector2(284, 435)
+
+[node name="MaskSpawnPoint2" type="Node2D" parent="MaskSpawnPoints" index="1" unique_id=1787333012]
+position = Vector2(157, 315)
+
+[node name="MaskSpawnPoint3" type="Node2D" parent="MaskSpawnPoints" index="2" unique_id=1299778320]
+position = Vector2(716, 318)

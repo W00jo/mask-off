@@ -3,17 +3,29 @@ extends Node2D
 @export var maps: Array[PackedScene]
 var _current_map: BaseMap
 var players: Array[Node2D]
+@onready var waiting_room_scene = preload("res://src/levels/waiting_room.tscn")
 
 
-func _ready() -> void:
+func spawn_waiting_room():
+	var waiting_room_instance = waiting_room_scene.instantiate()
+	add_child(waiting_room_instance)
+	waiting_room_instance.connect("on_game_start", start_new_game)
+
+func start_new_game(players):
 	randomize()
-	_spawn_map()
+	_spawn_map_and_players(players)
 
-func _spawn_map():
+func _spawn_map_and_players(players):
 	var index = randi() % maps.size()
 	_current_map = maps[index].instantiate()
 	add_child(_current_map)
 	_current_map.start()
+	_current_map.z_index = -1
+	
+	var pl_spawner_parent = _current_map.get_node("PlayerSpawners")
+	for i in players.size():
+		players[i].position = pl_spawner_parent.get_child(i).position
+
 
 func _process(delta: float) -> void:
 	if(players.size() > 0):

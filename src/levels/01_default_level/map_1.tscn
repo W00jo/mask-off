@@ -5,7 +5,6 @@
 [ext_resource type="Texture2D" uid="uid://51jwkaa5vsy7" path="res://src/levels/01_default_level/dziura.png" id="3_ltctc"]
 [ext_resource type="Texture2D" uid="uid://dcijx7etyjim5" path="res://src/levels/01_default_level/krzak.png" id="4_326ku"]
 [ext_resource type="Texture2D" uid="uid://bx8eaiqjxwufu" path="res://src/levels/01_default_level/UwagaSlisku.png" id="5_326ku"]
-[ext_resource type="PackedScene" uid="uid://bnwj4t5xae30h" path="res://src/player/player_spawn.tscn" id="5_ltctc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1lhyj"]
 size = Vector2(949, 104)
@@ -27,8 +26,9 @@ size = Vector2(72, 60)
 
 [node name="BaseMap" unique_id=1175649286 instance=ExtResource("1_tkn72")]
 
-[node name="MaskSpawner" parent="." index="0" unique_id=1271967546]
+[node name="MaskSpawner" parent="." index="0" unique_id=1271967546 node_paths=PackedStringArray("spawn_parent")]
 position = Vector2(677, 482)
+spawn_parent = NodePath("../MaskSpawnPoints")
 
 [node name="Sprites" type="Node" parent="." index="1" unique_id=1325012231]
 
@@ -97,16 +97,27 @@ position = Vector2(780, 511)
 shape = SubResource("RectangleShape2D_inifa")
 one_way_collision = true
 
-[node name="Spawnery" type="Node" parent="." index="3" unique_id=839232508]
+[node name="PlayerSpawners" type="Node" parent="." index="3" unique_id=839232508]
 
-[node name="Player_Marker" parent="." index="4" unique_id=1255660246 instance=ExtResource("5_ltctc")]
+[node name="Marker2D" type="Marker2D" parent="PlayerSpawners" index="0" unique_id=2016183580]
 position = Vector2(121, 317)
 
-[node name="Player_Marker2" parent="." index="5" unique_id=1690592295 instance=ExtResource("5_ltctc")]
+[node name="Marker2D2" type="Marker2D" parent="PlayerSpawners" index="1" unique_id=537807400]
 position = Vector2(984, 283)
 
-[node name="Player_Marker3" parent="." index="6" unique_id=101467649 instance=ExtResource("5_ltctc")]
+[node name="Marker2D3" type="Marker2D" parent="PlayerSpawners" index="2" unique_id=1123289738]
 position = Vector2(407, 131)
 
-[node name="Player_Marker4" parent="." index="7" unique_id=1663052159 instance=ExtResource("5_ltctc")]
+[node name="Marker2D4" type="Marker2D" parent="PlayerSpawners" index="3" unique_id=1588270870]
 position = Vector2(782, 127)
+
+[node name="MaskSpawnPoints" type="Node" parent="." index="4" unique_id=188837765]
+
+[node name="MaskSpawnPoint" type="Node2D" parent="MaskSpawnPoints" index="0" unique_id=1037521067]
+position = Vector2(284, 435)
+
+[node name="MaskSpawnPoint2" type="Node2D" parent="MaskSpawnPoints" index="1" unique_id=1753789963]
+position = Vector2(157, 315)
+
+[node name="MaskSpawnPoint3" type="Node2D" parent="MaskSpawnPoints" index="2" unique_id=145732782]
+position = Vector2(716, 318)
