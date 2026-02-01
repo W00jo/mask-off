@@ -17,9 +17,13 @@ func physics_update(_delta:float):
 		if direction < 0:
 			sprite.flip_h = true
 			owner.attack_parent.scale.x = -1
+			if owner.mask_parent.get_children().size() > 0:
+				owner.mask_parent.get_child(0).scale.x = -1
 		elif direction > 0:
 			sprite.flip_h = false
 			owner.attack_parent.scale.x = 1
+			if owner.mask_parent.get_children().size() > 0:
+				owner.mask_parent.get_child(0).scale.x = 1
 		
 		if direction == 0:
 				state_machine.change_state("idlestate")

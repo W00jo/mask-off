@@ -8,6 +8,7 @@ var type
 func set_type(mask):
 	type = mask
 	setup_animation()
+	# TODO: setup special attacks
 
 func setup_animation():
 	anim.play(GameManager.mask_types.get(type))

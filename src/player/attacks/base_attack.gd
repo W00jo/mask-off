@@ -6,7 +6,7 @@ var camera_2d
 func _ready():
 	#print(get_parent().get_parent().get_parent().get_node("BaseMap/Camera2D"))
 	pass
- 
+
 signal attack_finished
 
 

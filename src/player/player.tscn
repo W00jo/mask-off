@@ -231,6 +231,7 @@ position = Vector2(1, 28)
 shape = SubResource("RectangleShape2D_g6k8r")
 
 [node name="AttackParent" type="Node2D" parent="." unique_id=923474934]
+visible = false
 
 [node name="AttackHolder" type="Node2D" parent="AttackParent" unique_id=1126711854]
 position = Vector2(0, 37)
@@ -250,9 +251,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -25.0
-offset_top = -85.0
+offset_top = -104.0
 offset_right = 24.57
-offset_bottom = -76.28
+offset_bottom = -95.28
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset_ratio = Vector2(0.5, 0.5)
