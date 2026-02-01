@@ -48,7 +48,7 @@ position = Vector2(1035, 173)
 [node name="Bomb" type="Sprite2D" parent="Sprites" index="0" unique_id=1329820755]
 position = Vector2(1497, 372.00003)
 scale = Vector2(0.554945, 0.55494505)
-texture = ExtResource("5_n7gt7")
+texture = ExtResource("4_n7gt7")
 
 [node name="Platform" type="Sprite2D" parent="Sprites" index="1" unique_id=2019154368]
 position = Vector2(841, 372)
