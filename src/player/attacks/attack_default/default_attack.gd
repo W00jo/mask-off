@@ -4,6 +4,7 @@ extends BaseAttack
 @onready var collider := $Area2D/CollisionShape2D
 
 func start_attack(player: Player):
+	$Area2D.set_custom_parent(player)
 	collider.disabled = false
 	player.animation_player.play(animName)
 	var initVel = player.velocity

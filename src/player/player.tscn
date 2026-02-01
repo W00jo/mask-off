@@ -44,6 +44,18 @@ tracks/1/keys = {
 "update": 0,
 "values": [Vector2(0, 37)]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AttackParent/AttackHolder:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
 
 [sub_resource type="Animation" id="Animation_rl62b"]
 resource_name = "attack_default"
@@ -80,10 +92,22 @@ tracks/0/path = NodePath("AttackParent/AttackHolder:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.19999999, 0.39999998),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(0, 0.19999999),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(0, 37), Vector2(80, 24), Vector2(4, 33)]
+"values": [Vector2(0, 37), Vector2(80, 24)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AttackParent/AttackHolder:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.20037545),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
 }
 
 [sub_resource type="Animation" id="Animation_dh4si"]
@@ -276,3 +300,4 @@ color_ramp = SubResource("Gradient_cwolq")
 
 [connection signal="on_damage_received" from="DamageTarget" to="UI" method="_on_damage_target_on_damage_received"]
 [connection signal="on_damage_received" from="DamageTarget" to="SFX" method="_on_damage_received"]
+[connection signal="on_knockback" from="DamageTarget" to="." method="_on_knockback"]
