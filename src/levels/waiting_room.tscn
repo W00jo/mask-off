@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://cmtk5jkhwnmxv"]
+[gd_scene format=3 uid="uid://dymtu8a4widx5"]
 
 [ext_resource type="Script" uid="uid://d0qnl4mjb4t2l" path="res://src/waiting_room.gd" id="1_eqxna"]
 [ext_resource type="PackedScene" uid="uid://dfa7acfcvc3yy" path="res://src/player/player.tscn" id="2_jhs3w"]
