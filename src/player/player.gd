@@ -1,5 +1,6 @@
-class_name Player
 extends CharacterBody2D
+
+class_name Player
 
 signal on_player_death
 
@@ -19,7 +20,6 @@ var current_attack: BaseAttack
 @onready var mask_system: Area2D = $MaskSystem
 @onready var wearable_mask_scene = preload("res://src/masks/werable_base_mask.tscn")
 
-
 func _ready():
 	print("StateMAchine: ", state_machine)
 	state_machine.set_input_data(InputData.new(
@@ -28,10 +28,16 @@ func _ready():
 	mask_system.on_attack_picked_up.connect(set_attack)
 	set_attack(default_attack)
 
+var did_attack = false
+
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity += get_gravity() * delta 
 
+		
+func get_direction() -> int:
+	return -1 if $Sprite2D.flip_h else 1
+	
 func reset():
 	damage_target._ready()
 	set_attack(default_attack)
@@ -62,5 +68,10 @@ func create_wearable_mask(mask):
 	var wearable_mask_instance = wearable_mask_scene.instantiate()
 	mask_parent.add_child(wearable_mask_instance)
 	wearable_mask_instance.set_type(mask)
-	
-	
+
+
+func _on_knockback(data: KnockbackData) -> void:
+	print("from: ", data.from, " force: ", data.force)
+	var from = data.from
+	from *= data.force 
+	velocity -= from

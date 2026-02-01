@@ -6,7 +6,7 @@ extends State
 
 func enter():
 	print("entering FALL state...")
-	owner.velocity.y = 0
+	#owner.velocity.y = 0
 
 func physics_update(delta:float):
 	owner.velocity.y += 980 * delta
@@ -20,10 +20,11 @@ func physics_update(delta:float):
 		sprite.flip_h = false
 		owner.attack_parent.scale.x = 1
 	
-	owner.velocity.x = direction * 200
+	#owner.velocity.x = direction * 200
 	owner.move_and_slide()
 
 	if owner.is_on_floor():
+		owner.did_attack = false
 		#owner.get_node("AnimationPlayer").play("land")
 		#await $"../../AnimationPlayer".animation_finished
 		if direction != 0:
