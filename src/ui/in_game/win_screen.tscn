@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://ce0ttob42nhv0"]
 
 [ext_resource type="Script" uid="uid://cpvsr6xqvnirj" path="res://src/ui/in_game/win_screen.gd" id="1_65oyn"]
-[ext_resource type="Texture2D" uid="uid://d3arjtebur5c0" path="res://src/ui/menus/prettiers/pink-sticky-note-taped.png" id="2_6by6w"]
+[ext_resource type="Texture2D" uid="uid://d3arjtebur5c0" path="res://src/ui/menus/prettiers/sticky_note_pink.png" id="2_6by6w"]
 [ext_resource type="FontFile" uid="uid://dg4utm6nyqq2b" path="res://assets/fonts/headers_font.ttf" id="3_b1wth"]
 [ext_resource type="Texture2D" uid="uid://bchspf21u5uwh" path="res://assets/sprites/ziomek_profilowe.png" id="3_yvci4"]
 

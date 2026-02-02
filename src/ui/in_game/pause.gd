@@ -7,8 +7,8 @@ func _on_resume_pressed() -> void:
 
 
 func _on_menu_pressed() -> void:
-	pass # Replace with function body.
+	get_tree().change_scene_to_file("res://src/ui/menus/main_menu.tscn")
 
 
 func _on_exit_pressed() -> void:
-	pass # Replace with function body.
+	get_tree().quit()

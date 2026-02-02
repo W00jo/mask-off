@@ -73,7 +73,7 @@ size_flags_vertical = 3
 [node name="Music" type="HBoxContainer" parent="MarginContainer/VBoxContainer/OptionComponents" unique_id=1529962010]
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_constants/separation = 60
+theme_override_constants/separation = 120
 
 [node name="MusicLabel" type="Label" parent="MarginContainer/VBoxContainer/OptionComponents/Music" unique_id=1703178224]
 layout_mode = 2
@@ -96,7 +96,7 @@ ticks_position = 3
 [node name="SFX" type="HBoxContainer" parent="MarginContainer/VBoxContainer/OptionComponents" unique_id=1704688958]
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_constants/separation = 60
+theme_override_constants/separation = 35
 
 [node name="SFXLabel" type="Label" parent="MarginContainer/VBoxContainer/OptionComponents/SFX" unique_id=498556522]
 layout_mode = 2

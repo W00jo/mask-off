@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://dpn8bx34sdq87"]
+
+[ext_resource type="Material" uid="uid://cf5mvpkmoli0k" path="res://assets/shaders/rays.tres" id="1_8uh7m"]
+[ext_resource type="Texture2D" uid="uid://cua4qrw158iii" path="res://assets/splash_art.png" id="2_6uqi0"]
+
+[node name="Control" type="Control" unique_id=1172108132]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BackgroundColor" type="ColorRect" parent="." unique_id=1239987892]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -176.0
+offset_top = -96.0
+offset_right = 160.0
+offset_bottom = 93.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.95686275, 0.8901961, 0.8235294, 1)
+
+[node name="ColorBackground" type="ColorRect" parent="." unique_id=526998543]
+material = ExtResource("1_8uh7m")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.95686275, 0.8901961, 0.8235294, 1)
+
+[node name="SplashArt" type="TextureRect" parent="." unique_id=109381753]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("2_6uqi0")
+expand_mode = 1

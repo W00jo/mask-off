@@ -1,0 +1,18 @@
+[gd_resource type="Theme" format=3 uid="uid://bpebolcfow1y6"]
+
+[ext_resource type="FontFile" uid="uid://dg4utm6nyqq2b" path="res://assets/fonts/headers_font.ttf" id="1_uad3y"]
+[ext_resource type="Texture2D" uid="uid://82c8ffht4sah" path="res://src/ui/menus/borders/key_input_border_01.png" id="2_nedvw"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sdqy2"]
+texture = ExtResource("2_nedvw")
+expand_margin_left = 10.0
+expand_margin_top = 5.0
+expand_margin_right = 10.0
+expand_margin_bottom = 5.0
+
+[resource]
+default_font = ExtResource("1_uad3y")
+Label/colors/font_color = Color(0.27450982, 0.50980395, 0.7058824, 1)
+Label/font_sizes/font_size = 32
+Label/fonts/font = ExtResource("1_uad3y")
+Label/styles/normal = SubResource("StyleBoxTexture_sdqy2")

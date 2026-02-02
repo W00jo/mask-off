@@ -2,14 +2,12 @@
 
 [ext_resource type="Script" uid="uid://mnykhaxqggbi" path="res://src/ui/menus/how_to_play.gd" id="1_e1emm"]
 [ext_resource type="Texture2D" uid="uid://bbi0ym12jj8ok" path="res://src/ui/menus/prettiers/grid.png" id="2_xq3li"]
+[ext_resource type="Texture2D" uid="uid://ch8bay61phjld" path="res://src/ui/menus/prettiers/torn_lined_paper.png" id="3_f8gdc"]
 [ext_resource type="FontFile" uid="uid://dg4utm6nyqq2b" path="res://assets/fonts/headers_font.ttf" id="3_xq3li"]
 [ext_resource type="FontFile" uid="uid://cdv28u2sltsxo" path="res://assets/fonts/text_font.ttf" id="4_fyenn"]
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_xq3li"]
-load_path = "res://.godot/imported/key_input_border_01.png-fb702c8f946148526bcd3b8950d5b476.ctex"
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fyenn"]
-texture = SubResource("CompressedTexture2D_xq3li")
+[ext_resource type="Texture2D" uid="uid://d2jdav251akc1" path="res://src/ui/menus/prettiers/tape.png" id="4_k6iji"]
+[ext_resource type="Theme" uid="uid://bpebolcfow1y6" path="res://src/ui/themes/key_input_01.tres" id="5_fyenn"]
+[ext_resource type="Theme" uid="uid://5ecqj3r5lm78" path="res://src/ui/themes/key_input_02.tres" id="5_tmjqu"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xq3li"]
 
@@ -43,6 +41,35 @@ offset_bottom = 1069.2743
 scale = Vector2(0.60601854, 0.6060185)
 texture = ExtResource("2_xq3li")
 
+[node name="BackgroundActions" type="TextureRect" parent="." unique_id=167286590]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 152.0
+offset_right = 344.0
+offset_bottom = 559.81177
+texture = ExtResource("3_f8gdc")
+expand_mode = 1
+
+[node name="Tape1" type="TextureRect" parent="." unique_id=1170178685]
+layout_mode = 0
+offset_left = 7.999996
+offset_top = 495.99997
+offset_right = 104.0
+offset_bottom = 592.0
+rotation = -0.08405095
+texture = ExtResource("4_k6iji")
+expand_mode = 1
+
+[node name="Tape2" type="TextureRect" parent="." unique_id=1699058689]
+layout_mode = 0
+offset_left = 104.0
+offset_top = 143.99998
+offset_right = 200.0
+offset_bottom = 239.99998
+rotation = -0.45861834
+texture = ExtResource("4_k6iji")
+expand_mode = 1
+
 [node name="HowToPlayLabel" type="Label" parent="." unique_id=212005606]
 layout_mode = 1
 anchors_preset = 5
@@ -74,6 +101,70 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 30
 
+[node name="Actions" type="VBoxContainer" parent="PlayersControlsContainer" unique_id=587007730]
+layout_mode = 2
+
+[node name="ActionLabel" type="Label" parent="PlayersControlsContainer/Actions" unique_id=767477078]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_xq3li")
+theme_override_font_sizes/font_size = 32
+text = "ACTION"
+horizontal_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="PlayersControlsContainer/Actions" unique_id=251328388]
+layout_mode = 2
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_bottom = 10
+
+[node name="Actions" type="VBoxContainer" parent="PlayersControlsContainer/Actions/MarginContainer" unique_id=128506105]
+layout_mode = 2
+theme_override_constants/separation = 25
+alignment = 1
+
+[node name="Jump" type="Label" parent="PlayersControlsContainer/Actions/MarginContainer/Actions" unique_id=1674349716]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_fyenn")
+theme_override_font_sizes/font_size = 24
+text = "JUMP"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Left" type="Label" parent="PlayersControlsContainer/Actions/MarginContainer/Actions" unique_id=708419923]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_fyenn")
+theme_override_font_sizes/font_size = 24
+text = "LEFT"
+horizontal_alignment = 2
+
+[node name="Right" type="Label" parent="PlayersControlsContainer/Actions/MarginContainer/Actions" unique_id=276023983]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_fyenn")
+theme_override_font_sizes/font_size = 24
+text = "RIGHT"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Attack" type="Label" parent="PlayersControlsContainer/Actions/MarginContainer/Actions" unique_id=209862220]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_fyenn")
+theme_override_font_sizes/font_size = 24
+text = "ATTACK"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="VSeparator" type="VSeparator" parent="PlayersControlsContainer" unique_id=217257437]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+
 [node name="Player1" type="VBoxContainer" parent="PlayersControlsContainer" unique_id=1207324329]
 layout_mode = 2
 size_flags_horizontal = 3
@@ -87,110 +178,42 @@ theme_override_font_sizes/font_size = 32
 text = "PLAYER_1"
 horizontal_alignment = 1
 
-[node name="Controls" type="VBoxContainer" parent="PlayersControlsContainer/Player1" unique_id=407418141]
+[node name="MarginContainer" type="MarginContainer" parent="PlayersControlsContainer/Player1" unique_id=1737301145]
 layout_mode = 2
-theme_override_constants/separation = 8
+theme_override_constants/margin_left = 75
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 75
+theme_override_constants/margin_bottom = 10
 
-[node name="Jump" type="HBoxContainer" parent="PlayersControlsContainer/Player1/Controls" unique_id=1170135575]
+[node name="Controls" type="VBoxContainer" parent="PlayersControlsContainer/Player1/MarginContainer" unique_id=1323905069]
 layout_mode = 2
-theme_override_constants/separation = 10
+theme_override_constants/separation = 20
+alignment = 1
 
-[node name="Label" type="Label" parent="PlayersControlsContainer/Player1/Controls/Jump" unique_id=1615427072]
-custom_minimum_size = Vector2(80, 0)
+[node name="Jump" type="Label" parent="PlayersControlsContainer/Player1/MarginContainer/Controls" unique_id=682369110]
 layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("4_fyenn")
-theme_override_font_sizes/font_size = 24
-text = "JUMP"
-
-[node name="KeyPanel" type="PanelContainer" parent="PlayersControlsContainer/Player1/Controls/Jump" unique_id=272838047]
-custom_minimum_size = Vector2(50, 50)
-layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_fyenn")
-
-[node name="Key" type="Label" parent="PlayersControlsContainer/Player1/Controls/Jump/KeyPanel" unique_id=1526715060]
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_xq3li")
-theme_override_font_sizes/font_size = 32
+theme = ExtResource("5_fyenn")
 text = "W"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Left" type="HBoxContainer" parent="PlayersControlsContainer/Player1/Controls" unique_id=1983646494]
+[node name="Left" type="Label" parent="PlayersControlsContainer/Player1/MarginContainer/Controls" unique_id=656336171]
 layout_mode = 2
-theme_override_constants/separation = 10
-
-[node name="Label" type="Label" parent="PlayersControlsContainer/Player1/Controls/Left" unique_id=247064412]
-custom_minimum_size = Vector2(80, 0)
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("4_fyenn")
-theme_override_font_sizes/font_size = 24
-text = "LEFT"
-
-[node name="KeyPanel" type="PanelContainer" parent="PlayersControlsContainer/Player1/Controls/Left" unique_id=836942779]
-custom_minimum_size = Vector2(50, 50)
-layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_fyenn")
-
-[node name="Key" type="Label" parent="PlayersControlsContainer/Player1/Controls/Left/KeyPanel" unique_id=643342088]
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_xq3li")
-theme_override_font_sizes/font_size = 32
+theme = ExtResource("5_tmjqu")
 text = "A"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Right" type="HBoxContainer" parent="PlayersControlsContainer/Player1/Controls" unique_id=2129368167]
+[node name="Right" type="Label" parent="PlayersControlsContainer/Player1/MarginContainer/Controls" unique_id=684853238]
 layout_mode = 2
-theme_override_constants/separation = 10
-
-[node name="Label" type="Label" parent="PlayersControlsContainer/Player1/Controls/Right" unique_id=1578059467]
-custom_minimum_size = Vector2(80, 0)
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("4_fyenn")
-theme_override_font_sizes/font_size = 24
-text = "RIGHT"
-
-[node name="KeyPanel" type="PanelContainer" parent="PlayersControlsContainer/Player1/Controls/Right" unique_id=303433375]
-custom_minimum_size = Vector2(50, 50)
-layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_fyenn")
-
-[node name="Key" type="Label" parent="PlayersControlsContainer/Player1/Controls/Right/KeyPanel" unique_id=1085667142]
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_xq3li")
-theme_override_font_sizes/font_size = 32
+theme = ExtResource("5_fyenn")
 text = "D"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Attack" type="HBoxContainer" parent="PlayersControlsContainer/Player1/Controls" unique_id=701914764]
+[node name="Attack" type="Label" parent="PlayersControlsContainer/Player1/MarginContainer/Controls" unique_id=1494657223]
 layout_mode = 2
-theme_override_constants/separation = 10
-
-[node name="Label" type="Label" parent="PlayersControlsContainer/Player1/Controls/Attack" unique_id=1358884608]
-custom_minimum_size = Vector2(80, 0)
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("4_fyenn")
-theme_override_font_sizes/font_size = 24
-text = "ATTACK"
-
-[node name="KeyPanel" type="PanelContainer" parent="PlayersControlsContainer/Player1/Controls/Attack" unique_id=1673512226]
-custom_minimum_size = Vector2(50, 50)
-layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_fyenn")
-
-[node name="Key" type="Label" parent="PlayersControlsContainer/Player1/Controls/Attack/KeyPanel" unique_id=141016156]
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_xq3li")
-theme_override_font_sizes/font_size = 32
+theme = ExtResource("5_tmjqu")
 text = "S"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -208,110 +231,42 @@ theme_override_font_sizes/font_size = 32
 text = "PLAYER_2"
 horizontal_alignment = 1
 
-[node name="Controls" type="VBoxContainer" parent="PlayersControlsContainer/Player2" unique_id=1492486971]
+[node name="MarginContainer" type="MarginContainer" parent="PlayersControlsContainer/Player2" unique_id=1925549410]
 layout_mode = 2
-theme_override_constants/separation = 8
+theme_override_constants/margin_left = 75
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 75
+theme_override_constants/margin_bottom = 10
 
-[node name="Jump" type="HBoxContainer" parent="PlayersControlsContainer/Player2/Controls" unique_id=1184840181]
+[node name="Controls" type="VBoxContainer" parent="PlayersControlsContainer/Player2/MarginContainer" unique_id=217925700]
 layout_mode = 2
-theme_override_constants/separation = 10
+theme_override_constants/separation = 20
+alignment = 1
 
-[node name="Label" type="Label" parent="PlayersControlsContainer/Player2/Controls/Jump" unique_id=759421962]
-custom_minimum_size = Vector2(80, 0)
+[node name="Jump" type="Label" parent="PlayersControlsContainer/Player2/MarginContainer/Controls" unique_id=186561504]
 layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("4_fyenn")
-theme_override_font_sizes/font_size = 24
-text = "JUMP"
-
-[node name="KeyPanel" type="PanelContainer" parent="PlayersControlsContainer/Player2/Controls/Jump" unique_id=576071978]
-custom_minimum_size = Vector2(50, 50)
-layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_fyenn")
-
-[node name="Key" type="Label" parent="PlayersControlsContainer/Player2/Controls/Jump/KeyPanel" unique_id=1804153307]
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_xq3li")
-theme_override_font_sizes/font_size = 32
+theme = ExtResource("5_fyenn")
 text = "↑"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Left" type="HBoxContainer" parent="PlayersControlsContainer/Player2/Controls" unique_id=1401957737]
+[node name="Left" type="Label" parent="PlayersControlsContainer/Player2/MarginContainer/Controls" unique_id=1020933030]
 layout_mode = 2
-theme_override_constants/separation = 10
-
-[node name="Label" type="Label" parent="PlayersControlsContainer/Player2/Controls/Left" unique_id=458481626]
-custom_minimum_size = Vector2(80, 0)
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("4_fyenn")
-theme_override_font_sizes/font_size = 24
-text = "LEFT"
-
-[node name="KeyPanel" type="PanelContainer" parent="PlayersControlsContainer/Player2/Controls/Left" unique_id=193322135]
-custom_minimum_size = Vector2(50, 50)
-layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_fyenn")
-
-[node name="Key" type="Label" parent="PlayersControlsContainer/Player2/Controls/Left/KeyPanel" unique_id=614477598]
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_xq3li")
-theme_override_font_sizes/font_size = 32
+theme = ExtResource("5_tmjqu")
 text = "←"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Right" type="HBoxContainer" parent="PlayersControlsContainer/Player2/Controls" unique_id=2141633927]
+[node name="Right" type="Label" parent="PlayersControlsContainer/Player2/MarginContainer/Controls" unique_id=65822775]
 layout_mode = 2
-theme_override_constants/separation = 10
-
-[node name="Label" type="Label" parent="PlayersControlsContainer/Player2/Controls/Right" unique_id=1247791068]
-custom_minimum_size = Vector2(80, 0)
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("4_fyenn")
-theme_override_font_sizes/font_size = 24
-text = "RIGHT"
-
-[node name="KeyPanel" type="PanelContainer" parent="PlayersControlsContainer/Player2/Controls/Right" unique_id=10092826]
-custom_minimum_size = Vector2(50, 50)
-layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_fyenn")
-
-[node name="Key" type="Label" parent="PlayersControlsContainer/Player2/Controls/Right/KeyPanel" unique_id=479370704]
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_xq3li")
-theme_override_font_sizes/font_size = 32
+theme = ExtResource("5_fyenn")
 text = "→"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Attack" type="HBoxContainer" parent="PlayersControlsContainer/Player2/Controls" unique_id=847579788]
+[node name="Attack" type="Label" parent="PlayersControlsContainer/Player2/MarginContainer/Controls" unique_id=680163701]
 layout_mode = 2
-theme_override_constants/separation = 10
-
-[node name="Label" type="Label" parent="PlayersControlsContainer/Player2/Controls/Attack" unique_id=1634827933]
-custom_minimum_size = Vector2(80, 0)
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("4_fyenn")
-theme_override_font_sizes/font_size = 24
-text = "ATTACK"
-
-[node name="KeyPanel" type="PanelContainer" parent="PlayersControlsContainer/Player2/Controls/Attack" unique_id=2036515010]
-custom_minimum_size = Vector2(50, 50)
-layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_fyenn")
-
-[node name="Key" type="Label" parent="PlayersControlsContainer/Player2/Controls/Attack/KeyPanel" unique_id=857327336]
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_xq3li")
-theme_override_font_sizes/font_size = 32
+theme = ExtResource("5_tmjqu")
 text = "↓"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -329,111 +284,43 @@ theme_override_font_sizes/font_size = 32
 text = "PLAYER_3"
 horizontal_alignment = 1
 
-[node name="Controls" type="VBoxContainer" parent="PlayersControlsContainer/Player3" unique_id=784777512]
+[node name="MarginContainer" type="MarginContainer" parent="PlayersControlsContainer/Player3" unique_id=1528936537]
 layout_mode = 2
-theme_override_constants/separation = 8
+theme_override_constants/margin_left = 75
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 75
+theme_override_constants/margin_bottom = 10
 
-[node name="Jump" type="HBoxContainer" parent="PlayersControlsContainer/Player3/Controls" unique_id=1421369657]
+[node name="Controls" type="VBoxContainer" parent="PlayersControlsContainer/Player3/MarginContainer" unique_id=497068414]
 layout_mode = 2
-theme_override_constants/separation = 10
+theme_override_constants/separation = 20
+alignment = 1
 
-[node name="Label" type="Label" parent="PlayersControlsContainer/Player3/Controls/Jump" unique_id=354400362]
-custom_minimum_size = Vector2(80, 0)
+[node name="Jump" type="Label" parent="PlayersControlsContainer/Player3/MarginContainer/Controls" unique_id=1985625134]
 layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("4_fyenn")
-theme_override_font_sizes/font_size = 24
-text = "JUMP"
-
-[node name="KeyPanel" type="PanelContainer" parent="PlayersControlsContainer/Player3/Controls/Jump" unique_id=622755330]
-custom_minimum_size = Vector2(50, 50)
-layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_fyenn")
-
-[node name="Key" type="Label" parent="PlayersControlsContainer/Player3/Controls/Jump/KeyPanel" unique_id=1792579452]
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_xq3li")
-theme_override_font_sizes/font_size = 32
-text = "4"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Left" type="HBoxContainer" parent="PlayersControlsContainer/Player3/Controls" unique_id=1840395642]
-layout_mode = 2
-theme_override_constants/separation = 10
-
-[node name="Label" type="Label" parent="PlayersControlsContainer/Player3/Controls/Left" unique_id=1822784642]
-custom_minimum_size = Vector2(80, 0)
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("4_fyenn")
-theme_override_font_sizes/font_size = 24
-text = "LEFT"
-
-[node name="KeyPanel" type="PanelContainer" parent="PlayersControlsContainer/Player3/Controls/Left" unique_id=444196286]
-custom_minimum_size = Vector2(50, 50)
-layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_fyenn")
-
-[node name="Key" type="Label" parent="PlayersControlsContainer/Player3/Controls/Left/KeyPanel" unique_id=1592271004]
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_xq3li")
-theme_override_font_sizes/font_size = 32
+theme = ExtResource("5_fyenn")
 text = "8"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Right" type="HBoxContainer" parent="PlayersControlsContainer/Player3/Controls" unique_id=1452152855]
+[node name="Left" type="Label" parent="PlayersControlsContainer/Player3/MarginContainer/Controls" unique_id=1507540816]
 layout_mode = 2
-theme_override_constants/separation = 10
-
-[node name="Label" type="Label" parent="PlayersControlsContainer/Player3/Controls/Right" unique_id=2001622469]
-custom_minimum_size = Vector2(80, 0)
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("4_fyenn")
-theme_override_font_sizes/font_size = 24
-text = "RIGHT"
-
-[node name="KeyPanel" type="PanelContainer" parent="PlayersControlsContainer/Player3/Controls/Right" unique_id=971890992]
-custom_minimum_size = Vector2(50, 50)
-layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_fyenn")
-
-[node name="Key" type="Label" parent="PlayersControlsContainer/Player3/Controls/Right/KeyPanel" unique_id=305866792]
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_xq3li")
-theme_override_font_sizes/font_size = 32
-text = "5"
+theme = ExtResource("5_tmjqu")
+text = "4"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Attack" type="HBoxContainer" parent="PlayersControlsContainer/Player3/Controls" unique_id=1368725172]
+[node name="Right" type="Label" parent="PlayersControlsContainer/Player3/MarginContainer/Controls" unique_id=1005477717]
 layout_mode = 2
-theme_override_constants/separation = 10
-
-[node name="Label" type="Label" parent="PlayersControlsContainer/Player3/Controls/Attack" unique_id=847410216]
-custom_minimum_size = Vector2(80, 0)
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("4_fyenn")
-theme_override_font_sizes/font_size = 24
-text = "ATTACK"
-
-[node name="KeyPanel" type="PanelContainer" parent="PlayersControlsContainer/Player3/Controls/Attack" unique_id=319590295]
-custom_minimum_size = Vector2(50, 50)
-layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_fyenn")
-
-[node name="Key" type="Label" parent="PlayersControlsContainer/Player3/Controls/Attack/KeyPanel" unique_id=293980761]
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_xq3li")
-theme_override_font_sizes/font_size = 32
+theme = ExtResource("5_fyenn")
 text = "6"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Attack" type="Label" parent="PlayersControlsContainer/Player3/MarginContainer/Controls" unique_id=1915630686]
+layout_mode = 2
+theme = ExtResource("5_tmjqu")
+text = "5"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -450,111 +337,43 @@ theme_override_font_sizes/font_size = 32
 text = "PLAYER_4"
 horizontal_alignment = 1
 
-[node name="Controls" type="VBoxContainer" parent="PlayersControlsContainer/Player4" unique_id=528928320]
+[node name="MarginContainer" type="MarginContainer" parent="PlayersControlsContainer/Player4" unique_id=510031853]
 layout_mode = 2
-theme_override_constants/separation = 8
+theme_override_constants/margin_left = 75
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 75
+theme_override_constants/margin_bottom = 10
 
-[node name="Jump" type="HBoxContainer" parent="PlayersControlsContainer/Player4/Controls" unique_id=1678468576]
+[node name="Controls" type="VBoxContainer" parent="PlayersControlsContainer/Player4/MarginContainer" unique_id=528928320]
 layout_mode = 2
-theme_override_constants/separation = 10
+theme_override_constants/separation = 20
+alignment = 1
 
-[node name="Label" type="Label" parent="PlayersControlsContainer/Player4/Controls/Jump" unique_id=107719438]
-custom_minimum_size = Vector2(80, 0)
+[node name="Jump" type="Label" parent="PlayersControlsContainer/Player4/MarginContainer/Controls" unique_id=816685711]
 layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("4_fyenn")
-theme_override_font_sizes/font_size = 24
-text = "JUMP"
-
-[node name="KeyPanel" type="PanelContainer" parent="PlayersControlsContainer/Player4/Controls/Jump" unique_id=531335780]
-custom_minimum_size = Vector2(50, 50)
-layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_fyenn")
-
-[node name="Key" type="Label" parent="PlayersControlsContainer/Player4/Controls/Jump/KeyPanel" unique_id=816685711]
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_xq3li")
-theme_override_font_sizes/font_size = 32
-text = "J"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Left" type="HBoxContainer" parent="PlayersControlsContainer/Player4/Controls" unique_id=981649192]
-layout_mode = 2
-theme_override_constants/separation = 10
-
-[node name="Label" type="Label" parent="PlayersControlsContainer/Player4/Controls/Left" unique_id=1616219202]
-custom_minimum_size = Vector2(80, 0)
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("4_fyenn")
-theme_override_font_sizes/font_size = 24
-text = "LEFT"
-
-[node name="KeyPanel" type="PanelContainer" parent="PlayersControlsContainer/Player4/Controls/Left" unique_id=674066324]
-custom_minimum_size = Vector2(50, 50)
-layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_fyenn")
-
-[node name="Key" type="Label" parent="PlayersControlsContainer/Player4/Controls/Left/KeyPanel" unique_id=628603872]
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_xq3li")
-theme_override_font_sizes/font_size = 32
+theme = ExtResource("5_fyenn")
 text = "I"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Right" type="HBoxContainer" parent="PlayersControlsContainer/Player4/Controls" unique_id=1852858190]
+[node name="Left" type="Label" parent="PlayersControlsContainer/Player4/MarginContainer/Controls" unique_id=1680322876]
 layout_mode = 2
-theme_override_constants/separation = 10
-
-[node name="Label" type="Label" parent="PlayersControlsContainer/Player4/Controls/Right" unique_id=1991294918]
-custom_minimum_size = Vector2(80, 0)
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("4_fyenn")
-theme_override_font_sizes/font_size = 24
-text = "RIGHT"
-
-[node name="KeyPanel" type="PanelContainer" parent="PlayersControlsContainer/Player4/Controls/Right" unique_id=583621633]
-custom_minimum_size = Vector2(50, 50)
-layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_fyenn")
-
-[node name="Key" type="Label" parent="PlayersControlsContainer/Player4/Controls/Right/KeyPanel" unique_id=949090799]
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_xq3li")
-theme_override_font_sizes/font_size = 32
-text = "K"
+theme = ExtResource("5_tmjqu")
+text = "J"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Attack" type="HBoxContainer" parent="PlayersControlsContainer/Player4/Controls" unique_id=1056889594]
+[node name="Right" type="Label" parent="PlayersControlsContainer/Player4/MarginContainer/Controls" unique_id=390239779]
 layout_mode = 2
-theme_override_constants/separation = 10
-
-[node name="Label" type="Label" parent="PlayersControlsContainer/Player4/Controls/Attack" unique_id=2109337758]
-custom_minimum_size = Vector2(80, 0)
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("4_fyenn")
-theme_override_font_sizes/font_size = 24
-text = "ATTACK"
-
-[node name="KeyPanel" type="PanelContainer" parent="PlayersControlsContainer/Player4/Controls/Attack" unique_id=351509499]
-custom_minimum_size = Vector2(50, 50)
-layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_fyenn")
-
-[node name="Key" type="Label" parent="PlayersControlsContainer/Player4/Controls/Attack/KeyPanel" unique_id=510606592]
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_xq3li")
-theme_override_font_sizes/font_size = 32
+theme = ExtResource("5_fyenn")
 text = "L"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Attack" type="Label" parent="PlayersControlsContainer/Player4/MarginContainer/Controls" unique_id=1380252494]
+layout_mode = 2
+theme = ExtResource("5_tmjqu")
+text = "K"
 horizontal_alignment = 1
 vertical_alignment = 1
 
