@@ -91,7 +91,7 @@ offset_bottom = 664.0
 texture = ExtResource("2_mvcab")
 expand_mode = 1
 
-[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1234567890]
+[node name="TeamContainer" type="VBoxContainer" parent="." unique_id=1234567890]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -104,7 +104,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 8
 
-[node name="CreditsLabel" type="Label" parent="VBoxContainer" unique_id=847663559]
+[node name="CreditsLabel" type="Label" parent="TeamContainer" unique_id=847663559]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("8_yhbge")
@@ -112,11 +112,11 @@ theme_override_font_sizes/font_size = 36
 text = "CREDITS"
 horizontal_alignment = 1
 
-[node name="Credit1" type="HBoxContainer" parent="VBoxContainer" unique_id=1234567910]
+[node name="Credit1" type="HBoxContainer" parent="TeamContainer" unique_id=1234567910]
 layout_mode = 2
 theme_override_constants/separation = 10
 
-[node name="Name" type="Label" parent="VBoxContainer/Credit1" unique_id=1234567911]
+[node name="Name" type="Label" parent="TeamContainer/Credit1" unique_id=1234567911]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.27, 0.51, 0.71, 1)
 theme_override_fonts/font = ExtResource("8_yhbge")
@@ -124,7 +124,7 @@ theme_override_font_sizes/font_size = 14
 text = "Gabriela"
 horizontal_alignment = 2
 
-[node name="Role" type="Label" parent="VBoxContainer/Credit1" unique_id=1234567913]
+[node name="Role" type="Label" parent="TeamContainer/Credit1" unique_id=1234567913]
 custom_minimum_size = Vector2(0.01, 0.01)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -134,11 +134,11 @@ theme_override_font_sizes/font_size = 14
 text = "Level Design, 2D Artist"
 autowrap_mode = 3
 
-[node name="Credit2" type="HBoxContainer" parent="VBoxContainer" unique_id=1234567920]
+[node name="Credit2" type="HBoxContainer" parent="TeamContainer" unique_id=1234567920]
 layout_mode = 2
 theme_override_constants/separation = 10
 
-[node name="Name" type="Label" parent="VBoxContainer/Credit2" unique_id=1234567921]
+[node name="Name" type="Label" parent="TeamContainer/Credit2" unique_id=1234567921]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.27, 0.51, 0.71, 1)
 theme_override_fonts/font = ExtResource("8_yhbge")
@@ -146,7 +146,7 @@ theme_override_font_sizes/font_size = 14
 text = "Janek"
 horizontal_alignment = 2
 
-[node name="Role" type="Label" parent="VBoxContainer/Credit2" unique_id=1234567923]
+[node name="Role" type="Label" parent="TeamContainer/Credit2" unique_id=1234567923]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -155,11 +155,11 @@ theme_override_font_sizes/font_size = 14
 text = "Programmer, QA Tester"
 autowrap_mode = 3
 
-[node name="Credit3" type="HBoxContainer" parent="VBoxContainer" unique_id=1234567930]
+[node name="Credit3" type="HBoxContainer" parent="TeamContainer" unique_id=1234567930]
 layout_mode = 2
 theme_override_constants/separation = 10
 
-[node name="Name" type="Label" parent="VBoxContainer/Credit3" unique_id=1234567931]
+[node name="Name" type="Label" parent="TeamContainer/Credit3" unique_id=1234567931]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.27, 0.51, 0.71, 1)
 theme_override_fonts/font = ExtResource("8_yhbge")
@@ -167,7 +167,7 @@ theme_override_font_sizes/font_size = 14
 text = "Zuza"
 horizontal_alignment = 2
 
-[node name="Role" type="Label" parent="VBoxContainer/Credit3" unique_id=1234567933]
+[node name="Role" type="Label" parent="TeamContainer/Credit3" unique_id=1234567933]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -176,11 +176,11 @@ theme_override_font_sizes/font_size = 14
 text = "Audio, Sound Designer"
 autowrap_mode = 3
 
-[node name="Credit4" type="HBoxContainer" parent="VBoxContainer" unique_id=1234567940]
+[node name="Credit4" type="HBoxContainer" parent="TeamContainer" unique_id=1234567940]
 layout_mode = 2
 theme_override_constants/separation = 10
 
-[node name="Name" type="Label" parent="VBoxContainer/Credit4" unique_id=1234567941]
+[node name="Name" type="Label" parent="TeamContainer/Credit4" unique_id=1234567941]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.27, 0.51, 0.71, 1)
 theme_override_fonts/font = ExtResource("8_yhbge")
@@ -188,7 +188,7 @@ theme_override_font_sizes/font_size = 14
 text = "Julia"
 horizontal_alignment = 2
 
-[node name="Role" type="Label" parent="VBoxContainer/Credit4" unique_id=1234567943]
+[node name="Role" type="Label" parent="TeamContainer/Credit4" unique_id=1234567943]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -197,11 +197,11 @@ theme_override_font_sizes/font_size = 14
 text = "Character Artist, Animator"
 autowrap_mode = 3
 
-[node name="Credit5" type="HBoxContainer" parent="VBoxContainer" unique_id=1234567950]
+[node name="Credit5" type="HBoxContainer" parent="TeamContainer" unique_id=1234567950]
 layout_mode = 2
 theme_override_constants/separation = 10
 
-[node name="Name" type="Label" parent="VBoxContainer/Credit5" unique_id=1234567951]
+[node name="Name" type="Label" parent="TeamContainer/Credit5" unique_id=1234567951]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.27, 0.51, 0.71, 1)
 theme_override_fonts/font = ExtResource("8_yhbge")
@@ -209,7 +209,7 @@ theme_override_font_sizes/font_size = 14
 text = "Wujo"
 horizontal_alignment = 2
 
-[node name="Role" type="Label" parent="VBoxContainer/Credit5" unique_id=1234567953]
+[node name="Role" type="Label" parent="TeamContainer/Credit5" unique_id=1234567953]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -218,11 +218,11 @@ theme_override_font_sizes/font_size = 14
 text = "Game Designer, UI Designer, Producer"
 autowrap_mode = 3
 
-[node name="Credit6" type="HBoxContainer" parent="VBoxContainer" unique_id=1234567960]
+[node name="Credit6" type="HBoxContainer" parent="TeamContainer" unique_id=1234567960]
 layout_mode = 2
 theme_override_constants/separation = 10
 
-[node name="Name" type="Label" parent="VBoxContainer/Credit6" unique_id=1234567961]
+[node name="Name" type="Label" parent="TeamContainer/Credit6" unique_id=1234567961]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.27, 0.51, 0.71, 1)
 theme_override_fonts/font = ExtResource("8_yhbge")
@@ -230,7 +230,7 @@ theme_override_font_sizes/font_size = 14
 text = "Filip"
 horizontal_alignment = 2
 
-[node name="Role" type="Label" parent="VBoxContainer/Credit6" unique_id=1234567963]
+[node name="Role" type="Label" parent="TeamContainer/Credit6" unique_id=1234567963]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -239,11 +239,11 @@ theme_override_font_sizes/font_size = 14
 text = "Level Designer"
 autowrap_mode = 3
 
-[node name="Credit7" type="HBoxContainer" parent="VBoxContainer" unique_id=1904744721]
+[node name="Credit7" type="HBoxContainer" parent="TeamContainer" unique_id=1904744721]
 layout_mode = 2
 theme_override_constants/separation = 10
 
-[node name="Name" type="Label" parent="VBoxContainer/Credit7" unique_id=143753807]
+[node name="Name" type="Label" parent="TeamContainer/Credit7" unique_id=143753807]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.27, 0.51, 0.71, 1)
 theme_override_fonts/font = ExtResource("8_yhbge")
@@ -251,7 +251,7 @@ theme_override_font_sizes/font_size = 14
 text = "Roksana"
 horizontal_alignment = 2
 
-[node name="Role" type="Label" parent="VBoxContainer/Credit7" unique_id=1285802259]
+[node name="Role" type="Label" parent="TeamContainer/Credit7" unique_id=1285802259]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -260,11 +260,11 @@ theme_override_font_sizes/font_size = 14
 text = "Marketing, UI Designer"
 autowrap_mode = 3
 
-[node name="Credit8" type="HBoxContainer" parent="VBoxContainer" unique_id=957133587]
+[node name="Credit8" type="HBoxContainer" parent="TeamContainer" unique_id=957133587]
 layout_mode = 2
 theme_override_constants/separation = 10
 
-[node name="Name" type="Label" parent="VBoxContainer/Credit8" unique_id=1227393930]
+[node name="Name" type="Label" parent="TeamContainer/Credit8" unique_id=1227393930]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.27, 0.51, 0.71, 1)
 theme_override_fonts/font = ExtResource("8_yhbge")
@@ -272,7 +272,7 @@ theme_override_font_sizes/font_size = 14
 text = "Dominik"
 horizontal_alignment = 2
 
-[node name="Role" type="Label" parent="VBoxContainer/Credit8" unique_id=1611791936]
+[node name="Role" type="Label" parent="TeamContainer/Credit8" unique_id=1611791936]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -281,11 +281,11 @@ theme_override_font_sizes/font_size = 14
 text = "Programmer, QA Tester"
 autowrap_mode = 3
 
-[node name="Credit9" type="HBoxContainer" parent="VBoxContainer" unique_id=957133588]
+[node name="Credit9" type="HBoxContainer" parent="TeamContainer" unique_id=957133588]
 layout_mode = 2
 theme_override_constants/separation = 10
 
-[node name="Name" type="Label" parent="VBoxContainer/Credit9" unique_id=1227393931]
+[node name="Name" type="Label" parent="TeamContainer/Credit9" unique_id=1227393931]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.27, 0.51, 0.71, 1)
 theme_override_fonts/font = ExtResource("8_yhbge")
@@ -293,7 +293,7 @@ theme_override_font_sizes/font_size = 14
 text = "Julia (rzabka)"
 horizontal_alignment = 2
 
-[node name="Role" type="Label" parent="VBoxContainer/Credit9" unique_id=1611791937]
+[node name="Role" type="Label" parent="TeamContainer/Credit9" unique_id=1611791937]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -302,7 +302,7 @@ theme_override_font_sizes/font_size = 14
 text = "Programmer, QA Tester, 2D Artist"
 autowrap_mode = 3
 
-[node name="MadeWith" type="Label" parent="VBoxContainer" unique_id=1892146470]
+[node name="MadeWith" type="Label" parent="TeamContainer" unique_id=1892146470]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.27450982, 0.50980395, 0.7058824, 1)
 theme_override_fonts/font = ExtResource("10_textf")
@@ -607,7 +607,5 @@ offset_top = 32.0
 offset_right = 1044.0
 offset_bottom = 86.0
 texture = ExtResource("7_3kdyq")
-
-[connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
 
 [connection signal="pressed" from="Back" to="." method="_on_back_pressed"]

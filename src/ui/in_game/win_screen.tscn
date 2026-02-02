@@ -15,7 +15,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_65oyn")
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=77723479]
+[node name="StickyNote" type="TextureRect" parent="." unique_id=77723479]
 layout_mode = 0
 offset_left = 312.0
 offset_top = 56.0
@@ -25,10 +25,10 @@ texture = ExtResource("2_6by6w")
 
 [node name="WinMessageContainer" type="VBoxContainer" parent="." unique_id=1947695063]
 layout_mode = 0
-offset_left = 373.25
-offset_top = 89.64533
-offset_right = 825.80743
-offset_bottom = 528.6153
+offset_left = 369.6966
+offset_top = 116.90402
+offset_right = 822.254
+offset_bottom = 528.38464
 rotation = 0.12962784
 theme_override_constants/separation = 100
 
