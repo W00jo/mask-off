@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dcf82av43nh2b" path="res://src/levels/02_bubble_level/bomb.png" id="4_n7gt7"]
 [ext_resource type="PackedScene" uid="uid://crrflahojckb3" path="res://src/levels/modifiers/killzones/damage_place.tscn" id="5_iw40w"]
 [ext_resource type="Texture2D" uid="uid://c6yylbsw0j2wl" path="res://src/levels/02_bubble_level/platform.png" id="6_wlwq4"]
-[ext_resource type="AudioStream" path="res://assets/audio/soundtrack/SOUNDTRACK/bubble.wav" id="7_music"]
+[ext_resource type="AudioStream" uid="uid://bnqroqp15cg68" path="res://assets/audio/soundtrack/1_track/bubble.wav" id="7_music"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_2hrto"]
 

@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://das4a7mbnqn46" path="res://src/levels/03_platform_level/bot.png" id="5_pp341"]
 [ext_resource type="Texture2D" uid="uid://beox271w218l8" path="res://src/levels/03_platform_level/chair.png" id="6_uad0n"]
 [ext_resource type="Texture2D" uid="uid://ddgjlj5lpmdyq" path="res://src/levels/03_platform_level/lampa.png" id="7_m1eih"]
-[ext_resource type="AudioStream" path="res://assets/audio/soundtrack/SOUNDTRACK/3lvl.wav" id="8_music"]
+[ext_resource type="AudioStream" uid="uid://dpx1mycgu6d4d" path="res://assets/audio/soundtrack/1_track/platform.wav" id="8_music"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_2joc0"]
 distance = -200.0

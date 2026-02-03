@@ -4,7 +4,7 @@ signal on_game_start(players: Array[Player])
 
 const PACKED_PLAYER = preload("res://src/player/player.tscn")
 
-const DISCO_MUSIC = preload("res://assets/audio/soundtrack/SOUNDTRACK/Disco.wav")
+const DISCO_MUSIC = preload("res://assets/audio/soundtrack/1_track/disco.wav")
 var music_player: AudioStreamPlayer
 var _activated_players: Array[bool] = [false, false, false, false]
 var _players: Array[Player] = []

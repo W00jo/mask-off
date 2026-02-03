@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dcijx7etyjim5" path="res://src/levels/01_default_level/krzak.png" id="4_326ku"]
 [ext_resource type="Texture2D" uid="uid://bx8eaiqjxwufu" path="res://src/levels/01_default_level/UwagaSlisku.png" id="5_326ku"]
 [ext_resource type="Texture2D" uid="uid://c7cvcta6gh8br" path="res://src/levels/01_default_level/Dol.png" id="6_326ku"]
-[ext_resource type="AudioStream" path="res://assets/audio/soundtrack/SOUNDTRACK/Doodle.wav" id="7_music"]
+[ext_resource type="AudioStream" uid="uid://brc4ed02uadm8" path="res://assets/audio/soundtrack/1_track/doodle.wav" id="7_music"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ltctc"]
 size = Vector2(1010.9358, 104)
