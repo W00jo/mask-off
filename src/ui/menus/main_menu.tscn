@@ -124,9 +124,6 @@ text = "HOW_TO_PLAY"
 
 [node name="Options" type="Button" parent="MenuInterface/ButtonsContainer" unique_id=40699872]
 layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(0.27, 0.51, 0.71, 1)
-theme_override_colors/font_hover_color = Color(0.27, 0.51, 0.71, 1)
 text = "OPTIONS"
 
 [node name="Credits" type="Button" parent="MenuInterface/ButtonsContainer" unique_id=90327146]
