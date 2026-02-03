@@ -7,7 +7,6 @@ const SAVE_PATH = "user://settings.cfg"
 
 var mask_types = { "konduktor": "mask_konduktor" }
 
-
 func _ready() -> void:
 	_load_settings()
 

@@ -16,7 +16,7 @@ signal exit_pressed
 ]
 
 @onready var play_button = $MenuInterface/ButtonsContainer/Play
-@onready var howtoplay_button = $MenuInterface/ButtonsContainer/HowToPlay
+@onready var how_to_play_button = $MenuInterface/ButtonsContainer/HowToPlay
 @onready var options_button = $MenuInterface/ButtonsContainer/Options
 @onready var credits_button = $MenuInterface/ButtonsContainer/Credits
 @onready var exit_button = $MenuInterface/ButtonsContainer/Exit
@@ -66,7 +66,7 @@ func _update_translations() -> void:
 	play_button.text = tr("PLAY")
 	options_button.text = tr("OPTIONS")
 	credits_button.text = tr("CREDITS")
-	howtoplay_button.text = tr("HOW_TO_PLAY")
+	how_to_play_button.text = tr("HOW_TO_PLAY")
 	exit_button.text = tr("EXIT")
 
 func _on_language_changed(_locale: String) -> void:

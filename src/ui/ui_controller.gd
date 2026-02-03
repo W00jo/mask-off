@@ -32,10 +32,12 @@ func _ready() -> void:
 
 func connect_signals():
 	main_menu.connect("play_pressed", _on_menu_play_pressed)
+	main_menu.connect("howtoplay_pressed", _on_menu_how_to_play_pressed)
 	main_menu.connect("options_pressed", _on_menu_options_pressed)
 	main_menu.connect("credits_pressed", _on_menu_credits_pressed)
 	main_menu.connect("exit_pressed", _on_menu_exit_pressed)
 	
+	how_to_play.connect("back_pressed", _on_how_to_play_back_pressed)
 	options.connect("back_pressed", _on_options_back_pressed)
 	credits.connect("back_pressed", _on_credits_pressed)
 	
@@ -65,6 +67,14 @@ func _on_menu_play_pressed():
 	show_layer(hud)
 	level_manager.spawn_waiting_room()
 
+func _on_menu_how_to_play_pressed():
+	hide_layer(main_menu)
+	show_layer(how_to_play)
+
+func _on_how_to_play_back_pressed():
+	hide_layer(how_to_play)
+	show_layer(main_menu)
+
 func _on_menu_options_pressed():
 	hide_layer(main_menu)
 	show_layer(options)
@@ -72,9 +82,6 @@ func _on_menu_options_pressed():
 func _on_menu_credits_pressed():
 	hide_layer(main_menu)
 	show_layer(credits)
-
-func _on_menu_exit_pressed():
-	get_tree().quit()
 
 func _on_options_back_pressed():
 	hide_layer(options)
@@ -84,9 +91,8 @@ func _on_credits_pressed():
 	hide_layer(credits)
 	show_layer(main_menu)
 
-#func _on_howto_start_pressed():
-	#hide_layer(how_to_play)
-	## TODO: Start the game
+func _on_menu_exit_pressed():
+	get_tree().quit()
 
 func _on_paused():
 	# Checking if not in menu or sub-menus. Change later to check if game started.
