@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://c4s7ycx24ujb0" path="res://assets/concept_arts/concept_art_gabriela_01.png" id="2_ttxch"]
 [ext_resource type="Texture2D" uid="uid://c8g3t7pnv3c5d" path="res://assets/concept_arts/concept_art_gabriela_02.png" id="3_mvcab"]
 [ext_resource type="Texture2D" uid="uid://cbpu5hei326qf" path="res://assets/concept_arts/concept_art_julia_02.png" id="4_3kdyq"]
+[ext_resource type="Texture2D" uid="uid://di4pu2bwyu1d0" path="res://src/ui/menus/icons/godot_icon.png" id="5_6xbll"]
 [ext_resource type="Texture2D" uid="uid://cjx7bofmmjd7r" path="res://assets/concept_arts/concept_art_julia_03.png" id="5_s8f31"]
 [ext_resource type="Texture2D" uid="uid://eb1adwsgb20v" path="res://src/ui/menus/prettiers/pin.png" id="7_3kdyq"]
 [ext_resource type="FontFile" uid="uid://dg4utm6nyqq2b" path="res://assets/fonts/headers_font.ttf" id="8_yhbge"]
@@ -302,11 +303,20 @@ theme_override_font_sizes/font_size = 14
 text = "Programmer, QA Tester, 2D Artist"
 autowrap_mode = 3
 
-[node name="MadeWith" type="Label" parent="TeamContainer" unique_id=1892146470]
+[node name="GodotContainer" type="HBoxContainer" parent="TeamContainer" unique_id=1333121076]
+layout_mode = 2
+alignment = 1
+
+[node name="MadeWithLabel" type="Label" parent="TeamContainer/GodotContainer" unique_id=1892146470]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.27450982, 0.50980395, 0.7058824, 1)
 theme_override_fonts/font = ExtResource("10_textf")
-text = "MADE_WITH_GODOT"
+text = "MADE_WITH"
+
+[node name="GodotIcon" type="TextureRect" parent="TeamContainer/GodotContainer" unique_id=602435614]
+layout_mode = 2
+texture = ExtResource("5_6xbll")
+expand_mode = 3
 
 [node name="ConceptArt1" type="PanelContainer" parent="." unique_id=1499955022]
 custom_minimum_size = Vector2(220, 260)

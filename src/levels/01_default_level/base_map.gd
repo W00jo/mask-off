@@ -6,7 +6,7 @@ extends Node2D
 var _used_spawn_points := 0
 var music_player: AudioStreamPlayer
 @onready var mask_spawner: MaskSpawner = $MaskSpawner
-@onready var timer: Timer = $Timer
+@onready var timer: Timer = $Timer if has_node("Timer") else null
 const TRAIN = preload("res://src/levels/03_platform_level/train.tscn")
 
 

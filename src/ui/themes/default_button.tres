@@ -1,0 +1,31 @@
+[gd_resource type="Theme" format=3 uid="uid://dko37aln2d6li"]
+
+[ext_resource type="FontFile" uid="uid://cdv28u2sltsxo" path="res://assets/fonts/text_font.ttf" id="1_tokcd"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tokcd"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0j7gm"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_r1csp"]
+
+[resource]
+Button/colors/font_color = Color(0.13333334, 0.13333334, 0.13333334, 1)
+Button/colors/font_hover_color = Color(0.27450982, 0.50980395, 0.7058824, 1)
+Button/colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+Button/colors/font_outline_color = Color(0.13333334, 0.13333334, 0.13333334, 1)
+Button/colors/font_pressed_color = Color(1, 1, 1, 1)
+Button/colors/icon_disabled_color = Color(1, 1, 1, 0.4)
+Button/colors/icon_focus_color = Color(1, 1, 1, 1)
+Button/colors/icon_hover_color = Color(1, 1, 1, 1)
+Button/colors/icon_hover_pressed_color = Color(1, 1, 1, 1)
+Button/colors/icon_normal_color = Color(1, 1, 1, 1)
+Button/colors/icon_pressed_color = Color(1, 1, 1, 1)
+Button/constants/align_to_largest_stylebox = 0
+Button/constants/h_separation = 4
+Button/constants/icon_max_width = 0
+Button/constants/outline_size = 0
+Button/font_sizes/font_size = 40
+Button/fonts/font = ExtResource("1_tokcd")
+Button/styles/hover = SubResource("StyleBoxEmpty_tokcd")
+Button/styles/normal = SubResource("StyleBoxEmpty_0j7gm")
+Button/styles/pressed = SubResource("StyleBoxEmpty_r1csp")

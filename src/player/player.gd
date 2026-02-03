@@ -54,6 +54,7 @@ func reset():
 	set_attack(default_attack)
 	state_machine.change_state("fallstate")
 	$Sprite2D.frame = 25
+	$Sprite2D.visible = true
 
 func set_attack(_attack: PackedScene):
 	var _new_attack: BaseAttack = _attack.instantiate()

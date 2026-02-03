@@ -3,32 +3,7 @@
 [ext_resource type="Script" uid="uid://imddjfbm0vd4" path="res://src/ui/in_game/pause.gd" id="1_xamp5"]
 [ext_resource type="FontFile" uid="uid://dg4utm6nyqq2b" path="res://assets/fonts/headers_font.ttf" id="2_0vyq1"]
 [ext_resource type="Texture2D" uid="uid://d3arjtebur5c0" path="res://src/ui/menus/prettiers/sticky_note_pink.png" id="2_18uyt"]
-[ext_resource type="FontFile" uid="uid://cdv28u2sltsxo" path="res://assets/fonts/text_font.ttf" id="4_tc1mk"]
-[ext_resource type="Texture2D" uid="uid://d14tl15eh2vgs" path="res://src/ui/menus/borders/kenney.png" id="5_ld8mo"]
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4qa4w"]
-texture = ExtResource("5_ld8mo")
-texture_margin_left = 5.0
-texture_margin_top = 5.0
-texture_margin_right = 5.0
-texture_margin_bottom = 5.0
-expand_margin_left = 5.0
-expand_margin_top = 5.0
-expand_margin_right = 5.0
-expand_margin_bottom = 5.0
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_020jc"]
-content_margin_left = 2.0
-content_margin_top = 2.0
-texture = ExtResource("5_ld8mo")
-texture_margin_left = 5.0
-texture_margin_top = 5.0
-texture_margin_right = 5.0
-texture_margin_bottom = 5.0
-expand_margin_left = 5.0
-expand_margin_top = 5.0
-expand_margin_right = 5.0
-expand_margin_bottom = 5.0
+[ext_resource type="Theme" uid="uid://dko37aln2d6li" path="res://src/ui/themes/default_button.tres" id="3_di0ge"]
 
 [node name="Pause" type="Control" unique_id=1320695175]
 layout_mode = 3
@@ -41,6 +16,12 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_xamp5")
 
+[node name="BackgroundColor" type="ColorRect" parent="." unique_id=2129768085]
+layout_mode = 0
+offset_right = 1161.0
+offset_bottom = 648.0
+color = Color(0.13333334, 0.13333334, 0.13333334, 0.3529412)
+
 [node name="StickyNote" type="TextureRect" parent="." unique_id=1012938380]
 layout_mode = 0
 offset_left = 226.0
@@ -52,11 +33,12 @@ texture = ExtResource("2_18uyt")
 
 [node name="PauseTextContainer" type="VBoxContainer" parent="." unique_id=1829975390]
 layout_mode = 0
-offset_left = 287.25
-offset_top = 162.80003
-offset_right = 739.80743
-offset_bottom = 601.77
+offset_left = 305.83948
+offset_top = 161.06212
+offset_right = 739.7264
+offset_bottom = 580.2449
 rotation = -0.09321727
+theme = ExtResource("3_di0ge")
 theme_override_constants/separation = 25
 
 [node name="PauseLabel" type="Label" parent="PauseTextContainer" unique_id=442235050]
@@ -67,43 +49,23 @@ theme_override_font_sizes/font_size = 96
 text = "PAUSE"
 horizontal_alignment = 1
 
-[node name="Resume" type="Button" parent="PauseTextContainer" unique_id=33378885]
+[node name="ButtonsContainer" type="VBoxContainer" parent="PauseTextContainer" unique_id=1058160624]
 layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(0.27, 0.51, 0.71, 1)
-theme_override_colors/font_hover_color = Color(0.27, 0.51, 0.71, 1)
-theme_override_constants/h_separation = 34
-theme_override_fonts/font = ExtResource("4_tc1mk")
-theme_override_font_sizes/font_size = 32
-theme_override_styles/normal = SubResource("StyleBoxTexture_4qa4w")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_020jc")
-theme_override_styles/hover = SubResource("StyleBoxTexture_020jc")
+theme = ExtResource("3_di0ge")
+theme_override_constants/separation = 25
+
+[node name="Resume" type="Button" parent="PauseTextContainer/ButtonsContainer" unique_id=33378885]
+layout_mode = 2
 text = "Resume"
 
-[node name="Menu" type="Button" parent="PauseTextContainer" unique_id=1778702769]
+[node name="Menu" type="Button" parent="PauseTextContainer/ButtonsContainer" unique_id=1778702769]
 layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(0.27, 0.51, 0.71, 1)
-theme_override_colors/font_hover_color = Color(0.27, 0.51, 0.71, 1)
-theme_override_fonts/font = ExtResource("4_tc1mk")
-theme_override_font_sizes/font_size = 32
-theme_override_styles/normal = SubResource("StyleBoxTexture_4qa4w")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_020jc")
-theme_override_styles/hover = SubResource("StyleBoxTexture_020jc")
 text = "Menu"
 
-[node name="Exit" type="Button" parent="PauseTextContainer" unique_id=347027725]
+[node name="Exit" type="Button" parent="PauseTextContainer/ButtonsContainer" unique_id=347027725]
 layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(0.27, 0.51, 0.71, 1)
-theme_override_colors/font_hover_color = Color(0.27, 0.51, 0.71, 1)
-theme_override_fonts/font = ExtResource("4_tc1mk")
-theme_override_font_sizes/font_size = 32
-theme_override_styles/normal = SubResource("StyleBoxTexture_4qa4w")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_020jc")
-theme_override_styles/hover = SubResource("StyleBoxTexture_020jc")
 text = "Exit"
 
-[connection signal="pressed" from="PauseTextContainer/Resume" to="." method="_on_resume_pressed"]
-[connection signal="pressed" from="PauseTextContainer/Menu" to="." method="_on_menu_pressed"]
-[connection signal="pressed" from="PauseTextContainer/Exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="PauseTextContainer/ButtonsContainer/Resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="PauseTextContainer/ButtonsContainer/Menu" to="." method="_on_menu_pressed"]
+[connection signal="pressed" from="PauseTextContainer/ButtonsContainer/Exit" to="." method="_on_exit_pressed"]
