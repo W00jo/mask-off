@@ -25,7 +25,7 @@ func set_profile_color(color: Color):
 func show_profile():
 	$VBoxContainer/HBoxContainer/PlayerIcon.texture = load("res://assets/sprites/ziomek_profilowe.png")
 
-func set_current_health():
+func set_current_health(_damage_value = 0):
 	#health_bar.value = player.damage_target.current_health
 	pass
 	

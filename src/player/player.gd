@@ -87,7 +87,8 @@ func create_wearable_mask(mask):
 	wearable_mask_instance.set_type(mask)
 		
 func clear_mask():
-	mask_parent.remove_child(mask_parent.get_child(0))
+	if mask_parent.get_child_count() > 0:
+		mask_parent.remove_child(mask_parent.get_child(0))
 
 
 func _on_knockback(data: KnockbackData) -> void:
