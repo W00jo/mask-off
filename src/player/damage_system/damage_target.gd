@@ -9,7 +9,6 @@ signal on_reset
 @export var max_health: int
 var current_health: int
 
-
 func _ready():
 	current_health = max_health
 	
