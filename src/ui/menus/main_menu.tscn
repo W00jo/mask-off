@@ -246,7 +246,6 @@ size_flags_horizontal = 4
 theme_override_colors/font_color = Color(0, 0, 0, 0.8)
 theme_override_fonts/font = ExtResource("5_o7egi")
 theme_override_font_sizes/font_size = 20
-text = "v0.1.0"
 horizontal_alignment = 1
 vertical_alignment = 1
 

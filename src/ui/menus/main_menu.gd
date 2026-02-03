@@ -31,6 +31,9 @@ func _ready() -> void:
 	_update_translations()
 	GameManager.language_changed.connect(_on_language_changed)
 	
+	# Set version from project settings
+	$Version/VersionLabel.text = "v" + ProjectSettings.get_setting("application/config/version", "0.1.0")
+	
 	# Fade-in animation
 	modulate.a = 0.0
 	var tween = create_tween().set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_CUBIC)
