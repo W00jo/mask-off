@@ -15,11 +15,11 @@ signal exit_pressed
 	preload("res://src/ui/menus/click_sfx/boowomp.mp3")
 ]
 
-@onready var play_button = $MenuInterface/MenuButtons/Play
-@onready var howtoplay_button = $MenuInterface/MenuButtons/HowToPlay
-@onready var options_button = $MenuInterface/MenuButtons/Options
-@onready var credits_button = $MenuInterface/MenuButtons/Credits
-@onready var exit_button = $MenuInterface/MenuButtons/Exit
+@onready var play_button = $MenuInterface/ButtonsContainer/Play
+@onready var howtoplay_button = $MenuInterface/ButtonsContainer/HowToPlay
+@onready var options_button = $MenuInterface/ButtonsContainer/Options
+@onready var credits_button = $MenuInterface/ButtonsContainer/Credits
+@onready var exit_button = $MenuInterface/ButtonsContainer/Exit
 @onready var audio_player = $ClickSFX
 @onready var fart = $FartSFX
 @onready var main_menu_music = $MainMenuMusic
@@ -32,7 +32,7 @@ func _ready() -> void:
 	GameManager.language_changed.connect(_on_language_changed)
 	
 	# Set version from project settings
-	$Version/VersionLabel.text = "v" + ProjectSettings.get_setting("application/config/version", "0.1.0")
+	$Version/VersionLabel.text = "v" + ProjectSettings.get_setting("application/config/version")
 	
 	# Fade-in animation
 	modulate.a = 0.0
@@ -43,6 +43,9 @@ func _ready() -> void:
 	_play_menu_music()
 
 func _play_menu_music() -> void:
+	if main_menu_music.finished.is_connected(_on_menu_music_finished):
+		main_menu_music.finished.disconnect(_on_menu_music_finished)
+	
 	main_menu_music.stream = MENU_MUSIC
 	main_menu_music.volume_db = -40.0
 	main_menu_music.play()
@@ -98,7 +101,7 @@ func _on_exit_pressed() -> void:
 
 func _on_itchio_pressed() -> void:
 	_play_click_sound()
-	OS.shell_open("https://itch.io/")
+	OS.shell_open("https://wujo-dev.itch.io/mask-off")
 
 func _on_butt_pressed() -> void:
 	fart.play()

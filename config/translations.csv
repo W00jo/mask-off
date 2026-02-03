@@ -10,14 +10,21 @@ CREDITS,Podziękowania,Credits
 MAIN_MENU,MENU GŁÓWNE,MAIN MENU
 PLAYER_1,Gracz 1,Player 1
 PLAYER_2,Gracz 2,Player 2
+PLAYER_3,Gracz 3,Player 3
+PLAYER_4,Gracz 4,Player 4
 JUMP,Skok,Jump
 LEFT,Lewo,Left
 RIGHT,Prawo,Right
 ATTACK,Atak,Attack
-WINNER,ZWYCIĘZCA,WINNER
+WINNER,WYGRANY,WINNER
 PLAY_AGAIN,Zagraj ponownie,Play again
 RETURN_TO_MENU,Powrót do menu,Return to menu
 PAUSE,PAUZA,PAUSE
 RESUME,Wznów,Resume
 MENU,Menu,Menu
 MADE_WITH,Stworzono na silniku Godot,Made with Godot
+CONCEPT_ARTS,Wczesne koncepty,Concept arts
+BUBBLE_LEVEL,Poziom bombelkowy,Bubble level
+CHARACTER_CONCEPT,Koncept postaci,Character concept
+DOODLING_ANIMATION,Bazgrołki animki,Doodling animation
+MENU_WIREFRAME,Wireframe menu,Menu wireframe

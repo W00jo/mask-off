@@ -159,7 +159,7 @@ A={
 
 [internationalization]
 
-locale/translations=PackedStringArray("res://config/translations.pl.translation", "res://config/translations.en.translation")
+locale/translations=PackedStringArray("res://config/translations.en.translation", "res://config/translations.pl.translation")
 
 [layer_names]
 

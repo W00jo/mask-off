@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://cbpu5hei326qf" path="res://assets/concept_arts/concept_art_julia_02.png" id="4_3kdyq"]
 [ext_resource type="Texture2D" uid="uid://di4pu2bwyu1d0" path="res://src/ui/menus/icons/godot_icon.png" id="5_6xbll"]
 [ext_resource type="Texture2D" uid="uid://cjx7bofmmjd7r" path="res://assets/concept_arts/concept_art_julia_03.png" id="5_s8f31"]
+[ext_resource type="Theme" uid="uid://badlxtabqmr8q" path="res://src/ui/themes/concept_arts.tres" id="6_e3ma1"]
 [ext_resource type="Texture2D" uid="uid://eb1adwsgb20v" path="res://src/ui/menus/prettiers/pin.png" id="7_3kdyq"]
 [ext_resource type="FontFile" uid="uid://dg4utm6nyqq2b" path="res://assets/fonts/headers_font.ttf" id="8_yhbge"]
 [ext_resource type="Texture2D" uid="uid://d14tl15eh2vgs" path="res://src/ui/menus/borders/kenney.png" id="9_5sbyp"]
@@ -337,7 +338,8 @@ theme_override_constants/margin_bottom = 10
 
 [node name="VBox" type="VBoxContainer" parent="ConceptArt1/MarginContainer" unique_id=1996128107]
 layout_mode = 2
-theme_override_constants/separation = 0
+theme = ExtResource("6_e3ma1")
+theme_override_constants/separation = 2
 
 [node name="PhotoFrame" type="Panel" parent="ConceptArt1/MarginContainer/VBox" unique_id=1111246631]
 custom_minimum_size = Vector2(200, 200)
@@ -367,8 +369,6 @@ stretch_mode = 5
 
 [node name="Description" type="Label" parent="ConceptArt1/MarginContainer/VBox" unique_id=331794515]
 layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 14
 text = "BUBBLE_LEVEL"
 horizontal_alignment = 1
 
@@ -404,6 +404,7 @@ theme_override_constants/margin_bottom = 10
 
 [node name="VBox" type="VBoxContainer" parent="ConceptArt2/MarginContainer" unique_id=1432980582]
 layout_mode = 2
+theme = ExtResource("6_e3ma1")
 
 [node name="PhotoFrame" type="Panel" parent="ConceptArt2/MarginContainer/VBox" unique_id=1009724317]
 custom_minimum_size = Vector2(200, 200)
@@ -435,8 +436,11 @@ stretch_mode = 5
 
 [node name="Caption" type="Label" parent="ConceptArt2/MarginContainer/VBox" unique_id=1253162510]
 layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 14
+text = "CHARACTER_CONCEPT"
+horizontal_alignment = 1
+
+[node name="Author" type="Label" parent="ConceptArt2/MarginContainer/VBox" unique_id=1205591390]
+layout_mode = 2
 text = "Gabriela"
 horizontal_alignment = 1
 
@@ -467,6 +471,7 @@ theme_override_constants/margin_bottom = 10
 
 [node name="VBox" type="VBoxContainer" parent="ConceptArt3/MarginContainer" unique_id=494326840]
 layout_mode = 2
+theme = ExtResource("6_e3ma1")
 
 [node name="PhotoFrame" type="Panel" parent="ConceptArt3/MarginContainer/VBox" unique_id=1074524996]
 custom_minimum_size = Vector2(200, 200)
@@ -497,11 +502,13 @@ stretch_mode = 5
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 14
+text = "DOODLING_ANIMATION"
 horizontal_alignment = 1
 
 [node name="Author" type="Label" parent="ConceptArt3/MarginContainer/VBox" unique_id=1085587681]
 layout_mode = 2
 text = "Julia"
+horizontal_alignment = 1
 
 [node name="Pin3" type="TextureRect" parent="." unique_id=633848480]
 layout_mode = 0
@@ -530,6 +537,7 @@ theme_override_constants/margin_bottom = 10
 
 [node name="VBox" type="VBoxContainer" parent="ConceptArt4/MarginContainer" unique_id=1112008655]
 layout_mode = 2
+theme = ExtResource("6_e3ma1")
 
 [node name="PhotoFrame" type="Panel" parent="ConceptArt4/MarginContainer/VBox" unique_id=1417269509]
 custom_minimum_size = Vector2(200, 200)
@@ -560,6 +568,13 @@ stretch_mode = 5
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 14
+text = "MENU_WIREFRAME"
+horizontal_alignment = 1
+
+[node name="Author" type="Label" parent="ConceptArt4/MarginContainer/VBox" unique_id=171098582]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 14
 text = "Julia"
 horizontal_alignment = 1
 
@@ -571,7 +586,7 @@ offset_right = 452.0
 offset_bottom = 393.0
 texture = ExtResource("7_3kdyq")
 
-[node name="Label" type="Label" parent="." unique_id=647818613]
+[node name="ConceptArtsLabel" type="Label" parent="." unique_id=647818613]
 modulate = Color(1, 1, 0.53333336, 1)
 layout_mode = 0
 offset_left = 208.0

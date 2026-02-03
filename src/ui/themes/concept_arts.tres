@@ -1,0 +1,8 @@
+[gd_resource type="Theme" format=3 uid="uid://badlxtabqmr8q"]
+
+[ext_resource type="FontFile" uid="uid://cdv28u2sltsxo" path="res://assets/fonts/text_font.ttf" id="1_bf1sb"]
+
+[resource]
+Label/colors/font_color = Color(0.13333334, 0.13333334, 0.13333334, 1)
+Label/font_sizes/font_size = 12
+Label/fonts/font = ExtResource("1_bf1sb")
