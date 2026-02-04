@@ -6,9 +6,7 @@
 [ext_resource type="Script" uid="uid://cjrscpoxhm7vk" path="res://src/doskozza.gd" id="5_lg5xu"]
 [ext_resource type="Texture2D" uid="uid://qsevh0bb7qlp" path="res://assets/sprites/elysium.png" id="6_o1hh2"]
 [ext_resource type="Texture2D" uid="uid://qix0oygodiat" path="res://icon.svg" id="7_jhs3w"]
-[ext_resource type="PackedScene" uid="uid://by66ymds8i5ef" path="res://src/masks/collectible_mask.tscn" id="8_06jn0"]
 [ext_resource type="Script" uid="uid://bl2rk8tlbm3sg" path="res://src/levels/laser.gd" id="8_lxmfo"]
-[ext_resource type="Resource" uid="uid://bh3g7wq0uswsf" path="res://src/masks/mask_konduktor/konduktor_data.tres" id="9_06jn0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5mrjc"]
 size = Vector2(609.90576, 342)
@@ -203,8 +201,3 @@ script = ExtResource("8_lxmfo")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Laser2/LaserLight" unique_id=1368524164]
 libraries/ = SubResource("AnimationLibrary_o1hh2")
-
-[node name="CollectibleMask" parent="." unique_id=1577365050 instance=ExtResource("8_06jn0")]
-position = Vector2(963, 521)
-debug = true
-debug_mask = ExtResource("9_06jn0")
