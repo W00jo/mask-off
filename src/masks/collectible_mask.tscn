@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://by66ymds8i5ef"]
+
+[ext_resource type="Script" uid="uid://b6cp6a2avi5ei" path="res://src/masks/scripts/collectible_mask.gd" id="1_l4cnm"]
+[ext_resource type="PackedScene" uid="uid://cllo6flqv14xq" path="res://src/masks/mask_skin.tscn" id="2_56j0t"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jfmbc"]
+radius = 64.195015
+
+[node name="CollectibleMask" type="Area2D" unique_id=1577365050]
+collision_mask = 3
+script = ExtResource("1_l4cnm")
+
+[node name="MaskSkin" parent="." unique_id=741899119 instance=ExtResource("2_56j0t")]
+z_index = 10
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1356159166]
+position = Vector2(-2, -30)
+shape = SubResource("CircleShape2D_jfmbc")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

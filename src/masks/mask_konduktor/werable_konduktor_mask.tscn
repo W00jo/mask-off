@@ -1,7 +1,7 @@
-[gd_scene format=3 uid="uid://qikavt2qn7s3"]
+[gd_scene format=3 uid="uid://bqnesj7ooxnws"]
 
-[ext_resource type="Script" uid="uid://nemq288fqk50" path="res://src/masks/wear_base_mask.gd" id="1_fxs40"]
-[ext_resource type="Texture2D" uid="uid://cdp7a6hv26tfp" path="res://assets/sprites/mask_animation_sheet.png" id="2_1mi2u"]
+[ext_resource type="Script" uid="uid://nemq288fqk50" path="res://src/masks/scripts/base_mask.gd" id="1_xgnre"]
+[ext_resource type="Texture2D" uid="uid://cdp7a6hv26tfp" path="res://assets/sprites/mask_animation_sheet.png" id="2_of7si"]
 
 [sub_resource type="Animation" id="Animation_2d6bc"]
 length = 0.001
@@ -176,11 +176,11 @@ _data = {
 }
 
 [node name="KOnduktorMask" type="Node2D" unique_id=454045348]
-script = ExtResource("1_fxs40")
+script = ExtResource("1_xgnre")
 anim_name = "mask_konduktor"
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=702931784]
-texture = ExtResource("2_1mi2u")
+texture = ExtResource("2_of7si")
 hframes = 6
 vframes = 6
 region_rect = Rect2(0, 0, 400, 400)

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b16lvx2svwcgy"]
 
-[ext_resource type="Script" uid="uid://nemq288fqk50" path="res://src/masks/wear_base_mask.gd" id="2_vglb0"]
+[ext_resource type="Script" uid="uid://nemq288fqk50" path="res://src/masks/scripts/base_mask.gd" id="2_vglb0"]
 [ext_resource type="Texture2D" uid="uid://cdp7a6hv26tfp" path="res://assets/sprites/mask_animation_sheet.png" id="3_je8t5"]
 
 [sub_resource type="Animation" id="Animation_2d6bc"]

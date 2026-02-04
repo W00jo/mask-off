@@ -145,13 +145,13 @@ position = Vector2(778, 448)
 [node name="MaskSpawnPoints" type="Node" parent="." index="6" unique_id=831274589]
 
 [node name="MaskSpawnPoint" type="Node2D" parent="MaskSpawnPoints" index="0" unique_id=1481516044]
-position = Vector2(284, 435)
+position = Vector2(207, 394)
 
 [node name="MaskSpawnPoint2" type="Node2D" parent="MaskSpawnPoints" index="1" unique_id=1787333012]
-position = Vector2(157, 315)
+position = Vector2(562, 98)
 
 [node name="MaskSpawnPoint3" type="Node2D" parent="MaskSpawnPoints" index="2" unique_id=1299778320]
-position = Vector2(716, 318)
+position = Vector2(762, 405)
 
 [node name="damage_place" parent="." index="7" unique_id=2001838863 instance=ExtResource("5_iw40w")]
 position = Vector2(553, 682)

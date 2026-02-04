@@ -8,9 +8,6 @@
 [ext_resource type="Texture2D" uid="uid://c7cvcta6gh8br" path="res://src/levels/01_default_level/Dol.png" id="6_326ku"]
 [ext_resource type="AudioStream" uid="uid://brc4ed02uadm8" path="res://assets/audio/soundtrack/1_track/doodle.wav" id="7_music"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ltctc"]
-size = Vector2(1010.9358, 104)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1lhyj"]
 size = Vector2(891.0642, 104)
 
@@ -132,13 +129,13 @@ position = Vector2(782, 127)
 [node name="MaskSpawnPoints" type="Node" parent="." index="4" unique_id=188837765]
 
 [node name="MaskSpawnPoint" type="Node2D" parent="MaskSpawnPoints" index="0" unique_id=1037521067]
-position = Vector2(284, 435)
+position = Vector2(137, 263)
 
 [node name="MaskSpawnPoint2" type="Node2D" parent="MaskSpawnPoints" index="1" unique_id=1753789963]
-position = Vector2(157, 315)
+position = Vector2(571, 98)
 
 [node name="MaskSpawnPoint3" type="Node2D" parent="MaskSpawnPoints" index="2" unique_id=145732782]
-position = Vector2(716, 318)
+position = Vector2(977, 244)
 
 [node name="Camera2D" type="Camera2D" parent="." index="5" unique_id=628659851]
 position = Vector2(570, 331)

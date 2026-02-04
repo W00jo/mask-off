@@ -4,15 +4,15 @@
 [ext_resource type="PackedScene" uid="uid://cr05qs3lbrrmq" path="res://src/player/attacks/attack_default/default_attack.tscn" id="2_rgyib"]
 [ext_resource type="Texture2D" uid="uid://b0f3n0netrmcw" path="res://assets/sprites/player_animation_sheet_final.png" id="4_2smqc"]
 [ext_resource type="Script" uid="uid://ca03ma24caxns" path="res://src/player/state_machine/idle_state.gd" id="5_fv2d4"]
-[ext_resource type="PackedScene" uid="uid://csjhmv4df2yek" path="res://src/player/attacks/attack_konduktor/konduktor_attack.tscn" id="6_rl62b"]
 [ext_resource type="Script" uid="uid://bbaeadmys6i6j" path="res://src/player/state_machine/state_machine.gd" id="7_hg6s5"]
 [ext_resource type="Script" uid="uid://bat84jucrkcqd" path="res://src/player/state_machine/walk_state.gd" id="8_p842g"]
 [ext_resource type="Script" uid="uid://djx2bb1xw15vw" path="res://src/player/state_machine/jump_state.gd" id="9_dh4si"]
 [ext_resource type="Script" uid="uid://crqfi21e4cwo5" path="res://src/player/state_machine/fall_state.gd" id="10_tcq0w"]
-[ext_resource type="Script" uid="uid://bqmioivprkl42" path="res://src/player/mask_system.gd" id="11_boad6"]
+[ext_resource type="Script" uid="uid://bqmioivprkl42" path="res://src/player/mask_collector.gd" id="11_boad6"]
 [ext_resource type="Script" uid="uid://uck8pyr0up71" path="res://src/player/state_machine/attack_state.gd" id="12_8t03j"]
 [ext_resource type="Script" uid="uid://dvx22adu7ly4a" path="res://src/player/state_machine/death_state.gd" id="13_2smqc"]
 [ext_resource type="Script" uid="uid://debf2l4kldxlb" path="res://src/player/damage_system/damage_target.gd" id="14_2ieo8"]
+[ext_resource type="PackedScene" uid="uid://cllo6flqv14xq" path="res://src/masks/mask_skin.tscn" id="14_rl62b"]
 [ext_resource type="Script" uid="uid://bwaqdqdr1hous" path="res://src/player/player_ui.gd" id="15_ebec5"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2smqc"]
@@ -293,13 +293,11 @@ _data = {
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g6k8r"]
 size = Vector2(46, 68)
 
-[node name="PlayerNew" type="CharacterBody2D" unique_id=1053524098 node_paths=PackedStringArray("mask_parent", "state_machine")]
+[node name="PlayerNew" type="CharacterBody2D" unique_id=1053524098 node_paths=PackedStringArray("state_machine")]
 collision_layer = 2
 script = ExtResource("1_0v0ik")
 default_attack = ExtResource("2_rgyib")
-mask_parent = NodePath("MaskParent")
 state_machine = NodePath("StateMachine")
-konduktor_attack = ExtResource("6_rl62b")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1375468071]
 texture_filter = 1
@@ -354,10 +352,11 @@ metadata/_custom_type_script = "uid://dvx22adu7ly4a"
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=340885158]
 libraries/ = SubResource("AnimationLibrary_tcq0w")
 
-[node name="MaskSystem" type="Area2D" parent="." unique_id=85479215]
+[node name="MaskCollector" type="Area2D" parent="." unique_id=85479215]
+visibility_layer = 3
 script = ExtResource("11_boad6")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="MaskSystem" unique_id=1915748846]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MaskCollector" unique_id=1915748846]
 position = Vector2(1, 28)
 shape = SubResource("RectangleShape2D_g6k8r")
 
@@ -390,8 +389,11 @@ pivot_offset_ratio = Vector2(0.5, 0.5)
 value = 50.0
 show_percentage = false
 
-[node name="MaskParent" type="Node2D" parent="." unique_id=1472926769]
+[node name="MaskSkin" parent="." unique_id=741899119 instance=ExtResource("14_rl62b")]
+visible = false
 
+[connection signal="area_entered" from="MaskCollector" to="MaskCollector" method="_on_area_entered"]
+[connection signal="body_entered" from="MaskCollector" to="MaskCollector" method="_on_body_entered"]
 [connection signal="on_damage_received" from="DamageTarget" to="UI" method="_on_damage_target_on_damage_received"]
 [connection signal="on_death" from="DamageTarget" to="." method="_begin_death"]
 [connection signal="on_death" from="DamageTarget" to="UI" method="_on_death"]

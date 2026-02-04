@@ -1,67 +1,9 @@
 [gd_scene format=3 uid="uid://vwin6y5xrqyc"]
 
 [ext_resource type="Script" uid="uid://bebxhv88yhyu2" path="res://src/levels/modifiers/mask_spawner/mask_spawner.gd" id="1_0m02b"]
-
-[sub_resource type="Animation" id="Animation_hxats"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:scale")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(1, 1)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:visible")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-
-[sub_resource type="Animation" id="Animation_y1oe4"]
-resource_name = "countdown_label_shrink"
-length = 0.4
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:scale")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.4),
-"transitions": PackedFloat32Array(0.39229217, 0.39229217),
-"update": 0,
-"values": [Vector2(1.529381, 1.529381), Vector2(1, 1)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:visible")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_qppop"]
-_data = {
-&"RESET": SubResource("Animation_hxats"),
-&"countdown_label_shrink": SubResource("Animation_y1oe4")
-}
+[ext_resource type="Script" uid="uid://ckiq7ovkckq4t" path="res://src/masks/scripts/mask_data.gd" id="2_hb63m"]
+[ext_resource type="Resource" uid="uid://bh3g7wq0uswsf" path="res://src/masks/mask_konduktor/konduktor_data.tres" id="3_0gddg"]
+[ext_resource type="FontFile" uid="uid://dg4utm6nyqq2b" path="res://assets/fonts/headers_font.ttf" id="4_0gddg"]
 
 [sub_resource type="Curve" id="Curve_y1oe4"]
 _data = [Vector2(0, 0.030129075), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
@@ -81,29 +23,58 @@ point_count = 2
 offsets = PackedFloat32Array(0, 0.48846152, 1)
 colors = PackedColorArray(1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0.19607843)
 
+[sub_resource type="Animation" id="Animation_hxats"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_y1oe4"]
+resource_name = "countdown_label_shrink"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(0.39229217, 0.39229217),
+"update": 0,
+"values": [Vector2(1.529381, 1.529381), Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qppop"]
+_data = {
+&"RESET": SubResource("Animation_hxats"),
+&"countdown_label_shrink": SubResource("Animation_y1oe4")
+}
+
+[sub_resource type="Curve" id="Curve_hb63m"]
+_data = [Vector2(0, 0), 0.0, 35.86284, 0, 0, Vector2(0.08741259, 1), 0.07844545, 0.07844545, 0, 0, Vector2(1, 0), -2.9451096, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="Gradient" id="Gradient_0gddg"]
+offsets = PackedFloat32Array(0, 0.32692307, 1)
+colors = PackedColorArray(0.9345193, 0.9342958, 4.6205523e-06, 1, 0.6327976, 0.63264215, 0, 1, 0.49747366, 0.49747366, 0.49747366, 0)
+
 [node name="MaskSpawner" type="Node2D" unique_id=1271967546]
+z_index = 999
 script = ExtResource("1_0m02b")
 max_ticks = 10
+masks = Array[ExtResource("2_hb63m")]([ExtResource("3_0gddg")])
 
-[node name="Timer" type="Timer" parent="." unique_id=179535140]
-autostart = true
-
-[node name="MaskSpawnPoint" type="Node2D" parent="." unique_id=1049850504]
-
-[node name="Label" type="Label" parent="MaskSpawnPoint" unique_id=530201785]
-offset_left = -39.000008
-offset_top = -55.0
-offset_right = 61.999992
-offset_bottom = 82.0
-pivot_offset_ratio = Vector2(0.5, 0.5)
-theme_override_font_sizes/font_size = 100
-text = ":D"
-horizontal_alignment = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="MaskSpawnPoint/Label" unique_id=2109742086]
-libraries/ = SubResource("AnimationLibrary_qppop")
-
-[node name="Particles!!!" type="CPUParticles2D" parent="MaskSpawnPoint" unique_id=698168306]
+[node name="Particles!!!" type="CPUParticles2D" parent="." unique_id=698168306]
 z_index = 2
 emitting = false
 amount = 150
@@ -126,7 +97,7 @@ hue_variation_min = -0.23
 hue_variation_max = 0.21
 hue_variation_curve = SubResource("Curve_uyu2i")
 
-[node name="MORE PARTICLES" type="CPUParticles2D" parent="MaskSpawnPoint/Particles!!!" unique_id=1369615952]
+[node name="MORE PARTICLES" type="CPUParticles2D" parent="Particles!!!" unique_id=1369615952]
 z_index = 1
 emitting = false
 amount = 400
@@ -146,5 +117,49 @@ scale_amount_min = 3.0
 scale_amount_max = 7.0
 color = Color(0.66498244, 0.6123902, 0.099962704, 1)
 color_ramp = SubResource("Gradient_y1oe4")
+
+[node name="Timer" type="Timer" parent="." unique_id=179535140]
+autostart = true
+
+[node name="LabelParent" type="Node2D" parent="." unique_id=771738509]
+
+[node name="Label" type="Label" parent="LabelParent" unique_id=530201785]
+z_index = 999
+z_as_relative = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.94000006)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0.95800006)
+theme_override_fonts/font = ExtResource("4_0gddg")
+theme_override_font_sizes/font_size = 100
+text = ":D"
+horizontal_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="LabelParent/Label" unique_id=2109742086]
+libraries/ = SubResource("AnimationLibrary_qppop")
+
+[node name="SpawnParticles" type="CPUParticles2D" parent="." unique_id=1170795984]
+emitting = false
+amount = 100
+lifetime = 4.0
+preprocess = 0.66
+lifetime_randomness = 1.0
+emission_shape = 1
+emission_sphere_radius = 0.01
+direction = Vector2(2.175, 0)
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 60.0
+initial_velocity_max = 113.34
+orbit_velocity_max = 2.0
+scale_amount_min = 5.0
+scale_amount_max = 15.0
+scale_amount_curve = SubResource("Curve_hb63m")
+color_ramp = SubResource("Gradient_0gddg")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timeout"]

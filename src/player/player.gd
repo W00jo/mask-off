@@ -10,23 +10,14 @@ signal on_player_death(Player)
 @export var attack: String
 @export var default_attack: PackedScene
 @export var new_attack: PackedScene
-@export var mask_parent: Node2D
 @export var state_machine: StateMachine
 var current_attack: BaseAttack
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var attack_parent: Node2D = $AttackParent 
 @onready var attack_holder: Node2D = $AttackParent/AttackHolder
 @onready var damage_target: DamageTarget = $DamageTarget 
-@onready var mask_system: Area2D = $MaskSystem
-
-@export var godot_attack: PackedScene
-@export var isaac_attack: PackedScene
-@export var konduktor_attack: PackedScene
-@export var konduktor_mask = preload("res://src/masks/werable_konduktor_mask.tscn")
-@export var plague_attack: PackedScene
-@export var bomberman_attack: PackedScene
-@export var catboy_attack: PackedScene
-@export var pig_attack: PackedScene
+@onready var mask_skin: MaskSkin = $MaskSkin
+@onready var mask_collector: MaskCollector = $MaskCollector
 
 var player_color: Color = Color.WHITE
 
@@ -35,8 +26,8 @@ func _ready():
 	state_machine.set_input_data(InputData.new(
 		move_left, move_right, jump, attack
 	))
-	mask_system.on_attack_picked_up.connect(set_attack)
-	set_attack(default_attack)
+	mask_collector.on_mask_picked_up.connect(on_mask_picked_up)
+	set_attack(default_attack.instantiate())
 
 var did_attack = false
 
@@ -51,21 +42,25 @@ func get_direction() -> int:
 func reset():
 	damage_target.reset()
 	$UI._ready()
-	set_attack(default_attack)
+	set_attack(default_attack.instantiate())
 	state_machine.change_state("fallstate")
 	$Sprite2D.frame = 25
 	$Sprite2D.visible = true
+	
+func on_mask_picked_up(data: MaskData):
+	create_wearable_mask(data.animation_name)
+	set_attack(data.get_attack())
+	
 
-func set_attack(_attack: PackedScene):
-	var _new_attack: BaseAttack = _attack.instantiate()
-	_new_attack.copy(default_attack)
-	current_attack = _new_attack;
+func set_attack(_attack: BaseAttack):
+	_attack.copy(default_attack)
+	current_attack = _attack;
 	print("current_attack", current_attack)
 	attack_holder.add_child(current_attack)
 	
 func clear_attack():
 	current_attack.queue_free()
-	set_attack(default_attack)
+	set_attack(default_attack.instantiate())
 
 func on_death() -> void:
 	on_player_death.emit(self)
@@ -76,20 +71,14 @@ func _begin_death() -> void:
 func set_input_data(input_data: InputData):
 	state_machine.set_input_data(input_data)
 
-func create_wearable_mask(mask):
-	print("MASK COLLECTED!!!! : ", mask)
-	var wearable_mask_instance
+func create_wearable_mask(anim_name: String):
+	print("MASK COLLECTED!!!! : ", anim_name)
 	
-	if(mask == "konduktor"):
-		set_attack(konduktor_attack)
-		wearable_mask_instance = konduktor_mask.instantiate()
-		
-	mask_parent.add_child(wearable_mask_instance)
-	wearable_mask_instance.set_type(mask)
-		
+	mask_skin.visible = true
+	mask_skin.play_anim(anim_name)
+	
 func clear_mask():
-	if mask_parent.get_child_count() > 0:
-		mask_parent.remove_child(mask_parent.get_child(0))
+	mask_skin.visible = false
 
 
 func _on_knockback(data: KnockbackData) -> void:

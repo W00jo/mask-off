@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="MaskData" format=3 uid="uid://bh3g7wq0uswsf"]
+
+[ext_resource type="Script" uid="uid://ckiq7ovkckq4t" path="res://src/masks/scripts/mask_data.gd" id="1_agyax"]
+[ext_resource type="PackedScene" uid="uid://csjhmv4df2yek" path="res://src/player/attacks/attack_konduktor/konduktor_attack.tscn" id="1_damnx"]
+
+[resource]
+script = ExtResource("1_agyax")
+_attack = ExtResource("1_damnx")
+animation_name = "mask_konduktor"
+metadata/_custom_type_script = "uid://ckiq7ovkckq4t"

@@ -211,13 +211,13 @@ position = Vector2(1095, 254)
 [node name="MaskSpawnPoints" type="Node" parent="." index="14" unique_id=1747793806]
 
 [node name="MaskSpawnPoint" type="Node2D" parent="MaskSpawnPoints" index="0" unique_id=633641578]
-position = Vector2(284, 435)
+position = Vector2(244, 350)
 
 [node name="MaskSpawnPoint2" type="Node2D" parent="MaskSpawnPoints" index="1" unique_id=671550127]
-position = Vector2(157, 315)
+position = Vector2(976, 354)
 
 [node name="MaskSpawnPoint3" type="Node2D" parent="MaskSpawnPoints" index="2" unique_id=673866011]
-position = Vector2(716, 318)
+position = Vector2(587, 230)
 
 [node name="Timer" type="Timer" parent="." index="15" unique_id=443749033]
 wait_time = 20.0

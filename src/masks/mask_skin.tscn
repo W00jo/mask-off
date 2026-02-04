@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://cllo6flqv14xq"]
+
+[ext_resource type="Texture2D" uid="uid://cdp7a6hv26tfp" path="res://assets/sprites/mask_animation_sheet.png" id="1_b0vi6"]
+[ext_resource type="AnimationLibrary" uid="uid://d15tkdqtffumx" path="res://assets/animations/player/temp/mask_animations.res" id="2_4hxw4"]
+[ext_resource type="Script" uid="uid://ck6hnw47fo6er" path="res://src/masks/scripts/mask_skin.gd" id="2_k2na7"]
+
+[node name="MaskSkin" type="Sprite2D" unique_id=741899119]
+texture = ExtResource("1_b0vi6")
+hframes = 6
+vframes = 6
+region_rect = Rect2(0, 0, 400, 400)
+script = ExtResource("2_k2na7")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1097758850]
+root_node = NodePath("../..")
+libraries/ = ExtResource("2_4hxw4")
