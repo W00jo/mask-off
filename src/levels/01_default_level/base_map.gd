@@ -36,3 +36,10 @@ func get_free_spawn_point() -> Node2D:
 func _on_timer_timeout() -> void:
 	var pendolino = TRAIN.instantiate()
 	add_child(pendolino)
+
+
+
+func _on_hole_body_entered(body: Node2D) -> void:
+	if body is CharacterBody2D:
+		print("Zadaje obrazenia",)
+		body.get_node("DamageTarget").receive_damage(DamageData.new(90))

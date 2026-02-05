@@ -16,6 +16,9 @@ size = Vector2(511, 78)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y7f0c"]
 size = Vector2(210, 16.25)
 
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_iw40w"]
+distance = -683.0
+
 [node name="BaseMap" unique_id=1175649286 instance=ExtResource("1_jkh1s")]
 level_music = ExtResource("7_music")
 
@@ -153,7 +156,12 @@ position = Vector2(157, 315)
 [node name="MaskSpawnPoint3" type="Node2D" parent="MaskSpawnPoints" index="2" unique_id=1299778320]
 position = Vector2(716, 318)
 
-[node name="damage_place" parent="." index="7" unique_id=2001838863 instance=ExtResource("5_iw40w")]
-position = Vector2(553, 682)
-scale = Vector2(18.885777, 2.6667345)
-DMG_amount = 999
+[node name="Hole" type="Area2D" parent="." index="7" unique_id=1202174402]
+collision_layer = 2
+collision_mask = 2
+
+[node name="Hole_coll" type="CollisionShape2D" parent="Hole" index="0" unique_id=542174839]
+position = Vector2(564, -11)
+shape = SubResource("WorldBoundaryShape2D_iw40w")
+
+[connection signal="body_entered" from="Hole" to="." method="_on_hole_body_entered"]

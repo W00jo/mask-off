@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://cpgs5pu5pihli" path="res://src/levels/03_platform_level/warning.png" id="4_h288v"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7riek"]
-size = Vector2(1010.99994, 223.00009)
+size = Vector2(1010.99994, 126.00002)
 
 [node name="Train" type="Area2D" unique_id=1893369949]
 collision_layer = 2
@@ -23,7 +23,7 @@ scale = Vector2(0.34817073, 0.34817073)
 texture = ExtResource("4_h288v")
 
 [node name="DamageCollision" type="CollisionShape2D" parent="." unique_id=1391015048]
-position = Vector2(1646.5002, 494)
+position = Vector2(1646.5002, 586)
 shape = SubResource("RectangleShape2D_7riek")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
